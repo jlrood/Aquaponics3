@@ -1,0 +1,341 @@
+{
+    "id": "32e61890-e95a-4d4f-8c33-877c1b27b0b5",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "MainMenu",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "f00aa91a-0fae-481f-b638-5f8f6d36d34d",
+            "label": "rectangle_1",
+            "x": 65,
+            "y": 376,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 72,
+            "height": 350
+        },
+        {
+            "type": "Ellipse",
+            "id": "ea15e159-360e-4f99-aaf6-7a67c089fa33",
+            "label": "ellipse_1",
+            "x": 65,
+            "y": 70,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 96,
+            "height": 96
+        },
+        {
+            "type": "Ellipse",
+            "id": "45be6f36-89f6-4d6f-8fbb-0cc6fa985c64",
+            "label": "ellipse",
+            "x": 1177,
+            "y": 70,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 70,
+            "height": 70
+        },
+        {
+            "type": "Ellipse",
+            "id": "2a018ac1-29d3-4846-b17f-5749d1a80e32",
+            "label": "ellipse_2",
+            "x": 1072,
+            "y": 70,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 70,
+            "height": 70
+        },
+        {
+            "type": "Ellipse",
+            "id": "018d3d88-ddf1-4dcc-b112-3807aa47bb4c",
+            "label": "ellipse_3",
+            "x": 43,
+            "y": 683,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 125,
+            "height": 125
+        },
+        {
+            "type": "Container",
+            "id": "27b0d179-6982-43c8-96a6-27a24ed530d4",
+            "label": "achievement_box",
+            "x": 1094,
+            "y": 202,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "ab8da1b2-a8d8-4c95-aaa3-9c6be6bfb636",
+                    "label": "rectangle",
+                    "x": 35.125,
+                    "y": 0.25,
+                    "isFilled": true,
+                    "fillColor": "#7db9e2",
+                    "strokeColor": "#000000",
+                    "lineWidth": 3,
+                    "width": 201,
+                    "height": 148
+                },
+                {
+                    "type": "Text",
+                    "id": "851af3cd-207d-417b-83c2-3dec9a0f9983",
+                    "label": "text_1",
+                    "x": -22.875,
+                    "y": -7.25,
+                    "text": "ACHIEVEMENTS",
+                    "resolution": 2,
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "5da05a22-399f-48e8-9c02-c25283fd6bdc",
+            "label": "plant_bed",
+            "x": 444,
+            "y": 303,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "0dd34cd2-1801-4e8b-bf01-97fb4a60a2d5",
+                    "label": "plant_box",
+                    "x": 36.125,
+                    "y": 3.375,
+                    "isFilled": true,
+                    "fillColor": "#9ee49c",
+                    "width": 330,
+                    "height": 182
+                },
+                {
+                    "type": "Text",
+                    "id": "cd7fca1d-cf38-447c-8e39-bffebad61270",
+                    "label": "plant_box_label",
+                    "x": 36.125,
+                    "y": 3.375,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "PLANT BED",
+                    "resolution": 2,
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "a53f36d2-8964-4854-922a-c055264e828e",
+            "label": "fish_tank",
+            "x": 892,
+            "y": 471,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "860c36e1-200b-4b7c-97b5-d39dd552f5fa",
+                    "label": "fish_box",
+                    "x": 36.125,
+                    "y": 3.375,
+                    "isFilled": true,
+                    "fillColor": "#87ace1",
+                    "width": 330,
+                    "height": 182
+                },
+                {
+                    "type": "Text",
+                    "id": "7ad66d4b-21c4-47e3-9c02-4789a80bb66d",
+                    "label": "fish_box_label",
+                    "x": 36.125,
+                    "y": 3.375,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "FISH TANK",
+                    "resolution": 2,
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "68e0c684-b65a-4826-b25a-870a5b272f01",
+            "label": "filter",
+            "x": 425.5,
+            "y": 552.5,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "a7d0c447-8ca5-403a-96c8-5c2e694185d1",
+                    "label": "filter_box",
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 117,
+                    "height": 198
+                },
+                {
+                    "type": "Text",
+                    "id": "ccf98405-ad93-4041-98fe-210361935ed9",
+                    "label": "filter_box_label",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "FILTER",
+                    "resolution": 2,
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "78255c73-ff86-4521-91ec-6a8bd8140d57",
+            "label": "left_menu",
+            "x": 65,
+            "y": 370.9837155707536,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "a7b71eb6-ba97-4410-a4c2-71a756e2b07f",
+                    "label": "tasks_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 49,
+                    "hitArea.height": 15,
+                    "y": -129.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "TASKS",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "ad4ae324-6d64-4c94-b076-a78679b75f8d",
+                    "label": "shop_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": -64.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "SHOP",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "376ac153-132b-46cb-83e3-36cb851f61ec",
+                    "label": "journal_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 68,
+                    "hitArea.height": 15,
+                    "y": 0.016262492341866164,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "JOURNAL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "aee13b6d-fb7e-4f31-b298-211e008c09fa",
+                    "label": "mail_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": 65.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "MAIL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "fd5b731e-cceb-4a85-9cf7-21418398ac44",
+                    "label": "system_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 58,
+                    "hitArea.height": 15,
+                    "y": 130.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "SYSTEM",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "94eca873-626a-4e93-9034-0486e838a746",
+            "label": "advance_button",
+            "x": 1192,
+            "y": 603,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "5e6e8f69-2642-4246-9289-1f32f5351241",
+                    "label": "rectangle_2",
+                    "y": 41,
+                    "strokeColor": "#000000",
+                    "lineWidth": 3,
+                    "isStroked": true,
+                    "width": 115,
+                    "height": 86
+                },
+                {
+                    "type": "Triangle",
+                    "id": "4f6b0efa-a984-4651-99d1-828508b83239",
+                    "label": "triangle_1",
+                    "x": 72,
+                    "angle": 90,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "strokeColor": "#000000",
+                    "lineWidth": 3,
+                    "isStroked": true,
+                    "x1": 40,
+                    "y2": 80,
+                    "x3": 88
+                },
+                {
+                    "type": "Triangle",
+                    "id": "081f8f20-1cb2-4649-891c-7ddf7eb847fe",
+                    "label": "triangle",
+                    "x": 97,
+                    "angle": 90,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "strokeColor": "#000000",
+                    "lineWidth": 3,
+                    "isStroked": true,
+                    "x1": 40,
+                    "y2": 80,
+                    "x3": 88
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
