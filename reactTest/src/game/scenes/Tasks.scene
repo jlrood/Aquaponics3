@@ -1,0 +1,155 @@
+{
+    "id": "7010c599-e8cc-466d-9126-f8ded67bfaa5",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Tasks",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "27f8c024-0151-4ef0-b906-f30893d44220",
+            "label": "image_1",
+            "texture": {
+                "key": "Screenshot 2025-11-05 150736"
+            },
+            "x": 599,
+            "y": 359,
+            "scaleX": 0.75,
+            "scaleY": 0.75,
+            "visible": false
+        },
+        {
+            "type": "Container",
+            "id": "b11370e2-404d-435b-86a5-8522cadc9ff2",
+            "label": "left_menu",
+            "x": 65,
+            "y": 370.9837155707536,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "9cb39742-8816-4058-b623-d69c7ab4ee2b",
+                    "label": "tasks_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 49,
+                    "hitArea.height": 15,
+                    "y": -129.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "TASKS",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "dcf6af21-153f-4934-af5a-7ee89991c69e",
+                    "label": "shop_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": -64.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "SHOP",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "5bb605b5-0810-45a1-9b15-62c7a16a5d5e",
+                    "label": "journal_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 68,
+                    "hitArea.height": 15,
+                    "y": 0.016262492341866164,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "JOURNAL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "14e0580d-0c10-4ce7-b8f0-8d243aad15ae",
+                    "label": "mail_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": 65.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "MAIL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "0e8fa15d-a069-479c-9b17-004c8b31a212",
+                    "label": "system_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 58,
+                    "hitArea.height": 15,
+                    "y": 130.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "SYSTEM",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "29857230-6199-4075-b84a-30bdff4b012e",
+                    "label": "rectangle_3",
+                    "y": 5.01629638671875,
+                    "strokeColor": "#000000",
+                    "lineWidth": 3,
+                    "isStroked": true,
+                    "width": 72,
+                    "height": 350
+                }
+            ]
+        },
+        {
+            "type": "Rectangle",
+            "id": "a69ed902-4684-4112-9c19-49b4679a2488",
+            "label": "rectangle_1",
+            "x": 334,
+            "y": 412,
+            "isFilled": true,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 465,
+            "height": 478
+        },
+        {
+            "type": "Rectangle",
+            "id": "231a7090-3e79-4312-8eb0-5d38cba0f3b2",
+            "label": "rectangle",
+            "x": 103,
+            "y": 240,
+            "isFilled": true,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "width": 8,
+            "height": 75
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

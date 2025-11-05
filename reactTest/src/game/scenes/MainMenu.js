@@ -19,6 +19,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// rectangle_1
 		const rectangle_1 = this.add.rectangle(65, 376, 72, 350);
+		rectangle_1.isFilled = true;
 		rectangle_1.isStroked = true;
 		rectangle_1.strokeColor = 0;
 		rectangle_1.lineWidth = 3;
@@ -217,13 +218,19 @@ export default class MainMenu extends Phaser.Scene {
         EventBus.emit('current-scene-ready', this);
 
         this.shop_button.on("pointerdown", () => {
-            this.scene.start('Shop'); // Still works!
+            this.scene.start('Shop');
         });
 
         this.system_button.on("pointerdown", () => {
-            this.scene.start('System'); // Still works!
+            this.scene.start('System');
         });
 
+        this.tasks_button.on("pointerdown", () => {
+            // Pause the main menu logic
+            this.scene.pause();
+            // Launch the overlay scene on top
+            this.scene.launch('Tasks');
+        });
     }
 
 

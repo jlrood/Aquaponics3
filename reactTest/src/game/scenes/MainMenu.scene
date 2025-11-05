@@ -17,6 +17,7 @@
             "label": "rectangle_1",
             "x": 65,
             "y": 376,
+            "isFilled": true,
             "strokeColor": "#000000",
             "lineWidth": 3,
             "isStroked": true,

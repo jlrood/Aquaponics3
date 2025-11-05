@@ -6,6 +6,7 @@ import Phaser from 'phaser';
 import Preloader from './scenes/Preloader';
 import System from './scenes/System';
 import Shop from './scenes/Shop';
+import Tasks from './scenes/Tasks';
 
 // Find out more information about the Game Config at:
 // https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
@@ -26,7 +27,8 @@ const config = {
         Game,
         GameOver,
         System,
-        Shop
+        Shop,
+        Tasks
     ]
 };
 
