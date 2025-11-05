@@ -1,0 +1,75 @@
+{
+    "id": "85bb61ac-8c02-4c61-ae7f-a3ca87de0736",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Mail",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "9d0a13a4-9779-44d0-83cc-ffe800d2224f",
+            "label": "Background",
+            "displayName": "Background",
+            "x": 120,
+            "y": 80,
+            "originX": 0,
+            "originY": 0,
+            "isFilled": true,
+            "fillColor": "#d37682",
+            "strokeColor": "#000000",
+            "isStroked": true,
+            "width": 1040,
+            "height": 560
+        },
+        {
+            "type": "Container",
+            "id": "ce348dbf-789b-4117-b1bb-6db9f1f87a7c",
+            "label": "back_container",
+            "x": 161,
+            "y": 120,
+            "list": [
+                {
+                    "type": "Ellipse",
+                    "id": "ebfb169e-1eda-47f5-a9a8-35b7e81be176",
+                    "label": "back_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 14,
+                    "y": 10,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5,
+                    "isFilled": true,
+                    "strokeColor": "#000000",
+                    "isStroked": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "de95c611-bba3-4836-891c-de630f3458a0",
+                    "label": "back_text",
+                    "displayName": "back_text",
+                    "x": -5,
+                    "y": 2,
+                    "text": "Back",
+                    "color": "#000000ff"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

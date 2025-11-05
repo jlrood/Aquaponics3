@@ -1,6 +1,7 @@
 import Boot from './scenes/Boot';
 import Game from './scenes/Game';
 import GameOver from './scenes/GameOver';
+import Mail from './scenes/Mail';
 import MainMenu from './scenes/MainMenu';
 import Phaser from 'phaser';
 import Preloader from './scenes/Preloader';
@@ -28,8 +29,10 @@ const config = {
         GameOver,
         System,
         Shop,
-        Tasks
+        Tasks,
+        Mail
     ]
+    //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
 };
 
 const StartGame = (parent) => {

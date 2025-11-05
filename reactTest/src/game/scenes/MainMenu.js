@@ -222,7 +222,8 @@ export default class MainMenu extends Phaser.Scene {
         });
 
         this.system_button.on("pointerdown", () => {
-            this.scene.start('System');
+			this.scene.pause();
+			this.scene.launch('System');
         });
 
         this.tasks_button.on("pointerdown", () => {
@@ -231,6 +232,11 @@ export default class MainMenu extends Phaser.Scene {
             // Launch the overlay scene on top
             this.scene.launch('Tasks');
         });
+
+		this.mail_button.on("pointerdown", () => {
+			this.scene.pause();
+			this.scene.launch('Mail');
+		});
     }
 
 
