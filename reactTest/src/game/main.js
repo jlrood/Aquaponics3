@@ -23,13 +23,14 @@ const config = {
     scene: [
         Boot,
         Preloader,
-        Mail,
         MainMenu,
         Game,
         GameOver,
         System,
-        Shop
+        Shop,
+        Mail
     ]
+    //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
 };
 
 const StartGame = (parent) => {

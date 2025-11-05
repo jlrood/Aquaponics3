@@ -23,15 +23,15 @@ export default class Mail extends Phaser.Scene {
 		const background = this.add.rectangle(120, 80, 1040, 560);
 		background.setOrigin(0, 0);
 		background.isFilled = true;
-		background.fillColor = 29709;
+		background.fillColor = 13858434;
 		background.isStroked = true;
 		background.strokeColor = 0;
 
 		// back_container
-		const back_container = this.add.container(151, 120);
-		
+		const back_container = this.add.container(161, 120);
+
 		// back_button
-		const back_button = this.add.ellipse(19, 10, 128, 128);
+		const back_button = this.add.ellipse(14, 10, 128, 128);
 		back_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
 		back_button.scaleX = 0.5;
 		back_button.scaleY = 0.5;
@@ -41,7 +41,7 @@ export default class Mail extends Phaser.Scene {
 		back_container.add(back_button);
 
 		// back_text
-		const back_text = this.add.text(0, 0, "", {});
+		const back_text = this.add.text(-5, 2, "", {});
 		back_text.text = "Back";
 		back_text.setStyle({ "color": "#000000ff" });
 		back_container.add(back_text);
