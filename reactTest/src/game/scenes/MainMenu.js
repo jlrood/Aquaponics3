@@ -226,6 +226,10 @@ export default class MainMenu extends Phaser.Scene {
 			this.scene.launch('System');
         });
 
+		this.mail_button.on("pointerdown", () => {
+			this.scene.pause();
+			this.scene.launch('Mail');
+		});
     }
 
 
