@@ -221,7 +221,9 @@ export default class MainMenu extends Phaser.Scene {
         });
 
         this.system_button.on("pointerdown", () => {
-            this.scene.start('System'); // Still works!
+            //this.scene.start('System'); // Still works!
+			this.scene.pause();
+			this.scene.launch('System');
         });
 
     }
