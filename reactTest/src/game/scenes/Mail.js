@@ -325,6 +325,57 @@ export default class Mail extends Phaser.Scene {
 		check_circle_5.lineWidth = 3;
 		mail_item_container_5.add(check_circle_5);
 
+		// announcements_container
+		const announcements_container = this.add.container(0, 0);
+
+		// announcement_1
+		const announcement_1 = this.add.rectangle(284.0733947753906, 245.9158935546875, 128, 128);
+		announcement_1.scaleX = 1.9313435329452338;
+		announcement_1.scaleY = 1.023622721338591;
+		announcement_1.isFilled = true;
+		announcement_1.isStroked = true;
+		announcement_1.strokeColor = 0;
+		announcement_1.lineWidth = 2;
+		announcements_container.add(announcement_1);
+
+		// announcement_2
+		const announcement_2 = this.add.rectangle(285.09893798828125, 392.8402099609375, 128, 128);
+		announcement_2.scaleX = 1.9313435329452338;
+		announcement_2.scaleY = 1.023622721338591;
+		announcement_2.isFilled = true;
+		announcement_2.isStroked = true;
+		announcement_2.strokeColor = 0;
+		announcement_2.lineWidth = 2;
+		announcements_container.add(announcement_2);
+
+		// announcement_3
+		const announcement_3 = this.add.rectangle(285.09893798828125, 538.7225341796875, 128, 128);
+		announcement_3.scaleX = 1.9313435329452338;
+		announcement_3.scaleY = 1.023622721338591;
+		announcement_3.isFilled = true;
+		announcement_3.isStroked = true;
+		announcement_3.strokeColor = 0;
+		announcement_3.lineWidth = 2;
+		announcements_container.add(announcement_3);
+
+		// announcement_icon_1
+		const announcement_icon_1 = this.add.image(281.0000305175781, 246, "star");
+		announcement_icon_1.scaleX = 1.8170590540794684;
+		announcement_icon_1.scaleY = 1.6965553601170669;
+		announcements_container.add(announcement_icon_1);
+
+		// announcement_icon_2
+		const announcement_icon_2 = this.add.image(283.0478515625, 392.8402099609375, "star");
+		announcement_icon_2.scaleX = 1.8170590540794684;
+		announcement_icon_2.scaleY = 1.6965553601170669;
+		announcements_container.add(announcement_icon_2);
+
+		// announcement_icon_3
+		const announcement_icon_3 = this.add.image(284.0733947753906, 538.7225341796875, "star");
+		announcement_icon_3.scaleX = 1.8170590540794684;
+		announcement_icon_3.scaleY = 1.6965553601170669;
+		announcements_container.add(announcement_icon_3);
+
 		this.back_button = back_button;
 		this.mail_button = mail_button;
 		this.maintenance_button = maintenance_button;
@@ -448,6 +499,27 @@ export default class Mail extends Phaser.Scene {
 			}
 		});
 	}
+
+	/*
+	Just in case it accidentally deletes it again:
+
+	this.check_circle_1 = check_circle_1;
+	this.check_circle_2 = check_circle_2;
+	this.check_circle_3 = check_circle_3;
+	this.check_circle_4 = check_circle_4;
+	this.check_circle_5 = check_circle_5;
+	*/
+
+	/** @type {Phaser.GameObjects.Ellipse} */
+	//check_circle_1;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	//check_circle_2;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	//check_circle_3;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	//check_circle_4;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	//check_circle_5;
 
 	/* END-USER-CODE */
 }
