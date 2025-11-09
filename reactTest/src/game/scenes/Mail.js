@@ -169,34 +169,84 @@ export default class Mail extends Phaser.Scene {
 		large_mail_container.add(mail_item_4);
 
 		// mail_text_1
-		const mail_text_1 = this.add.text(522, 221, "", {});
+		const mail_text_1 = this.add.text(528, 221, "", {});
 		mail_text_1.text = "You've got mail!";
 		mail_text_1.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		large_mail_container.add(mail_text_1);
 
 		// mail_text_2
-		const mail_text_2 = this.add.text(523, 289, "", {});
+		const mail_text_2 = this.add.text(529, 289, "", {});
 		mail_text_2.text = "You've got mail!";
 		mail_text_2.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		large_mail_container.add(mail_text_2);
 
 		// mail_text_3
-		const mail_text_3 = this.add.text(523, 362, "", {});
+		const mail_text_3 = this.add.text(529, 362, "", {});
 		mail_text_3.text = "You've got mail!";
 		mail_text_3.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		large_mail_container.add(mail_text_3);
 
 		// mail_text_4
-		const mail_text_4 = this.add.text(523, 433, "", {});
+		const mail_text_4 = this.add.text(528, 433, "", {});
 		mail_text_4.text = "You've got mail!";
 		mail_text_4.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		large_mail_container.add(mail_text_4);
 
 		// mail_text_5
-		const mail_text_5 = this.add.text(523, 502, "", {});
+		const mail_text_5 = this.add.text(528, 502, "", {});
 		mail_text_5.text = "You've got mail!";
 		mail_text_5.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		large_mail_container.add(mail_text_5);
+
+		// icon_1
+		const icon_1 = this.add.ellipse(506, 236, 128, 128);
+		icon_1.scaleX = 0.19049010132085792;
+		icon_1.scaleY = 0.20133064841509496;
+		icon_1.isFilled = true;
+		icon_1.fillColor = 8500087;
+		icon_1.isStroked = true;
+		icon_1.strokeColor = 0;
+		large_mail_container.add(icon_1);
+
+		// icon_2
+		const icon_2 = this.add.ellipse(506, 305, 128, 128);
+		icon_2.scaleX = 0.19049010132085792;
+		icon_2.scaleY = 0.20133064841509496;
+		icon_2.isFilled = true;
+		icon_2.fillColor = 8500087;
+		icon_2.isStroked = true;
+		icon_2.strokeColor = 0;
+		large_mail_container.add(icon_2);
+
+		// icon_3
+		const icon_3 = this.add.ellipse(506, 377, 128, 128);
+		icon_3.scaleX = 0.19049010132085792;
+		icon_3.scaleY = 0.20133064841509496;
+		icon_3.isFilled = true;
+		icon_3.fillColor = 8500087;
+		icon_3.isStroked = true;
+		icon_3.strokeColor = 0;
+		large_mail_container.add(icon_3);
+
+		// icon_4
+		const icon_4 = this.add.ellipse(506, 449, 128, 128);
+		icon_4.scaleX = 0.19049010132085792;
+		icon_4.scaleY = 0.20133064841509496;
+		icon_4.isFilled = true;
+		icon_4.fillColor = 8500087;
+		icon_4.isStroked = true;
+		icon_4.strokeColor = 0;
+		large_mail_container.add(icon_4);
+
+		// icon_5
+		const icon_5 = this.add.ellipse(506, 518, 128, 128);
+		icon_5.scaleX = 0.19049010132085792;
+		icon_5.scaleY = 0.20133064841509496;
+		icon_5.isFilled = true;
+		icon_5.fillColor = 8500087;
+		icon_5.isStroked = true;
+		icon_5.strokeColor = 0;
+		large_mail_container.add(icon_5);
 
 		this.back_button = back_button;
 		this.mail_button = mail_button;
