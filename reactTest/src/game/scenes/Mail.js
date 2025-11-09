@@ -106,7 +106,9 @@ export default class Mail extends Phaser.Scene {
 		updates_container.add(updates_text);
 
 		// large_mail_container
-		const large_mail_container = this.add.container(0, 0);
+		const large_mail_container = this.add.container(-20, -10);
+		large_mail_container.scaleX = 1.0255356539154903;
+		large_mail_container.scaleY = 1.0420164561418845;
 
 		// large_mail_menu
 		const large_mail_menu = this.add.rectangle(772, 379, 128, 128);
@@ -129,7 +131,7 @@ export default class Mail extends Phaser.Scene {
 		mail_item_1.isFilled = true;
 		mail_item_1.isStroked = true;
 		mail_item_1.strokeColor = 0;
-		mail_item_1.lineWidth = 0.5;
+		mail_item_1.lineWidth = 2;
 		mail_item_container_1.add(mail_item_1);
 
 		// icon_1
@@ -148,6 +150,17 @@ export default class Mail extends Phaser.Scene {
 		mail_text_1.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		mail_item_container_1.add(mail_text_1);
 
+		// check_circle_1
+		const check_circle_1 = this.add.ellipse(1037, 236, 128, 128);
+		check_circle_1.setInteractive(new Phaser.Geom.Ellipse(64, 64, 128, 128), Phaser.Geom.Ellipse.Contains);
+		check_circle_1.scaleX = 0.19049010132085792;
+		check_circle_1.scaleY = 0.20133064841509496;
+		check_circle_1.isFilled = true;
+		check_circle_1.isStroked = true;
+		check_circle_1.strokeColor = 0;
+		check_circle_1.lineWidth = 3;
+		mail_item_container_1.add(check_circle_1);
+
 		// mail_item_container_2
 		const mail_item_container_2 = this.add.container(0, 0);
 		large_mail_container.add(mail_item_container_2);
@@ -159,7 +172,7 @@ export default class Mail extends Phaser.Scene {
 		mail_item_2.isFilled = true;
 		mail_item_2.isStroked = true;
 		mail_item_2.strokeColor = 0;
-		mail_item_2.lineWidth = 0.5;
+		mail_item_2.lineWidth = 2;
 		mail_item_container_2.add(mail_item_2);
 
 		// mail_text_2
@@ -178,6 +191,17 @@ export default class Mail extends Phaser.Scene {
 		icon_2.strokeColor = 0;
 		mail_item_container_2.add(icon_2);
 
+		// check_circle_2
+		const check_circle_2 = this.add.ellipse(1037.6808404735332, 305.08071324922764, 128, 128);
+		check_circle_2.setInteractive(new Phaser.Geom.Ellipse(64, 64, 128, 128), Phaser.Geom.Ellipse.Contains);
+		check_circle_2.scaleX = 0.19049010132085792;
+		check_circle_2.scaleY = 0.20133064841509496;
+		check_circle_2.isFilled = true;
+		check_circle_2.isStroked = true;
+		check_circle_2.strokeColor = 0;
+		check_circle_2.lineWidth = 3;
+		mail_item_container_2.add(check_circle_2);
+
 		// mail_item_container_3
 		const mail_item_container_3 = this.add.container(0, 0);
 		large_mail_container.add(mail_item_container_3);
@@ -189,7 +213,7 @@ export default class Mail extends Phaser.Scene {
 		mail_item_3.isFilled = true;
 		mail_item_3.isStroked = true;
 		mail_item_3.strokeColor = 0;
-		mail_item_3.lineWidth = 0.5;
+		mail_item_3.lineWidth = 2;
 		mail_item_container_3.add(mail_item_3);
 
 		// mail_text_3
@@ -208,6 +232,17 @@ export default class Mail extends Phaser.Scene {
 		icon_3.strokeColor = 0;
 		mail_item_container_3.add(icon_3);
 
+		// check_circle_3
+		const check_circle_3 = this.add.ellipse(1038.344675122114, 377.3759385008788, 128, 128);
+		check_circle_3.setInteractive(new Phaser.Geom.Ellipse(64, 64, 128, 128), Phaser.Geom.Ellipse.Contains);
+		check_circle_3.scaleX = 0.19049010132085792;
+		check_circle_3.scaleY = 0.20133064841509496;
+		check_circle_3.isFilled = true;
+		check_circle_3.isStroked = true;
+		check_circle_3.strokeColor = 0;
+		check_circle_3.lineWidth = 3;
+		mail_item_container_3.add(check_circle_3);
+
 		// mail_item_container_4
 		const mail_item_container_4 = this.add.container(0, 0);
 		large_mail_container.add(mail_item_container_4);
@@ -219,7 +254,7 @@ export default class Mail extends Phaser.Scene {
 		mail_item_4.isFilled = true;
 		mail_item_4.isStroked = true;
 		mail_item_4.strokeColor = 0;
-		mail_item_4.lineWidth = 0.5;
+		mail_item_4.lineWidth = 2;
 		mail_item_container_4.add(mail_item_4);
 
 		// mail_text_4
@@ -238,6 +273,17 @@ export default class Mail extends Phaser.Scene {
 		icon_4.strokeColor = 0;
 		mail_item_container_4.add(icon_4);
 
+		// check_circle_4
+		const check_circle_4 = this.add.ellipse(1038.9920835233388, 446.75605543853453, 128, 128);
+		check_circle_4.setInteractive(new Phaser.Geom.Ellipse(64, 64, 128, 128), Phaser.Geom.Ellipse.Contains);
+		check_circle_4.scaleX = 0.19049010132085792;
+		check_circle_4.scaleY = 0.20133064841509496;
+		check_circle_4.isFilled = true;
+		check_circle_4.isStroked = true;
+		check_circle_4.strokeColor = 0;
+		check_circle_4.lineWidth = 3;
+		mail_item_container_4.add(check_circle_4);
+
 		// mail_item_container_5
 		const mail_item_container_5 = this.add.container(0, 0);
 		large_mail_container.add(mail_item_container_5);
@@ -249,7 +295,7 @@ export default class Mail extends Phaser.Scene {
 		mail_item_5.isFilled = true;
 		mail_item_5.isStroked = true;
 		mail_item_5.strokeColor = 0;
-		mail_item_5.lineWidth = 0.5;
+		mail_item_5.lineWidth = 2;
 		mail_item_container_5.add(mail_item_5);
 
 		// mail_text_5
@@ -268,10 +314,26 @@ export default class Mail extends Phaser.Scene {
 		icon_5.strokeColor = 0;
 		mail_item_container_5.add(icon_5);
 
+		// check_circle_5
+		const check_circle_5 = this.add.ellipse(1039.6233037387638, 518.3385865434293, 128, 128);
+		check_circle_5.setInteractive(new Phaser.Geom.Ellipse(64, 64, 128, 128), Phaser.Geom.Ellipse.Contains);
+		check_circle_5.scaleX = 0.19049010132085792;
+		check_circle_5.scaleY = 0.20133064841509496;
+		check_circle_5.isFilled = true;
+		check_circle_5.isStroked = true;
+		check_circle_5.strokeColor = 0;
+		check_circle_5.lineWidth = 3;
+		mail_item_container_5.add(check_circle_5);
+
 		this.back_button = back_button;
 		this.mail_button = mail_button;
 		this.maintenance_button = maintenance_button;
 		this.updates_button = updates_button;
+		this.check_circle_1 = check_circle_1;
+		this.check_circle_2 = check_circle_2;
+		this.check_circle_3 = check_circle_3;
+		this.check_circle_4 = check_circle_4;
+		this.check_circle_5 = check_circle_5;
 
 		this.events.emit("scene-awake");
 	}
@@ -284,6 +346,16 @@ export default class Mail extends Phaser.Scene {
 	maintenance_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	updates_button;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	check_circle_1;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	check_circle_2;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	check_circle_3;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	check_circle_4;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	check_circle_5;
 
 	/* START-USER-CODE */
 
@@ -320,6 +392,61 @@ export default class Mail extends Phaser.Scene {
 			this.updates_button.fillColor = 0x428544;
 			this.getProdGraph('w');
         });
+
+		this.check_circle_1.on("pointerdown", () => {
+			if(this.check_circle_1.fillColor == 0x000000)
+			{
+				this.check_circle_1.fillColor = 0xffffff;
+			}
+			else
+			{
+				this.check_circle_1.fillColor = 0x000000;
+			}
+		});
+
+		this.check_circle_2.on("pointerdown", () => {
+			if(this.check_circle_2.fillColor == 0x000000)
+			{
+				this.check_circle_2.fillColor = 0xffffff;
+			}
+			else
+			{
+				this.check_circle_2.fillColor = 0x000000;
+			}
+		});
+
+		this.check_circle_3.on("pointerdown", () => {
+			if(this.check_circle_3.fillColor == 0x000000)
+			{
+				this.check_circle_3.fillColor = 0xffffff;
+			}
+			else
+			{
+				this.check_circle_3.fillColor = 0x000000;
+			}
+		});
+
+		this.check_circle_4.on("pointerdown", () => {
+			if(this.check_circle_4.fillColor == 0x000000)
+			{
+				this.check_circle_4.fillColor = 0xffffff;
+			}
+			else
+			{
+				this.check_circle_4.fillColor = 0x000000;
+			}
+		});
+
+		this.check_circle_5.on("pointerdown", () => {
+			if(this.check_circle_5.fillColor == 0x000000)
+			{
+				this.check_circle_5.fillColor = 0xffffff;
+			}
+			else
+			{
+				this.check_circle_5.fillColor = 0x000000;
+			}
+		});
 	}
 
 	/* END-USER-CODE */

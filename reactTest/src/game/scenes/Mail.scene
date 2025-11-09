@@ -189,6 +189,10 @@
             "id": "afb48104-5f96-4d8b-b8b1-b60ef21b5f43",
             "label": "large_mail_container",
             "displayName": "large_mail_container",
+            "x": -20,
+            "y": -10,
+            "scaleX": 1.0255356539154903,
+            "scaleY": 1.0420164561418845,
             "list": [
                 {
                     "type": "Rectangle",
@@ -223,7 +227,7 @@
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
                             "strokeColor": "#000000",
-                            "lineWidth": 0.5,
+                            "lineWidth": 2,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
@@ -254,6 +258,28 @@
                             "text": "You've got mail!",
                             "fontSize": "32px",
                             "color": "#000000ff"
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "d877ec8a-3e82-42fd-9b3c-6f09c5a6324a",
+                            "label": "check_circle_1",
+                            "displayName": "check_circle_1",
+                            "hitArea.shape": "ELLIPSE",
+                            "hitArea.x": 64,
+                            "hitArea.y": 64,
+                            "hitArea.width": 128,
+                            "hitArea.height": 128,
+                            "x": 1037,
+                            "y": 236,
+                            "scaleX": 0.19049010132085792,
+                            "scaleY": 0.20133064841509496,
+                            "isFilled": true,
+                            "fillColor": "#ffffff",
+                            "strokeColor": "#000000",
+                            "lineWidth": 3,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
                         }
                     ]
                 },
@@ -274,7 +300,7 @@
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
                             "strokeColor": "#000000",
-                            "lineWidth": 0.5,
+                            "lineWidth": 2,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
@@ -305,6 +331,28 @@
                             "isStroked": true,
                             "width": 128,
                             "height": 128
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "72a436ae-7a8b-48fc-9932-883ae4333ece",
+                            "label": "check_circle_2",
+                            "displayName": "check_circle_2",
+                            "hitArea.shape": "ELLIPSE",
+                            "hitArea.x": 64,
+                            "hitArea.y": 64,
+                            "hitArea.width": 128,
+                            "hitArea.height": 128,
+                            "x": 1037.6808404735332,
+                            "y": 305.08071324922764,
+                            "scaleX": 0.19049010132085792,
+                            "scaleY": 0.20133064841509496,
+                            "isFilled": true,
+                            "fillColor": "#ffffff",
+                            "strokeColor": "#000000",
+                            "lineWidth": 3,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
                         }
                     ]
                 },
@@ -325,7 +373,7 @@
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
                             "strokeColor": "#000000",
-                            "lineWidth": 0.5,
+                            "lineWidth": 2,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
@@ -356,6 +404,28 @@
                             "isStroked": true,
                             "width": 128,
                             "height": 128
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "b0a4db2a-fb04-4184-b024-2f6f6b6fe7e7",
+                            "label": "check_circle_3",
+                            "displayName": "check_circle_3",
+                            "hitArea.shape": "ELLIPSE",
+                            "hitArea.x": 64,
+                            "hitArea.y": 64,
+                            "hitArea.width": 128,
+                            "hitArea.height": 128,
+                            "x": 1038.344675122114,
+                            "y": 377.3759385008788,
+                            "scaleX": 0.19049010132085792,
+                            "scaleY": 0.20133064841509496,
+                            "isFilled": true,
+                            "fillColor": "#ffffff",
+                            "strokeColor": "#000000",
+                            "lineWidth": 3,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
                         }
                     ]
                 },
@@ -376,7 +446,7 @@
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
                             "strokeColor": "#000000",
-                            "lineWidth": 0.5,
+                            "lineWidth": 2,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
@@ -407,6 +477,28 @@
                             "isStroked": true,
                             "width": 128,
                             "height": 128
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "457ff3bb-a149-4689-822e-5380e96d3d5c",
+                            "label": "check_circle_4",
+                            "displayName": "check_circle_4",
+                            "hitArea.shape": "ELLIPSE",
+                            "hitArea.x": 64,
+                            "hitArea.y": 64,
+                            "hitArea.width": 128,
+                            "hitArea.height": 128,
+                            "x": 1038.9920835233388,
+                            "y": 446.75605543853453,
+                            "scaleX": 0.19049010132085792,
+                            "scaleY": 0.20133064841509496,
+                            "isFilled": true,
+                            "fillColor": "#ffffff",
+                            "strokeColor": "#000000",
+                            "lineWidth": 3,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
                         }
                     ]
                 },
@@ -427,7 +519,7 @@
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
                             "strokeColor": "#000000",
-                            "lineWidth": 0.5,
+                            "lineWidth": 2,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
@@ -455,6 +547,28 @@
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "d18e322e-828f-4134-a14f-e0dc95ab7baf",
+                            "label": "check_circle_5",
+                            "displayName": "check_circle_5",
+                            "hitArea.shape": "ELLIPSE",
+                            "hitArea.x": 64,
+                            "hitArea.y": 64,
+                            "hitArea.width": 128,
+                            "hitArea.height": 128,
+                            "x": 1039.6233037387638,
+                            "y": 518.3385865434293,
+                            "scaleX": 0.19049010132085792,
+                            "scaleY": 0.20133064841509496,
+                            "isFilled": true,
+                            "fillColor": "#ffffff",
+                            "strokeColor": "#000000",
+                            "lineWidth": 3,
                             "isStroked": true,
                             "width": 128,
                             "height": 128
