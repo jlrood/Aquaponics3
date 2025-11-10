@@ -30,6 +30,7 @@
             "label": "ellipse_1",
             "x": 65,
             "y": 70,
+            "visible": false,
             "strokeColor": "#000000",
             "lineWidth": 3,
             "isStroked": true,
@@ -42,6 +43,7 @@
             "label": "ellipse",
             "x": 1177,
             "y": 70,
+            "visible": false,
             "strokeColor": "#000000",
             "lineWidth": 3,
             "isStroked": true,
@@ -54,6 +56,7 @@
             "label": "ellipse_2",
             "x": 1072,
             "y": 70,
+            "visible": false,
             "strokeColor": "#000000",
             "lineWidth": 3,
             "isStroked": true,
@@ -287,6 +290,7 @@
             "label": "advance_button",
             "x": 1192,
             "y": 603,
+            "visible": false,
             "list": [
                 {
                     "type": "Rectangle",
@@ -330,6 +334,46 @@
                     "x3": 88
                 }
             ]
+        },
+        {
+            "type": "Image",
+            "id": "03cb2620-c35a-4d79-a518-00fa05e0b6eb",
+            "label": "advance",
+            "texture": {
+                "key": "advance"
+            },
+            "x": 1192,
+            "y": 644
+        },
+        {
+            "type": "Image",
+            "id": "766f77b7-0020-4fae-b565-3489ee335862",
+            "label": "profile",
+            "texture": {
+                "key": "profile"
+            },
+            "x": 65,
+            "y": 69
+        },
+        {
+            "type": "Image",
+            "id": "6d4d31a9-a374-4fcd-9df4-7808511456ec",
+            "label": "help",
+            "texture": {
+                "key": "help"
+            },
+            "x": 1072,
+            "y": 70
+        },
+        {
+            "type": "Image",
+            "id": "9de9d501-5f8e-4d2e-a8f2-e78f82fe6618",
+            "label": "settings",
+            "texture": {
+                "key": "settings"
+            },
+            "x": 1177,
+            "y": 70
         }
     ],
     "plainObjects": [],

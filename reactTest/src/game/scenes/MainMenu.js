@@ -26,18 +26,21 @@ export default class MainMenu extends Phaser.Scene {
 
 		// ellipse_1
 		const ellipse_1 = this.add.ellipse(65, 70, 96, 96);
+		ellipse_1.visible = false;
 		ellipse_1.isStroked = true;
 		ellipse_1.strokeColor = 0;
 		ellipse_1.lineWidth = 3;
 
 		// ellipse
 		const ellipse = this.add.ellipse(1177, 70, 70, 70);
+		ellipse.visible = false;
 		ellipse.isStroked = true;
 		ellipse.strokeColor = 0;
 		ellipse.lineWidth = 3;
 
 		// ellipse_2
 		const ellipse_2 = this.add.ellipse(1072, 70, 70, 70);
+		ellipse_2.visible = false;
 		ellipse_2.isStroked = true;
 		ellipse_2.strokeColor = 0;
 		ellipse_2.lineWidth = 3;
@@ -159,6 +162,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// advance_button
 		const advance_button = this.add.container(1192, 603);
+		advance_button.visible = false;
 
 		// rectangle_2
 		const rectangle_2 = this.add.rectangle(0, 41, 115, 86);
@@ -186,6 +190,18 @@ export default class MainMenu extends Phaser.Scene {
 		triangle.strokeColor = 0;
 		triangle.lineWidth = 3;
 		advance_button.add(triangle);
+
+		// advance
+		this.add.image(1192, 644, "advance");
+
+		// profile
+		this.add.image(65, 69, "profile");
+
+		// help
+		this.add.image(1072, 70, "help");
+
+		// settings
+		this.add.image(1177, 70, "settings");
 
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
