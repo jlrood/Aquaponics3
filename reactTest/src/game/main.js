@@ -31,8 +31,9 @@ const config = {
         Shop,
         Tasks,
         Mail
-    ]
+    ],
     //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
+    pixelArt: true
 };
 
 const StartGame = (parent) => {

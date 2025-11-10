@@ -69,17 +69,17 @@ export default class MainMenu extends Phaser.Scene {
 		const plant_bed = this.add.container(444, 303);
 
 		// plant_box
-		const plant_box = this.add.rectangle(36.125, 3.375, 330, 182);
+		const plant_box = this.add.rectangle(37.5625, 3.1875, 330, 182);
 		plant_box.isFilled = true;
 		plant_box.fillColor = 10413212;
 		plant_bed.add(plant_box);
 
-		// plant_box_label
-		const plant_box_label = this.add.text(36.125, 3.375, "", {});
-		plant_box_label.setOrigin(0.5, 0.5);
-		plant_box_label.text = "PLANT BED";
-		plant_box_label.setStyle({ "color": "#000000ff", "resolution": 2 });
-		plant_bed.add(plant_box_label);
+		// bitmaptext_2
+		const bitmaptext_2 = this.add.bitmapText(37.5625, 3.1875, "pixelmix_16", "PLANT BED");
+		bitmaptext_2.setOrigin(0.5, 0.5);
+		bitmaptext_2.text = "PLANT BED";
+		bitmaptext_2.fontSize = 16;
+		plant_bed.add(bitmaptext_2);
 
 		// fish_tank
 		const fish_tank = this.add.container(892, 471);

@@ -115,24 +115,24 @@
                     "type": "Rectangle",
                     "id": "0dd34cd2-1801-4e8b-bf01-97fb4a60a2d5",
                     "label": "plant_box",
-                    "x": 36.125,
-                    "y": 3.375,
+                    "x": 37.5625,
+                    "y": 3.1875,
                     "isFilled": true,
                     "fillColor": "#9ee49c",
                     "width": 330,
                     "height": 182
                 },
                 {
-                    "type": "Text",
-                    "id": "cd7fca1d-cf38-447c-8e39-bffebad61270",
-                    "label": "plant_box_label",
-                    "x": 36.125,
-                    "y": 3.375,
+                    "type": "BitmapText",
+                    "id": "f76a57d7-e0ea-463a-9da3-ef6ccb8e9c82",
+                    "label": "bitmaptext_2",
+                    "x": 37.5625,
+                    "y": 3.1875,
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "PLANT BED",
-                    "resolution": 2,
-                    "color": "#000000ff"
+                    "font": "pixelmix_16",
+                    "fontSize": 16
                 }
             ]
         },

@@ -12,19 +12,6 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "27f8c024-0151-4ef0-b906-f30893d44220",
-            "label": "image_1",
-            "texture": {
-                "key": "Screenshot 2025-11-05 150736"
-            },
-            "x": 599,
-            "y": 359,
-            "scaleX": 0.75,
-            "scaleY": 0.75,
-            "visible": false
-        },
-        {
             "type": "Container",
             "id": "b11370e2-404d-435b-86a5-8522cadc9ff2",
             "label": "left_menu",
@@ -122,7 +109,7 @@
         {
             "type": "Rectangle",
             "id": "a69ed902-4684-4112-9c19-49b4679a2488",
-            "label": "rectangle_1",
+            "label": "task_box",
             "x": 334,
             "y": 412,
             "isFilled": true,
@@ -135,7 +122,7 @@
         {
             "type": "Rectangle",
             "id": "231a7090-3e79-4312-8eb0-5d38cba0f3b2",
-            "label": "rectangle",
+            "label": "whiteout_box",
             "x": 103,
             "y": 240,
             "isFilled": true,
@@ -143,6 +130,222 @@
             "lineWidth": 3,
             "width": 8,
             "height": 75
+        },
+        {
+            "type": "Container",
+            "id": "b79cd8dc-d8b5-48f4-9332-40af6f2ce8df",
+            "label": "ptask_container",
+            "x": 158,
+            "y": 270,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "d6e00476-503c-4ec6-9d05-3f6e41f79100",
+                    "label": "ptask_box",
+                    "x": 177.66665649414062,
+                    "y": 18,
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 396,
+                    "height": 69
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "f440a5db-f140-4bd3-9998-0e14c85cb27f",
+                    "label": "bitmaptext_8",
+                    "text": "PRIMARY TASK",
+                    "font": "pixelmix_32",
+                    "fontSize": 32
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "9c644981-f839-40a0-992c-a9997d82a49a",
+            "label": "rtask_container",
+            "x": 250,
+            "y": 216,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "f882e235-3ec3-4653-b875-62e12e290e7a",
+                    "label": "rtask_box",
+                    "x": 85.66665649414062,
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 396,
+                    "height": 38
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "52f242b0-0bbe-49d8-aa13-e900c427551e",
+                    "label": "bitmaptext_7",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "RANDOM EVENT TASK!",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "73edd077-9387-47d0-a7a1-3e2b01a81d2a",
+            "label": "dt_container",
+            "x": 251.5,
+            "y": 365,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "32798152-a0a8-4070-8886-dd794d59b2aa",
+                    "label": "rectangle_5",
+                    "x": 84.16665649414062,
+                    "y": 118,
+                    "strokeColor": "#000000",
+                    "lineWidth": 2,
+                    "isStroked": true,
+                    "width": 396,
+                    "height": 285
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "90b541f5-efa9-4bab-afd7-1dbab69dcae5",
+                    "label": "bitmaptext_1",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "DAILY TASKS 0/3",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "Container",
+                    "id": "bc531944-90e2-48ae-acde-0da13b6726f0",
+                    "label": "dt3_container",
+                    "y": 214,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "02fb012f-6b66-433a-aa1d-7f994f24cb21",
+                            "label": "dt3_box",
+                            "x": 84.16665649414062,
+                            "strokeColor": "#000000",
+                            "lineWidth": 2,
+                            "isStroked": true,
+                            "width": 355,
+                            "height": 55
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "fd714b0f-110c-4f70-b790-5dacba1c05a0",
+                            "label": "bitmaptext_3",
+                            "y": 3,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "DAILY TASKS #3",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "df914e45-3c9c-47a9-b7ed-aeafa37cdfe8",
+                            "label": "bitmaptext_6",
+                            "x": 229.5,
+                            "y": 3,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "$[]",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "66894fcd-d00e-45b6-9e8f-cb61bb30ae8d",
+                    "label": "dt2_container",
+                    "y": 139,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "2abbd256-9ae8-4426-a556-301347329345",
+                            "label": "dt2_box",
+                            "x": 84.16665649414062,
+                            "strokeColor": "#000000",
+                            "lineWidth": 2,
+                            "isStroked": true,
+                            "width": 355,
+                            "height": 55
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "ff5e2290-2ce5-4ac1-ae0d-4d58dc4f046b",
+                            "label": "bitmaptext_2",
+                            "y": 2,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "DAILY TASKS #2",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "121011e9-7a4f-4658-969b-692883681d9e",
+                            "label": "bitmaptext_5",
+                            "x": 229.5,
+                            "y": 2,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "$[]",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "12dcbb4b-1dbe-41a0-abc1-9cfcf1f75ee4",
+                    "label": "dt1_container",
+                    "y": 64,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "27105e44-f57b-4eef-9906-c2705b772d00",
+                            "label": "dt1_box",
+                            "x": 84.16665649414062,
+                            "strokeColor": "#000000",
+                            "lineWidth": 2,
+                            "isStroked": true,
+                            "width": 355,
+                            "height": 55
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "d56a1ff8-9f4b-4589-820e-2df1ac68f068",
+                            "label": "bitmaptext",
+                            "y": 1,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "DAILY TASKS #1",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "c5ca685a-a6ad-45c9-b999-d0f4fc589553",
+                            "label": "bitmaptext_4",
+                            "x": 229.5,
+                            "y": 1,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "$[]",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [],
