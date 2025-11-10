@@ -5,5 +5,7 @@
         "dist"
     ],
     "playUrl": "http://localhost:8080",
-    "settings": {}
+    "settings": {
+        "phasereditor2d.scene.enablePixelArt": true
+    }
 }
