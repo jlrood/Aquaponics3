@@ -289,17 +289,17 @@ export default class System extends Phaser.Scene {
 	populateSystemGraphAndValues() {
 		//Part 1: Retrieval - TODO
 		//Tests for now
-		this.money = 100;
-		this.fish = 0;
-		this.plants = 0;
-		this.water = 40;
-		this.energy = 30;
+		let money = this.registry.get('money');
+		let water = this.registry.get('water_use');
+        let energy = this.registry.get('energy_use');
+        let fish = this.registry.get('fish_amount');
+        let plants = this.registry.get('plant_amount');
 		//Part 2: Assigning
-		this.money_value.text = this.money;
-		this.fish_amount.text = this.fish;
-		this.plant_amount.text = this.plants;
-		this.energy_rate.text = this.water;
-		this.water_rate.text = this.energy;
+		this.money_value.text = money;
+		this.fish_amount.text = fish;
+		this.plant_amount.text = plants;
+		this.energy_rate.text = water;
+		this.water_rate.text = energy;
 	}
 
 	create() {

@@ -17,6 +17,11 @@ export default class Boot extends Scene
 
     create ()
     {
+        this.registry.set('money', 100);
+        this.registry.set('water_use', 0);
+        this.registry.set('energy_use', 0);
+        this.registry.set('fish_amount', 0);
+        this.registry.set('plant_amount', 0);
         this.scene.start('Preloader');
     }
 }
