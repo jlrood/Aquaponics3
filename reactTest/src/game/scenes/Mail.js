@@ -41,9 +41,9 @@ export default class Mail extends Phaser.Scene {
 		back_container.add(back_button);
 
 		// back_text
-		const back_text = this.add.text(-5, 2, "", {});
+		const back_text = this.add.bitmapText(-7, 1, "pixelmix_8", "Back");
 		back_text.text = "Back";
-		back_text.setStyle({ "color": "#000000ff" });
+		back_text.fontSize = 15;
 		back_container.add(back_text);
 
 		// mail_container
@@ -59,10 +59,10 @@ export default class Mail extends Phaser.Scene {
 		mail_container.add(mail_button);
 
 		// mail_text
-		const mail_text = this.add.text(72, 30, "", {});
+		const mail_text = this.add.bitmapText(72, 30, "pixelmix_16", "Mail");
 		mail_text.setOrigin(0.5, 0.5);
 		mail_text.text = "Mail";
-		mail_text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text.fontSize = 30;
 		mail_container.add(mail_text);
 
 		// maintenance_container
@@ -79,10 +79,10 @@ export default class Mail extends Phaser.Scene {
 		maintenance_container.add(maintenance_button);
 
 		// maintenance_text
-		const maintenance_text = this.add.text(128, 31, "", {});
+		const maintenance_text = this.add.bitmapText(128, 31, "pixelmix_16", "Maintenance");
 		maintenance_text.setOrigin(0.5, 0.5);
 		maintenance_text.text = "Maintenance";
-		maintenance_text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		maintenance_text.fontSize = 30;
 		maintenance_container.add(maintenance_text);
 
 		// updates_container
@@ -99,10 +99,10 @@ export default class Mail extends Phaser.Scene {
 		updates_container.add(updates_button);
 
 		// updates_text
-		const updates_text = this.add.text(88, 30, "", {});
+		const updates_text = this.add.bitmapText(88, 30, "pixelmix_16", "Updates");
 		updates_text.setOrigin(0.5, 0.5);
 		updates_text.text = "Updates";
-		updates_text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		updates_text.fontSize = 30;
 		updates_container.add(updates_text);
 
 		// large_mail_container
@@ -145,9 +145,9 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_1.add(icon_1);
 
 		// mail_text_1
-		const mail_text_1 = this.add.text(528, 221, "", {});
+		const mail_text_1 = this.add.bitmapText(528, 221, "pixelmix_16", "You've got mail!");
 		mail_text_1.text = "You've got mail!";
-		mail_text_1.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text_1.fontSize = 30;
 		mail_item_container_1.add(mail_text_1);
 
 		// check_circle_1
@@ -176,9 +176,9 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_2.add(mail_item_2);
 
 		// mail_text_2
-		const mail_text_2 = this.add.text(529, 289, "", {});
+		const mail_text_2 = this.add.bitmapText(529, 289, "pixelmix_16", "You've got mail!");
 		mail_text_2.text = "You've got mail!";
-		mail_text_2.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text_2.fontSize = 30;
 		mail_item_container_2.add(mail_text_2);
 
 		// icon_2
@@ -217,9 +217,9 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_3.add(mail_item_3);
 
 		// mail_text_3
-		const mail_text_3 = this.add.text(529, 362, "", {});
+		const mail_text_3 = this.add.bitmapText(529, 362, "pixelmix_16", "You've got mail!");
 		mail_text_3.text = "You've got mail!";
-		mail_text_3.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text_3.fontSize = 30;
 		mail_item_container_3.add(mail_text_3);
 
 		// icon_3
@@ -258,9 +258,9 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_4.add(mail_item_4);
 
 		// mail_text_4
-		const mail_text_4 = this.add.text(528, 433, "", {});
+		const mail_text_4 = this.add.bitmapText(528, 433, "pixelmix_16", "You've got mail!");
 		mail_text_4.text = "You've got mail!";
-		mail_text_4.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text_4.fontSize = 30;
 		mail_item_container_4.add(mail_text_4);
 
 		// icon_4
@@ -299,9 +299,9 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_5.add(mail_item_5);
 
 		// mail_text_5
-		const mail_text_5 = this.add.text(528, 502, "", {});
+		const mail_text_5 = this.add.bitmapText(528, 502, "pixelmix_16", "You've got mail!");
 		mail_text_5.text = "You've got mail!";
-		mail_text_5.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		mail_text_5.fontSize = 30;
 		mail_item_container_5.add(mail_text_5);
 
 		// icon_5

@@ -53,14 +53,15 @@
                     "height": 128
                 },
                 {
-                    "type": "Text",
+                    "type": "BitmapText",
                     "id": "de95c611-bba3-4836-891c-de630f3458a0",
                     "label": "back_text",
                     "displayName": "back_text",
-                    "x": -5,
-                    "y": 2,
+                    "x": -7,
+                    "y": 1,
                     "text": "Back",
-                    "color": "#000000ff"
+                    "font": "pixelmix_8",
+                    "fontSize": 15
                 }
             ]
         },
@@ -89,7 +90,7 @@
                     "height": 60
                 },
                 {
-                    "type": "Text",
+                    "type": "BitmapText",
                     "id": "30821820-0b86-401b-b864-e9bdd41bd50f",
                     "label": "mail_text",
                     "displayName": "mail_text",
@@ -98,8 +99,8 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Mail",
-                    "fontSize": "32px",
-                    "color": "#000000ff"
+                    "font": "pixelmix_16",
+                    "fontSize": 30
                 }
             ]
         },
@@ -130,7 +131,7 @@
                     "height": 60
                 },
                 {
-                    "type": "Text",
+                    "type": "BitmapText",
                     "id": "c0489845-8830-443f-8ea4-f132d92e0db5",
                     "label": "maintenance_text",
                     "displayName": "maintenance_text",
@@ -139,8 +140,8 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Maintenance",
-                    "fontSize": "32px",
-                    "color": "#000000ff"
+                    "font": "pixelmix_16",
+                    "fontSize": 30
                 }
             ]
         },
@@ -170,7 +171,7 @@
                     "height": 60
                 },
                 {
-                    "type": "Text",
+                    "type": "BitmapText",
                     "id": "891395de-65b0-4172-8081-9722c092bfa7",
                     "label": "updates_text",
                     "displayName": "updates_text",
@@ -179,8 +180,8 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Updates",
-                    "fontSize": "32px",
-                    "color": "#000000ff"
+                    "font": "pixelmix_16",
+                    "fontSize": 30
                 }
             ]
         },
@@ -249,21 +250,22 @@
                             "height": 128
                         },
                         {
-                            "type": "Text",
+                            "type": "BitmapText",
                             "id": "16fe568e-d685-44e0-b5a2-bb5817b4ee83",
                             "label": "mail_text_1",
                             "displayName": "mail_text_1",
                             "x": 528,
                             "y": 221,
                             "text": "You've got mail!",
-                            "fontSize": "32px",
-                            "color": "#000000ff"
+                            "font": "pixelmix_16",
+                            "fontSize": 30
                         },
                         {
                             "type": "Ellipse",
                             "id": "d877ec8a-3e82-42fd-9b3c-6f09c5a6324a",
                             "label": "check_circle_1",
                             "displayName": "check_circle_1",
+                            "scope": "CLASS",
                             "hitArea.shape": "ELLIPSE",
                             "hitArea.x": 64,
                             "hitArea.y": 64,
@@ -306,15 +308,15 @@
                             "height": 128
                         },
                         {
-                            "type": "Text",
+                            "type": "BitmapText",
                             "id": "e63fe040-d64d-44ea-8a1c-7c656d2d0c96",
                             "label": "mail_text_2",
                             "displayName": "mail_text_2",
                             "x": 529,
                             "y": 289,
                             "text": "You've got mail!",
-                            "fontSize": "32px",
-                            "color": "#000000ff"
+                            "font": "pixelmix_16",
+                            "fontSize": 30
                         },
                         {
                             "type": "Ellipse",
@@ -337,6 +339,7 @@
                             "id": "72a436ae-7a8b-48fc-9932-883ae4333ece",
                             "label": "check_circle_2",
                             "displayName": "check_circle_2",
+                            "scope": "CLASS",
                             "hitArea.shape": "ELLIPSE",
                             "hitArea.x": 64,
                             "hitArea.y": 64,
@@ -379,15 +382,15 @@
                             "height": 128
                         },
                         {
-                            "type": "Text",
+                            "type": "BitmapText",
                             "id": "80ad6ffd-20fa-4225-9dbc-d46fea162953",
                             "label": "mail_text_3",
                             "displayName": "mail_text_3",
                             "x": 529,
                             "y": 362,
                             "text": "You've got mail!",
-                            "fontSize": "32px",
-                            "color": "#000000ff"
+                            "font": "pixelmix_16",
+                            "fontSize": 30
                         },
                         {
                             "type": "Ellipse",
@@ -410,6 +413,7 @@
                             "id": "b0a4db2a-fb04-4184-b024-2f6f6b6fe7e7",
                             "label": "check_circle_3",
                             "displayName": "check_circle_3",
+                            "scope": "CLASS",
                             "hitArea.shape": "ELLIPSE",
                             "hitArea.x": 64,
                             "hitArea.y": 64,
@@ -452,15 +456,15 @@
                             "height": 128
                         },
                         {
-                            "type": "Text",
+                            "type": "BitmapText",
                             "id": "92a1fc2f-ee7d-4095-8e5e-c7bf2539ef01",
                             "label": "mail_text_4",
                             "displayName": "mail_text_4",
                             "x": 528,
                             "y": 433,
                             "text": "You've got mail!",
-                            "fontSize": "32px",
-                            "color": "#000000ff"
+                            "font": "pixelmix_16",
+                            "fontSize": 30
                         },
                         {
                             "type": "Ellipse",
@@ -483,6 +487,7 @@
                             "id": "457ff3bb-a149-4689-822e-5380e96d3d5c",
                             "label": "check_circle_4",
                             "displayName": "check_circle_4",
+                            "scope": "CLASS",
                             "hitArea.shape": "ELLIPSE",
                             "hitArea.x": 64,
                             "hitArea.y": 64,
@@ -525,15 +530,15 @@
                             "height": 128
                         },
                         {
-                            "type": "Text",
+                            "type": "BitmapText",
                             "id": "bcfed000-ad6b-403c-abc6-424eaf19c1b3",
                             "label": "mail_text_5",
                             "displayName": "mail_text_5",
                             "x": 528,
                             "y": 502,
                             "text": "You've got mail!",
-                            "fontSize": "32px",
-                            "color": "#000000ff"
+                            "font": "pixelmix_16",
+                            "fontSize": 30
                         },
                         {
                             "type": "Ellipse",
@@ -556,6 +561,7 @@
                             "id": "d18e322e-828f-4134-a14f-e0dc95ab7baf",
                             "label": "check_circle_5",
                             "displayName": "check_circle_5",
+                            "scope": "CLASS",
                             "hitArea.shape": "ELLIPSE",
                             "hitArea.x": 64,
                             "hitArea.y": 64,

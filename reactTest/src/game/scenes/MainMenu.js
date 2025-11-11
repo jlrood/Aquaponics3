@@ -18,7 +18,7 @@ export default class MainMenu extends Phaser.Scene {
 	editorCreate() {
 
 		// bg__1_
-		this.add.image(637, 356, "bg (1)");
+		this.add.image(640, 360, "bg (1)");
 
 		// rectangle_1
 		const rectangle_1 = this.add.rectangle(65, 376, 72, 350);
@@ -55,7 +55,7 @@ export default class MainMenu extends Phaser.Scene {
 		ellipse_3.lineWidth = 3;
 
 		// achievement_box
-		const achievement_box = this.add.container(1094, 202);
+		const achievement_box = this.add.container(892, 187);
 
 		// rectangle
 		const rectangle = this.add.rectangle(35.125, 0.25, 201, 148);
@@ -66,9 +66,9 @@ export default class MainMenu extends Phaser.Scene {
 		achievement_box.add(rectangle);
 
 		// text_1
-		const text_1 = this.add.text(-22.875, -7.25, "", {});
+		const text_1 = this.add.bitmapText(-22.875, -7.25, "pixelmix_16", "ACHIEVEMENTS");
 		text_1.text = "ACHIEVEMENTS";
-		text_1.setStyle({ "color": "#000000ff", "resolution": 2 });
+		text_1.fontSize = 15;
 		achievement_box.add(text_1);
 
 		// plant_bed

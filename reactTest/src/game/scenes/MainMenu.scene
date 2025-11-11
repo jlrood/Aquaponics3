@@ -18,8 +18,8 @@
             "texture": {
                 "key": "bg (1)"
             },
-            "x": 637,
-            "y": 356
+            "x": 640,
+            "y": 360
         },
         {
             "type": "Rectangle",
@@ -89,8 +89,8 @@
             "type": "Container",
             "id": "27b0d179-6982-43c8-96a6-27a24ed530d4",
             "label": "achievement_box",
-            "x": 1094,
-            "y": 202,
+            "x": 892,
+            "y": 187,
             "list": [
                 {
                     "type": "Rectangle",
@@ -106,14 +106,14 @@
                     "height": 148
                 },
                 {
-                    "type": "Text",
+                    "type": "BitmapText",
                     "id": "851af3cd-207d-417b-83c2-3dec9a0f9983",
                     "label": "text_1",
                     "x": -22.875,
                     "y": -7.25,
                     "text": "ACHIEVEMENTS",
-                    "resolution": 2,
-                    "color": "#000000ff"
+                    "font": "pixelmix_16",
+                    "fontSize": 15
                 }
             ]
         },
