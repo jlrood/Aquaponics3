@@ -172,35 +172,35 @@ export default class MainMenu extends Phaser.Scene {
 		left_menu.add(system_button);
 
 		// task_icon
-		const task_icon = this.add.image(-0.15999755859375142, -129.98370361328125, "task icon");
+		const task_icon = this.add.image(0, -130, "task icon");
 		task_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		task_icon.scaleX = 2;
 		task_icon.scaleY = 2;
 		left_menu.add(task_icon);
 
 		// shop_icon
-		const shop_icon = this.add.image(-0.15999755859375142, -60.98370361328125, "shop icon");
+		const shop_icon = this.add.image(0, -61, "shop icon");
 		shop_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		shop_icon.scaleX = 2;
 		shop_icon.scaleY = 2;
 		left_menu.add(shop_icon);
 
 		// journal_icon
-		const journal_icon = this.add.image(-0.15999755859375142, 8.01629638671875, "journal icon");
+		const journal_icon = this.add.image(0, 8, "journal icon");
 		journal_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		journal_icon.scaleX = 2;
 		journal_icon.scaleY = 2;
 		left_menu.add(journal_icon);
 
 		// mail_icon
-		const mail_icon = this.add.image(-0.15999755859375142, 77.01629638671875, "mail icon");
+		const mail_icon = this.add.image(0, 77, "mail icon");
 		mail_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		mail_icon.scaleX = 2;
 		mail_icon.scaleY = 2;
 		left_menu.add(mail_icon);
 
 		// system_icon
-		const system_icon = this.add.image(-0.15999755859375142, 146.01629638671875, "system icon");
+		const system_icon = this.add.image(0, 146, "system icon");
 		system_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		system_icon.scaleX = 2;
 		system_icon.scaleY = 2;
