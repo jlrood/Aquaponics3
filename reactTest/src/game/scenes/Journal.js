@@ -6,10 +6,10 @@
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class Tasks extends Phaser.Scene {
+export default class Journal extends Phaser.Scene {
 
 	constructor() {
-		super("Tasks");
+		super("Journal");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -19,143 +19,24 @@ export default class Tasks extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// task_box
-		const task_box = this.add.rectangle(334, 412, 465, 478);
-		task_box.isFilled = true;
-		task_box.isStroked = true;
-		task_box.strokeColor = 0;
-		task_box.lineWidth = 3;
+		// journal_box
+		const journal_box = this.add.rectangle(334, 412, 465, 478);
+		journal_box.isFilled = true;
+		journal_box.isStroked = true;
+		journal_box.strokeColor = 0;
+		journal_box.lineWidth = 3;
 
 		// whiteout_box
-		const whiteout_box = this.add.rectangle(103, 240, 8, 75);
+		const whiteout_box = this.add.rectangle(103, 382, 8, 75);
 		whiteout_box.isFilled = true;
 		whiteout_box.strokeColor = 0;
 		whiteout_box.lineWidth = 3;
 
-		// ptask_container
-		const ptask_container = this.add.container(158, 270);
-
-		// ptask_box
-		const ptask_box = this.add.rectangle(177.66665649414062, 18, 396, 69);
-		ptask_box.isStroked = true;
-		ptask_box.strokeColor = 0;
-		ptask_box.lineWidth = 2;
-		ptask_container.add(ptask_box);
-
-		// bitmaptext_8
-		const bitmaptext_8 = this.add.bitmapText(0, 0, "pixelmix_32", "PRIMARY TASK");
-		bitmaptext_8.text = "PRIMARY TASK";
-		bitmaptext_8.fontSize = 32;
-		ptask_container.add(bitmaptext_8);
-
-		// rtask_container
-		const rtask_container = this.add.container(250, 216);
-
-		// rtask_box
-		const rtask_box = this.add.rectangle(85.66665649414062, 0, 396, 38);
-		rtask_box.isStroked = true;
-		rtask_box.strokeColor = 0;
-		rtask_box.lineWidth = 2;
-		rtask_container.add(rtask_box);
-
-		// bitmaptext_7
-		const bitmaptext_7 = this.add.bitmapText(0, 0, "pixelmix_16", "RANDOM EVENT TASK!");
-		bitmaptext_7.setOrigin(0.5, 0.5);
-		bitmaptext_7.text = "RANDOM EVENT TASK!";
-		bitmaptext_7.fontSize = 16;
-		rtask_container.add(bitmaptext_7);
-
-		// dt_container
-		const dt_container = this.add.container(251.5, 365);
-
 		// rectangle_5
-		const rectangle_5 = this.add.rectangle(84.16665649414062, 118, 396, 285);
+		const rectangle_5 = this.add.rectangle(318.5, 412, 381, 422);
 		rectangle_5.isStroked = true;
 		rectangle_5.strokeColor = 0;
 		rectangle_5.lineWidth = 2;
-		dt_container.add(rectangle_5);
-
-		// bitmaptext_1
-		const bitmaptext_1 = this.add.bitmapText(0, 0, "pixelmix_16", "DAILY TASKS 0/3");
-		bitmaptext_1.setOrigin(0.5, 0.5);
-		bitmaptext_1.text = "DAILY TASKS 0/3";
-		bitmaptext_1.fontSize = 16;
-		dt_container.add(bitmaptext_1);
-
-		// dt3_container
-		const dt3_container = this.add.container(0, 214);
-		dt_container.add(dt3_container);
-
-		// dt3_box
-		const dt3_box = this.add.rectangle(84.16665649414062, 0, 355, 55);
-		dt3_box.isStroked = true;
-		dt3_box.strokeColor = 0;
-		dt3_box.lineWidth = 2;
-		dt3_container.add(dt3_box);
-
-		// bitmaptext_3
-		const bitmaptext_3 = this.add.bitmapText(0, 3, "pixelmix_16", "DAILY TASKS #3");
-		bitmaptext_3.setOrigin(0.5, 0.5);
-		bitmaptext_3.text = "DAILY TASKS #3";
-		bitmaptext_3.fontSize = 16;
-		dt3_container.add(bitmaptext_3);
-
-		// bitmaptext_6
-		const bitmaptext_6 = this.add.bitmapText(229.5, 3, "pixelmix_16", "$[]");
-		bitmaptext_6.setOrigin(0.5, 0.5);
-		bitmaptext_6.text = "$[]";
-		bitmaptext_6.fontSize = 16;
-		dt3_container.add(bitmaptext_6);
-
-		// dt2_container
-		const dt2_container = this.add.container(0, 139);
-		dt_container.add(dt2_container);
-
-		// dt2_box
-		const dt2_box = this.add.rectangle(84.16665649414062, 0, 355, 55);
-		dt2_box.isStroked = true;
-		dt2_box.strokeColor = 0;
-		dt2_box.lineWidth = 2;
-		dt2_container.add(dt2_box);
-
-		// bitmaptext_2
-		const bitmaptext_2 = this.add.bitmapText(0, 2, "pixelmix_16", "DAILY TASKS #2");
-		bitmaptext_2.setOrigin(0.5, 0.5);
-		bitmaptext_2.text = "DAILY TASKS #2";
-		bitmaptext_2.fontSize = 16;
-		dt2_container.add(bitmaptext_2);
-
-		// bitmaptext_5
-		const bitmaptext_5 = this.add.bitmapText(229.5, 2, "pixelmix_16", "$[]");
-		bitmaptext_5.setOrigin(0.5, 0.5);
-		bitmaptext_5.text = "$[]";
-		bitmaptext_5.fontSize = 16;
-		dt2_container.add(bitmaptext_5);
-
-		// dt1_container
-		const dt1_container = this.add.container(0, 64);
-		dt_container.add(dt1_container);
-
-		// dt1_box
-		const dt1_box = this.add.rectangle(84.16665649414062, 0, 355, 55);
-		dt1_box.isStroked = true;
-		dt1_box.strokeColor = 0;
-		dt1_box.lineWidth = 2;
-		dt1_container.add(dt1_box);
-
-		// bitmaptext
-		const bitmaptext = this.add.bitmapText(0, 1, "pixelmix_16", "DAILY TASKS #1");
-		bitmaptext.setOrigin(0.5, 0.5);
-		bitmaptext.text = "DAILY TASKS #1";
-		bitmaptext.fontSize = 16;
-		dt1_container.add(bitmaptext);
-
-		// bitmaptext_4
-		const bitmaptext_4 = this.add.bitmapText(229.5, 1, "pixelmix_16", "$[]");
-		bitmaptext_4.setOrigin(0.5, 0.5);
-		bitmaptext_4.text = "$[]";
-		bitmaptext_4.fontSize = 16;
-		dt1_container.add(bitmaptext_4);
 
 		// left_menu
 		const left_menu = this.add.container(65, 370.9837155707536);
@@ -240,6 +121,69 @@ export default class Tasks extends Phaser.Scene {
 		system_icon.scaleY = 2;
 		left_menu.add(system_icon);
 
+		// rectangle
+		const rectangle = this.add.rectangle(319, 322, 354, 110);
+		rectangle.isStroked = true;
+		rectangle.strokeColor = 0;
+		rectangle.lineWidth = 2;
+
+		// bitmaptext_1
+		const bitmaptext_1 = this.add.bitmapText(141, 214, "pixelmix_32", "WEEK []");
+		bitmaptext_1.text = "WEEK []";
+		bitmaptext_1.fontSize = 32;
+
+		// bitmaptext_2
+		const bitmaptext_2 = this.add.bitmapText(150, 279, "pixelmix_16", "FILTER LEVEL:");
+		bitmaptext_2.text = "FILTER LEVEL:";
+		bitmaptext_2.fontSize = 16;
+
+		// bitmaptext
+		const bitmaptext = this.add.bitmapText(150, 308, "pixelmix_16", "TEMP:");
+		bitmaptext.text = "TEMP:";
+		bitmaptext.fontSize = 16;
+
+		// rectangle_1
+		const rectangle_1 = this.add.rectangle(228, 499, 171, 217);
+		rectangle_1.isStroked = true;
+		rectangle_1.strokeColor = 0;
+		rectangle_1.lineWidth = 2;
+
+		// rectangle_2
+		const rectangle_2 = this.add.rectangle(411, 499, 171, 217);
+		rectangle_2.isStroked = true;
+		rectangle_2.strokeColor = 0;
+		rectangle_2.lineWidth = 2;
+
+		// bitmaptext_4
+		const bitmaptext_4 = this.add.bitmapText(152, 404, "pixelmix_32", "pH:");
+		bitmaptext_4.text = "pH:";
+		bitmaptext_4.fontSize = 32;
+
+		// bitmaptext_3
+		const bitmaptext_3 = this.add.bitmapText(152, 456, "pixelmix_32", "NO:");
+		bitmaptext_3.text = "NO:";
+		bitmaptext_3.fontSize = 32;
+
+		// bitmaptext_5
+		const bitmaptext_5 = this.add.bitmapText(152, 508, "pixelmix_32", "NO:");
+		bitmaptext_5.text = "NO:";
+		bitmaptext_5.fontSize = 32;
+
+		// bitmaptext_6
+		const bitmaptext_6 = this.add.bitmapText(152, 560, "pixelmix_32", "TEMP:");
+		bitmaptext_6.text = "TEMP:";
+		bitmaptext_6.fontSize = 32;
+
+		// bitmaptext_8
+		const bitmaptext_8 = this.add.bitmapText(194.5, 538, "pixelmix_16", "2");
+		bitmaptext_8.text = "2";
+		bitmaptext_8.fontSize = 16;
+
+		// bitmaptext_7
+		const bitmaptext_7 = this.add.bitmapText(194.5, 486, "pixelmix_16", "3");
+		bitmaptext_7.text = "3";
+		bitmaptext_7.fontSize = 16;
+
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
 		this.journal_button = journal_button;
@@ -280,14 +224,13 @@ export default class Tasks extends Phaser.Scene {
 	// Write your code here
 
 	create() {
-
 		this.editorCreate();
 
-		this.task_icon.on("pointerdown", () => {
-            // Stop this overlay scene
-            this.scene.stop();
-            // Resume the underlying main scene
-            this.scene.resume('MainMenu');
+		this.journal_icon.on("pointerdown", () => {
+			// Stop this overlay scene
+			this.scene.stop();
+			// Resume the underlying main scene
+			this.scene.resume('MainMenu');
         });
 	}
 

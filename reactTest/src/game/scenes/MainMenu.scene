@@ -496,6 +496,18 @@
             },
             "x": 628,
             "y": 591
+        },
+        {
+            "type": "BitmapText",
+            "id": "a6b48e69-f0b3-4124-a194-e71696bd0f8f",
+            "label": "bitmaptext_1",
+            "x": 628,
+            "y": 591,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "Testing of bitmap text in a textbox...",
+            "font": "pixelmix_16",
+            "fontSize": 16
         }
     ],
     "plainObjects": [],
