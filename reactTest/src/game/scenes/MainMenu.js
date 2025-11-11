@@ -369,6 +369,11 @@ export default class MainMenu extends Phaser.Scene {
 			this.scene.pause();
 			this.scene.launch('Mail');
 		});
+
+		this.journal_icon.on("pointerdown", () => {
+			this.scene.pause();
+			this.scene.launch('Journal');
+		});
     }
 
 
