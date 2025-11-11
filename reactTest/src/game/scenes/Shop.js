@@ -19,17 +19,34 @@ export default class Shop extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// Title
-		const title = this.add.text(336, 50, "", {});
-		title.text = "SHOP";
-		title.setStyle({ "color": "#000000ff", "fontSize": "48px" });
+		// all_background
+		const all_background = this.add.rectangle(0, 0, 1280, 720);
+		all_background.setOrigin(0, 0);
+		all_background.isFilled = true;
+		all_background.fillColor = 10420122;
 
-		// rectangle_3
-		const rectangle_3 = this.add.rectangle(40, 220, 698, 466);
-		rectangle_3.setOrigin(0, 0);
-		rectangle_3.isFilled = true;
-		rectangle_3.isStroked = true;
-		rectangle_3.strokeColor = 0;
+		// header2_background
+		const header2_background = this.add.image(999, 73, "text_box_empty");
+		header2_background.scaleX = 0.5;
+		header2_background.scaleY = 0.5;
+
+		// header1_background
+		const header1_background = this.add.image(386, 71, "text_box_empty");
+		header1_background.scaleX = 0.5;
+		header1_background.scaleY = 0.5;
+
+		// Title
+		const title = this.add.bitmapText(340, 55, "pixelmix_32", "Shop");
+		title.text = "Shop";
+		title.fontSize = 32;
+
+		// content1_box
+		const content1_box = this.add.rectangle(40, 220, 698, 466);
+		content1_box.setOrigin(0, 0);
+		content1_box.isFilled = true;
+		content1_box.fillColor = 16114844;
+		content1_box.isStroked = true;
+		content1_box.strokeColor = 0;
 
 		// Scroll
 		const scroll = this.add.rectangle(670, 240, 40, 420);
@@ -190,29 +207,29 @@ export default class Shop extends Phaser.Scene {
 		tab_container.add(plant_Box);
 
 		// Fish_Text
-		const fish_Text = this.add.text(84, 20, "", {});
+		const fish_Text = this.add.bitmapText(84, 20, "pixelmix_32", "Fish\n");
 		fish_Text.setOrigin(0.5, 0);
 		fish_Text.text = "Fish\n";
-		fish_Text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		fish_Text.fontSize = 32;
 		tab_container.add(fish_Text);
 
 		// Plants_Text
-		const plants_Text = this.add.text(261, 20, "", {});
+		const plants_Text = this.add.bitmapText(263, 20, "pixelmix_32", "Plants");
 		plants_Text.setOrigin(0.5, 0);
 		plants_Text.text = "Plants";
-		plants_Text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		plants_Text.fontSize = 30;
 		tab_container.add(plants_Text);
 
 		// Systems_Text
-		const systems_Text = this.add.text(371, 20, "", {});
+		const systems_Text = this.add.bitmapText(360, 20, "pixelmix_32", "Systems");
 		systems_Text.text = "Systems";
-		systems_Text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		systems_Text.fontSize = 30;
 		tab_container.add(systems_Text);
 
 		// Equips_Text
-		const equips_Text = this.add.text(555, 20, "", {});
+		const equips_Text = this.add.bitmapText(555, 20, "pixelmix_32", "Equips");
 		equips_Text.text = "Equips";
-		equips_Text.setStyle({ "color": "#000000ff", "fontSize": "32px" });
+		equips_Text.fontSize = 30;
 		tab_container.add(equips_Text);
 
 		// back_container
@@ -229,28 +246,308 @@ export default class Shop extends Phaser.Scene {
 		back_container.add(back_Button);
 
 		// BackText
-		const backText = this.add.text(0, 0, "", {});
+		const backText = this.add.bitmapText(-2, -2, "pixelmix_8", "Back");
 		backText.text = "Back";
-		backText.setStyle({ "color": "#000000ff" });
+		backText.fontSize = 15;
 		back_container.add(backText);
 
 		// system_container
 		const system_container = this.add.container(760, 45);
 
+		// content2_box
+		const content2_box = this.add.rectangle(0, 75, 484, 565);
+		content2_box.setOrigin(0, 0);
+		content2_box.isFilled = true;
+		content2_box.fillColor = 16114844;
+		content2_box.isStroked = true;
+		content2_box.strokeColor = 0;
+		system_container.add(content2_box);
+
+		// Header2_Text
+		const header2_Text = this.add.bitmapText(241, 10, "pixelmix_32", "System");
+		header2_Text.setOrigin(0.5, 0);
+		header2_Text.text = "System";
+		header2_Text.fontSize = 32;
+		system_container.add(header2_Text);
+
+		// sell_page_button
+		const sell_page_button = this.add.ellipse(1280, 360, 256, 256);
+		sell_page_button.setInteractive(new Phaser.Geom.Ellipse(128, 128, 256, 256), Phaser.Geom.Ellipse.Contains);
+		sell_page_button.isFilled = true;
+		sell_page_button.fillColor = 428544;
+		sell_page_button.isStroked = true;
+		sell_page_button.strokeColor = 0;
+
+		// sell_page_icon
+		const sell_page_icon = this.add.bitmapText(1179, 360, "pixelmix_32", "$");
+		sell_page_icon.setOrigin(0, 0.5);
+		sell_page_icon.text = "$";
+		sell_page_icon.fontSize = 128;
+
+		// rectangle_1
+		const rectangle_1 = this.add.rectangle(120, 343, 116, 30);
+		rectangle_1.isFilled = true;
+		rectangle_1.fillColor = 10246716;
+		rectangle_1.isStroked = true;
+		rectangle_1.strokeColor = 0;
+
+		// rectangle_2
+		const rectangle_2 = this.add.rectangle(260, 343, 116, 30);
+		rectangle_2.isFilled = true;
+		rectangle_2.fillColor = 10246716;
+		rectangle_2.isStroked = true;
+		rectangle_2.strokeColor = 0;
+
+		// rectangle_3
+		const rectangle_3 = this.add.rectangle(400, 343, 116, 30);
+		rectangle_3.isFilled = true;
+		rectangle_3.fillColor = 10246716;
+		rectangle_3.isStroked = true;
+		rectangle_3.strokeColor = 0;
+
 		// rectangle_4
-		const rectangle_4 = this.add.rectangle(0, 75, 484, 565);
-		rectangle_4.setOrigin(0, 0);
+		const rectangle_4 = this.add.rectangle(540, 343, 116, 30);
 		rectangle_4.isFilled = true;
+		rectangle_4.fillColor = 10246716;
 		rectangle_4.isStroked = true;
 		rectangle_4.strokeColor = 0;
-		system_container.add(rectangle_4);
 
-		// CurrentSys_Text
-		const currentSys_Text = this.add.text(25, 0, "", {});
-		currentSys_Text.text = "Current System";
-		currentSys_Text.setStyle({ "color": "#000000ff", "fontSize": "50px" });
-		system_container.add(currentSys_Text);
+		// rectangle_5
+		const rectangle_5 = this.add.rectangle(120, 483, 116, 30);
+		rectangle_5.isFilled = true;
+		rectangle_5.fillColor = 10246716;
+		rectangle_5.isStroked = true;
+		rectangle_5.strokeColor = 0;
 
+		// rectangle_6
+		const rectangle_6 = this.add.rectangle(260, 483, 116, 30);
+		rectangle_6.isFilled = true;
+		rectangle_6.fillColor = 10246716;
+		rectangle_6.isStroked = true;
+		rectangle_6.strokeColor = 0;
+
+		// rectangle_7
+		const rectangle_7 = this.add.rectangle(400, 483, 116, 30);
+		rectangle_7.isFilled = true;
+		rectangle_7.fillColor = 10246716;
+		rectangle_7.isStroked = true;
+		rectangle_7.strokeColor = 0;
+
+		// rectangle_8
+		const rectangle_8 = this.add.rectangle(540, 483, 116, 30);
+		rectangle_8.isFilled = true;
+		rectangle_8.fillColor = 10246716;
+		rectangle_8.isStroked = true;
+		rectangle_8.strokeColor = 0;
+
+		// rectangle_11
+		const rectangle_11 = this.add.rectangle(400, 623, 116, 30);
+		rectangle_11.isFilled = true;
+		rectangle_11.fillColor = 10246716;
+		rectangle_11.isStroked = true;
+		rectangle_11.strokeColor = 0;
+
+		// rectangle_12
+		const rectangle_12 = this.add.rectangle(540, 623, 116, 30);
+		rectangle_12.isFilled = true;
+		rectangle_12.fillColor = 10246716;
+		rectangle_12.isStroked = true;
+		rectangle_12.strokeColor = 0;
+
+		// rectangle_10
+		const rectangle_10 = this.add.rectangle(260, 623, 116, 30);
+		rectangle_10.isFilled = true;
+		rectangle_10.fillColor = 10246716;
+		rectangle_10.isStroked = true;
+		rectangle_10.strokeColor = 0;
+
+		// rectangle_9
+		const rectangle_9 = this.add.rectangle(120, 623, 116, 30);
+		rectangle_9.isFilled = true;
+		rectangle_9.fillColor = 10246716;
+		rectangle_9.isStroked = true;
+		rectangle_9.strokeColor = 0;
+
+		// option1_text
+		const option1_text = this.add.bitmapText(120, 282, "pixelmix_16", "Tilapia\nFingerling");
+		option1_text.setOrigin(0.5, 0.5);
+		option1_text.text = "Tilapia\nFingerling";
+		option1_text.fontSize = 16;
+		option1_text.align = 1;
+
+		// option2_text
+		const option2_text = this.add.bitmapText(261, 282, "pixelmix_16", "Tilapia\nLarvae");
+		option2_text.setOrigin(0.5, 0.5);
+		option2_text.text = "Tilapia\nLarvae";
+		option2_text.fontSize = 16;
+		option2_text.align = 1;
+
+		// option3_text
+		const option3_text = this.add.bitmapText(401, 282, "pixelmix_16", "Tilapia\nJuvenille");
+		option3_text.setOrigin(0.5, 0.5);
+		option3_text.text = "Tilapia\nJuvenille";
+		option3_text.fontSize = 16;
+		option3_text.align = 1;
+
+		// option4_text
+		const option4_text = this.add.bitmapText(540, 282, "pixelmix_16", "Tilapia\nAdult");
+		option4_text.setOrigin(0.5, 0.5);
+		option4_text.text = "Tilapia\nAdult";
+		option4_text.fontSize = 16;
+		option4_text.align = 1;
+
+		// option5_text
+		const option5_text = this.add.bitmapText(120, 421, "pixelmix_16", "Barramundi\nFingerling");
+		option5_text.setOrigin(0.5, 0.5);
+		option5_text.text = "Barramundi\nFingerling";
+		option5_text.fontSize = 16;
+		option5_text.align = 1;
+
+		// option6_text
+		const option6_text = this.add.bitmapText(261, 421, "pixelmix_16", "Barramundi\nLarvae");
+		option6_text.setOrigin(0.5, 0.5);
+		option6_text.text = "Barramundi\nLarvae";
+		option6_text.fontSize = 16;
+		option6_text.align = 1;
+
+		// option7_text
+		const option7_text = this.add.bitmapText(401, 421, "pixelmix_16", "Barramundi\nJuvenille");
+		option7_text.setOrigin(0.5, 0.5);
+		option7_text.text = "Barramundi\nJuvenille";
+		option7_text.fontSize = 16;
+		option7_text.align = 1;
+
+		// option8_text
+		const option8_text = this.add.bitmapText(540, 421, "pixelmix_16", "Barramundi\nAdult");
+		option8_text.setOrigin(0.5, 0.5);
+		option8_text.text = "Barramundi\nAdult";
+		option8_text.fontSize = 16;
+		option8_text.align = 1;
+
+		// option9_text
+		const option9_text = this.add.bitmapText(120, 560, "pixelmix_16", "");
+		option9_text.setOrigin(0.5, 0.5);
+		option9_text.fontSize = 16;
+		option9_text.align = 1;
+
+		// option10_text
+		const option10_text = this.add.bitmapText(261, 560, "pixelmix_16", "");
+		option10_text.setOrigin(0.5, 0.5);
+		option10_text.fontSize = 16;
+		option10_text.align = 1;
+
+		// option11_text
+		const option11_text = this.add.bitmapText(401, 560, "pixelmix_16", "");
+		option11_text.setOrigin(0.5, 0.5);
+		option11_text.fontSize = 16;
+		option11_text.align = 1;
+
+		// option12_text
+		const option12_text = this.add.bitmapText(540, 560, "pixelmix_16", "");
+		option12_text.setOrigin(0.5, 0.5);
+		option12_text.fontSize = 16;
+		option12_text.align = 1;
+
+		// option1_price
+		const option1_price = this.add.bitmapText(71, 343, "pixelmix_16", "$ 0.00");
+		option1_price.setOrigin(0, 0.5);
+		option1_price.text = "$ 0.00";
+		option1_price.fontSize = 16;
+
+		// option2_price
+		const option2_price = this.add.bitmapText(211, 343, "pixelmix_16", "$ 0.00");
+		option2_price.setOrigin(0, 0.5);
+		option2_price.text = "$ 0.00";
+		option2_price.fontSize = 16;
+
+		// option3_price
+		const option3_price = this.add.bitmapText(351, 343, "pixelmix_16", "$ 0.00");
+		option3_price.setOrigin(0, 0.5);
+		option3_price.text = "$ 0.00";
+		option3_price.fontSize = 16;
+
+		// option4_price
+		const option4_price = this.add.bitmapText(491, 343, "pixelmix_16", "$ 0.00");
+		option4_price.setOrigin(0, 0.5);
+		option4_price.text = "$ 0.00";
+		option4_price.fontSize = 16;
+
+		// option5_price
+		const option5_price = this.add.bitmapText(71, 483, "pixelmix_16", "$ 0.00");
+		option5_price.setOrigin(0, 0.5);
+		option5_price.text = "$ 0.00";
+		option5_price.fontSize = 16;
+
+		// option6_price
+		const option6_price = this.add.bitmapText(211, 483, "pixelmix_16", "$ 0.00");
+		option6_price.setOrigin(0, 0.5);
+		option6_price.text = "$ 0.00";
+		option6_price.fontSize = 16;
+
+		// option7_price
+		const option7_price = this.add.bitmapText(351, 483, "pixelmix_16", "$ 0.00");
+		option7_price.setOrigin(0, 0.5);
+		option7_price.text = "$ 0.00";
+		option7_price.fontSize = 16;
+
+		// option8_price
+		const option8_price = this.add.bitmapText(491, 483, "pixelmix_16", "$ 0.00");
+		option8_price.setOrigin(0, 0.5);
+		option8_price.text = "$ 0.00";
+		option8_price.fontSize = 16;
+
+		// option9_price
+		const option9_price = this.add.bitmapText(71, 623, "pixelmix_16", "$ 0.00");
+		option9_price.setOrigin(0, 0.5);
+		option9_price.text = "$ 0.00";
+		option9_price.fontSize = 16;
+
+		// option10_price
+		const option10_price = this.add.bitmapText(211, 623, "pixelmix_16", "$ 0.00");
+		option10_price.setOrigin(0, 0.5);
+		option10_price.text = "$ 0.00";
+		option10_price.fontSize = 16;
+
+		// option11_price
+		const option11_price = this.add.bitmapText(351, 623, "pixelmix_16", "$ 0.00");
+		option11_price.setOrigin(0, 0.5);
+		option11_price.text = "$ 0.00";
+		option11_price.fontSize = 16;
+
+		// option12_price
+		const option12_price = this.add.bitmapText(491, 623, "pixelmix_16", "$ 0.00");
+		option12_price.setOrigin(0, 0.5);
+		option12_price.text = "$ 0.00";
+		option12_price.fontSize = 16;
+
+		// money_background
+		const money_background = this.add.image(186, 676, "text_box_empty");
+		money_background.scaleX = 0.5;
+		money_background.scaleY = 0.5;
+
+		// money_text
+		const money_text = this.add.bitmapText(30, 675, "pixelmix_32", "$ ");
+		money_text.setOrigin(0, 0.5);
+		money_text.text = "$ ";
+		money_text.fontSize = 32;
+
+		// buy_page_button
+		const buy_page_button = this.add.ellipse(0, 360, 256, 256);
+		buy_page_button.setInteractive(new Phaser.Geom.Ellipse(128, 128, 256, 256), Phaser.Geom.Ellipse.Contains);
+		buy_page_button.visible = false;
+		buy_page_button.isFilled = true;
+		buy_page_button.fillColor = 428544;
+		buy_page_button.isStroked = true;
+		buy_page_button.strokeColor = 0;
+
+		// buy_page_icon
+		const buy_page_icon = this.add.bitmapText(14, 360, "pixelmix_32", "%");
+		buy_page_icon.setOrigin(0, 0.5);
+		buy_page_icon.visible = false;
+		buy_page_icon.text = "%";
+		buy_page_icon.fontSize = 128;
+
+		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
 		this.option_box_2 = option_box_2;
 		this.option_box_3 = option_box_3;
@@ -268,10 +565,54 @@ export default class Shop extends Phaser.Scene {
 		this.system_Box = system_Box;
 		this.plant_Box = plant_Box;
 		this.back_Button = back_Button;
+		this.header2_Text = header2_Text;
+		this.sell_page_button = sell_page_button;
+		this.sell_page_icon = sell_page_icon;
+		this.rectangle_1 = rectangle_1;
+		this.rectangle_2 = rectangle_2;
+		this.rectangle_3 = rectangle_3;
+		this.rectangle_4 = rectangle_4;
+		this.rectangle_5 = rectangle_5;
+		this.rectangle_6 = rectangle_6;
+		this.rectangle_7 = rectangle_7;
+		this.rectangle_8 = rectangle_8;
+		this.rectangle_11 = rectangle_11;
+		this.rectangle_12 = rectangle_12;
+		this.rectangle_10 = rectangle_10;
+		this.rectangle_9 = rectangle_9;
+		this.option1_text = option1_text;
+		this.option2_text = option2_text;
+		this.option3_text = option3_text;
+		this.option4_text = option4_text;
+		this.option5_text = option5_text;
+		this.option6_text = option6_text;
+		this.option7_text = option7_text;
+		this.option8_text = option8_text;
+		this.option9_text = option9_text;
+		this.option10_text = option10_text;
+		this.option11_text = option11_text;
+		this.option12_text = option12_text;
+		this.option1_price = option1_price;
+		this.option2_price = option2_price;
+		this.option3_price = option3_price;
+		this.option4_price = option4_price;
+		this.option5_price = option5_price;
+		this.option6_price = option6_price;
+		this.option7_price = option7_price;
+		this.option8_price = option8_price;
+		this.option9_price = option9_price;
+		this.option10_price = option10_price;
+		this.option11_price = option11_price;
+		this.option12_price = option12_price;
+		this.money_text = money_text;
+		this.buy_page_button = buy_page_button;
+		this.buy_page_icon = buy_page_icon;
 
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.GameObjects.Rectangle} */
+	scroll;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	option_box_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
@@ -306,11 +647,193 @@ export default class Shop extends Phaser.Scene {
 	plant_Box;
 	/** @type {Phaser.GameObjects.Ellipse} */
 	back_Button;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	header2_Text;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	sell_page_button;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	sell_page_icon;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_1;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_2;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_3;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_4;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_5;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_6;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_7;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_8;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_11;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_12;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_10;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_9;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option1_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option2_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option3_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option4_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option5_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option6_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option7_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option8_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option9_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option10_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option11_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option12_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option1_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option2_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option3_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option4_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option5_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option6_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option7_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option8_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option9_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option10_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option11_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option12_price;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	money_text;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	buy_page_button;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	buy_page_icon;
 
 	/* START-USER-CODE */
 
 	toggleBoxColor(box) {
-    	box.fillColor = (box.fillColor === 0xffffff) ? 0x428544 : 0xffffff;
+    	box.fillColor = 0x428544;
+		this.time.delayedCall(500, () => {
+			box.fillColor = 0xffffff;
+		})
+	}
+
+	switchScreen(str) {
+		if (str == 's') {
+			this.sell_page_button.setVisible(false);
+			this.sell_page_icon.setVisible(false);
+			this.buy_page_button.setVisible(true);
+			this.buy_page_icon.setVisible(true);
+			this.header2_Text.text = "Current Prices";
+		}
+		else {
+			this.sell_page_button.setVisible(true);
+			this.sell_page_icon.setVisible(true);
+			this.buy_page_button.setVisible(false);
+			this.buy_page_icon.setVisible(false);
+			this.header2_Text.text = "System";
+		}
+	}
+
+	setListPrice(boxNum, textObj, price) {
+		textObj.text = "$ " + price;
+		this.priceTable[boxNum] = price;
+	}
+
+	updateMoney(intChange) {
+		let curMoney = this.registry.get('money');
+		let newMoney = curMoney + intChange;
+		if (newMoney < 0)
+			return -1;
+		this.registry.set('money', newMoney);
+		this.money_text.text = "$ " + newMoney;
+		return 0;
+	}
+
+	setupFishShop() {
+		this.fish_Box.fillColor = 0x428544;
+		this.plant_Box.fillColor = 0xffffff;
+		this.system_Box.fillColor = 0xffffff;
+		this.equip_Box.fillColor = 0xffffff;
+		this.wipeOptions();
+
+		this.option1_text.text = "Tilapia\nFingerling";
+		this.option2_text.text = "Tilapia\nLarvae";
+		this.option3_text.text = "Tilapia\nJuvenile";
+		this.option4_text.text = "Tilapia\nAdult";
+		this.option5_text.text = "Barramundi\nFingerling";
+		this.option6_text.text = "Barramundi\nLarvae";
+		this.option7_text.text = "Barramundi\nJuvenile";
+		this.option8_text.text = "Barramundi\nAdult";
+		this.option9_text.text = "";
+		this.option10_text.text = "";
+		this.option11_text.text = "";
+		this.option12_text.text = "";
+
+		let priceArr = this.registry.get('shopPrices');
+		this.setListPrice(1, this.option1_price, priceArr.tilapiaFingerling);
+		this.setListPrice(2, this.option2_price, priceArr.tilapiaLarvae);
+		this.setListPrice(3, this.option3_price, priceArr.tilapiaJuvenile);
+		this.setListPrice(4, this.option4_price, priceArr.tilapiaAdult);
+		this.setListPrice(5, this.option5_price, priceArr.barramundiFingerling);
+		this.setListPrice(6, this.option6_price, priceArr.barramundiLarvae);
+		this.setListPrice(7, this.option7_price, priceArr.barramundiJuvenile);
+		this.setListPrice(8, this.option8_price, priceArr.barramundiAdult);
+		this.option9_price.text = "";
+		this.option10_price.text = "";
+		this.option11_price.text = "";
+		this.option12_price.text = "";
+
+		this.rectangle_1.setVisible(true);
+		this.rectangle_2.setVisible(true);
+		this.rectangle_3.setVisible(true);
+		this.rectangle_4.setVisible(true);
+		this.rectangle_5.setVisible(true);
+		this.rectangle_6.setVisible(true);
+		this.rectangle_7.setVisible(true);
+		this.rectangle_8.setVisible(true);
+		this.rectangle_9.setVisible(false);
+		this.rectangle_10.setVisible(false);
+		this.rectangle_11.setVisible(false);
+		this.rectangle_12.setVisible(false);
+
+		this.option_box_1.setVisible(true);
+		this.option_box_2.setVisible(true);
+		this.option_box_3.setVisible(true);
+		this.option_box_4.setVisible(true);
+		this.option_box_5.setVisible(true);
+		this.option_box_6.setVisible(true);
+		this.option_box_7.setVisible(true);
+		this.option_box_8.setVisible(true);
+		this.option_box_9.setVisible(false);
+		this.option_box_10.setVisible(false);
+		this.option_box_11.setVisible(false);
+		this.option_box_12.setVisible(false);
+
+		this.scroll.setVisible(false);
 	}
 
 	wipeOptions() {
@@ -333,17 +856,16 @@ export default class Shop extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.priceTable = new Array(40);
+		this.updateMoney(0);
+		this.setupFishShop();
 
 		this.back_Button.on("pointerdown", () => {
             this.scene.start('MainMenu'); // Still works!
         });
 
 		this.fish_Box.on("pointerdown", () => {
-            this.fish_Box.fillColor = 0x428544;
-			this.plant_Box.fillColor = 0xffffff;
-			this.system_Box.fillColor = 0xffffff;
-			this.equip_Box.fillColor = 0xffffff;
-			this.wipeOptions();
+			this.setupFishShop();
         });
 
 		this.plant_Box.on("pointerdown", () => {
@@ -370,52 +892,72 @@ export default class Shop extends Phaser.Scene {
 			this.wipeOptions();
         });
 
+		this.sell_page_button.on("pointerdown", () => {
+			this.switchScreen('s');
+		})
+
+		this.buy_page_button.on("pointerdown", () => {
+			this.switchScreen('b');
+		})
+
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
+			this.updateMoney(this.priceTable[1] * -1);
 		})
 
 		this.option_box_2.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_2);
+			this.updateMoney(this.priceTable[2] * -1);
 		})
 
 		this.option_box_3.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_3);
+			this.updateMoney(this.priceTable[3] * -1);
 		})
 
 		this.option_box_4.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_4);
+			this.updateMoney(this.priceTable[4] * -1);
 		})
 
 		this.option_box_5.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_5);
+			this.updateMoney(this.priceTable[5] * -1);
 		})
 
 		this.option_box_6.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_6);
+			this.updateMoney(this.priceTable[6] * -1);
 		})
 
 		this.option_box_7.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_7);
+			this.updateMoney(this.priceTable[7] * -1);
 		})
 
 		this.option_box_8.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_8);
+			this.updateMoney(this.priceTable[8] * -1);
 		})
 
 		this.option_box_9.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_9);
+			this.updateMoney(this.priceTable[9] * -1);
 		})
 
 		this.option_box_10.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_10);
+			this.updateMoney(this.priceTable[10] * -1);
 		})
 
 		this.option_box_11.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_11);
+			this.updateMoney(this.priceTable[11] * -1);
 		})
 
 		this.option_box_12.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_12);
+			this.updateMoney(this.priceTable[12] * -1);
 		})
 	}
 
