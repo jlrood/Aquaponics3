@@ -17,11 +17,21 @@ export default class Boot extends Scene
 
     create ()
     {
-        this.registry.set('money', 100);
+        this.registry.set('money', 100.00);
         this.registry.set('water_use', 0);
         this.registry.set('energy_use', 0);
         this.registry.set('fish_amount', 0);
         this.registry.set('plant_amount', 0);
+        this.registry.set('shopPrices', {
+            tilapiaFingerling: 1.00,
+            tilapiaLarvae: 2.00,
+            tilapiaJuvenile: 5.00,
+            tilapiaAdult: 10.00,
+            barramundiFingerling: 2.00,
+            barramundiLarvae: 5.00,
+            barramundiJuvenile: 10.00,
+            barramundiAdult: 20.00
+        });
         this.scene.start('Preloader');
     }
 }
