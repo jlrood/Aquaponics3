@@ -27,6 +27,19 @@
                 "key": "journal icon"
             },
             {
+                "url": "assets/juvenile.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": 1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "juvenile"
+            },
+            {
                 "url": "assets/logo.png",
                 "type": "image",
                 "key": "logo"
