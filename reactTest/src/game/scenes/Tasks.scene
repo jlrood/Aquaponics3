@@ -254,14 +254,14 @@
         },
         {
             "type": "Container",
-            "id": "dbddf289-b0b5-4868-8f4e-84f67c39a39d",
+            "id": "07ff3b0a-7118-4ce1-a173-7208828ae5f1",
             "label": "left_menu",
             "x": 65,
             "y": 370.9837155707536,
             "list": [
                 {
                     "type": "Text",
-                    "id": "2fd8342d-73e7-4243-ace2-e535548ce691",
+                    "id": "a135084b-0d08-4144-96dc-d0df6a770bb5",
                     "label": "tasks_button",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -277,7 +277,7 @@
                 },
                 {
                     "type": "Text",
-                    "id": "c3f96a38-c880-4873-8c6d-623587cd0415",
+                    "id": "a1068dff-9206-497a-96b4-a1b9d65a03d7",
                     "label": "shop_button",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -293,7 +293,7 @@
                 },
                 {
                     "type": "Text",
-                    "id": "d3787f0c-dfd8-4a80-831e-e21c320c5632",
+                    "id": "f5a14e5d-ea4f-4c13-96f6-b7a4e85a2099",
                     "label": "journal_button",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -309,7 +309,7 @@
                 },
                 {
                     "type": "Text",
-                    "id": "c011eae0-a97d-4490-ae24-53f3e967b3d1",
+                    "id": "e20cd702-ea9c-4ce0-9200-e9d7ad5f655b",
                     "label": "mail_button",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -325,7 +325,7 @@
                 },
                 {
                     "type": "Text",
-                    "id": "ca1fd9e9-f985-4a20-b880-3720ca84afdc",
+                    "id": "2689fae2-45b8-4082-8d02-f70764a9b464",
                     "label": "system_button",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -341,7 +341,7 @@
                 },
                 {
                     "type": "Image",
-                    "id": "188f2edb-79ba-4bee-bd31-3585f9a2cf50",
+                    "id": "500492ea-6beb-488a-bf83-7373ad896ab3",
                     "label": "task_icon",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -350,14 +350,13 @@
                     "texture": {
                         "key": "task icon"
                     },
-                    "x": -0.15999755859375142,
-                    "y": -129.98370361328125,
+                    "y": -130,
                     "scaleX": 2,
                     "scaleY": 2
                 },
                 {
                     "type": "Image",
-                    "id": "14644423-2564-4cf4-98ff-18c6ee503b07",
+                    "id": "3e37dc3f-b796-4571-af7a-cec8d77937a8",
                     "label": "shop_icon",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -366,14 +365,13 @@
                     "texture": {
                         "key": "shop icon"
                     },
-                    "x": -0.15999755859375142,
-                    "y": -60.98370361328125,
+                    "y": -61,
                     "scaleX": 2,
                     "scaleY": 2
                 },
                 {
                     "type": "Image",
-                    "id": "4f2a935c-b2da-415c-89fa-24e3138a48e4",
+                    "id": "d5f0c998-950c-4fed-8846-8a365f8234ef",
                     "label": "journal_icon",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -382,14 +380,13 @@
                     "texture": {
                         "key": "journal icon"
                     },
-                    "x": -0.15999755859375142,
-                    "y": 8.01629638671875,
+                    "y": 8,
                     "scaleX": 2,
                     "scaleY": 2
                 },
                 {
                     "type": "Image",
-                    "id": "d4b4208b-72da-4a73-bd4e-0cb3dbe26ffa",
+                    "id": "d0abee8d-0d4d-4303-9988-ba7130301724",
                     "label": "mail_icon",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -398,14 +395,13 @@
                     "texture": {
                         "key": "mail icon"
                     },
-                    "x": -0.15999755859375142,
-                    "y": 77.01629638671875,
+                    "y": 77,
                     "scaleX": 2,
                     "scaleY": 2
                 },
                 {
                     "type": "Image",
-                    "id": "56deb249-7c67-45a1-95ff-59ee28e59593",
+                    "id": "dfa138b6-0ec3-4651-8705-8c943c95b956",
                     "label": "system_icon",
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
@@ -414,8 +410,7 @@
                     "texture": {
                         "key": "system icon"
                     },
-                    "x": -0.15999755859375142,
-                    "y": 146.01629638671875,
+                    "y": 146,
                     "scaleX": 2,
                     "scaleY": 2
                 }

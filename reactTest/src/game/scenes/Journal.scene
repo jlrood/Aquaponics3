@@ -1,0 +1,349 @@
+{
+    "id": "f81c8c38-529c-40aa-afcc-e481614dfd32",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Journal",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "da5882c6-6108-496b-a95b-0cf034f3f0ff",
+            "label": "journal_box",
+            "x": 334,
+            "y": 412,
+            "isFilled": true,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "isStroked": true,
+            "width": 465,
+            "height": 478
+        },
+        {
+            "type": "Rectangle",
+            "id": "202b13e9-a948-4678-a6a2-dac5ff76004a",
+            "label": "whiteout_box",
+            "x": 103,
+            "y": 382,
+            "isFilled": true,
+            "strokeColor": "#000000",
+            "lineWidth": 3,
+            "width": 8,
+            "height": 75
+        },
+        {
+            "type": "Rectangle",
+            "id": "c8e90d77-3276-4cce-947a-568bfe2e0784",
+            "label": "rectangle_5",
+            "x": 318.5,
+            "y": 412,
+            "strokeColor": "#000000",
+            "lineWidth": 2,
+            "isStroked": true,
+            "width": 381,
+            "height": 422
+        },
+        {
+            "type": "Container",
+            "id": "0e39c928-3bea-477e-9be9-33a9b3c33860",
+            "label": "left_menu",
+            "x": 65,
+            "y": 370.9837155707536,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "76f069fd-09dd-4282-ad19-486367ae4b47",
+                    "label": "tasks_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 49,
+                    "hitArea.height": 15,
+                    "y": -129.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "TASKS",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "d6b47750-d631-42ea-b681-af2bdd6580b4",
+                    "label": "shop_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": -64.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "SHOP",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "1dce667c-686d-49ca-96fe-8550ad6a8c0b",
+                    "label": "journal_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 68,
+                    "hitArea.height": 15,
+                    "y": 0.016262492341866164,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "JOURNAL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "923ab4bc-d304-4bd7-9a3c-161f468f94ab",
+                    "label": "mail_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": 65.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "MAIL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "952b6e8c-4bfa-4440-83b9-e3ccc682790a",
+                    "label": "system_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 58,
+                    "hitArea.height": 15,
+                    "y": 130.01626586914062,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "SYSTEM",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "92a78e31-ab1e-436b-bd71-27176e439d5b",
+                    "label": "task_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "task icon"
+                    },
+                    "y": -130,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "7cdd2016-42e0-45ba-9ebb-cb18bccd1e21",
+                    "label": "shop_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "shop icon"
+                    },
+                    "y": -61,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "20eac4e3-9f73-46c9-b0ed-79fe10906f31",
+                    "label": "journal_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "journal icon"
+                    },
+                    "y": 8,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "af7a5f3a-bde0-42c2-a071-7f85f1a989c1",
+                    "label": "mail_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "mail icon"
+                    },
+                    "y": 77,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "80dadcac-512d-43cf-b1cd-c95329c3cc3b",
+                    "label": "system_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "system icon"
+                    },
+                    "y": 146,
+                    "scaleX": 2,
+                    "scaleY": 2
+                }
+            ]
+        },
+        {
+            "type": "Rectangle",
+            "id": "c048c536-be28-48c8-aaa9-3449f5363df9",
+            "label": "rectangle",
+            "x": 319,
+            "y": 322,
+            "strokeColor": "#000000",
+            "lineWidth": 2,
+            "isStroked": true,
+            "width": 354,
+            "height": 110
+        },
+        {
+            "type": "BitmapText",
+            "id": "67adb970-6671-44b2-8ca4-7334a1dc750a",
+            "label": "bitmaptext_1",
+            "x": 141,
+            "y": 214,
+            "text": "WEEK []",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        },
+        {
+            "type": "BitmapText",
+            "id": "65c26bb3-6ccb-4346-abc4-76b729a8fce4",
+            "label": "bitmaptext_2",
+            "x": 150,
+            "y": 279,
+            "text": "FILTER LEVEL:",
+            "font": "pixelmix_16",
+            "fontSize": 16
+        },
+        {
+            "type": "BitmapText",
+            "id": "a5aefa84-923e-4e63-9b6e-aa5a8c8b797a",
+            "label": "bitmaptext",
+            "x": 150,
+            "y": 308,
+            "text": "TEMP:",
+            "font": "pixelmix_16",
+            "fontSize": 16
+        },
+        {
+            "type": "Rectangle",
+            "id": "21856698-2fa2-4eb7-b487-a0103b4bc67e",
+            "label": "rectangle_1",
+            "x": 228,
+            "y": 499,
+            "strokeColor": "#000000",
+            "lineWidth": 2,
+            "isStroked": true,
+            "width": 171,
+            "height": 217
+        },
+        {
+            "type": "Rectangle",
+            "id": "8f6cb59f-a9b3-4c1b-81eb-9c8985267850",
+            "label": "rectangle_2",
+            "x": 411,
+            "y": 499,
+            "strokeColor": "#000000",
+            "lineWidth": 2,
+            "isStroked": true,
+            "width": 171,
+            "height": 217
+        },
+        {
+            "type": "BitmapText",
+            "id": "87936cd2-e97d-4d1f-b537-67e905ee4618",
+            "label": "bitmaptext_4",
+            "x": 152,
+            "y": 404,
+            "text": "pH:",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        },
+        {
+            "type": "BitmapText",
+            "id": "7299d5c0-ea56-4a03-80eb-a141514f826b",
+            "label": "bitmaptext_3",
+            "x": 152,
+            "y": 456,
+            "text": "NO:",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        },
+        {
+            "type": "BitmapText",
+            "id": "4af0b783-cdc5-4b17-a47d-997b04fdcebd",
+            "label": "bitmaptext_5",
+            "x": 152,
+            "y": 508,
+            "text": "NO:",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        },
+        {
+            "type": "BitmapText",
+            "id": "4ba3e10e-4a11-4459-a01f-1071cfbcb384",
+            "label": "bitmaptext_6",
+            "x": 152,
+            "y": 560,
+            "text": "TEMP:",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        },
+        {
+            "type": "BitmapText",
+            "id": "3301adac-84e5-40cc-98d6-33be9dfe28bc",
+            "label": "bitmaptext_8",
+            "x": 194.5,
+            "y": 538,
+            "text": "2",
+            "font": "pixelmix_16",
+            "fontSize": 16
+        },
+        {
+            "type": "BitmapText",
+            "id": "a50a6cb3-e19c-4d00-94ad-03a1eee8f0a7",
+            "label": "bitmaptext_7",
+            "x": 194.5,
+            "y": 486,
+            "text": "3",
+            "font": "pixelmix_16",
+            "fontSize": 16
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

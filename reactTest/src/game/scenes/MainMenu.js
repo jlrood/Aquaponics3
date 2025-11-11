@@ -264,6 +264,12 @@ export default class MainMenu extends Phaser.Scene {
 		// text_box_empty
 		this.add.image(628, 591, "text_box_empty");
 
+		// bitmaptext_1
+		const bitmaptext_1 = this.add.bitmapText(628, 591, "pixelmix_16", "Testing of bitmap text in a textbox...");
+		bitmaptext_1.setOrigin(0.5, 0.5);
+		bitmaptext_1.text = "Testing of bitmap text in a textbox...";
+		bitmaptext_1.fontSize = 16;
+
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
 		this.journal_button = journal_button;
@@ -328,6 +334,11 @@ export default class MainMenu extends Phaser.Scene {
 		this.mail_icon.on("pointerdown", () => {
 			this.scene.pause();
 			this.scene.launch('Mail');
+		});
+
+		this.journal_icon.on("pointerdown", () => {
+			this.scene.pause();
+			this.scene.launch('Journal');
 		});
     }
 
