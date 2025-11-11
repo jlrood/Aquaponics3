@@ -308,13 +308,47 @@ export default class MainMenu extends Phaser.Scene {
 	/* START-USER-CODE */
 
 	// Write your code here
+	
     create ()
     {
 
         this.editorCreate();
 
+
+		// Change to hand cursor when you hover over interactable icons.
+		const handify = o => {
+  			if (!o || !o.input) o.setInteractive();           // ensure it has an input plugin
+  			o.input.cursor = 'pointer';                       // hand on hover
+  			o.on('pointerover', () => this.input.setDefaultCursor('pointer'));
+  			o.on('pointerout',  () => this.input.setDefaultCursor('default'));
+  		return o;
+		};
+
+		// Icons are visible, so start with these
+		[ this.task_icon,
+		this.shop_icon,
+		this.journal_icon,
+		this.mail_icon,
+		this.system_icon
+		].forEach(handify);
+
+		// If you later show the text buttons, fix their hit areas then handify
+		[ this.tasks_button,
+		  this.shop_button,
+		  this.journal_button,
+		  this.mail_button,
+		  this.system_button
+		].forEach(t => {
+ 		 if (!t) return;
+		// re-center the generated 0,0 hit rect on origin 0.5
+		  const w = t.width || 64, h = t.height || 18;
+		  if (t.input?.hitArea?.setTo) t.input.hitArea.setTo(-w / 2, -h / 2, w, h);
+		  handify(t);
+		});
+
         EventBus.emit('current-scene-ready', this);
 
+		
         this.shop_icon.on("pointerdown", () => {
             this.scene.start('Shop');
         });
@@ -334,11 +368,6 @@ export default class MainMenu extends Phaser.Scene {
 		this.mail_icon.on("pointerdown", () => {
 			this.scene.pause();
 			this.scene.launch('Mail');
-		});
-
-		this.journal_icon.on("pointerdown", () => {
-			this.scene.pause();
-			this.scene.launch('Journal');
 		});
     }
 
