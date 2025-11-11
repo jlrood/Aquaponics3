@@ -12,6 +12,16 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "9862b195-0d44-4b5d-9fc5-76c89c7ce2b0",
+            "label": "bg__1_",
+            "texture": {
+                "key": "bg (1)"
+            },
+            "x": 637,
+            "y": 356
+        },
+        {
             "type": "Rectangle",
             "id": "f00aa91a-0fae-481f-b638-5f8f6d36d34d",
             "label": "rectangle_1",
@@ -113,6 +123,7 @@
             "label": "plant_bed",
             "x": 444,
             "y": 303,
+            "visible": false,
             "list": [
                 {
                     "type": "Rectangle",
@@ -145,6 +156,7 @@
             "label": "fish_tank",
             "x": 892,
             "y": 471,
+            "visible": false,
             "list": [
                 {
                     "type": "Rectangle",
@@ -177,6 +189,7 @@
             "label": "filter",
             "x": 425.5,
             "y": 552.5,
+            "visible": false,
             "list": [
                 {
                     "type": "Rectangle",
@@ -218,6 +231,7 @@
                     "y": -129.98373750765813,
                     "originX": 0.5,
                     "originY": 0.5,
+                    "visible": false,
                     "text": "TASKS",
                     "resolution": 5,
                     "color": "#000000ff"
@@ -233,6 +247,7 @@
                     "y": -64.98373750765813,
                     "originX": 0.5,
                     "originY": 0.5,
+                    "visible": false,
                     "text": "SHOP",
                     "resolution": 5,
                     "color": "#000000ff"
@@ -248,6 +263,7 @@
                     "y": 0.016262492341866164,
                     "originX": 0.5,
                     "originY": 0.5,
+                    "visible": false,
                     "text": "JOURNAL",
                     "resolution": 5,
                     "color": "#000000ff"
@@ -263,6 +279,7 @@
                     "y": 65.01626249234187,
                     "originX": 0.5,
                     "originY": 0.5,
+                    "visible": false,
                     "text": "MAIL",
                     "resolution": 5,
                     "color": "#000000ff"
@@ -275,12 +292,92 @@
                     "hitArea.shape": "RECTANGLE",
                     "hitArea.width": 58,
                     "hitArea.height": 15,
-                    "y": 130.01626249234187,
+                    "y": 130.01626586914062,
                     "originX": 0.5,
                     "originY": 0.5,
+                    "visible": false,
                     "text": "SYSTEM",
                     "resolution": 5,
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "4470382b-7bb8-4224-b968-9af548211aa6",
+                    "label": "task_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "task icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": -129.98370361328125,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "243c1d9a-8c9d-41a3-958a-db57ca662a0b",
+                    "label": "shop_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "shop icon"
+                    },
+                    "y": -60.98370361328125,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "002fe611-bd04-4b44-b696-261dad39c285",
+                    "label": "journal_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "journal icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 8.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "344273f5-36d0-46bd-98a4-e31e96c7c4cb",
+                    "label": "mail_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "mail icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 77.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "bbfb9a43-5481-47b3-8528-ace815c16a0f",
+                    "label": "system_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "system icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 146.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         },
@@ -363,7 +460,8 @@
                 "key": "help"
             },
             "x": 1072,
-            "y": 70
+            "y": 70,
+            "visible": false
         },
         {
             "type": "Image",
@@ -373,7 +471,31 @@
                 "key": "settings"
             },
             "x": 1177,
-            "y": 70
+            "y": 70,
+            "scaleX": 2,
+            "scaleY": 2
+        },
+        {
+            "type": "Image",
+            "id": "522529db-9b78-4fb4-ab9e-b6151302c4f4",
+            "label": "question",
+            "texture": {
+                "key": "question"
+            },
+            "x": 1072,
+            "y": 70,
+            "scaleX": 2,
+            "scaleY": 2
+        },
+        {
+            "type": "Image",
+            "id": "383b2d9b-af7a-4d97-9eb5-37af66e3e50b",
+            "label": "text_box_empty",
+            "texture": {
+                "key": "text_box_empty"
+            },
+            "x": 628,
+            "y": 591
         }
     ],
     "plainObjects": [],

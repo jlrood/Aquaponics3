@@ -12,101 +12,6 @@
     },
     "displayList": [
         {
-            "type": "Container",
-            "id": "b11370e2-404d-435b-86a5-8522cadc9ff2",
-            "label": "left_menu",
-            "x": 65,
-            "y": 370.9837155707536,
-            "list": [
-                {
-                    "type": "Text",
-                    "id": "9cb39742-8816-4058-b623-d69c7ab4ee2b",
-                    "label": "tasks_button",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 49,
-                    "hitArea.height": 15,
-                    "y": -129.98373750765813,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "TASKS",
-                    "resolution": 5,
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "dcf6af21-153f-4934-af5a-7ee89991c69e",
-                    "label": "shop_button",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 39,
-                    "hitArea.height": 15,
-                    "y": -64.98373750765813,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "SHOP",
-                    "resolution": 5,
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "5bb605b5-0810-45a1-9b15-62c7a16a5d5e",
-                    "label": "journal_button",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 68,
-                    "hitArea.height": 15,
-                    "y": 0.016262492341866164,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "JOURNAL",
-                    "resolution": 5,
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "14e0580d-0c10-4ce7-b8f0-8d243aad15ae",
-                    "label": "mail_button",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 39,
-                    "hitArea.height": 15,
-                    "y": 65.01626249234187,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "MAIL",
-                    "resolution": 5,
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "0e8fa15d-a069-479c-9b17-004c8b31a212",
-                    "label": "system_button",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 58,
-                    "hitArea.height": 15,
-                    "y": 130.01626249234187,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "SYSTEM",
-                    "resolution": 5,
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Rectangle",
-                    "id": "29857230-6199-4075-b84a-30bdff4b012e",
-                    "label": "rectangle_3",
-                    "y": 5.01629638671875,
-                    "strokeColor": "#000000",
-                    "lineWidth": 3,
-                    "isStroked": true,
-                    "width": 72,
-                    "height": 350
-                }
-            ]
-        },
-        {
             "type": "Rectangle",
             "id": "a69ed902-4684-4112-9c19-49b4679a2488",
             "label": "task_box",
@@ -344,6 +249,174 @@
                             "fontSize": 16
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "dbddf289-b0b5-4868-8f4e-84f67c39a39d",
+            "label": "left_menu",
+            "x": 65,
+            "y": 370.9837155707536,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "2fd8342d-73e7-4243-ace2-e535548ce691",
+                    "label": "tasks_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 49,
+                    "hitArea.height": 15,
+                    "y": -129.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "TASKS",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "c3f96a38-c880-4873-8c6d-623587cd0415",
+                    "label": "shop_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": -64.98373750765813,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "SHOP",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "d3787f0c-dfd8-4a80-831e-e21c320c5632",
+                    "label": "journal_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 68,
+                    "hitArea.height": 15,
+                    "y": 0.016262492341866164,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "JOURNAL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "c011eae0-a97d-4490-ae24-53f3e967b3d1",
+                    "label": "mail_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 39,
+                    "hitArea.height": 15,
+                    "y": 65.01626249234187,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "MAIL",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "ca1fd9e9-f985-4a20-b880-3720ca84afdc",
+                    "label": "system_button",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 58,
+                    "hitArea.height": 15,
+                    "y": 130.01626586914062,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "visible": false,
+                    "text": "SYSTEM",
+                    "resolution": 5,
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "188f2edb-79ba-4bee-bd31-3585f9a2cf50",
+                    "label": "task_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "task icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": -129.98370361328125,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "14644423-2564-4cf4-98ff-18c6ee503b07",
+                    "label": "shop_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "shop icon"
+                    },
+                    "y": -60.98370361328125,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "4f2a935c-b2da-415c-89fa-24e3138a48e4",
+                    "label": "journal_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "journal icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 8.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "d4b4208b-72da-4a73-bd4e-0cb3dbe26ffa",
+                    "label": "mail_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "mail icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 77.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "56deb249-7c67-45a1-95ff-59ee28e59593",
+                    "label": "system_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "system icon"
+                    },
+                    "x": -0.1999969482421875,
+                    "y": 146.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         }

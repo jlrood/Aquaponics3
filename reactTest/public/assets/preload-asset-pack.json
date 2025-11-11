@@ -2,9 +2,19 @@
     "section1": {
         "files": [
             {
+                "url": "assets/buttons_boxes/achievement icon.png",
+                "type": "image",
+                "key": "achievement icon"
+            },
+            {
                 "url": "assets/buttons_boxes/advance.png",
                 "type": "image",
                 "key": "advance"
+            },
+            {
+                "url": "assets/backgrounds/bg (1).png",
+                "type": "image",
+                "key": "bg (1)"
             },
             {
                 "url": "assets/buttons_boxes/help.png",
@@ -12,9 +22,19 @@
                 "key": "help"
             },
             {
+                "url": "assets/buttons_boxes/journal icon.png",
+                "type": "image",
+                "key": "journal icon"
+            },
+            {
                 "url": "assets/logo.png",
                 "type": "image",
                 "key": "logo"
+            },
+            {
+                "url": "assets/buttons_boxes/mail icon.png",
+                "type": "image",
+                "key": "mail icon"
             },
             {
                 "textureURL": "assets/bmFonts/pixelmix_16.png",
@@ -40,14 +60,34 @@
                 "key": "profile"
             },
             {
+                "url": "assets/buttons_boxes/question.png",
+                "type": "image",
+                "key": "question"
+            },
+            {
                 "url": "assets/buttons_boxes/settings.png",
                 "type": "image",
                 "key": "settings"
             },
             {
+                "url": "assets/buttons_boxes/shop icon.png",
+                "type": "image",
+                "key": "shop icon"
+            },
+            {
                 "url": "assets/star.png",
                 "type": "image",
                 "key": "star"
+            },
+            {
+                "url": "assets/buttons_boxes/system icon.png",
+                "type": "image",
+                "key": "system icon"
+            },
+            {
+                "url": "assets/buttons_boxes/task icon.png",
+                "type": "image",
+                "key": "task icon"
             },
             {
                 "url": "assets/buttons_boxes/text_box_empty.png",

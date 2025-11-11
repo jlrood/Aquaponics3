@@ -17,6 +17,9 @@ export default class MainMenu extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
+		// bg__1_
+		this.add.image(637, 356, "bg (1)");
+
 		// rectangle_1
 		const rectangle_1 = this.add.rectangle(65, 376, 72, 350);
 		rectangle_1.isFilled = true;
@@ -70,6 +73,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// plant_bed
 		const plant_bed = this.add.container(444, 303);
+		plant_bed.visible = false;
 
 		// plant_box
 		const plant_box = this.add.rectangle(37.5625, 3.1875, 330, 182);
@@ -86,6 +90,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// fish_tank
 		const fish_tank = this.add.container(892, 471);
+		fish_tank.visible = false;
 
 		// fish_box
 		const fish_box = this.add.rectangle(36.125, 3.375, 330, 182);
@@ -102,6 +107,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// filter
 		const filter = this.add.container(425.5, 552.5);
+		filter.visible = false;
 
 		// filter_box
 		const filter_box = this.add.rectangle(0, 0, 117, 198);
@@ -124,6 +130,7 @@ export default class MainMenu extends Phaser.Scene {
 		const tasks_button = this.add.text(0, -129.98373750765813, "", {});
 		tasks_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 15), Phaser.Geom.Rectangle.Contains);
 		tasks_button.setOrigin(0.5, 0.5);
+		tasks_button.visible = false;
 		tasks_button.text = "TASKS";
 		tasks_button.setStyle({ "color": "#000000ff", "resolution": 5 });
 		left_menu.add(tasks_button);
@@ -132,6 +139,7 @@ export default class MainMenu extends Phaser.Scene {
 		const shop_button = this.add.text(0, -64.98373750765813, "", {});
 		shop_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 39, 15), Phaser.Geom.Rectangle.Contains);
 		shop_button.setOrigin(0.5, 0.5);
+		shop_button.visible = false;
 		shop_button.text = "SHOP";
 		shop_button.setStyle({ "color": "#000000ff", "resolution": 5 });
 		left_menu.add(shop_button);
@@ -140,6 +148,7 @@ export default class MainMenu extends Phaser.Scene {
 		const journal_button = this.add.text(0, 0.016262492341866164, "", {});
 		journal_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 68, 15), Phaser.Geom.Rectangle.Contains);
 		journal_button.setOrigin(0.5, 0.5);
+		journal_button.visible = false;
 		journal_button.text = "JOURNAL";
 		journal_button.setStyle({ "color": "#000000ff", "resolution": 5 });
 		left_menu.add(journal_button);
@@ -148,17 +157,54 @@ export default class MainMenu extends Phaser.Scene {
 		const mail_button = this.add.text(0, 65.01626249234187, "", {});
 		mail_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 39, 15), Phaser.Geom.Rectangle.Contains);
 		mail_button.setOrigin(0.5, 0.5);
+		mail_button.visible = false;
 		mail_button.text = "MAIL";
 		mail_button.setStyle({ "color": "#000000ff", "resolution": 5 });
 		left_menu.add(mail_button);
 
 		// system_button
-		const system_button = this.add.text(0, 130.01626249234187, "", {});
+		const system_button = this.add.text(0, 130.01626586914062, "", {});
 		system_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 58, 15), Phaser.Geom.Rectangle.Contains);
 		system_button.setOrigin(0.5, 0.5);
+		system_button.visible = false;
 		system_button.text = "SYSTEM";
 		system_button.setStyle({ "color": "#000000ff", "resolution": 5 });
 		left_menu.add(system_button);
+
+		// task_icon
+		const task_icon = this.add.image(-0.1999969482421875, -129.98370361328125, "task icon");
+		task_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		task_icon.scaleX = 2;
+		task_icon.scaleY = 2;
+		left_menu.add(task_icon);
+
+		// shop_icon
+		const shop_icon = this.add.image(0, -60.98370361328125, "shop icon");
+		shop_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		shop_icon.scaleX = 2;
+		shop_icon.scaleY = 2;
+		left_menu.add(shop_icon);
+
+		// journal_icon
+		const journal_icon = this.add.image(-0.1999969482421875, 8.01629638671875, "journal icon");
+		journal_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		journal_icon.scaleX = 2;
+		journal_icon.scaleY = 2;
+		left_menu.add(journal_icon);
+
+		// mail_icon
+		const mail_icon = this.add.image(-0.1999969482421875, 77.01629638671875, "mail icon");
+		mail_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		mail_icon.scaleX = 2;
+		mail_icon.scaleY = 2;
+		left_menu.add(mail_icon);
+
+		// system_icon
+		const system_icon = this.add.image(-0.1999969482421875, 146.01629638671875, "system icon");
+		system_icon.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		system_icon.scaleX = 2;
+		system_icon.scaleY = 2;
+		left_menu.add(system_icon);
 
 		// advance_button
 		const advance_button = this.add.container(1192, 603);
@@ -198,16 +244,32 @@ export default class MainMenu extends Phaser.Scene {
 		this.add.image(65, 69, "profile");
 
 		// help
-		this.add.image(1072, 70, "help");
+		const help = this.add.image(1072, 70, "help");
+		help.visible = false;
 
 		// settings
-		this.add.image(1177, 70, "settings");
+		const settings = this.add.image(1177, 70, "settings");
+		settings.scaleX = 2;
+		settings.scaleY = 2;
+
+		// question
+		const question = this.add.image(1072, 70, "question");
+		question.scaleX = 2;
+		question.scaleY = 2;
+
+		// text_box_empty
+		this.add.image(628, 591, "text_box_empty");
 
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
 		this.journal_button = journal_button;
 		this.mail_button = mail_button;
 		this.system_button = system_button;
+		this.task_icon = task_icon;
+		this.shop_icon = shop_icon;
+		this.journal_icon = journal_icon;
+		this.mail_icon = mail_icon;
+		this.system_icon = system_icon;
 
 		this.events.emit("scene-awake");
 	}
@@ -222,6 +284,16 @@ export default class MainMenu extends Phaser.Scene {
 	mail_button;
 	/** @type {Phaser.GameObjects.Text} */
 	system_button;
+	/** @type {Phaser.GameObjects.Image} */
+	task_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	shop_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	journal_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	mail_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	system_icon;
 
 	/* START-USER-CODE */
 
@@ -233,23 +305,23 @@ export default class MainMenu extends Phaser.Scene {
 
         EventBus.emit('current-scene-ready', this);
 
-        this.shop_button.on("pointerdown", () => {
+        this.shop_icon.on("pointerdown", () => {
             this.scene.start('Shop');
         });
 
-        this.system_button.on("pointerdown", () => {
+        this.system_icon.on("pointerdown", () => {
 			this.scene.pause();
 			this.scene.launch('System');
         });
 
-        this.tasks_button.on("pointerdown", () => {
+        this.task_icon.on("pointerdown", () => {
             // Pause the main menu logic
             this.scene.pause();
             // Launch the overlay scene on top
             this.scene.launch('Tasks');
         });
 
-		this.mail_button.on("pointerdown", () => {
+		this.mail_icon.on("pointerdown", () => {
 			this.scene.pause();
 			this.scene.launch('Mail');
 		});
