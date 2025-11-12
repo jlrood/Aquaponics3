@@ -12,6 +12,19 @@
                 "key": "advance"
             },
             {
+                "url": "assets/backgrounds/bg.png",
+                "frameConfig": {
+                    "frameWidth": 1280,
+                    "frameHeight": 720,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "bg"
+            },
+            {
                 "url": "assets/backgrounds/bg (1).png",
                 "type": "image",
                 "key": "bg (1)"

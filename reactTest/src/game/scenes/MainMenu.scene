@@ -12,11 +12,13 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "9862b195-0d44-4b5d-9fc5-76c89c7ce2b0",
-            "label": "bg__1_",
+            "type": "Sprite",
+            "id": "d0c4a79a-78b1-471c-b264-f2793875354f",
+            "label": "bg",
+            "scope": "CLASS",
             "texture": {
-                "key": "bg (1)"
+                "key": "bg",
+                "frame": 0
             },
             "x": 640,
             "y": 360
@@ -98,6 +100,7 @@
                     "label": "rectangle",
                     "x": 35.125,
                     "y": 0.25,
+                    "visible": false,
                     "isFilled": true,
                     "fillColor": "#7db9e2",
                     "strokeColor": "#000000",
@@ -111,6 +114,7 @@
                     "label": "text_1",
                     "x": -22.875,
                     "y": -7.25,
+                    "visible": false,
                     "text": "ACHIEVEMENTS",
                     "font": "pixelmix_16",
                     "fontSize": 15
@@ -505,7 +509,7 @@
             "y": 591,
             "originX": 0.5,
             "originY": 0.5,
-            "text": "Testing of bitmap text in a textbox...",
+            "text": "Welcome to Grow n' Flow!",
             "font": "pixelmix_16",
             "fontSize": 16
         }

@@ -17,8 +17,8 @@ export default class MainMenu extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// bg__1_
-		this.add.image(640, 360, "bg (1)");
+		// bg
+		const bg = this.add.sprite(640, 360, "bg", 0);
 
 		// rectangle_1
 		const rectangle_1 = this.add.rectangle(65, 376, 72, 350);
@@ -59,6 +59,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// rectangle
 		const rectangle = this.add.rectangle(35.125, 0.25, 201, 148);
+		rectangle.visible = false;
 		rectangle.isFilled = true;
 		rectangle.fillColor = 8239586;
 		rectangle.strokeColor = 0;
@@ -67,6 +68,7 @@ export default class MainMenu extends Phaser.Scene {
 
 		// text_1
 		const text_1 = this.add.bitmapText(-22.875, -7.25, "pixelmix_16", "ACHIEVEMENTS");
+		text_1.visible = false;
 		text_1.text = "ACHIEVEMENTS";
 		text_1.fontSize = 15;
 		achievement_box.add(text_1);
@@ -265,11 +267,12 @@ export default class MainMenu extends Phaser.Scene {
 		this.add.image(628, 591, "text_box_empty");
 
 		// bitmaptext_1
-		const bitmaptext_1 = this.add.bitmapText(628, 591, "pixelmix_16", "Testing of bitmap text in a textbox...");
+		const bitmaptext_1 = this.add.bitmapText(628, 591, "pixelmix_16", "Welcome to Grow n' Flow!");
 		bitmaptext_1.setOrigin(0.5, 0.5);
-		bitmaptext_1.text = "Testing of bitmap text in a textbox...";
+		bitmaptext_1.text = "Welcome to Grow n' Flow!";
 		bitmaptext_1.fontSize = 16;
 
+		this.bg = bg;
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
 		this.journal_button = journal_button;
@@ -284,6 +287,8 @@ export default class MainMenu extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.GameObjects.Sprite} */
+	bg;
 	/** @type {Phaser.GameObjects.Text} */
 	tasks_button;
 	/** @type {Phaser.GameObjects.Text} */
@@ -308,7 +313,7 @@ export default class MainMenu extends Phaser.Scene {
 	/* START-USER-CODE */
 
 	// Write your code here
-	
+
     create ()
     {
 
@@ -348,7 +353,7 @@ export default class MainMenu extends Phaser.Scene {
 
         EventBus.emit('current-scene-ready', this);
 
-		
+
         this.shop_icon.on("pointerdown", () => {
             this.scene.start('Shop');
         });
@@ -374,6 +379,21 @@ export default class MainMenu extends Phaser.Scene {
 			this.scene.pause();
 			this.scene.launch('Journal');
 		});
+
+		if (!this.anims.exists('bg')) {
+			this.anims.create({
+				key: 'bg',
+				frames: this.anims.generateFrameNumbers('bg', { 
+					start: 0, 
+					end: 3 
+				}),
+				frameRate: 1,
+				repeat: -1
+			});
+		}
+
+		// If you have a sprite created in the editor named 'player'
+		this.bg.play('bg');
     }
 
 
