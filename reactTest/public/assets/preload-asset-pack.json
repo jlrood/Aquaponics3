@@ -30,6 +30,16 @@
                 "key": "bg (1)"
             },
             {
+                "url": "assets/buttons_boxes/graph1.png",
+                "type": "image",
+                "key": "graph1"
+            },
+            {
+                "url": "assets/buttons_boxes/graph2.png",
+                "type": "image",
+                "key": "graph2"
+            },
+            {
                 "url": "assets/buttons_boxes/help.png",
                 "type": "image",
                 "key": "help"
@@ -61,6 +71,11 @@
                 "url": "assets/buttons_boxes/mail icon.png",
                 "type": "image",
                 "key": "mail icon"
+            },
+            {
+                "url": "assets/buttons_boxes/multiplayer icon.png",
+                "type": "image",
+                "key": "multiplayer icon"
             },
             {
                 "textureURL": "assets/bmFonts/pixelmix_16.png",

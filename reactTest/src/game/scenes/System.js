@@ -23,7 +23,7 @@ export default class System extends Phaser.Scene {
 		const background = this.add.rectangle(120, 80, 1040, 560);
 		background.setOrigin(0, 0);
 		background.isFilled = true;
-		background.fillColor = 29709;
+		background.fillColor = 12443844;
 		background.isStroked = true;
 		background.strokeColor = 0;
 
@@ -188,15 +188,6 @@ export default class System extends Phaser.Scene {
 		// system_container
 		const system_container = this.add.container(150, 363);
 
-		// system_graph_box
-		const system_graph_box = this.add.rectangle(0, 0, 500, 190);
-		system_graph_box.setInteractive(new Phaser.Geom.Rectangle(0, 0, 500, 190), Phaser.Geom.Rectangle.Contains);
-		system_graph_box.setOrigin(0, 0);
-		system_graph_box.isFilled = true;
-		system_graph_box.isStroked = true;
-		system_graph_box.strokeColor = 0;
-		system_container.add(system_graph_box);
-
 		// system_header
 		const system_header = this.add.text(250, 210, "", {});
 		system_header.setOrigin(0.5, 0);
@@ -204,17 +195,14 @@ export default class System extends Phaser.Scene {
 		system_header.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		system_container.add(system_header);
 
+		// graph2
+		const graph2 = this.add.image(252, 92, "graph2");
+		graph2.scaleX = 2.2;
+		graph2.scaleY = 2.2;
+		system_container.add(graph2);
+
 		// production_container
 		const production_container = this.add.container(674, 273);
-
-		// production_graph_box
-		const production_graph_box = this.add.rectangle(0, 0, 455, 280);
-		production_graph_box.setInteractive(new Phaser.Geom.Rectangle(0, 0, 455, 280), Phaser.Geom.Rectangle.Contains);
-		production_graph_box.setOrigin(0, 0);
-		production_graph_box.isFilled = true;
-		production_graph_box.isStroked = true;
-		production_graph_box.strokeColor = 0;
-		production_container.add(production_graph_box);
 
 		// production_header
 		const production_header = this.add.text(227, 300, "", {});
@@ -222,6 +210,12 @@ export default class System extends Phaser.Scene {
 		production_header.text = "Production";
 		production_header.setStyle({ "color": "#000000ff", "fontSize": "32px" });
 		production_container.add(production_header);
+
+		// graph1
+		const graph1 = this.add.image(229, 160, "graph1");
+		graph1.scaleX = 2.6;
+		graph1.scaleY = 2.6;
+		production_container.add(graph1);
 
 		this.back_button = back_button;
 		this.week_button = week_button;
@@ -232,8 +226,6 @@ export default class System extends Phaser.Scene {
 		this.plant_amount = plant_amount;
 		this.energy_rate = energy_rate;
 		this.water_rate = water_rate;
-		this.system_graph_box = system_graph_box;
-		this.production_graph_box = production_graph_box;
 
 		this.events.emit("scene-awake");
 	}
@@ -256,10 +248,6 @@ export default class System extends Phaser.Scene {
 	energy_rate;
 	/** @type {Phaser.GameObjects.Text} */
 	water_rate;
-	/** @type {Phaser.GameObjects.Rectangle} */
-	system_graph_box;
-	/** @type {Phaser.GameObjects.Rectangle} */
-	production_graph_box;
 
 	/* START-USER-CODE */
 

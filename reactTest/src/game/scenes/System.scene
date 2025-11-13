@@ -21,7 +21,7 @@
             "originX": 0,
             "originY": 0,
             "isFilled": true,
-            "fillColor": "#00740d",
+            "fillColor": "#bde0c4",
             "strokeColor": "#000000",
             "isStroked": true,
             "width": 1040,
@@ -330,23 +330,6 @@
             "y": 363,
             "list": [
                 {
-                    "type": "Rectangle",
-                    "id": "9dee5870-ebf5-442f-bdf7-6ab7fc4f0687",
-                    "label": "system_graph_box",
-                    "displayName": "system_graph_box",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 500,
-                    "hitArea.height": 190,
-                    "originX": 0,
-                    "originY": 0,
-                    "isFilled": true,
-                    "strokeColor": "#000000",
-                    "isStroked": true,
-                    "width": 500,
-                    "height": 190
-                },
-                {
                     "type": "Text",
                     "id": "03c446fe-0b90-4679-9c32-370963f05695",
                     "label": "system_header",
@@ -356,6 +339,18 @@
                     "text": "System",
                     "fontSize": "32px",
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "e91083ac-c54d-4173-9d55-7c25f630a3ee",
+                    "label": "graph2",
+                    "texture": {
+                        "key": "graph2"
+                    },
+                    "x": 252,
+                    "y": 92,
+                    "scaleX": 2.2,
+                    "scaleY": 2.2
                 }
             ]
         },
@@ -367,23 +362,6 @@
             "y": 273,
             "list": [
                 {
-                    "type": "Rectangle",
-                    "id": "6daea309-447c-4d09-86a0-5e636b966571",
-                    "label": "production_graph_box",
-                    "displayName": "production_graph_box",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 455,
-                    "hitArea.height": 280,
-                    "originX": 0,
-                    "originY": 0,
-                    "isFilled": true,
-                    "strokeColor": "#000000",
-                    "isStroked": true,
-                    "width": 455,
-                    "height": 280
-                },
-                {
                     "type": "Text",
                     "id": "7a002e4a-73b8-4cbb-aa15-09c273b7f07a",
                     "label": "production_header",
@@ -394,6 +372,18 @@
                     "text": "Production",
                     "fontSize": "32px",
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "aebe4c78-c5a6-41b4-b6a0-1c3838e88f34",
+                    "label": "graph1",
+                    "texture": {
+                        "key": "graph1"
+                    },
+                    "x": 229,
+                    "y": 160,
+                    "scaleX": 2.6,
+                    "scaleY": 2.6
                 }
             ]
         }
