@@ -76,18 +76,6 @@
             "height": 70
         },
         {
-            "type": "Ellipse",
-            "id": "018d3d88-ddf1-4dcc-b112-3807aa47bb4c",
-            "label": "ellipse_3",
-            "x": 43,
-            "y": 683,
-            "strokeColor": "#000000",
-            "lineWidth": 3,
-            "isStroked": true,
-            "width": 125,
-            "height": 125
-        },
-        {
             "type": "Container",
             "id": "27b0d179-6982-43c8-96a6-27a24ed530d4",
             "label": "achievement_box",
@@ -512,6 +500,18 @@
             "text": "Welcome to Grow n' Flow!",
             "font": "pixelmix_16",
             "fontSize": 16
+        },
+        {
+            "type": "Image",
+            "id": "79f012cf-4e77-4f8e-937e-ee46d5be4e7a",
+            "label": "multiplayer_icon",
+            "texture": {
+                "key": "multiplayer icon"
+            },
+            "x": 64,
+            "y": 665,
+            "scaleX": 1.5,
+            "scaleY": 1.5
         }
     ],
     "plainObjects": [],

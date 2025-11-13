@@ -48,12 +48,6 @@ export default class MainMenu extends Phaser.Scene {
 		ellipse_2.strokeColor = 0;
 		ellipse_2.lineWidth = 3;
 
-		// ellipse_3
-		const ellipse_3 = this.add.ellipse(43, 683, 125, 125);
-		ellipse_3.isStroked = true;
-		ellipse_3.strokeColor = 0;
-		ellipse_3.lineWidth = 3;
-
 		// achievement_box
 		const achievement_box = this.add.container(892, 187);
 
@@ -271,6 +265,11 @@ export default class MainMenu extends Phaser.Scene {
 		bitmaptext_1.setOrigin(0.5, 0.5);
 		bitmaptext_1.text = "Welcome to Grow n' Flow!";
 		bitmaptext_1.fontSize = 16;
+
+		// multiplayer_icon
+		const multiplayer_icon = this.add.image(64, 665, "multiplayer icon");
+		multiplayer_icon.scaleX = 1.5;
+		multiplayer_icon.scaleY = 1.5;
 
 		this.bg = bg;
 		this.tasks_button = tasks_button;
