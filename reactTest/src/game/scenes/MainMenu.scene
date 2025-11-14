@@ -424,6 +424,11 @@
             "type": "Image",
             "id": "03cb2620-c35a-4d79-a518-00fa05e0b6eb",
             "label": "advance",
+            "useGameObjectName": true,
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 32,
+            "hitArea.height": 32,
             "texture": {
                 "key": "advance"
             },

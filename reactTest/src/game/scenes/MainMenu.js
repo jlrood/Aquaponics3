@@ -1,7 +1,10 @@
 /* START OF COMPILED CODE */
 
 /* START-USER-IMPORTS */
+import Phaser from 'phaser'
 import { EventBus } from '../EventBus';
+import WeekSystem, { WEEK_CHANGED } from '../../systems/WeekSystem'
+import createWeekOverlay from '../../ui/WeekOverlay'
 /* END-USER-IMPORTS */
 
 export default class MainMenu extends Phaser.Scene {
@@ -235,6 +238,8 @@ export default class MainMenu extends Phaser.Scene {
 
 		// advance
 		const advance = this.add.image(1192, 644, "advance");
+		advance.name = "advance";
+		advance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 32, 32), Phaser.Geom.Rectangle.Contains);
 		advance.scaleX = 4;
 		advance.scaleY = 4;
 
@@ -282,6 +287,7 @@ export default class MainMenu extends Phaser.Scene {
 		this.journal_icon = journal_icon;
 		this.mail_icon = mail_icon;
 		this.system_icon = system_icon;
+		this.advance = advance;
 
 		this.events.emit("scene-awake");
 	}
@@ -308,66 +314,98 @@ export default class MainMenu extends Phaser.Scene {
 	mail_icon;
 	/** @type {Phaser.GameObjects.Image} */
 	system_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	advance;
 
 	/* START-USER-CODE */
 
 	// Write your code here
 
-    create ()
-    {
+	create() {
 
-        this.editorCreate();
+		this.editorCreate();
 
+		this.cameras.main.setBackgroundColor('#ffffff')
 
 		// Change to hand cursor when you hover over interactable icons.
 		const handify = o => {
-  			if (!o || !o.input) o.setInteractive();           // ensure it has an input plugin
-  			o.input.cursor = 'pointer';                       // hand on hover
-  			o.on('pointerover', () => this.input.setDefaultCursor('pointer'));
-  			o.on('pointerout',  () => this.input.setDefaultCursor('default'));
-  		return o;
+			if (!o || !o.input) o.setInteractive();           // ensure it has an input plugin
+			o.input.cursor = 'pointer';                       // hand on hover
+			o.on('pointerover', () => this.input.setDefaultCursor('pointer'));
+			o.on('pointerout', () => this.input.setDefaultCursor('default'));
+			return o;
 		};
 
 		// Icons are visible, so start with these
-		[ this.task_icon,
+		[this.task_icon,
 		this.shop_icon,
 		this.journal_icon,
 		this.mail_icon,
-		this.system_icon
+		this.system_icon,
+		this.advance
 		].forEach(handify);
 
 		// If you later show the text buttons, fix their hit areas then handify
-		[ this.tasks_button,
-		  this.shop_button,
-		  this.journal_button,
-		  this.mail_button,
-		  this.system_button
+		[this.tasks_button,
+		this.shop_button,
+		this.journal_button,
+		this.mail_button,
+		this.system_button,
+		this.advance
 		].forEach(t => {
- 		 if (!t) return;
-		// re-center the generated 0,0 hit rect on origin 0.5
-		  const w = t.width || 64, h = t.height || 18;
-		  if (t.input?.hitArea?.setTo) t.input.hitArea.setTo(-w / 2, -h / 2, w, h);
-		  handify(t);
+			if (!t) return;
+			// re-center the generated 0,0 hit rect on origin 0.5
+			const w = t.width || 64, h = t.height || 18;
+			if (t.input?.hitArea?.setTo) t.input.hitArea.setTo(-w / 2, -h / 2, w, h);
+			handify(t);
 		});
 
-        EventBus.emit('current-scene-ready', this);
+		// week system
+		this.week = new WeekSystem(this, 6)
+		this.weekText = this.add.text(
+			this.scale.width - 20,
+			16,
+			`Week ${this.week.week}`,
+			{ color: '#000000', fontSize: '24px' }
+		).setOrigin(1, 0)
 
 
-        this.shop_icon.on("pointerdown", () => {
-            this.scene.start('Shop');
-        });
+		this.week.on(WEEK_CHANGED, wk => {
+			this.weekText.setText(`Week ${wk}`)
+			this.applyWeekRules(wk)
+		})
 
-        this.system_icon.on("pointerdown", () => {
+		this.applyWeekRules(this.week.week)
+
+		// advance is your week system button
+		if (this.advance) {
+			this.advance.setInteractive({ useHandCursor: true })
+			this.advance.on('pointerdown', async () => {
+				if (this.week.isFinalWeek()) return
+				await this.showWeekOverlay({ week: this.week.week })
+				this.week.nextWeek()
+			})
+		}
+
+		// React bridge
+		EventBus.emit('current-scene-ready', this)
+
+
+		this.shop_icon.on("pointerdown", () => {
+			this.scene.start('Shop');
+		});
+
+		this.system_icon.on("pointerdown", () => {
 			this.scene.pause();
 			this.scene.launch('System');
-        });
+		});
 
-        this.task_icon.on("pointerdown", () => {
-            // Pause the main menu logic
-            this.scene.pause();
-            // Launch the overlay scene on top
-            this.scene.launch('Tasks');
-        });
+		this.task_icon.on("pointerdown", () => {
+			// Pause the main menu logic
+			this.scene.pause();
+			// Launch the overlay scene on top
+			this.scene.launch('Tasks');
+		});
 
 		this.mail_icon.on("pointerdown", () => {
 			this.scene.pause();
@@ -382,9 +420,9 @@ export default class MainMenu extends Phaser.Scene {
 		if (!this.anims.exists('bg')) {
 			this.anims.create({
 				key: 'bg',
-				frames: this.anims.generateFrameNumbers('bg', { 
-					start: 0, 
-					end: 3 
+				frames: this.anims.generateFrameNumbers('bg', {
+					start: 0,
+					end: 3
 				}),
 				frameRate: 1,
 				repeat: -1
@@ -393,56 +431,63 @@ export default class MainMenu extends Phaser.Scene {
 
 		// If you have a sprite created in the editor named 'player'
 		this.bg.play('bg');
-    }
+	}
 
 
-    changeScene ()
-    {
-        if (this.logoTween)
-        {
-            this.logoTween.stop();
-            this.logoTween = null;
-        }
+	changeScene() {
+		if (this.logoTween) {
+			this.logoTween.stop();
+			this.logoTween = null;
+		}
 
-        this.scene.start('Game');
-    }
+		this.scene.start('Game');
+	}
 
 
-    moveLogo (reactCallback)
-    {
-        if (this.logoTween)
-        {
-            if (this.logoTween.isPlaying())
-            {
-                this.logoTween.pause();
-            }
-            else
-            {
-                this.logoTween.play();
-            }
-        }
-        else
-        {
-            this.logoTween = this.tweens.add({
-                targets: this.logo,
-                x: { value: 750, duration: 3000, ease: 'Back.easeInOut' },
-                y: { value: 80, duration: 1500, ease: 'Sine.easeOut' },
-                yoyo: true,
-                repeat: -1,
-                onUpdate: () => {
-                    if (reactCallback)
-                    {
-                        reactCallback({
-                            x: Math.floor(this.logo.x),
-                            y: Math.floor(this.logo.y)
-                        });
-                    }
-                }
-            });
-        }
-    }
+	moveLogo(reactCallback) {
+		if (this.logoTween) {
+			if (this.logoTween.isPlaying()) {
+				this.logoTween.pause();
+			}
+			else {
+				this.logoTween.play();
+			}
+		}
+		else {
+			this.logoTween = this.tweens.add({
+				targets: this.logo,
+				x: { value: 750, duration: 3000, ease: 'Back.easeInOut' },
+				y: { value: 80, duration: 1500, ease: 'Sine.easeOut' },
+				yoyo: true,
+				repeat: -1,
+				onUpdate: () => {
+					if (reactCallback) {
+						reactCallback({
+							x: Math.floor(this.logo.x),
+							y: Math.floor(this.logo.y)
+						});
+					}
+				}
+			});
+		}
+	}
+	// week rules
+	applyWeekRules(wk) {
+		if (wk == 1) {
 
-        /* END-USER-CODE */
+		}
+		if (wk == 2) {
+
+		}
+	}
+
+	showWeekOverlay(data) {
+		return createWeekOverlay(this, {
+			title: `Week ${data.week} complete`,
+			message: 'New actions unlocked next week.'
+		})
+	}
+	/* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */

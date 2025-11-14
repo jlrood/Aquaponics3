@@ -4,7 +4,7 @@
 import Phaser from 'phaser'
 import WeekSystem, { WEEK_CHANGED } from '../systems/WeekSystem.js'
 import createWeekOverlay from '../ui/WeekOverlay.js'
-import { EventBus } from '../EventBus.js'
+import { EventBus } from '../../EventBus.js'
 
 
 /* END-USER-IMPORTS */
@@ -234,16 +234,16 @@ export default class MainMenu extends Phaser.Scene {
 create() {
   this.editorCreate();
 
-if (!this.advance_button) {
-  // fallback if you missed the edit
-  this.advance_button = this.children.getByName && this.children.getByName('advance_button');
-}
-if (!this.advance_button) {
+	if (!this.advance_button) {
+		// fallback if you missed the edit
+  		this.advance_button = this.children.getByName && this.children.getByName('advance_button');
+		}
+	if (!this.advance_button) {
   console.error('advance_button missing');
   return;
-}
+	}
 
-  // initialize week system inside create()
+  	// initialize week system inside create()
   this.week = new WeekSystem(this, 6);
 
   // simple HUD
