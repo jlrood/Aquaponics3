@@ -758,9 +758,9 @@ export default class Shop extends Phaser.Scene {
 		}
 	}
 
-	setListPrice(boxNum, textObj, price) {
-		textObj.text = "$ " + price;
-		this.priceTable[boxNum] = price;
+	setListPrice(boxNum, textObj, itemObj) {
+		textObj.text = "$ " + itemObj.price;
+		this.shopTable[boxNum] = itemObj;
 	}
 
 	updateMoney(intChange) {
@@ -773,6 +773,27 @@ export default class Shop extends Phaser.Scene {
 		return 0;
 	}
 
+	getItemIndexbyID(strID, itemsArr) {
+		let i = 0;
+		while (i < itemsArr.length) {
+			if (itemsArr[i].id == strID) {
+				break;
+			}
+			i += 1;
+		}
+		return i;
+	}
+
+	buyItem(itemID) {
+		let items = this.registry.get('items');
+		const itemIndex = this.getItemIndexbyID(itemID, items);
+		// Modify the value you want
+		items[itemIndex].playerHas += 1;
+		// Write it back to the registry so the change is recognized globally
+		this.registry.set('items', items);
+		console.log(items[itemIndex]);
+	}
+
 	setupFishShop() {
 		this.fish_Box.fillColor = 0x428544;
 		this.plant_Box.fillColor = 0xffffff;
@@ -780,28 +801,28 @@ export default class Shop extends Phaser.Scene {
 		this.equip_Box.fillColor = 0xffffff;
 		this.wipeOptions();
 
-		this.option1_text.text = "Tilapia\nFingerling";
-		this.option2_text.text = "Tilapia\nLarvae";
-		this.option3_text.text = "Tilapia\nJuvenile";
-		this.option4_text.text = "Tilapia\nAdult";
-		this.option5_text.text = "Barramundi\nFingerling";
-		this.option6_text.text = "Barramundi\nLarvae";
-		this.option7_text.text = "Barramundi\nJuvenile";
-		this.option8_text.text = "Barramundi\nAdult";
+		let itemsArr = this.registry.get('items');
+		this.option1_text.text = itemsArr[0].shopText;
+		this.option2_text.text = itemsArr[1].shopText;
+		this.option3_text.text = itemsArr[2].shopText;
+		this.option4_text.text = itemsArr[3].shopText;
+		this.option5_text.text = itemsArr[4].shopText;
+		this.option6_text.text = itemsArr[5].shopText;
+		this.option7_text.text = itemsArr[6].shopText;
+		this.option8_text.text = itemsArr[7].shopText;
 		this.option9_text.text = "";
 		this.option10_text.text = "";
 		this.option11_text.text = "";
 		this.option12_text.text = "";
 
-		let priceArr = this.registry.get('shopPrices');
-		this.setListPrice(1, this.option1_price, priceArr.tilapiaFingerling);
-		this.setListPrice(2, this.option2_price, priceArr.tilapiaLarvae);
-		this.setListPrice(3, this.option3_price, priceArr.tilapiaJuvenile);
-		this.setListPrice(4, this.option4_price, priceArr.tilapiaAdult);
-		this.setListPrice(5, this.option5_price, priceArr.barramundiFingerling);
-		this.setListPrice(6, this.option6_price, priceArr.barramundiLarvae);
-		this.setListPrice(7, this.option7_price, priceArr.barramundiJuvenile);
-		this.setListPrice(8, this.option8_price, priceArr.barramundiAdult);
+		this.setListPrice(1, this.option1_price, itemsArr[0]);
+		this.setListPrice(2, this.option2_price, itemsArr[1]);
+		this.setListPrice(3, this.option3_price, itemsArr[2]);
+		this.setListPrice(4, this.option4_price, itemsArr[3]);
+		this.setListPrice(5, this.option5_price, itemsArr[4]);
+		this.setListPrice(6, this.option6_price, itemsArr[5]);
+		this.setListPrice(7, this.option7_price, itemsArr[6]);
+		this.setListPrice(8, this.option8_price, itemsArr[7]);
 		this.option9_price.text = "";
 		this.option10_price.text = "";
 		this.option11_price.text = "";
@@ -856,7 +877,7 @@ export default class Shop extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
-		this.priceTable = new Array(40);
+		this.shopTable = new Array(12);
 		this.updateMoney(0);
 		this.setupFishShop();
 
@@ -902,62 +923,74 @@ export default class Shop extends Phaser.Scene {
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
-			this.updateMoney(this.priceTable[1] * -1);
+			this.updateMoney(this.shopTable[1].price * -1);
+			this.buyItem(this.shopTable[1].id);
 		})
 
 		this.option_box_2.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_2);
-			this.updateMoney(this.priceTable[2] * -1);
+			this.updateMoney(this.shopTable[2].price * -1);
+			this.buyItem(this.shopTable[2].id);
 		})
 
 		this.option_box_3.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_3);
-			this.updateMoney(this.priceTable[3] * -1);
+			this.updateMoney(this.shopTable[3].price * -1);
+			this.buyItem(this.shopTable[3].id);
 		})
 
 		this.option_box_4.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_4);
-			this.updateMoney(this.priceTable[4] * -1);
+			this.updateMoney(this.shopTable[4].price * -1);
+			this.buyItem(this.shopTable[4].id);
 		})
 
 		this.option_box_5.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_5);
-			this.updateMoney(this.priceTable[5] * -1);
+			this.updateMoney(this.shopTable[5].price * -1);
+			this.buyItem(this.shopTable[5].id);
 		})
 
 		this.option_box_6.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_6);
-			this.updateMoney(this.priceTable[6] * -1);
+			this.updateMoney(this.shopTable[6].price * -1);
+			this.buyItem(this.shopTable[6].id);
 		})
 
 		this.option_box_7.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_7);
-			this.updateMoney(this.priceTable[7] * -1);
+			this.updateMoney(this.shopTable[7].price * -1);
+			this.buyItem(this.shopTable[7].id);
 		})
 
 		this.option_box_8.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_8);
-			this.updateMoney(this.priceTable[8] * -1);
+			this.updateMoney(this.shopTable[8].price * -1);
+			this.buyItem(this.shopTable[8].id);
 		})
 
 		this.option_box_9.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_9);
-			this.updateMoney(this.priceTable[9] * -1);
+			this.updateMoney(this.shopTable[9].price * -1);
+			this.buyItem(this.shopTable[9].id);
 		})
 
 		this.option_box_10.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_10);
-			this.updateMoney(this.priceTable[10] * -1);
+			this.updateMoney(this.shopTable[10].price * -1);
+			this.buyItem(this.shopTable[10].id);
 		})
 
 		this.option_box_11.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_11);
-			this.updateMoney(this.priceTable[11] * -1);
+			this.updateMoney(this.shopTable[11].price * -1);
+			this.buyItem(this.shopTable[11].id);
 		})
 
 		this.option_box_12.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_12);
-			this.updateMoney(this.priceTable[12] * -1);
+			this.updateMoney(this.shopTable[12].price * -1);
+			this.buyItem(this.shopTable[12].id);
 		})
 	}
 
