@@ -23,7 +23,7 @@ export default class Shop extends Phaser.Scene {
 		const all_background = this.add.rectangle(0, 0, 1280, 720);
 		all_background.setOrigin(0, 0);
 		all_background.isFilled = true;
-		all_background.fillColor = 10420122;
+		all_background.fillColor = 12113847;
 
 		// header2_background
 		const header2_background = this.add.image(999, 73, "text_box_empty");
@@ -251,6 +251,12 @@ export default class Shop extends Phaser.Scene {
 		backText.fontSize = 15;
 		back_container.add(backText);
 
+		// back_button
+		const back_button = this.add.image(19, 9, "back button");
+		back_button.scaleX = 2;
+		back_button.scaleY = 2;
+		back_container.add(back_button);
+
 		// system_container
 		const system_container = this.add.container(760, 45);
 
@@ -355,42 +361,42 @@ export default class Shop extends Phaser.Scene {
 		rectangle_9.strokeColor = 0;
 
 		// option1_text
-		const option1_text = this.add.bitmapText(120, 282, "pixelmix_16", "Tilapia\nFingerling");
+		const option1_text = this.add.bitmapText(260, 238, "pixelmix_16", "Tilapia\nFingerling");
 		option1_text.setOrigin(0.5, 0.5);
 		option1_text.text = "Tilapia\nFingerling";
 		option1_text.fontSize = 16;
 		option1_text.align = 1;
 
 		// option2_text
-		const option2_text = this.add.bitmapText(261, 282, "pixelmix_16", "Tilapia\nLarvae");
+		const option2_text = this.add.bitmapText(117, 237, "pixelmix_16", "Tilapia\nLarvae");
 		option2_text.setOrigin(0.5, 0.5);
 		option2_text.text = "Tilapia\nLarvae";
 		option2_text.fontSize = 16;
 		option2_text.align = 1;
 
 		// option3_text
-		const option3_text = this.add.bitmapText(401, 282, "pixelmix_16", "Tilapia\nJuvenille");
+		const option3_text = this.add.bitmapText(401, 239, "pixelmix_16", "Tilapia\nJuvenille");
 		option3_text.setOrigin(0.5, 0.5);
 		option3_text.text = "Tilapia\nJuvenille";
 		option3_text.fontSize = 16;
 		option3_text.align = 1;
 
 		// option4_text
-		const option4_text = this.add.bitmapText(540, 282, "pixelmix_16", "Tilapia\nAdult");
+		const option4_text = this.add.bitmapText(539, 238, "pixelmix_16", "Tilapia\nAdult");
 		option4_text.setOrigin(0.5, 0.5);
 		option4_text.text = "Tilapia\nAdult";
 		option4_text.fontSize = 16;
 		option4_text.align = 1;
 
 		// option5_text
-		const option5_text = this.add.bitmapText(120, 421, "pixelmix_16", "Barramundi\nFingerling");
+		const option5_text = this.add.bitmapText(260, 424, "pixelmix_16", "Barramundi\nFingerling");
 		option5_text.setOrigin(0.5, 0.5);
 		option5_text.text = "Barramundi\nFingerling";
 		option5_text.fontSize = 16;
 		option5_text.align = 1;
 
 		// option6_text
-		const option6_text = this.add.bitmapText(261, 421, "pixelmix_16", "Barramundi\nLarvae");
+		const option6_text = this.add.bitmapText(120, 424, "pixelmix_16", "Barramundi\nLarvae");
 		option6_text.setOrigin(0.5, 0.5);
 		option6_text.text = "Barramundi\nLarvae";
 		option6_text.fontSize = 16;
@@ -627,6 +633,36 @@ export default class Shop extends Phaser.Scene {
 		option12_lock.setOrigin(0, 0);
 		option12_lock.visible = false;
 
+		// larvae0
+		const larvae0 = this.add.image(121, 298, "larvae", 0);
+		larvae0.scaleX = 1.9;
+		larvae0.scaleY = 1.9;
+
+		// fingerling0
+		const fingerling0 = this.add.image(286, 286, "fingerling", 0);
+		fingerling0.scaleX = 1.9;
+		fingerling0.scaleY = 1.9;
+
+		// juvenile0
+		const juvenile0 = this.add.image(418, 287, "juvenile", 0);
+		juvenile0.scaleX = 1.9;
+		juvenile0.scaleY = 1.9;
+
+		// tilapia_new0
+		const tilapia_new0 = this.add.image(541, 283, "tilapia_new", 0);
+		tilapia_new0.scaleX = 1.9;
+		tilapia_new0.scaleY = 1.9;
+
+		// lettuce
+		const lettuce = this.add.image(123, 297, "lettuce");
+		lettuce.scaleX = 3;
+		lettuce.scaleY = 3;
+
+		// sprout
+		const sprout = this.add.image(269, 294, "sprout");
+		sprout.scaleX = 3;
+		sprout.scaleY = 3;
+
 		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
 		this.option_box_2 = option_box_2;
@@ -700,6 +736,13 @@ export default class Shop extends Phaser.Scene {
 		this.option10_lock = option10_lock;
 		this.option11_lock = option11_lock;
 		this.option12_lock = option12_lock;
+
+		this.til_fin = fingerling0;
+		this.til_re = tilapia_new0;
+		this.til_lrv = larvae0;
+		this.til_juv = juvenile0;
+		this.ltt_spr = sprout;
+		this.ltt_h = lettuce;
 
 		this.events.emit("scene-awake");
 	}
@@ -975,6 +1018,13 @@ export default class Shop extends Phaser.Scene {
 		this.option_box_11.setVisible(false);
 		this.option_box_12.setVisible(false);
 
+		this.til_fin.setVisible(true);
+		this.til_re.setVisible(true);
+		this.til_lrv.setVisible(true);
+		this.til_juv.setVisible(true);
+		this.ltt_h.setVisible(false);
+		this.ltt_spr.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1037,6 +1087,13 @@ export default class Shop extends Phaser.Scene {
 		this.option_box_10.setVisible(false);
 		this.option_box_11.setVisible(false);
 		this.option_box_12.setVisible(false);
+
+		this.til_fin.setVisible(false);
+		this.til_re.setVisible(false);
+		this.til_lrv.setVisible(false);
+		this.til_juv.setVisible(false);
+		this.ltt_h.setVisible(true);
+		this.ltt_spr.setVisible(true);
 
 		this.scroll.setVisible(false);
 	}
@@ -1101,6 +1158,13 @@ export default class Shop extends Phaser.Scene {
 		this.option_box_11.setVisible(false);
 		this.option_box_12.setVisible(false);
 
+		this.til_fin.setVisible(false);
+		this.til_re.setVisible(false);
+		this.til_lrv.setVisible(false);
+		this.til_juv.setVisible(false);
+		this.ltt_h.setVisible(false);
+		this.ltt_spr.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1112,8 +1176,8 @@ export default class Shop extends Phaser.Scene {
 		this.wipeOptions();
 
 		let itemsArr = this.registry.get('items');
-		this.option1_text.text = itemsArr[16].shopText;
-		this.option2_text.text = ""
+		this.option1_text.text = "";
+		this.option2_text.text = itemsArr[16].shopText;
 		this.option3_text.text = "";
 		this.option4_text.text = "";
 		this.option5_text.text = "";
@@ -1163,6 +1227,14 @@ export default class Shop extends Phaser.Scene {
 		this.option_box_10.setVisible(false);
 		this.option_box_11.setVisible(false);
 		this.option_box_12.setVisible(false);
+		
+		this.til_fin.setVisible(false);
+		this.til_re.setVisible(false);
+		this.til_lrv.setVisible(false);
+		this.til_juv.setVisible(false);
+		this.ltt_h.setVisible(false);
+		this.ltt_spr.setVisible(false);
+
 
 		this.scroll.setVisible(false);
 	}

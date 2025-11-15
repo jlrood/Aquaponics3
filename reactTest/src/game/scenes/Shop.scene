@@ -19,7 +19,7 @@
             "originX": 0,
             "originY": 0,
             "isFilled": true,
-            "fillColor": "#9eff9a",
+            "fillColor": "#b8d7b7",
             "width": 1280,
             "height": 720
         },
@@ -484,6 +484,18 @@
                     "text": "Back",
                     "font": "pixelmix_8",
                     "fontSize": 15
+                },
+                {
+                    "type": "Image",
+                    "id": "c163f983-1515-4d35-b28e-ad8cb9eae8f7",
+                    "label": "back_button",
+                    "texture": {
+                        "key": "back button"
+                    },
+                    "x": 19,
+                    "y": 9,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         },
@@ -710,8 +722,8 @@
             "label": "option1_text",
             "displayName": "option1_text",
             "scope": "CLASS",
-            "x": 120,
-            "y": 282,
+            "x": 260,
+            "y": 238,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Tilapia\nFingerling",
@@ -725,8 +737,8 @@
             "label": "option2_text",
             "displayName": "option2_text",
             "scope": "CLASS",
-            "x": 261,
-            "y": 282,
+            "x": 117,
+            "y": 237,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Tilapia\nLarvae",
@@ -741,7 +753,7 @@
             "displayName": "option3_text",
             "scope": "CLASS",
             "x": 401,
-            "y": 282,
+            "y": 239,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Tilapia\nJuvenille",
@@ -755,8 +767,8 @@
             "label": "option4_text",
             "displayName": "option4_text",
             "scope": "CLASS",
-            "x": 540,
-            "y": 282,
+            "x": 539,
+            "y": 238,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Tilapia\nAdult",
@@ -770,8 +782,8 @@
             "label": "option5_text",
             "displayName": "option5_text",
             "scope": "CLASS",
-            "x": 120,
-            "y": 421,
+            "x": 260,
+            "y": 424,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Barramundi\nFingerling",
@@ -785,8 +797,8 @@
             "label": "option6_text",
             "displayName": "option6_text",
             "scope": "CLASS",
-            "x": 261,
-            "y": 421,
+            "x": 120,
+            "y": 424,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Barramundi\nLarvae",
@@ -1361,6 +1373,82 @@
             "originX": 0,
             "originY": 0,
             "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "3dabb019-374a-4eef-b9d3-fb6e3508d1a3",
+            "label": "larvae0",
+            "texture": {
+                "key": "larvae",
+                "frame": 0
+            },
+            "x": 121,
+            "y": 298,
+            "scaleX": 1.9,
+            "scaleY": 1.9
+        },
+        {
+            "type": "Image",
+            "id": "c440b9c2-d6c2-4d51-a350-5cebccb5158c",
+            "label": "fingerling0",
+            "texture": {
+                "key": "fingerling",
+                "frame": 0
+            },
+            "x": 286,
+            "y": 286,
+            "scaleX": 1.9,
+            "scaleY": 1.9
+        },
+        {
+            "type": "Image",
+            "id": "3bc17c21-a20f-4219-a0a6-66cd390f432f",
+            "label": "juvenile0",
+            "texture": {
+                "key": "juvenile",
+                "frame": 0
+            },
+            "x": 418,
+            "y": 287,
+            "scaleX": 1.9,
+            "scaleY": 1.9
+        },
+        {
+            "type": "Image",
+            "id": "4522eaa0-3bc3-470a-a281-597f7a46ddaf",
+            "label": "tilapia_new0",
+            "texture": {
+                "key": "tilapia_new",
+                "frame": 0
+            },
+            "x": 541,
+            "y": 283,
+            "scaleX": 1.9,
+            "scaleY": 1.9
+        },
+        {
+            "type": "Image",
+            "id": "6d048dd0-628c-4fdd-bf11-8f0b8fe9ea76",
+            "label": "lettuce",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 123,
+            "y": 297,
+            "scaleX": 3,
+            "scaleY": 3
+        },
+        {
+            "type": "Image",
+            "id": "3bc61837-2dc1-421d-9b24-4c7506de34d6",
+            "label": "sprout",
+            "texture": {
+                "key": "sprout"
+            },
+            "x": 269,
+            "y": 294,
+            "scaleX": 3,
+            "scaleY": 3
         }
     ],
     "plainObjects": [],

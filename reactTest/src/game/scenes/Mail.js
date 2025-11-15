@@ -23,7 +23,7 @@ export default class Mail extends Phaser.Scene {
 		const background = this.add.rectangle(120, 80, 1040, 560);
 		background.setOrigin(0, 0);
 		background.isFilled = true;
-		background.fillColor = 13858434;
+		background.fillColor = 10144758;
 		background.isStroked = true;
 		background.strokeColor = 0;
 
@@ -45,6 +45,12 @@ export default class Mail extends Phaser.Scene {
 		back_text.text = "Back";
 		back_text.fontSize = 15;
 		back_container.add(back_text);
+
+		// back_button_1
+		const back_button_1 = this.add.image(14, 10, "back button");
+		back_button_1.scaleX = 2;
+		back_button_1.scaleY = 2;
+		back_container.add(back_button_1);
 
 		// mail_container
 		const mail_container = this.add.container(478, 120);

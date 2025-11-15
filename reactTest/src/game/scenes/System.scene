@@ -59,6 +59,18 @@
                     "displayName": "back_text",
                     "text": "Back",
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "a820c86a-a623-4e47-8c7f-8162df93ef43",
+                    "label": "back_button_1",
+                    "texture": {
+                        "key": "back button"
+                    },
+                    "x": 19,
+                    "y": 10,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         },

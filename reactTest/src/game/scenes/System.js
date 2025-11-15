@@ -46,6 +46,12 @@ export default class System extends Phaser.Scene {
 		back_text.setStyle({ "color": "#000000ff" });
 		back_container.add(back_text);
 
+		// back_button_1
+		const back_button_1 = this.add.image(19, 10, "back button");
+		back_button_1.scaleX = 2;
+		back_button_1.scaleY = 2;
+		back_container.add(back_button_1);
+
 		// week_container
 		const week_container = this.add.container(674, 190);
 
