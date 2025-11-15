@@ -270,20 +270,6 @@ export default class Shop extends Phaser.Scene {
 		header2_Text.fontSize = 32;
 		system_container.add(header2_Text);
 
-		// sell_page_button
-		const sell_page_button = this.add.ellipse(1280, 360, 256, 256);
-		sell_page_button.setInteractive(new Phaser.Geom.Ellipse(128, 128, 256, 256), Phaser.Geom.Ellipse.Contains);
-		sell_page_button.isFilled = true;
-		sell_page_button.fillColor = 428544;
-		sell_page_button.isStroked = true;
-		sell_page_button.strokeColor = 0;
-
-		// sell_page_icon
-		const sell_page_icon = this.add.bitmapText(1179, 360, "pixelmix_32", "$");
-		sell_page_icon.setOrigin(0, 0.5);
-		sell_page_icon.text = "$";
-		sell_page_icon.fontSize = 128;
-
 		// rectangle_1
 		const rectangle_1 = this.add.rectangle(120, 343, 116, 30);
 		rectangle_1.isFilled = true;
@@ -547,6 +533,100 @@ export default class Shop extends Phaser.Scene {
 		buy_page_icon.text = "%";
 		buy_page_icon.fontSize = 128;
 
+		// systemImage
+		const systemImage = this.add.image(1010, 427, "bg (1)");
+		systemImage.scaleX = 0.25;
+		systemImage.scaleY = 0.25;
+		systemImage.visible = false;
+
+		// sell_page_button
+		const sell_page_button = this.add.ellipse(1280, 360, 256, 256);
+		sell_page_button.setInteractive(new Phaser.Geom.Ellipse(128, 128, 256, 256), Phaser.Geom.Ellipse.Contains);
+		sell_page_button.visible = false;
+		sell_page_button.isFilled = true;
+		sell_page_button.fillColor = 428544;
+		sell_page_button.isStroked = true;
+		sell_page_button.strokeColor = 0;
+
+		// sell_page_icon
+		const sell_page_icon = this.add.bitmapText(1179, 360, "pixelmix_32", "$");
+		sell_page_icon.setOrigin(0, 0.5);
+		sell_page_icon.visible = false;
+		sell_page_icon.text = "$";
+		sell_page_icon.fontSize = 128;
+
+		// option1_lock
+		const option1_lock = this.add.image(60, 240, "Lock");
+		option1_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option1_lock.setOrigin(0, 0);
+		option1_lock.visible = false;
+
+		// option2_lock
+		const option2_lock = this.add.image(200, 240, "Lock");
+		option2_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option2_lock.setOrigin(0, 0);
+		option2_lock.visible = false;
+
+		// option3_lock
+		const option3_lock = this.add.image(340, 240, "Lock");
+		option3_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option3_lock.setOrigin(0, 0);
+		option3_lock.visible = false;
+
+		// option4_lock
+		const option4_lock = this.add.image(480, 240, "Lock");
+		option4_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option4_lock.setOrigin(0, 0);
+		option4_lock.visible = false;
+
+		// option5_lock
+		const option5_lock = this.add.image(60, 380, "Lock");
+		option5_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option5_lock.setOrigin(0, 0);
+		option5_lock.visible = false;
+
+		// option6_lock
+		const option6_lock = this.add.image(200, 380, "Lock");
+		option6_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option6_lock.setOrigin(0, 0);
+		option6_lock.visible = false;
+
+		// option7_lock
+		const option7_lock = this.add.image(340, 380, "Lock");
+		option7_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option7_lock.setOrigin(0, 0);
+		option7_lock.visible = false;
+
+		// option8_lock
+		const option8_lock = this.add.image(480, 380, "Lock");
+		option8_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option8_lock.setOrigin(0, 0);
+		option8_lock.visible = false;
+
+		// option9_lock
+		const option9_lock = this.add.image(60, 520, "Lock");
+		option9_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option9_lock.setOrigin(0, 0);
+		option9_lock.visible = false;
+
+		// option10_lock
+		const option10_lock = this.add.image(200, 520, "Lock");
+		option10_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option10_lock.setOrigin(0, 0);
+		option10_lock.visible = false;
+
+		// option11_lock
+		const option11_lock = this.add.image(340, 520, "Lock");
+		option11_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option11_lock.setOrigin(0, 0);
+		option11_lock.visible = false;
+
+		// option12_lock
+		const option12_lock = this.add.image(480, 520, "Lock");
+		option12_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
+		option12_lock.setOrigin(0, 0);
+		option12_lock.visible = false;
+
 		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
 		this.option_box_2 = option_box_2;
@@ -566,8 +646,6 @@ export default class Shop extends Phaser.Scene {
 		this.plant_Box = plant_Box;
 		this.back_Button = back_Button;
 		this.header2_Text = header2_Text;
-		this.sell_page_button = sell_page_button;
-		this.sell_page_icon = sell_page_icon;
 		this.rectangle_1 = rectangle_1;
 		this.rectangle_2 = rectangle_2;
 		this.rectangle_3 = rectangle_3;
@@ -607,6 +685,21 @@ export default class Shop extends Phaser.Scene {
 		this.money_text = money_text;
 		this.buy_page_button = buy_page_button;
 		this.buy_page_icon = buy_page_icon;
+		this.systemImage = systemImage;
+		this.sell_page_button = sell_page_button;
+		this.sell_page_icon = sell_page_icon;
+		this.option1_lock = option1_lock;
+		this.option2_lock = option2_lock;
+		this.option3_lock = option3_lock;
+		this.option4_lock = option4_lock;
+		this.option5_lock = option5_lock;
+		this.option6_lock = option6_lock;
+		this.option7_lock = option7_lock;
+		this.option8_lock = option8_lock;
+		this.option9_lock = option9_lock;
+		this.option10_lock = option10_lock;
+		this.option11_lock = option11_lock;
+		this.option12_lock = option12_lock;
 
 		this.events.emit("scene-awake");
 	}
@@ -649,10 +742,6 @@ export default class Shop extends Phaser.Scene {
 	back_Button;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	header2_Text;
-	/** @type {Phaser.GameObjects.Ellipse} */
-	sell_page_button;
-	/** @type {Phaser.GameObjects.BitmapText} */
-	sell_page_icon;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	rectangle_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
@@ -731,6 +820,36 @@ export default class Shop extends Phaser.Scene {
 	buy_page_button;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	buy_page_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	systemImage;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	sell_page_button;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	sell_page_icon;
+	/** @type {Phaser.GameObjects.Image} */
+	option1_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option2_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option3_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option4_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option5_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option6_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option7_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option8_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option9_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option10_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option11_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	option12_lock;
 
 	/* START-USER-CODE */
 
@@ -747,6 +866,7 @@ export default class Shop extends Phaser.Scene {
 			this.sell_page_icon.setVisible(false);
 			this.buy_page_button.setVisible(true);
 			this.buy_page_icon.setVisible(true);
+			this.systemImage.setVisible(false);
 			this.header2_Text.text = "Current Prices";
 		}
 		else {
@@ -754,6 +874,7 @@ export default class Shop extends Phaser.Scene {
 			this.sell_page_icon.setVisible(true);
 			this.buy_page_button.setVisible(false);
 			this.buy_page_icon.setVisible(false);
+			this.systemImage.setVisible(true);
 			this.header2_Text.text = "System";
 		}
 	}
@@ -1069,6 +1190,7 @@ export default class Shop extends Phaser.Scene {
 		this.shopTable = new Array(13);
 		this.updateMoney(0);
 		this.setupFishShop();
+		this.switchScreen('b')
 
 		this.back_Button.on("pointerdown", () => {
             this.scene.start('MainMenu'); // Still works!

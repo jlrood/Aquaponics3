@@ -525,39 +525,6 @@
             ]
         },
         {
-            "type": "Ellipse",
-            "id": "03dceb76-f685-43c3-9a43-49140ebf8567",
-            "label": "sell_page_button",
-            "displayName": "sell_page_button",
-            "scope": "CLASS",
-            "hitArea.shape": "ELLIPSE",
-            "hitArea.x": 128,
-            "hitArea.y": 128,
-            "hitArea.width": 256,
-            "hitArea.height": 256,
-            "x": 1280,
-            "y": 360,
-            "isFilled": true,
-            "fillColor": "#068a00",
-            "strokeColor": "#000000",
-            "isStroked": true,
-            "width": 256,
-            "height": 256
-        },
-        {
-            "type": "BitmapText",
-            "id": "0d27ba15-8ea6-4270-818b-556db10bdc7a",
-            "label": "sell_page_icon",
-            "displayName": "sell_page_icon",
-            "scope": "CLASS",
-            "x": 1179,
-            "y": 360,
-            "originY": 0.5,
-            "text": "$",
-            "font": "pixelmix_32",
-            "fontSize": 128
-        },
-        {
             "type": "Rectangle",
             "id": "0a7c035a-b0be-4de9-9b00-85066781f5a4",
             "label": "rectangle_1",
@@ -1128,6 +1095,272 @@
             "text": "%",
             "font": "pixelmix_32",
             "fontSize": 128
+        },
+        {
+            "type": "Image",
+            "id": "18fe7ce7-30b7-44ee-ac14-25aed3db94be",
+            "label": "systemImage",
+            "displayName": "systemImage",
+            "scope": "CLASS",
+            "texture": {
+                "key": "bg (1)"
+            },
+            "x": 1010,
+            "y": 427,
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "visible": false
+        },
+        {
+            "type": "Ellipse",
+            "id": "03dceb76-f685-43c3-9a43-49140ebf8567",
+            "label": "sell_page_button",
+            "displayName": "sell_page_button",
+            "scope": "CLASS",
+            "hitArea.shape": "ELLIPSE",
+            "hitArea.x": 128,
+            "hitArea.y": 128,
+            "hitArea.width": 256,
+            "hitArea.height": 256,
+            "x": 1280,
+            "y": 360,
+            "visible": false,
+            "isFilled": true,
+            "fillColor": "#068a00",
+            "strokeColor": "#000000",
+            "isStroked": true,
+            "width": 256,
+            "height": 256
+        },
+        {
+            "type": "BitmapText",
+            "id": "0d27ba15-8ea6-4270-818b-556db10bdc7a",
+            "label": "sell_page_icon",
+            "displayName": "sell_page_icon",
+            "scope": "CLASS",
+            "x": 1179,
+            "y": 360,
+            "originY": 0.5,
+            "visible": false,
+            "text": "$",
+            "font": "pixelmix_32",
+            "fontSize": 128
+        },
+        {
+            "type": "Image",
+            "id": "310d831a-4489-48ee-bb17-df961f0152f8",
+            "label": "option1_lock",
+            "displayName": "option1_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 60,
+            "y": 240,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "a23b1a76-98ef-49c3-a08f-b32741345c38",
+            "label": "option2_lock",
+            "displayName": "option2_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 200,
+            "y": 240,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "7541ab37-a571-432c-bbd5-91d99a7810da",
+            "label": "option3_lock",
+            "displayName": "option3_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 340,
+            "y": 240,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "19df6684-2fc8-4719-81c7-ee5afb75b623",
+            "label": "option4_lock",
+            "displayName": "option4_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 480,
+            "y": 240,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "8a31c790-aa69-46e3-a174-a60ae8f63d9c",
+            "label": "option5_lock",
+            "displayName": "option5_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 60,
+            "y": 380,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "eda23924-36bb-4819-9e62-70441979e79f",
+            "label": "option6_lock",
+            "displayName": "option6_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 200,
+            "y": 380,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "ce48904b-42af-46ea-a83f-1ad0f743d8bc",
+            "label": "option7_lock",
+            "displayName": "option7_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 340,
+            "y": 380,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "3e959e54-5e6f-48c6-9485-ce4551aedbcc",
+            "label": "option8_lock",
+            "displayName": "option8_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 480,
+            "y": 380,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "63170628-b861-4821-9356-f4a5cab43c67",
+            "label": "option9_lock",
+            "displayName": "option9_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 60,
+            "y": 520,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "64bad07a-2875-48e7-a879-1ef73b9aa237",
+            "label": "option10_lock",
+            "displayName": "option10_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 200,
+            "y": 520,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "51b51055-6a98-4856-92fc-ef978ca1cd91",
+            "label": "option11_lock",
+            "displayName": "option11_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 340,
+            "y": 520,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "3117e175-8235-4f21-8229-70af9e6d1fb9",
+            "label": "option12_lock",
+            "displayName": "option12_lock",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 120,
+            "hitArea.height": 120,
+            "texture": {
+                "key": "Lock"
+            },
+            "x": 480,
+            "y": 520,
+            "originX": 0,
+            "originY": 0,
+            "visible": false
         }
     ],
     "plainObjects": [],
