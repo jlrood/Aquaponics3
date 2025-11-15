@@ -119,6 +119,19 @@
                 "key": "mail icon"
             },
             {
+                "url": "assets/buttons_boxes/mini icons.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 15,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "mini icons"
+            },
+            {
                 "url": "assets/buttons_boxes/multiplayer icon.png",
                 "type": "image",
                 "key": "multiplayer icon"
@@ -170,6 +183,11 @@
                 "url": "assets/buttons_boxes/shop icon.png",
                 "type": "image",
                 "key": "shop icon"
+            },
+            {
+                "url": "assets/life/sillouette.png",
+                "type": "image",
+                "key": "sillouette"
             },
             {
                 "url": "assets/life/sprout.png",

@@ -263,33 +263,6 @@
                 },
                 {
                     "type": "Text",
-                    "id": "92be9d8d-7ffb-4059-9528-07b67360181b",
-                    "label": "text_3",
-                    "x": 14,
-                    "y": 30,
-                    "text": "[I]",
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "04d3e3bf-7db7-4c73-b912-6f8cf1b3b56e",
-                    "label": "text_4",
-                    "x": 12,
-                    "y": 107,
-                    "text": "[I]",
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
-                    "id": "8349543c-d152-49da-b2f6-d1e499ba3b90",
-                    "label": "text_5",
-                    "x": 15,
-                    "y": 66,
-                    "text": "[I]",
-                    "color": "#000000ff"
-                },
-                {
-                    "type": "Text",
                     "id": "13c3fe25-2c97-4d5a-b7d7-7680a7eafab4",
                     "label": "energy_rate",
                     "displayName": "energy_rate",
@@ -315,22 +288,43 @@
                     "color": "#000000ff"
                 },
                 {
-                    "type": "Text",
-                    "id": "62f7baab-eae9-469d-a09f-61b5bffc7267",
-                    "label": "text_6",
-                    "x": 262,
-                    "y": 44,
-                    "text": "[I]",
-                    "color": "#000000ff"
+                    "type": "Image",
+                    "id": "08f3244a-ebc4-4f5d-a1e8-bfbe04d473ab",
+                    "label": "mini_icons4",
+                    "texture": {
+                        "key": "mini icons",
+                        "frame": 4
+                    },
+                    "x": 32,
+                    "y": 38,
+                    "scaleX": 1.8,
+                    "scaleY": 1.8
                 },
                 {
-                    "type": "Text",
-                    "id": "b98a8073-31df-442f-93cc-12e93bd2ff2b",
-                    "label": "text_7",
-                    "x": 263,
-                    "y": 90,
-                    "text": "[I]",
-                    "color": "#000000ff"
+                    "type": "Image",
+                    "id": "1fb2eb8a-d0a7-438d-96ee-b172a3bdf0ad",
+                    "label": "mini_icons1",
+                    "texture": {
+                        "key": "mini icons",
+                        "frame": 1
+                    },
+                    "x": 30,
+                    "y": 76,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "fa08ceca-8c71-437f-8cdc-fa7fbb55416b",
+                    "label": "mini_icons0",
+                    "texture": {
+                        "key": "mini icons",
+                        "frame": 0
+                    },
+                    "x": 29,
+                    "y": 114,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         },
@@ -363,6 +357,19 @@
                     "y": 92,
                     "scaleX": 2.2,
                     "scaleY": 2.2
+                },
+                {
+                    "type": "Image",
+                    "id": "33c28e8b-ae6a-4a9d-b320-a8edbed29fc0",
+                    "label": "mini_icons3",
+                    "texture": {
+                        "key": "mini icons",
+                        "frame": 3
+                    },
+                    "x": 287,
+                    "y": -120,
+                    "scaleX": 2,
+                    "scaleY": 2
                 }
             ]
         },
@@ -398,6 +405,19 @@
                     "scaleY": 2.6
                 }
             ]
+        },
+        {
+            "type": "Image",
+            "id": "05901895-150a-4e1d-8435-e5dbfc6c87f7",
+            "label": "mini_icons2",
+            "texture": {
+                "key": "mini icons",
+                "frame": 2
+            },
+            "x": 435,
+            "y": 291,
+            "scaleX": 2,
+            "scaleY": 2
         }
     ],
     "plainObjects": [],
