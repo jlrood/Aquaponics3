@@ -30,7 +30,16 @@ export default class Boot extends Scene
             {id: 'barramundiFingerling', playerHas: 0, price: 2, shopText: "Barramundi\nFingerling"},
             {id: 'barramundiLarvae', playerHas: 0, price: 5, shopText: "Barramundi\nLarvae"},
             {id: 'barramundiJuvenile', playerHas: 0, price: 10, shopText: "Barramundi\nJuvenile"},
-            {id: 'barramundiAdult', playerHas: 0, price: 20, shopText: "Barramundi\nAdult"}
+            {id: 'barramundiAdult', playerHas: 0, price: 20, shopText: "Barramundi\nAdult"},
+            {id: 'parrisIslandRomaineSeeds', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSeeds"},
+            {id: 'parrisIslandRomaineGrown', playerHas: 0, price: 5, shopText: "Romaine\nLettuce"},
+            {id: 'growBed', playerHas: 0, price: 20, shopText: "Grow Bed"},
+            {id: 'fluorescentLight', playerHas: 0, price: 15, shopText: "F. Light"},
+            {id: 'tankSensor', playerHas: 0, price: 20, shopText: "Tank\nSensor"},
+            {id: 'regTank', playerHas: 0, price: 30, shopText: "Fish Tank"},
+            {id: 'premiumTank', playerHas: 0, price: 80, shopText: "Premium\nFish Tank"},
+            {id: 'plantTray', playerHas: 0, price: 10, shopText: "Plant\nTray"},
+            {id: 'pHMeter', playerHas: 0, price: 5, shopText: "pH Meter"}
         ]);
         this.scene.start('Preloader');
     }

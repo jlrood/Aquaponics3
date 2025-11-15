@@ -767,10 +767,10 @@ export default class Shop extends Phaser.Scene {
 		let curMoney = this.registry.get('money');
 		let newMoney = curMoney + intChange;
 		if (newMoney < 0)
-			return -1;
+			return false;
 		this.registry.set('money', newMoney);
 		this.money_text.text = "$ " + newMoney;
-		return 0;
+		return true;
 	}
 
 	getItemIndexbyID(strID, itemsArr) {
@@ -857,6 +857,195 @@ export default class Shop extends Phaser.Scene {
 		this.scroll.setVisible(false);
 	}
 
+	setupPlantShop() {
+		this.fish_Box.fillColor = 0xffffff;
+		this.plant_Box.fillColor = 0x428544;
+		this.system_Box.fillColor = 0xffffff;
+		this.equip_Box.fillColor = 0xffffff;
+		this.wipeOptions();
+
+		let itemsArr = this.registry.get('items');
+		this.option1_text.text = itemsArr[8].shopText;
+		this.option2_text.text = itemsArr[9].shopText;
+		this.option3_text.text = "";
+		this.option4_text.text = "";
+		this.option5_text.text = "";
+		this.option6_text.text = "";
+		this.option7_text.text = "";
+		this.option8_text.text = "";
+		this.option9_text.text = "";
+		this.option10_text.text = "";
+		this.option11_text.text = "";
+		this.option12_text.text = "";
+
+		this.setListPrice(1, this.option1_price, itemsArr[8]);
+		this.setListPrice(2, this.option2_price, itemsArr[9]);
+		this.option3_price.text = "";
+		this.option4_price.text = "";
+		this.option5_price.text = "";
+		this.option6_price.text = "";
+		this.option7_price.text = "";
+		this.option8_price.text = "";
+		this.option9_price.text = "";
+		this.option10_price.text = "";
+		this.option11_price.text = "";
+		this.option12_price.text = "";
+
+		this.rectangle_1.setVisible(true);
+		this.rectangle_2.setVisible(true);
+		this.rectangle_3.setVisible(false);
+		this.rectangle_4.setVisible(false);
+		this.rectangle_5.setVisible(false);
+		this.rectangle_6.setVisible(false);
+		this.rectangle_7.setVisible(false);
+		this.rectangle_8.setVisible(false);
+		this.rectangle_9.setVisible(false);
+		this.rectangle_10.setVisible(false);
+		this.rectangle_11.setVisible(false);
+		this.rectangle_12.setVisible(false);
+
+		this.option_box_1.setVisible(true);
+		this.option_box_2.setVisible(true);
+		this.option_box_3.setVisible(false);
+		this.option_box_4.setVisible(false);
+		this.option_box_5.setVisible(false);
+		this.option_box_6.setVisible(false);
+		this.option_box_7.setVisible(false);
+		this.option_box_8.setVisible(false);
+		this.option_box_9.setVisible(false);
+		this.option_box_10.setVisible(false);
+		this.option_box_11.setVisible(false);
+		this.option_box_12.setVisible(false);
+
+		this.scroll.setVisible(false);
+	}
+
+	setupSystemsShop() {
+		this.fish_Box.fillColor = 0xffffff;
+		this.plant_Box.fillColor = 0xffffff;
+		this.system_Box.fillColor = 0x428544;
+		this.equip_Box.fillColor = 0xffffff;
+		this.wipeOptions();
+
+		let itemsArr = this.registry.get('items');
+		this.option1_text.text = itemsArr[10].shopText;
+		this.option2_text.text = itemsArr[11].shopText;
+		this.option3_text.text = itemsArr[12].shopText;
+		this.option4_text.text = itemsArr[13].shopText;
+		this.option5_text.text = itemsArr[14].shopText;
+		this.option6_text.text = itemsArr[15].shopText;
+		this.option7_text.text = "";
+		this.option8_text.text = "";
+		this.option9_text.text = "";
+		this.option10_text.text = "";
+		this.option11_text.text = "";
+		this.option12_text.text = "";
+
+		this.setListPrice(1, this.option1_price, itemsArr[10]);
+		this.setListPrice(2, this.option2_price, itemsArr[11]);
+		this.setListPrice(3, this.option3_price, itemsArr[12]);
+		this.setListPrice(4, this.option4_price, itemsArr[13]);
+		this.setListPrice(5, this.option5_price, itemsArr[14]);
+		this.setListPrice(6, this.option6_price, itemsArr[15]);
+		this.option7_price.text = "";
+		this.option8_price.text = "";
+		this.option9_price.text = "";
+		this.option10_price.text = "";
+		this.option11_price.text = "";
+		this.option12_price.text = "";
+
+		this.rectangle_1.setVisible(true);
+		this.rectangle_2.setVisible(true);
+		this.rectangle_3.setVisible(true);
+		this.rectangle_4.setVisible(true);
+		this.rectangle_5.setVisible(true);
+		this.rectangle_6.setVisible(true);
+		this.rectangle_7.setVisible(false);
+		this.rectangle_8.setVisible(false);
+		this.rectangle_9.setVisible(false);
+		this.rectangle_10.setVisible(false);
+		this.rectangle_11.setVisible(false);
+		this.rectangle_12.setVisible(false);
+
+		this.option_box_1.setVisible(true);
+		this.option_box_2.setVisible(true);
+		this.option_box_3.setVisible(true);
+		this.option_box_4.setVisible(true);
+		this.option_box_5.setVisible(true);
+		this.option_box_6.setVisible(true);
+		this.option_box_7.setVisible(false);
+		this.option_box_8.setVisible(false);
+		this.option_box_9.setVisible(false);
+		this.option_box_10.setVisible(false);
+		this.option_box_11.setVisible(false);
+		this.option_box_12.setVisible(false);
+
+		this.scroll.setVisible(false);
+	}
+
+	setupEquipShop() {
+		this.fish_Box.fillColor = 0xffffff;
+		this.plant_Box.fillColor = 0xffffff;
+		this.system_Box.fillColor = 0xffffff;
+		this.equip_Box.fillColor = 0x428544;
+		this.wipeOptions();
+
+		let itemsArr = this.registry.get('items');
+		this.option1_text.text = itemsArr[16].shopText;
+		this.option2_text.text = ""
+		this.option3_text.text = "";
+		this.option4_text.text = "";
+		this.option5_text.text = "";
+		this.option6_text.text = "";
+		this.option7_text.text = "";
+		this.option8_text.text = "";
+		this.option9_text.text = "";
+		this.option10_text.text = "";
+		this.option11_text.text = "";
+		this.option12_text.text = "";
+
+		this.setListPrice(1, this.option1_price, itemsArr[16]);
+		this.option2_price.text = "";
+		this.option3_price.text = "";
+		this.option4_price.text = "";
+		this.option5_price.text = "";
+		this.option6_price.text = "";
+		this.option7_price.text = "";
+		this.option8_price.text = "";
+		this.option9_price.text = "";
+		this.option10_price.text = "";
+		this.option11_price.text = "";
+		this.option12_price.text = "";
+
+		this.rectangle_1.setVisible(true);
+		this.rectangle_2.setVisible(false);
+		this.rectangle_3.setVisible(false);
+		this.rectangle_4.setVisible(false);
+		this.rectangle_5.setVisible(false);
+		this.rectangle_6.setVisible(false);
+		this.rectangle_7.setVisible(false);
+		this.rectangle_8.setVisible(false);
+		this.rectangle_9.setVisible(false);
+		this.rectangle_10.setVisible(false);
+		this.rectangle_11.setVisible(false);
+		this.rectangle_12.setVisible(false);
+
+		this.option_box_1.setVisible(true);
+		this.option_box_2.setVisible(false);
+		this.option_box_3.setVisible(false);
+		this.option_box_4.setVisible(false);
+		this.option_box_5.setVisible(false);
+		this.option_box_6.setVisible(false);
+		this.option_box_7.setVisible(false);
+		this.option_box_8.setVisible(false);
+		this.option_box_9.setVisible(false);
+		this.option_box_10.setVisible(false);
+		this.option_box_11.setVisible(false);
+		this.option_box_12.setVisible(false);
+
+		this.scroll.setVisible(false);
+	}
+
 	wipeOptions() {
 		this.option_box_1.fillColor = 0xffffff;
 		this.option_box_2.fillColor = 0xffffff;
@@ -877,7 +1066,7 @@ export default class Shop extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
-		this.shopTable = new Array(12);
+		this.shopTable = new Array(13);
 		this.updateMoney(0);
 		this.setupFishShop();
 
@@ -890,27 +1079,15 @@ export default class Shop extends Phaser.Scene {
         });
 
 		this.plant_Box.on("pointerdown", () => {
-            this.fish_Box.fillColor = 0xffffff;
-			this.plant_Box.fillColor = 0x428544;
-			this.system_Box.fillColor = 0xffffff;
-			this.equip_Box.fillColor = 0xffffff;
-			this.wipeOptions();
+            this.setupPlantShop();
         });
 
 		this.system_Box.on("pointerdown", () => {
-            this.fish_Box.fillColor = 0xffffff;
-			this.plant_Box.fillColor = 0xffffff;
-			this.system_Box.fillColor = 0x428544;
-			this.equip_Box.fillColor = 0xffffff;
-			this.wipeOptions();
+            this.setupSystemsShop();
         });
 
 		this.equip_Box.on("pointerdown", () => {
-            this.fish_Box.fillColor = 0xffffff;
-			this.plant_Box.fillColor = 0xffffff;
-			this.system_Box.fillColor = 0xffffff;
-			this.equip_Box.fillColor = 0x428544;
-			this.wipeOptions();
+            this.setupEquipShop();
         });
 
 		this.sell_page_button.on("pointerdown", () => {
@@ -923,74 +1100,74 @@ export default class Shop extends Phaser.Scene {
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
-			this.updateMoney(this.shopTable[1].price * -1);
-			this.buyItem(this.shopTable[1].id);
+			if (this.updateMoney(this.shopTable[1].price * -1))
+				this.buyItem(this.shopTable[1].id);
 		})
 
 		this.option_box_2.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_2);
-			this.updateMoney(this.shopTable[2].price * -1);
-			this.buyItem(this.shopTable[2].id);
+			if (this.updateMoney(this.shopTable[2].price * -1))
+				this.buyItem(this.shopTable[2].id);
 		})
 
 		this.option_box_3.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_3);
-			this.updateMoney(this.shopTable[3].price * -1);
-			this.buyItem(this.shopTable[3].id);
+			if (this.updateMoney(this.shopTable[3].price * -1))
+				this.buyItem(this.shopTable[3].id);
 		})
 
 		this.option_box_4.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_4);
-			this.updateMoney(this.shopTable[4].price * -1);
-			this.buyItem(this.shopTable[4].id);
+			if (this.updateMoney(this.shopTable[4].price * -1))
+				this.buyItem(this.shopTable[4].id);
 		})
 
 		this.option_box_5.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_5);
-			this.updateMoney(this.shopTable[5].price * -1);
-			this.buyItem(this.shopTable[5].id);
+			if (this.updateMoney(this.shopTable[5].price * -1))
+				this.buyItem(this.shopTable[5].id);
 		})
 
 		this.option_box_6.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_6);
-			this.updateMoney(this.shopTable[6].price * -1);
-			this.buyItem(this.shopTable[6].id);
+			if (this.updateMoney(this.shopTable[6].price * -1))
+				this.buyItem(this.shopTable[6].id);
 		})
 
 		this.option_box_7.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_7);
-			this.updateMoney(this.shopTable[7].price * -1);
-			this.buyItem(this.shopTable[7].id);
+			if (this.updateMoney(this.shopTable[7].price * -1))
+				this.buyItem(this.shopTable[7].id);
 		})
 
 		this.option_box_8.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_8);
-			this.updateMoney(this.shopTable[8].price * -1);
-			this.buyItem(this.shopTable[8].id);
+			if (this.updateMoney(this.shopTable[8].price * -1))
+				this.buyItem(this.shopTable[8].id);
 		})
 
 		this.option_box_9.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_9);
-			this.updateMoney(this.shopTable[9].price * -1);
-			this.buyItem(this.shopTable[9].id);
+			if (this.updateMoney(this.shopTable[9].price * -1))
+				this.buyItem(this.shopTable[9].id);
 		})
 
 		this.option_box_10.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_10);
-			this.updateMoney(this.shopTable[10].price * -1);
-			this.buyItem(this.shopTable[10].id);
+			if (this.updateMoney(this.shopTable[10].price * -1))
+				this.buyItem(this.shopTable[10].id);
 		})
 
 		this.option_box_11.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_11);
-			this.updateMoney(this.shopTable[11].price * -1);
-			this.buyItem(this.shopTable[11].id);
+			if (this.updateMoney(this.shopTable[11].price * -1))
+				this.buyItem(this.shopTable[11].id);
 		})
 
 		this.option_box_12.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_12);
-			this.updateMoney(this.shopTable[12].price * -1);
-			this.buyItem(this.shopTable[12].id);
+			if (this.updateMoney(this.shopTable[12].price * -1))
+				this.buyItem(this.shopTable[12].id);
 		})
 	}
 
