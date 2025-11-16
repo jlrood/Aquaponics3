@@ -12,8 +12,8 @@ import Journal from './scenes/Journal';
 import Cycle from './scenes/Cycle';
 import TankZoom from './scenes/TankZoom';
 import BedZoom from './scenes/BedZoom';
-import Tutorial from './scenes/Tutorial.js';
-import SetupTut from './scense/SetupTut.js';
+import Tutorial from './scenes/Tutorial';
+import SetupTut from './scenes/SetupTut';
 
 // Find out more information about the Game Config at:
 // https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
