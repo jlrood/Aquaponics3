@@ -1377,7 +1377,9 @@
         {
             "type": "Image",
             "id": "3dabb019-374a-4eef-b9d3-fb6e3508d1a3",
-            "label": "larvae0",
+            "label": "til_lrv",
+            "displayName": "til_lrv",
+            "scope": "CLASS",
             "texture": {
                 "key": "larvae",
                 "frame": 0
@@ -1390,7 +1392,9 @@
         {
             "type": "Image",
             "id": "c440b9c2-d6c2-4d51-a350-5cebccb5158c",
-            "label": "fingerling0",
+            "label": "til_fin",
+            "displayName": "til_fin",
+            "scope": "CLASS",
             "texture": {
                 "key": "fingerling",
                 "frame": 0
@@ -1403,7 +1407,9 @@
         {
             "type": "Image",
             "id": "3bc17c21-a20f-4219-a0a6-66cd390f432f",
-            "label": "juvenile0",
+            "label": "til_juv",
+            "displayName": "til_juv",
+            "scope": "CLASS",
             "texture": {
                 "key": "juvenile",
                 "frame": 0
@@ -1416,7 +1422,9 @@
         {
             "type": "Image",
             "id": "4522eaa0-3bc3-470a-a281-597f7a46ddaf",
-            "label": "tilapia_new0",
+            "label": "til_re",
+            "displayName": "til_re",
+            "scope": "CLASS",
             "texture": {
                 "key": "tilapia_new",
                 "frame": 0
@@ -1429,7 +1437,9 @@
         {
             "type": "Image",
             "id": "6d048dd0-628c-4fdd-bf11-8f0b8fe9ea76",
-            "label": "lettuce",
+            "label": "ltt_h",
+            "displayName": "ltt_h",
+            "scope": "CLASS",
             "texture": {
                 "key": "lettuce"
             },
@@ -1441,7 +1451,9 @@
         {
             "type": "Image",
             "id": "3bc61837-2dc1-421d-9b24-4c7506de34d6",
-            "label": "sprout",
+            "label": "ltt_spr",
+            "displayName": "ltt_spr",
+            "scope": "CLASS",
             "texture": {
                 "key": "sprout"
             },

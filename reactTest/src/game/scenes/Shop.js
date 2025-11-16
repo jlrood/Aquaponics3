@@ -633,35 +633,35 @@ export default class Shop extends Phaser.Scene {
 		option12_lock.setOrigin(0, 0);
 		option12_lock.visible = false;
 
-		// larvae0
-		const larvae0 = this.add.image(121, 298, "larvae", 0);
-		larvae0.scaleX = 1.9;
-		larvae0.scaleY = 1.9;
+		// til_lrv
+		const til_lrv = this.add.image(121, 298, "larvae", 0);
+		til_lrv.scaleX = 1.9;
+		til_lrv.scaleY = 1.9;
 
-		// fingerling0
-		const fingerling0 = this.add.image(286, 286, "fingerling", 0);
-		fingerling0.scaleX = 1.9;
-		fingerling0.scaleY = 1.9;
+		// til_fin
+		const til_fin = this.add.image(286, 286, "fingerling", 0);
+		til_fin.scaleX = 1.9;
+		til_fin.scaleY = 1.9;
 
-		// juvenile0
-		const juvenile0 = this.add.image(418, 287, "juvenile", 0);
-		juvenile0.scaleX = 1.9;
-		juvenile0.scaleY = 1.9;
+		// til_juv
+		const til_juv = this.add.image(418, 287, "juvenile", 0);
+		til_juv.scaleX = 1.9;
+		til_juv.scaleY = 1.9;
 
-		// tilapia_new0
-		const tilapia_new0 = this.add.image(541, 283, "tilapia_new", 0);
-		tilapia_new0.scaleX = 1.9;
-		tilapia_new0.scaleY = 1.9;
+		// til_re
+		const til_re = this.add.image(541, 283, "tilapia_new", 0);
+		til_re.scaleX = 1.9;
+		til_re.scaleY = 1.9;
 
-		// lettuce
-		const lettuce = this.add.image(123, 297, "lettuce");
-		lettuce.scaleX = 3;
-		lettuce.scaleY = 3;
+		// ltt_h
+		const ltt_h = this.add.image(123, 297, "lettuce");
+		ltt_h.scaleX = 3;
+		ltt_h.scaleY = 3;
 
-		// sprout
-		const sprout = this.add.image(269, 294, "sprout");
-		sprout.scaleX = 3;
-		sprout.scaleY = 3;
+		// ltt_spr
+		const ltt_spr = this.add.image(269, 294, "sprout");
+		ltt_spr.scaleX = 3;
+		ltt_spr.scaleY = 3;
 
 		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
@@ -736,13 +736,12 @@ export default class Shop extends Phaser.Scene {
 		this.option10_lock = option10_lock;
 		this.option11_lock = option11_lock;
 		this.option12_lock = option12_lock;
-
-		this.til_fin = fingerling0;
-		this.til_re = tilapia_new0;
-		this.til_lrv = larvae0;
-		this.til_juv = juvenile0;
-		this.ltt_spr = sprout;
-		this.ltt_h = lettuce;
+		this.til_lrv = til_lrv;
+		this.til_fin = til_fin;
+		this.til_juv = til_juv;
+		this.til_re = til_re;
+		this.ltt_h = ltt_h;
+		this.ltt_spr = ltt_spr;
 
 		this.events.emit("scene-awake");
 	}
@@ -893,6 +892,18 @@ export default class Shop extends Phaser.Scene {
 	option11_lock;
 	/** @type {Phaser.GameObjects.Image} */
 	option12_lock;
+	/** @type {Phaser.GameObjects.Image} */
+	til_lrv;
+	/** @type {Phaser.GameObjects.Image} */
+	til_fin;
+	/** @type {Phaser.GameObjects.Image} */
+	til_juv;
+	/** @type {Phaser.GameObjects.Image} */
+	til_re;
+	/** @type {Phaser.GameObjects.Image} */
+	ltt_h;
+	/** @type {Phaser.GameObjects.Image} */
+	ltt_spr;
 
 	/* START-USER-CODE */
 
@@ -1227,7 +1238,7 @@ export default class Shop extends Phaser.Scene {
 		this.option_box_10.setVisible(false);
 		this.option_box_11.setVisible(false);
 		this.option_box_12.setVisible(false);
-		
+
 		this.til_fin.setVisible(false);
 		this.til_re.setVisible(false);
 		this.til_lrv.setVisible(false);
