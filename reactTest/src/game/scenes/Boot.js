@@ -23,10 +23,10 @@ export default class Boot extends Scene
         this.registry.set('fish_amount', 0);
         this.registry.set('plant_amount', 0);
         this.registry.set('items', [
-            {id: 'tilapiaLarvae', playerHas: 0, price: 1, shopText: "Tilapia\nLarvae"},
-            {id: 'tilapiaFingerling', playerHas: 0, price: 2, shopText: "Tilapia\nFingerling"},
-            {id: 'tilapiaJuvenile', playerHas: 0, price: 5, shopText: "Tilapia\nJuvenile"},
-            {id: 'tilapiaAdult', playerHas: 0, price: 10, shopText: "Tilapia\nAdult"},
+            {id: 'tilapiaLarvae', playerHas: 0, price: 1, shopText: "Tilapia\nLarvae", sprite: 'larvae'},
+            {id: 'tilapiaFingerling', playerHas: 0, price: 2, shopText: "Tilapia\nFingerling", sprite: 'fingerling'},
+            {id: 'tilapiaJuvenile', playerHas: 0, price: 5, shopText: "Tilapia\nJuvenile", sprite: 'juvenile'},
+            {id: 'tilapiaAdult', playerHas: 0, price: 10, shopText: "Tilapia\nAdult", sprite: 'tilapia_new'},
             {id: 'barramundiLarvae', playerHas: 0, price: 2, shopText: "Barramundi\nLarvae"},
             {id: 'barramundiFingerling', playerHas: 0, price: 5, shopText: "Barramundi\nFingerling"},
             {id: 'barramundiJuvenile', playerHas: 0, price: 10, shopText: "Barramundi\nJuvenile"},
