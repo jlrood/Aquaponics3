@@ -12,6 +12,7 @@ import Journal from './scenes/Journal';
 import Cycle from './scenes/Cycle';
 import TankZoom from './scenes/TankZoom';
 import BedZoom from './scenes/BedZoom';
+import Tutorial from './scenes/Tutorial.js';
 
 // Find out more information about the Game Config at:
 // https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
@@ -23,6 +24,9 @@ const config = {
         width: 1280,
         height: 720,
         autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    dom: {
+    createContainer: true
     },
     backgroundColor: '#ffffff',
     scene: [
@@ -38,7 +42,8 @@ const config = {
         Journal,
         Cycle,
         TankZoom,
-        BedZoom
+        BedZoom,
+        Tutorial
     ],
     //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
     pixelArt: true

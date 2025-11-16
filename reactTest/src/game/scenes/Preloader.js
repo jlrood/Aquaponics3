@@ -2,7 +2,6 @@
 
 /* START OF COMPILED CODE */
 
-import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -20,19 +19,35 @@ export default class Preloader extends Phaser.Scene {
 	editorCreate() {
 
 		// background
-		this.add.image(512, 384, "background");
+		const background = this.add.rectangle(493, 380, 1280, 720);
+		background.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1280, 720), Phaser.Geom.Rectangle.Contains);
+		background.scaleX = 0.8535365312473634;
+		background.scaleY = 1.037546494551729;
+		background.isFilled = true;
+		background.fillColor = 14609917;
 
 		// progressBar
-		const progressBar = this.add.rectangle(704, 158, 468, 32);
+		const progressBar = this.add.rectangle(594, 342, 468, 32);
 		progressBar.isFilled = true;
 		progressBar.fillColor = 14737632;
 		progressBar.isStroked = true;
 
+		// text_1
+		const text_1 = this.add.text(368, 305, "", {});
+		text_1.text = "Populating Fishes...\n";
+		text_1.setStyle({ "color": "#060404ff" });
+
+		// tilapia_new0
+		this.add.image(324, 327, "tilapia_new", 0);
+
+		this.background = background;
 		this.progressBar = progressBar;
 
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.GameObjects.Rectangle} */
+	background;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	progressBar;
 
@@ -69,7 +84,7 @@ export default class Preloader extends Phaser.Scene {
         //  For example, you can define global animations here, so we can use them in other scenes.
 
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
-        this.scene.start('MainMenu');
+        this.scene.start('Tutorial');
     }
         /* END-USER-CODE */
 }

@@ -1,0 +1,59 @@
+{
+    "id": "f865a520-cc65-4542-b359-4b1acb9a4f0b",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Tutorial",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "6ed3534f-21c8-494a-a675-a82b52bdcedd",
+            "label": "background",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 1280,
+            "hitArea.height": 720,
+            "x": 640,
+            "y": 360,
+            "isFilled": true,
+            "fillColor": "#4d966f",
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "type": "Image",
+            "id": "a8131db1-85ea-4271-b04f-aa3becbd71d5",
+            "label": "help",
+            "texture": {
+                "key": "help"
+            },
+            "x": 1228,
+            "y": 45
+        },
+        {
+            "type": "Image",
+            "id": "ef6670ec-9746-4be8-9ebd-d3e2f1749c97",
+            "label": "title",
+            "texture": {
+                "key": "title"
+            },
+            "x": 653,
+            "y": 132,
+            "scaleX": 1.8406697932199103,
+            "scaleY": 1.8503780327126584
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

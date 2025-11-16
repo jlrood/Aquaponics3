@@ -1,5 +1,5 @@
 {
-    "boot": {
+    "section1": {
         "files": [
             {
                 "url": "assets/bg.png",
@@ -11,8 +11,9 @@
     "meta": {
         "app": "Phaser Editor 2D - Asset Pack Editor",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
-        "url": "https://phaser.io/editor",
+        "url": "https://phasereditor2d.com",
         "version": 2,
-        "showAllFilesInBlocks": false
+        "showAllFilesInBlocks": false,
+        "visible": true
     }
 }

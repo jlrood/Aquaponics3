@@ -12,33 +12,60 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "1cb7aa2a-0c09-4135-a34b-4da58adb90a2",
+            "type": "Rectangle",
+            "id": "222e4343-1d4f-4c1f-ad60-d3ee4c94ff67",
             "label": "background",
-            "texture": {
-                "key": "background"
-            },
-            "x": 512,
-            "y": 384
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 1280,
+            "hitArea.height": 720,
+            "x": 493,
+            "y": 380,
+            "scaleX": 0.8535365312473634,
+            "scaleY": 1.037546494551729,
+            "isFilled": true,
+            "fillColor": "#deedfd",
+            "width": 1280,
+            "height": 720
         },
         {
             "type": "Rectangle",
             "id": "845d4ca6-7417-44fc-97e3-a3bb2fbbdd03",
             "label": "progressBar",
             "scope": "CLASS",
-            "x": 704,
-            "y": 158,
+            "x": 594,
+            "y": 342,
             "isFilled": true,
             "fillColor": "#e0e0e0",
             "isStroked": true,
             "width": 468,
             "height": 32
+        },
+        {
+            "type": "Text",
+            "id": "e7463f19-4260-4f26-b2ac-790aebcc0a1f",
+            "label": "text_1",
+            "x": 368,
+            "y": 305,
+            "text": "Populating Fishes...\n",
+            "color": "#060404ff"
+        },
+        {
+            "type": "Image",
+            "id": "b3af3fa8-b88f-457d-988d-b3a3274aacb2",
+            "label": "tilapia_new0",
+            "texture": {
+                "key": "tilapia_new",
+                "frame": 0
+            },
+            "x": 324,
+            "y": 327
         }
     ],
     "plainObjects": [],
     "meta": {
-        "app": "Phaser Editor 2D - Scene Editor",
-        "url": "https://phasereditor2d.com",
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
     }
