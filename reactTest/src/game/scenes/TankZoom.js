@@ -207,6 +207,7 @@ export default class TankZoom extends Phaser.Scene {
 		const y = Phaser.Math.Between(180, 485);
 		const fish = this.add.sprite(x, y, fishItem.sprite);
 		fish.scale = 2;
+		fish.tint = 0x659bba;
 		fish.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		fish.on("pointerdown", () => {
 			this.analyzeFish(x, y, fishIndex, fishItem);
