@@ -455,7 +455,7 @@ export default class MainMenu extends Phaser.Scene {
 			this.scene.start('BedZoom');
 		})
 
-		// If you have a sprite created in the editor named 'player'
+		// Play the background bubbles
 		this.bg.play('bg');
 	}
 
@@ -498,6 +498,7 @@ export default class MainMenu extends Phaser.Scene {
 			});
 		}
 	}
+
 	// week rules
 	applyWeekRules(wk) {
 		if (wk == 1) {

@@ -159,6 +159,71 @@ export default class BedZoom extends Phaser.Scene {
 		bitmaptext_1.text = "Green";
 		bitmaptext_1.fontSize = 32;
 
+		// zoomTray
+		const zoomTray = this.add.image(640, 354, "zoomTray");
+		zoomTray.scaleX = 20;
+		zoomTray.scaleY = 20;
+
+		// lettuce
+		const lettuce = this.add.image(172, 252, "lettuce");
+		lettuce.scaleX = 6;
+		lettuce.scaleY = 6;
+
+		// lettuce_1
+		const lettuce_1 = this.add.image(314, 251, "lettuce");
+		lettuce_1.scaleX = 6;
+		lettuce_1.scaleY = 6;
+
+		// lettuce_2
+		const lettuce_2 = this.add.image(454, 252, "lettuce");
+		lettuce_2.scaleX = 6;
+		lettuce_2.scaleY = 6;
+
+		// lettuce_3
+		const lettuce_3 = this.add.image(599, 251, "lettuce");
+		lettuce_3.scaleX = 6;
+		lettuce_3.scaleY = 6;
+
+		// lettuce_4
+		const lettuce_4 = this.add.image(169, 334, "lettuce");
+		lettuce_4.scaleX = 6;
+		lettuce_4.scaleY = 6;
+
+		// lettuce_5
+		const lettuce_5 = this.add.image(311, 339, "lettuce");
+		lettuce_5.scaleX = 6;
+		lettuce_5.scaleY = 6;
+
+		// lettuce_6
+		const lettuce_6 = this.add.image(454, 338, "lettuce");
+		lettuce_6.scaleX = 6;
+		lettuce_6.scaleY = 6;
+
+		// lettuce_7
+		const lettuce_7 = this.add.image(608, 338, "lettuce");
+		lettuce_7.scaleX = 6;
+		lettuce_7.scaleY = 6;
+
+		// lettuce_8
+		const lettuce_8 = this.add.image(171, 439, "lettuce");
+		lettuce_8.scaleX = 6;
+		lettuce_8.scaleY = 6;
+
+		// lettuce_9
+		const lettuce_9 = this.add.image(311, 446, "lettuce");
+		lettuce_9.scaleX = 6;
+		lettuce_9.scaleY = 6;
+
+		// lettuce_10
+		const lettuce_10 = this.add.image(454, 445, "lettuce");
+		lettuce_10.scaleX = 6;
+		lettuce_10.scaleY = 6;
+
+		// lettuce_11
+		const lettuce_11 = this.add.image(607, 449, "lettuce");
+		lettuce_11.scaleX = 6;
+		lettuce_11.scaleY = 6;
+
 		this.back_button = back_button;
 		this.cur_plant_name = cur_plant_name;
 		this.zoom_out_button = zoom_out_button;

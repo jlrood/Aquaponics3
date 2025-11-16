@@ -372,6 +372,11 @@
                 "url": "assets/life/young.png",
                 "type": "image",
                 "key": "young"
+            },
+            {
+                "url": "assets/backgrounds/zoomTray.png",
+                "type": "image",
+                "key": "zoomTray"
             }
         ]
     },

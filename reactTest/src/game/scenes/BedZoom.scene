@@ -304,6 +304,162 @@
             "text": "Green",
             "font": "pixelmix_32",
             "fontSize": 32
+        },
+        {
+            "type": "Image",
+            "id": "9e77521d-7067-44eb-834c-cee7b5b2f16c",
+            "label": "zoomTray",
+            "texture": {
+                "key": "zoomTray"
+            },
+            "x": 640,
+            "y": 354,
+            "scaleX": 20,
+            "scaleY": 20
+        },
+        {
+            "type": "Image",
+            "id": "6603c0f9-53bd-4e37-a80d-f894af8c4229",
+            "label": "lettuce",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 172,
+            "y": 252,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "401f2591-2080-45a6-a3d5-a577da176851",
+            "label": "lettuce_1",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 314,
+            "y": 251,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "8307a3b5-8b8c-41ef-84ca-15ff5201eb5c",
+            "label": "lettuce_2",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 454,
+            "y": 252,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "32ea5678-d9a8-4492-98fa-0df5f5c5a200",
+            "label": "lettuce_3",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 599,
+            "y": 251,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "78d3c1d7-055c-4fc3-b4aa-f3aa854d0d18",
+            "label": "lettuce_4",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 169,
+            "y": 334,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "a575b390-83cc-4b55-b9ff-75df1ce5a482",
+            "label": "lettuce_5",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 311,
+            "y": 339,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "23c6e36c-bf49-40bf-b5a1-be12f7aa729d",
+            "label": "lettuce_6",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 454,
+            "y": 338,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "bf1f8668-87cf-41c5-b4b5-a666b7e05da6",
+            "label": "lettuce_7",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 608,
+            "y": 338,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "8fb943ea-61df-452b-a76a-d748633e8aff",
+            "label": "lettuce_8",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 171,
+            "y": 439,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "38002c75-1a7a-45d3-9b08-dcd50ff89dee",
+            "label": "lettuce_9",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 311,
+            "y": 446,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "1ba88291-a793-46ab-b937-f14040f9dda7",
+            "label": "lettuce_10",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 454,
+            "y": 445,
+            "scaleX": 6,
+            "scaleY": 6
+        },
+        {
+            "type": "Image",
+            "id": "70a20aba-7af6-435e-aa82-290c37214040",
+            "label": "lettuce_11",
+            "texture": {
+                "key": "lettuce"
+            },
+            "x": 607,
+            "y": 449,
+            "scaleX": 6,
+            "scaleY": 6
         }
     ],
     "plainObjects": [],
