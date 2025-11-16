@@ -719,8 +719,8 @@
         {
             "type": "BitmapText",
             "id": "a65ca773-78b4-41c9-bd62-76e5844857ec",
-            "label": "option1_text",
-            "displayName": "option1_text",
+            "label": "option2_text",
+            "displayName": "option2_text",
             "scope": "CLASS",
             "x": 260,
             "y": 238,
@@ -734,8 +734,8 @@
         {
             "type": "BitmapText",
             "id": "2dc55e17-fade-4204-a9fb-c62220c8343a",
-            "label": "option2_text",
-            "displayName": "option2_text",
+            "label": "option1_text",
+            "displayName": "option1_text",
             "scope": "CLASS",
             "x": 117,
             "y": 237,
@@ -779,8 +779,8 @@
         {
             "type": "BitmapText",
             "id": "c0de287c-0bc6-4f76-b1e2-b1c520f0b774",
-            "label": "option5_text",
-            "displayName": "option5_text",
+            "label": "option6_text",
+            "displayName": "option6_text",
             "scope": "CLASS",
             "x": 260,
             "y": 424,
@@ -794,8 +794,8 @@
         {
             "type": "BitmapText",
             "id": "e7f2090b-1673-4a52-92c8-e110efa6e601",
-            "label": "option6_text",
-            "displayName": "option6_text",
+            "label": "option5_text",
+            "displayName": "option5_text",
             "scope": "CLASS",
             "x": 120,
             "y": 424,
@@ -1443,7 +1443,7 @@
             "texture": {
                 "key": "lettuce"
             },
-            "x": 123,
+            "x": 263,
             "y": 297,
             "scaleX": 3,
             "scaleY": 3
@@ -1457,8 +1457,8 @@
             "texture": {
                 "key": "sprout"
             },
-            "x": 269,
-            "y": 294,
+            "x": 125,
+            "y": 297,
             "scaleX": 3,
             "scaleY": 3
         }

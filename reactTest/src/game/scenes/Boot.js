@@ -23,15 +23,15 @@ export default class Boot extends Scene
         this.registry.set('fish_amount', 0);
         this.registry.set('plant_amount', 0);
         this.registry.set('items', [
-            {id: 'tilapiaFingerling', playerHas: 0, price: 1, shopText: "Tilapia\nFingerling"},
-            {id: 'tilapiaLarvae', playerHas: 0, price: 2, shopText: "Tilapia\nLarvae"},
+            {id: 'tilapiaLarvae', playerHas: 0, price: 1, shopText: "Tilapia\nLarvae"},
+            {id: 'tilapiaFingerling', playerHas: 0, price: 2, shopText: "Tilapia\nFingerling"},
             {id: 'tilapiaJuvenile', playerHas: 0, price: 5, shopText: "Tilapia\nJuvenile"},
             {id: 'tilapiaAdult', playerHas: 0, price: 10, shopText: "Tilapia\nAdult"},
-            {id: 'barramundiFingerling', playerHas: 0, price: 2, shopText: "Barramundi\nFingerling"},
-            {id: 'barramundiLarvae', playerHas: 0, price: 5, shopText: "Barramundi\nLarvae"},
+            {id: 'barramundiLarvae', playerHas: 0, price: 2, shopText: "Barramundi\nLarvae"},
+            {id: 'barramundiFingerling', playerHas: 0, price: 5, shopText: "Barramundi\nFingerling"},
             {id: 'barramundiJuvenile', playerHas: 0, price: 10, shopText: "Barramundi\nJuvenile"},
             {id: 'barramundiAdult', playerHas: 0, price: 20, shopText: "Barramundi\nAdult"},
-            {id: 'parrisIslandRomaineSeeds', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSeeds"},
+            {id: 'parrisIslandRomaineSeeds', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSprout"},
             {id: 'parrisIslandRomaineGrown', playerHas: 0, price: 5, shopText: "Romaine\nLettuce"},
             {id: 'growBed', playerHas: 0, price: 20, shopText: "Grow Bed"},
             {id: 'fluorescentLight', playerHas: 0, price: 15, shopText: "F. Light"},

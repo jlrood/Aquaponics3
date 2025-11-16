@@ -360,19 +360,19 @@ export default class Shop extends Phaser.Scene {
 		rectangle_9.isStroked = true;
 		rectangle_9.strokeColor = 0;
 
-		// option1_text
-		const option1_text = this.add.bitmapText(260, 238, "pixelmix_16", "Tilapia\nFingerling");
-		option1_text.setOrigin(0.5, 0.5);
-		option1_text.text = "Tilapia\nFingerling";
-		option1_text.fontSize = 16;
-		option1_text.align = 1;
-
 		// option2_text
-		const option2_text = this.add.bitmapText(117, 237, "pixelmix_16", "Tilapia\nLarvae");
+		const option2_text = this.add.bitmapText(260, 238, "pixelmix_16", "Tilapia\nFingerling");
 		option2_text.setOrigin(0.5, 0.5);
-		option2_text.text = "Tilapia\nLarvae";
+		option2_text.text = "Tilapia\nFingerling";
 		option2_text.fontSize = 16;
 		option2_text.align = 1;
+
+		// option1_text
+		const option1_text = this.add.bitmapText(117, 237, "pixelmix_16", "Tilapia\nLarvae");
+		option1_text.setOrigin(0.5, 0.5);
+		option1_text.text = "Tilapia\nLarvae";
+		option1_text.fontSize = 16;
+		option1_text.align = 1;
 
 		// option3_text
 		const option3_text = this.add.bitmapText(401, 239, "pixelmix_16", "Tilapia\nJuvenille");
@@ -388,19 +388,19 @@ export default class Shop extends Phaser.Scene {
 		option4_text.fontSize = 16;
 		option4_text.align = 1;
 
-		// option5_text
-		const option5_text = this.add.bitmapText(260, 424, "pixelmix_16", "Barramundi\nFingerling");
-		option5_text.setOrigin(0.5, 0.5);
-		option5_text.text = "Barramundi\nFingerling";
-		option5_text.fontSize = 16;
-		option5_text.align = 1;
-
 		// option6_text
-		const option6_text = this.add.bitmapText(120, 424, "pixelmix_16", "Barramundi\nLarvae");
+		const option6_text = this.add.bitmapText(260, 424, "pixelmix_16", "Barramundi\nFingerling");
 		option6_text.setOrigin(0.5, 0.5);
-		option6_text.text = "Barramundi\nLarvae";
+		option6_text.text = "Barramundi\nFingerling";
 		option6_text.fontSize = 16;
 		option6_text.align = 1;
+
+		// option5_text
+		const option5_text = this.add.bitmapText(120, 424, "pixelmix_16", "Barramundi\nLarvae");
+		option5_text.setOrigin(0.5, 0.5);
+		option5_text.text = "Barramundi\nLarvae";
+		option5_text.fontSize = 16;
+		option5_text.align = 1;
 
 		// option7_text
 		const option7_text = this.add.bitmapText(401, 421, "pixelmix_16", "Barramundi\nJuvenille");
@@ -654,12 +654,12 @@ export default class Shop extends Phaser.Scene {
 		til_re.scaleY = 1.9;
 
 		// ltt_h
-		const ltt_h = this.add.image(123, 297, "lettuce");
+		const ltt_h = this.add.image(263, 297, "lettuce");
 		ltt_h.scaleX = 3;
 		ltt_h.scaleY = 3;
 
 		// ltt_spr
-		const ltt_spr = this.add.image(269, 294, "sprout");
+		const ltt_spr = this.add.image(125, 297, "sprout");
 		ltt_spr.scaleX = 3;
 		ltt_spr.scaleY = 3;
 
@@ -694,12 +694,12 @@ export default class Shop extends Phaser.Scene {
 		this.rectangle_12 = rectangle_12;
 		this.rectangle_10 = rectangle_10;
 		this.rectangle_9 = rectangle_9;
-		this.option1_text = option1_text;
 		this.option2_text = option2_text;
+		this.option1_text = option1_text;
 		this.option3_text = option3_text;
 		this.option4_text = option4_text;
-		this.option5_text = option5_text;
 		this.option6_text = option6_text;
+		this.option5_text = option5_text;
 		this.option7_text = option7_text;
 		this.option8_text = option8_text;
 		this.option9_text = option9_text;
@@ -809,17 +809,17 @@ export default class Shop extends Phaser.Scene {
 	/** @type {Phaser.GameObjects.Rectangle} */
 	rectangle_9;
 	/** @type {Phaser.GameObjects.BitmapText} */
-	option1_text;
-	/** @type {Phaser.GameObjects.BitmapText} */
 	option2_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option1_text;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	option3_text;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	option4_text;
 	/** @type {Phaser.GameObjects.BitmapText} */
-	option5_text;
-	/** @type {Phaser.GameObjects.BitmapText} */
 	option6_text;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	option5_text;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	option7_text;
 	/** @type {Phaser.GameObjects.BitmapText} */
