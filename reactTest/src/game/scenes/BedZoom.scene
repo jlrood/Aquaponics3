@@ -1,0 +1,46 @@
+{
+    "id": "caca2cb5-4690-41f9-b5e4-d8bff07ee2d4",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "BedZoom",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "5d6d2efd-b745-4c69-ae14-b748fcb30124",
+            "label": "rectangle_1",
+            "originX": 0,
+            "originY": 0,
+            "isFilled": true,
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "type": "BitmapText",
+            "id": "4b1721f2-0cc7-4554-a268-08cdef235fa3",
+            "label": "bitmaptext",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 332,
+            "hitArea.height": 32,
+            "x": 462,
+            "y": 297,
+            "text": "BedZoom Screen",
+            "font": "pixelmix_32",
+            "fontSize": 32
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

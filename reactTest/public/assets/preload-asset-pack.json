@@ -228,6 +228,11 @@
                 "key": "tilapia_new"
             },
             {
+                "url": "assets/buttons_boxes/transparent.png",
+                "type": "image",
+                "key": "transparent"
+            },
+            {
                 "url": "assets/life/young.png",
                 "type": "image",
                 "key": "young"

@@ -517,6 +517,42 @@
             "y": 665,
             "scaleX": 1.5,
             "scaleY": 1.5
+        },
+        {
+            "type": "Image",
+            "id": "17ae9ddd-4e7d-4db6-82d7-7230bbd0cd97",
+            "label": "tank_screen_trigger",
+            "displayName": "tank_screen_trigger",
+            "scope": "CLASS",
+            "hitArea.shape": "ELLIPSE",
+            "hitArea.x": 150,
+            "hitArea.y": 150,
+            "hitArea.width": 300,
+            "hitArea.height": 300,
+            "texture": {
+                "key": "transparent"
+            },
+            "x": 958,
+            "y": 468,
+            "scaleX": 1.66,
+            "scaleY": 1.05
+        },
+        {
+            "type": "Image",
+            "id": "a8fd4743-83ed-4f7d-82d8-29d7f6728c9d",
+            "label": "bed_screen_trigger",
+            "displayName": "bed_screen_trigger",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 300,
+            "hitArea.height": 300,
+            "texture": {
+                "key": "transparent"
+            },
+            "x": 432,
+            "y": 335,
+            "scaleX": 1.5,
+            "scaleY": 0.41
         }
     ],
     "plainObjects": [],
