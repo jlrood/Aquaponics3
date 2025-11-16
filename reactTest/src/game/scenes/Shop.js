@@ -361,28 +361,28 @@ export default class Shop extends Phaser.Scene {
 		rectangle_9.strokeColor = 0;
 
 		// option2_text
-		const option2_text = this.add.bitmapText(260, 238, "pixelmix_16", "Tilapia\nFingerling");
+		const option2_text = this.add.bitmapText(260, 283, "pixelmix_16", "Tilapia\nFingerling");
 		option2_text.setOrigin(0.5, 0.5);
 		option2_text.text = "Tilapia\nFingerling";
 		option2_text.fontSize = 16;
 		option2_text.align = 1;
 
 		// option1_text
-		const option1_text = this.add.bitmapText(117, 237, "pixelmix_16", "Tilapia\nLarvae");
+		const option1_text = this.add.bitmapText(117, 286, "pixelmix_16", "Tilapia\nLarvae");
 		option1_text.setOrigin(0.5, 0.5);
 		option1_text.text = "Tilapia\nLarvae";
 		option1_text.fontSize = 16;
 		option1_text.align = 1;
 
 		// option3_text
-		const option3_text = this.add.bitmapText(401, 239, "pixelmix_16", "Tilapia\nJuvenille");
+		const option3_text = this.add.bitmapText(401, 285, "pixelmix_16", "Tilapia\nJuvenille");
 		option3_text.setOrigin(0.5, 0.5);
 		option3_text.text = "Tilapia\nJuvenille";
 		option3_text.fontSize = 16;
 		option3_text.align = 1;
 
 		// option4_text
-		const option4_text = this.add.bitmapText(539, 238, "pixelmix_16", "Tilapia\nAdult");
+		const option4_text = this.add.bitmapText(539, 282, "pixelmix_16", "Tilapia\nAdult");
 		option4_text.setOrigin(0.5, 0.5);
 		option4_text.text = "Tilapia\nAdult";
 		option4_text.fontSize = 16;
@@ -977,10 +977,10 @@ export default class Shop extends Phaser.Scene {
 		this.wipeOptions();
 
 		let itemsArr = this.registry.get('items');
-		this.option1_text.text = itemsArr[0].shopText;
-		this.option2_text.text = itemsArr[1].shopText;
-		this.option3_text.text = itemsArr[2].shopText;
-		this.option4_text.text = itemsArr[3].shopText;
+		this.option1_text.text = "";
+		this.option2_text.text = "";
+		this.option3_text.text = "";
+		this.option4_text.text = "";
 		this.option5_text.text = itemsArr[4].shopText;
 		this.option6_text.text = itemsArr[5].shopText;
 		this.option7_text.text = itemsArr[6].shopText;
@@ -1036,6 +1036,11 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option5_lock.setVisible(true);
+		this.option6_lock.setVisible(true);
+		this.option7_lock.setVisible(true);
+		this.option8_lock.setVisible(true);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1047,8 +1052,8 @@ export default class Shop extends Phaser.Scene {
 		this.wipeOptions();
 
 		let itemsArr = this.registry.get('items');
-		this.option1_text.text = itemsArr[8].shopText;
-		this.option2_text.text = itemsArr[9].shopText;
+		this.option1_text.text = "";
+		this.option2_text.text = "";
 		this.option3_text.text = "";
 		this.option4_text.text = "";
 		this.option5_text.text = "";
@@ -1060,8 +1065,8 @@ export default class Shop extends Phaser.Scene {
 		this.option11_text.text = "";
 		this.option12_text.text = "";
 
-		this.setListPrice(1, this.option1_price, itemsArr[8]);
-		this.setListPrice(2, this.option2_price, itemsArr[9]);
+		this.setListPrice(1, this.option1_price, itemsArr[9]);
+		this.setListPrice(2, this.option2_price, itemsArr[12]);
 		this.option3_price.text = "";
 		this.option4_price.text = "";
 		this.option5_price.text = "";
@@ -1106,6 +1111,11 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(true);
 		this.ltt_spr.setVisible(true);
 
+		this.option5_lock.setVisible(false);
+		this.option6_lock.setVisible(false);
+		this.option7_lock.setVisible(false);
+		this.option8_lock.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1117,12 +1127,12 @@ export default class Shop extends Phaser.Scene {
 		this.wipeOptions();
 
 		let itemsArr = this.registry.get('items');
-		this.option1_text.text = itemsArr[10].shopText;
-		this.option2_text.text = itemsArr[11].shopText;
-		this.option3_text.text = itemsArr[12].shopText;
-		this.option4_text.text = itemsArr[13].shopText;
-		this.option5_text.text = itemsArr[14].shopText;
-		this.option6_text.text = itemsArr[15].shopText;
+		this.option1_text.text = itemsArr[13].shopText;
+		this.option2_text.text = itemsArr[14].shopText;
+		this.option3_text.text = itemsArr[15].shopText;
+		this.option4_text.text = itemsArr[16].shopText;
+		this.option5_text.text = itemsArr[17].shopText;
+		this.option6_text.text = itemsArr[18].shopText;
 		this.option7_text.text = "";
 		this.option8_text.text = "";
 		this.option9_text.text = "";
@@ -1130,12 +1140,12 @@ export default class Shop extends Phaser.Scene {
 		this.option11_text.text = "";
 		this.option12_text.text = "";
 
-		this.setListPrice(1, this.option1_price, itemsArr[10]);
-		this.setListPrice(2, this.option2_price, itemsArr[11]);
-		this.setListPrice(3, this.option3_price, itemsArr[12]);
-		this.setListPrice(4, this.option4_price, itemsArr[13]);
-		this.setListPrice(5, this.option5_price, itemsArr[14]);
-		this.setListPrice(6, this.option6_price, itemsArr[15]);
+		this.setListPrice(1, this.option1_price, itemsArr[13]);
+		this.setListPrice(2, this.option2_price, itemsArr[14]);
+		this.setListPrice(3, this.option3_price, itemsArr[15]);
+		this.setListPrice(4, this.option4_price, itemsArr[16]);
+		this.setListPrice(5, this.option5_price, itemsArr[17]);
+		this.setListPrice(6, this.option6_price, itemsArr[18]);
 		this.option7_price.text = "";
 		this.option8_price.text = "";
 		this.option9_price.text = "";
@@ -1176,6 +1186,11 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option5_lock.setVisible(false);
+		this.option6_lock.setVisible(false);
+		this.option7_lock.setVisible(false);
+		this.option8_lock.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1187,8 +1202,8 @@ export default class Shop extends Phaser.Scene {
 		this.wipeOptions();
 
 		let itemsArr = this.registry.get('items');
-		this.option1_text.text = "";
-		this.option2_text.text = itemsArr[16].shopText;
+		this.option1_text.text = itemsArr[19].shopText;
+		this.option2_text.text = "";
 		this.option3_text.text = "";
 		this.option4_text.text = "";
 		this.option5_text.text = "";
@@ -1200,7 +1215,7 @@ export default class Shop extends Phaser.Scene {
 		this.option11_text.text = "";
 		this.option12_text.text = "";
 
-		this.setListPrice(1, this.option1_price, itemsArr[16]);
+		this.setListPrice(1, this.option1_price, itemsArr[19]);
 		this.option2_price.text = "";
 		this.option3_price.text = "";
 		this.option4_price.text = "";
@@ -1246,6 +1261,10 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option5_lock.setVisible(false);
+		this.option6_lock.setVisible(false);
+		this.option7_lock.setVisible(false);
+		this.option8_lock.setVisible(false);
 
 		this.scroll.setVisible(false);
 	}

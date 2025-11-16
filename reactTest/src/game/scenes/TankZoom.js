@@ -181,6 +181,11 @@ export default class TankZoom extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
+	/**
+	 * Moves the green selection box to be on the same
+	 * origin as the current fish, and changes the
+	 * current fish text to be the correct one.
+	 */
 	analyzeFish(posX, posY, index, item) {
 		this.selected_box.setVisible(true);
 		this.selected_box.setPosition(posX, posY);
@@ -188,6 +193,11 @@ export default class TankZoom extends Phaser.Scene {
 		this.cur_fish_name.text = item.shopText;
 	}
 
+	/**
+	 * Called when pushing the "change fish" button.
+	 * It iterates the fish array, and analyzes the new
+	 * fish.
+	 */
 	changeFish() {
 		this.fishArrIndex += 1;
 		if (this.fishArr[this.fishArrIndex] == null) {
@@ -198,10 +208,19 @@ export default class TankZoom extends Phaser.Scene {
 		this.analyzeFish(fish.x, fish.y, this.fishArrIndex, fishItem);
 	}
 
+	//Sets the fish index.
 	setFishArrIndex(i) {
 		this.fishArrIndex = i;
 	}
 
+	/**
+	 * Adds a single fish as a sprite to the scene,
+	 * and gives it a handler function for if the user
+	 * clicks on it.
+	 * 
+	 * Additionally, stores the fish in the array as it's
+	 * graphical icon and it's item information.
+	 */
 	addFish(fishItem, fishIndex) {
 		const x = Phaser.Math.Between(125, 1165);
 		const y = Phaser.Math.Between(180, 485);
@@ -216,21 +235,30 @@ export default class TankZoom extends Phaser.Scene {
 		this.fishArr[fishIndex] = {icon: fish, item: fishItem};
 	}
 
+	/**
+	 * Populates the tank with all the fish that the player has.
+	 * It fills an array of all the player's fish so that
+	 * the "change fish" button has an order to follow.
+	 */
 	populateTank() {
 		let itemsArr = this.registry.get('items');
 		let fishIndex = 0;
+		//For each tilapia larvae...
 		for (let i = 0; i < itemsArr[0].playerHas; i++) {
 			this.addFish(itemsArr[0], fishIndex);
 			fishIndex++;
 		}
+		//For each tilapia fingerling...
 		for (let i = 0; i < itemsArr[1].playerHas; i++) {
 			this.addFish(itemsArr[1], fishIndex);
 			fishIndex++;
 		}
+		//For each tilapia juvenile...
 		for (let i = 0; i < itemsArr[2].playerHas; i++) {
 			this.addFish(itemsArr[2], fishIndex);
 			fishIndex++;
 		}
+		//For each tilapia adult...
 		for (let i = 0; i < itemsArr[3].playerHas; i++) {
 			this.addFish(itemsArr[3], fishIndex);
 			fishIndex++;
