@@ -76,7 +76,7 @@ function App ()
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
             <div>
                 <div>
-                    <button className="button" onClick={changeScene}>Change Scene</button>
+                    <button className="button" onClick={changeScene}>Begin Tutorial</button>
                 </div>
                 <div>
                     <button disabled={canMoveSprite} className="button" onClick={moveSprite}>Toggle Movement</button>

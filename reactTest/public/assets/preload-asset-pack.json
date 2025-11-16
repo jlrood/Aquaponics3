@@ -2,6 +2,111 @@
     "section1": {
         "files": [
             {
+                "url": "assets/cycle/1.png",
+                "type": "image",
+                "key": "1"
+            },
+            {
+                "url": "assets/cycle/10.png",
+                "type": "image",
+                "key": "10"
+            },
+            {
+                "url": "assets/cycle/11.png",
+                "type": "image",
+                "key": "11"
+            },
+            {
+                "url": "assets/cycle/12.png",
+                "type": "image",
+                "key": "12"
+            },
+            {
+                "url": "assets/cycle/13.png",
+                "type": "image",
+                "key": "13"
+            },
+            {
+                "url": "assets/cycle/14.png",
+                "type": "image",
+                "key": "14"
+            },
+            {
+                "url": "assets/cycle/15.png",
+                "type": "image",
+                "key": "15"
+            },
+            {
+                "url": "assets/cycle/16.png",
+                "type": "image",
+                "key": "16"
+            },
+            {
+                "url": "assets/cycle/17.png",
+                "type": "image",
+                "key": "17"
+            },
+            {
+                "url": "assets/cycle/18.png",
+                "type": "image",
+                "key": "18"
+            },
+            {
+                "url": "assets/cycle/19.png",
+                "type": "image",
+                "key": "19"
+            },
+            {
+                "url": "assets/cycle/2.png",
+                "type": "image",
+                "key": "2"
+            },
+            {
+                "url": "assets/cycle/20.png",
+                "type": "image",
+                "key": "20"
+            },
+            {
+                "url": "assets/cycle/21.png",
+                "type": "image",
+                "key": "21"
+            },
+            {
+                "url": "assets/cycle/3.png",
+                "type": "image",
+                "key": "3"
+            },
+            {
+                "url": "assets/cycle/4.png",
+                "type": "image",
+                "key": "4"
+            },
+            {
+                "url": "assets/cycle/5.png",
+                "type": "image",
+                "key": "5"
+            },
+            {
+                "url": "assets/cycle/6.png",
+                "type": "image",
+                "key": "6"
+            },
+            {
+                "url": "assets/cycle/7.png",
+                "type": "image",
+                "key": "7"
+            },
+            {
+                "url": "assets/cycle/8.png",
+                "type": "image",
+                "key": "8"
+            },
+            {
+                "url": "assets/cycle/9.png",
+                "type": "image",
+                "key": "9"
+            },
+            {
                 "url": "assets/buttons_boxes/achievement icon.png",
                 "type": "image",
                 "key": "achievement icon"
@@ -38,6 +143,11 @@
                 "url": "assets/backgrounds/bg (1).png",
                 "type": "image",
                 "key": "bg (1)"
+            },
+            {
+                "url": "assets/backgrounds/cycle.png",
+                "type": "image",
+                "key": "cycle"
             },
             {
                 "url": "assets/life/fingerling.png",
@@ -130,6 +240,12 @@
                 "key": "pixelmix_16"
             },
             {
+                "textureURL": "assets/bmFonts/pixelmix_24.png",
+                "fontDataURL": "assets/bmFonts/pixelmix_24.xml",
+                "type": "bitmapFont",
+                "key": "pixelmix_24"
+            },
+            {
                 "textureURL": "assets/bmFonts/pixelmix_32.png",
                 "fontDataURL": "assets/bmFonts/pixelmix_32.xml",
                 "type": "bitmapFont",
@@ -142,6 +258,16 @@
                 "key": "pixelmix_8"
             },
             {
+                "url": "assets/backgrounds/plant_ss_1.png",
+                "type": "image",
+                "key": "plant_ss_1"
+            },
+            {
+                "url": "assets/backgrounds/plant_ss_2.png",
+                "type": "image",
+                "key": "plant_ss_2"
+            },
+            {
                 "url": "assets/buttons_boxes/profile.png",
                 "type": "image",
                 "key": "profile"
@@ -150,6 +276,11 @@
                 "url": "assets/buttons_boxes/question.png",
                 "type": "image",
                 "key": "question"
+            },
+            {
+                "url": "assets/backgrounds/Screenshot 2025-11-15 212047.png",
+                "type": "image",
+                "key": "Screenshot 2025-11-15 212047"
             },
             {
                 "url": "assets/life/seed.png",

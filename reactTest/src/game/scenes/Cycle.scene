@@ -1,0 +1,971 @@
+{
+    "id": "8bd903aa-0bb6-4124-8566-928cbe83fc44",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Cycle",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "4aae5078-b84e-4507-800e-b57fb2f57b0d",
+            "label": "background",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 1280,
+            "hitArea.height": 720,
+            "x": 640,
+            "y": 360,
+            "isFilled": true,
+            "fillColor": "#deedfd",
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "type": "Image",
+            "id": "cb11c026-9e52-4e35-9c1c-b8c5f749eda8",
+            "label": "plant_img",
+            "texture": {
+                "key": "21"
+            },
+            "x": 640,
+            "y": 360,
+            "scaleX": 0.6666666666666666,
+            "scaleY": 0.6666666666666666,
+            "visible": false
+        },
+        {
+            "type": "Image",
+            "id": "1e082b3c-2999-42ad-9f30-f0b30c85bad4",
+            "label": "cycle",
+            "scope": "CLASS",
+            "texture": {
+                "key": "cycle"
+            },
+            "x": 640,
+            "y": 277,
+            "scaleX": 0.5,
+            "scaleY": 0.5,
+            "visible": false
+        },
+        {
+            "type": "Container",
+            "id": "dcdd6855-2a23-4077-9a72-f54a4bb79c3c",
+            "label": "page1",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 310,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "5ffde31d-4ed4-4b2f-9a6e-0797ac1e1412",
+                    "label": "tilapia_new0",
+                    "texture": {
+                        "key": "tilapia_new",
+                        "frame": 0
+                    },
+                    "x": 3,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Container",
+                    "id": "822f9aa6-beba-4f4a-a379-f538f8414b86",
+                    "label": "tb1",
+                    "y": 305,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "82107f24-1f89-4952-9177-cb53dc795146",
+                            "label": "text_box_empty",
+                            "texture": {
+                                "key": "text_box_empty"
+                            },
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "6f192de9-9c9a-48e8-9536-43d936f26cff",
+                            "label": "bitmaptext_1",
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Welcome to Grow n' Flow!",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "7866bbe3-709e-4ca7-b982-75e60c32564a",
+            "label": "page2",
+            "scope": "CLASS",
+            "x": 583,
+            "y": 202,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "574457c4-1fae-4b2a-86f4-dd286f15bbe7",
+                    "label": "tilapia_new",
+                    "texture": {
+                        "key": "tilapia_new",
+                        "frame": 0
+                    },
+                    "x": 60,
+                    "y": 108,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Container",
+                    "id": "7ac3142f-0b5f-4412-a01d-bfc269e6cadc",
+                    "label": "tb2",
+                    "x": 57,
+                    "y": 413,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "75d254b9-a91a-44e8-ba7e-2d001d695725",
+                            "label": "text_box_empty_1",
+                            "texture": {
+                                "key": "text_box_empty"
+                            },
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "23e785ac-add1-401f-8e3a-1c022ca30ba9",
+                            "label": "bitmaptext",
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Let's introduce the wonderful world of aquaponics.",
+                            "font": "pixelmix_16",
+                            "fontSize": 16
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "1862f1d5-2fec-41b7-9f57-741d2ffc1070",
+            "label": "page3",
+            "scope": "CLASS",
+            "x": 358,
+            "y": 123,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "456e8d61-e996-4722-9f01-05f50b783bbb",
+                    "label": "text_box_empty_2",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "597eaacc-fc82-49f5-a405-8298ea9eb819",
+                    "label": "bitmaptext_2",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "In a basic sense, aquaponics is a form of\nagriculture that combines  two key concept...",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "fbe4178f-7283-4ae0-a79d-ce339a268ef7",
+            "label": "page4",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 337,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "9aefcd15-1421-4616-b78d-e5480cf33526",
+                    "label": "text_box_empty_3",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 253,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "e434c167-8c3b-49c1-874f-c8ac04e855a9",
+                    "label": "bitmaptext_3",
+                    "x": 253,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "...Aquaculture, controlled farming of aquatic life",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "9a8411a7-c1a4-479d-a505-89f39657119a",
+                    "label": "juvenile0",
+                    "texture": {
+                        "key": "juvenile",
+                        "frame": 0
+                    },
+                    "y": 58,
+                    "scaleX": 3,
+                    "scaleY": 3
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "2663446a-099e-405a-80b1-d3034483f31f",
+            "label": "page5",
+            "scope": "CLASS",
+            "x": 363,
+            "y": 544,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "71d1bbf2-5d4d-40ab-86c6-fcb13b57aa31",
+                    "label": "text_box_empty_4",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "ef1f7ba3-bfa6-4fff-8bef-88799049aac9",
+                    "label": "bitmaptext_4",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "...and Hydroponics, growing plants without soil",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "d9d16401-60d5-42cf-a8f2-f91de5beda95",
+                    "label": "lettuce",
+                    "texture": {
+                        "key": "lettuce"
+                    },
+                    "x": 290,
+                    "y": 38,
+                    "scaleX": 3,
+                    "scaleY": 3
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "e9cecc94-e18f-4afd-a8e0-a711849a097e",
+            "label": "page6",
+            "scope": "CLASS",
+            "x": 636,
+            "y": 167,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "fbd02631-8a12-4063-b648-57f529f47ec3",
+                    "label": "text_box_empty_5",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "92ca8b53-8940-4edd-8541-9f592d5c8b62",
+                    "label": "bitmaptext_5",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "By connecting these two concepts, we can create\na thriving, sustainable environment.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "d7a73a99-b5d3-4f09-84de-dc9a8cbb399f",
+            "label": "page7",
+            "scope": "CLASS",
+            "x": 636,
+            "y": 388,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "ce5ef504-7b92-44b6-81ec-388239ea44f0",
+                    "label": "text_box_empty_6",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "be5d2c8f-68a2-4056-8a63-c3ba37819834",
+                    "label": "bitmaptext_6",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "But how does the process actually work?",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "6ee51f06-4fcc-4a76-871e-0ca1acbea7be",
+            "label": "page8",
+            "scope": "CLASS",
+            "x": 636,
+            "y": 610,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "5424c7b2-a364-4f0b-9b03-3dbd18b44ce8",
+                    "label": "text_box_empty_7",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "88a114ad-368d-4689-935f-6cc1877f44eb",
+                    "label": "bitmaptext_7",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Well, the idea is quite simple",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "dcfeccee-c146-4926-be9b-12a652528101",
+            "label": "page9",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 611,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "6bb1944d-e479-4d22-8c92-9e6d7042dacf",
+                    "label": "text_box_empty_8",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2d209a51-f087-46ce-ac45-31953a30ba48",
+                    "label": "bitmaptext_8",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "In a controlled tank, fish eat and produce waste,\nwhich goes into the water system.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "23f55bfd-4aba-454e-90f8-a624cbf66cab",
+            "label": "page10",
+            "scope": "CLASS",
+            "x": 497,
+            "y": 611,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "a0869f21-b0af-450d-9dfe-cfa1d6823af2",
+                    "label": "text_box_empty_9",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 143,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2b78f057-a30a-4529-9bc7-ef2583cdebed",
+                    "label": "bitmaptext_9",
+                    "x": 143,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Bacteria in the filters converts waste from\ntoxic",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "0d9617f5-5549-4e95-b853-0d20555c9db8",
+                    "label": "bitmaptext_10",
+                    "y": 8,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#ee0000",
+                    "tintTopRight": "#ee0000",
+                    "tintBottomLeft": "#ee0000",
+                    "tintBottomRight": "#ee0000",
+                    "tintFill": true,
+                    "text": "ammonia",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "b32167d0-a5a9-4dde-8bb2-991e632bad71",
+                    "label": "bitmaptext_11",
+                    "x": 60,
+                    "y": 8,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#ee0000",
+                    "tintTopRight": "#ee0000",
+                    "tintBottomLeft": "#ee0000",
+                    "tintBottomRight": "#ee0000",
+                    "text": "to",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "e5a26756-845e-4bf4-a48d-41d047e1365d",
+                    "label": "bitmaptext_12",
+                    "x": 120,
+                    "y": 8,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#00ee00",
+                    "tintTopRight": "#00ee00",
+                    "tintBottomLeft": "#00ee00",
+                    "tintBottomRight": "#00ee00",
+                    "tintFill": true,
+                    "text": "nitrate",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "e06977b1-effd-4a82-9528-740cf7d1b56e",
+                    "label": "bitmaptext_13",
+                    "x": 290,
+                    "y": 8,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#ee0000",
+                    "tintTopRight": "#ee0000",
+                    "tintBottomLeft": "#ee0000",
+                    "tintBottomRight": "#ee0000",
+                    "text": ", a nutrient for plants.",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "9605a0a5-5096-4cbc-ba11-3a383b24ffa1",
+            "label": "page11",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 611,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "83ad0482-ab81-4cb3-8999-5a81e185d03e",
+                    "label": "text_box_empty_10",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "eaff0f5e-bb71-4901-9210-a7b15bd77e48",
+                    "label": "bitmaptext_14",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Filtered water is pumped through the plants tank,\nwhere the roots absorb          .",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "144b16df-507b-4cbf-9d87-daf957ac2fb5",
+                    "label": "bitmaptext_15",
+                    "x": 128,
+                    "y": 8,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#00ee00",
+                    "tintTopRight": "#00ee00",
+                    "tintBottomLeft": "#00ee00",
+                    "tintBottomRight": "#00ee00",
+                    "tintFill": true,
+                    "text": "nitrates",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "bd8d5448-e754-4fb5-9894-da5009ed180f",
+            "label": "page12",
+            "scope": "CLASS",
+            "x": 600,
+            "y": 595,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "a44d7c3f-d94d-43f7-9780-2986f23a472f",
+                    "label": "text_box_empty_11",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 40,
+                    "y": 16,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "7d08eab8-f65b-4bf5-81a3-e2f93b9dbf0a",
+                    "label": "bitmaptext_16",
+                    "x": 40,
+                    "y": 16,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "This prevents           from accumulating to\n harmful levels, which can hurt fish if not\n properly monitored.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "0a129ca4-5146-4731-a1f2-6be1ea2cd066",
+                    "label": "bitmaptext_17",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintTopLeft": "#00ee00",
+                    "tintTopRight": "#00ee00",
+                    "tintBottomLeft": "#00ee00",
+                    "tintBottomRight": "#00ee00",
+                    "tintFill": true,
+                    "text": "nitrates",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "567feaf2-036c-463d-b5da-774e18373a59",
+            "label": "page13",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 611,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "76aad471-f266-4d57-bc9f-1c027144a1bf",
+                    "label": "text_box_empty_12",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "ef15e56e-9656-43f4-8290-7aa17f3c926b",
+                    "label": "bitmaptext_18",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Finally, the cleaned water is pumped back \nto the fish tank, completing the cycle.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "2c771925-09ca-4bd6-ab1b-9c155067b7a6",
+            "label": "page14",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 611,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "dbe2ebfc-2a27-4eb8-9875-95713eb4c19f",
+                    "label": "text_box_empty_13",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2948ac7e-b442-420b-8cc6-5ec582bf2165",
+                    "label": "bitmaptext_19",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Now that we know how the cycle works, \nlet's move onto the system that holds it!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "a93524b9-bd24-4e6d-b7f3-8e67ba429fdb",
+            "label": "page15",
+            "scope": "CLASS",
+            "x": 358,
+            "y": 124,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "93433065-931e-4d3f-a638-ad26abd60676",
+                    "label": "text_box_empty_14",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "9c325f25-148f-4d8b-a778-69f591294c15",
+                    "label": "bitmaptext_20",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "There are several types of aquaponics systems\nwidely used across the world.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "43ddc1ad-d662-4d9b-914c-f0e95eb734c2",
+            "label": "page16",
+            "scope": "CLASS",
+            "x": 893,
+            "y": 338,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "939a385e-1847-4db7-9308-dfde53fb3281",
+                    "label": "text_box_empty_15",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "78feac98-b4a2-4ab7-997c-83d2bcddb7d9",
+                    "label": "bitmaptext_21",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Media Based, Nutrient Film Technique, etc...",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "4360d911-20ec-4638-aa7b-7b8f66ec0f4c",
+            "label": "page17",
+            "scope": "CLASS",
+            "x": 358,
+            "y": 561,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "80e46c0c-3478-4c67-9a91-a5c8f774894d",
+                    "label": "text_box_empty_16",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "980d1959-37b7-450e-95d1-a75c96c99d9f",
+                    "label": "bitmaptext_22",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Factors like efficiency, durability, and scale will\neffect which system is best for you.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "82fa0b07-564c-4e35-9187-fb0cc2cb7714",
+            "label": "page18",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 167,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "4a1935d6-e2c8-4446-a80a-322fd1e7d469",
+                    "label": "text_box_empty_17",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "45f38f7c-a8c9-4836-85ae-98922c579df4",
+                    "label": "bitmaptext_23",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Grow n' Flow focuses on Deep Water Culture(DWC)",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "7a41b3ff-386b-4cad-8e8d-0693a9a4bd0d",
+            "label": "page19",
+            "scope": "CLASS",
+            "x": 177,
+            "y": 249,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "8f660f3a-b976-42b1-987f-b39ac866c3d6",
+                    "label": "text_box_empty_18",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 463,
+                    "y": 141,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "a69366e0-8985-4bb5-8990-d0eb886d9298",
+                    "label": "bitmaptext_24",
+                    "x": 463,
+                    "y": 141,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Plants are grown on floating rafts, instead of in\ngrowing media,",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "e6d8097c-e230-4c90-893a-b4b14b1b34ef",
+                    "label": "rectangle_2",
+                    "angle": -12,
+                    "isFilled": true,
+                    "fillColor": "#9c5a3c",
+                    "width": 274,
+                    "height": 209
+                },
+                {
+                    "type": "Image",
+                    "id": "53fdebb7-92ee-4c9a-ab67-edd007002378",
+                    "label": "plant_ss_1",
+                    "texture": {
+                        "key": "plant_ss_1"
+                    },
+                    "x": 1,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "angle": -12
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "473bcaf2-abd0-4d9f-9b26-f9237221d84e",
+            "label": "page20",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 448,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "8f111003-9375-4d8d-8eb9-5cba2f3d3721",
+                    "label": "text_box_empty_19",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "y": 163,
+                    "scaleX": 0.85,
+                    "scaleY": 0.85
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "8cd184d5-006a-4dbb-a40d-ffcbff6fb305",
+                    "label": "bitmaptext_25",
+                    "y": 163,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "And their roots hang in water,\nreceiving nutrients directly.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "7bc73331-cbbd-4239-a9fe-ee4a2bad8057",
+                    "label": "rectangle",
+                    "x": 451,
+                    "angle": 6,
+                    "isFilled": true,
+                    "fillColor": "#9c5a3c",
+                    "width": 213,
+                    "height": 281
+                },
+                {
+                    "type": "Image",
+                    "id": "73f65811-340b-4715-a1aa-c8192742b6fd",
+                    "label": "plant_ss_2",
+                    "texture": {
+                        "key": "plant_ss_2"
+                    },
+                    "x": 451,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "angle": 6
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "b81e6386-335c-4069-9ad2-a3f1ff6bccac",
+            "label": "page21",
+            "scope": "CLASS",
+            "x": 640,
+            "y": 310,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "15a7d77b-4fc7-4c42-be70-df81df20a0ea",
+                    "label": "tilapia_new_1",
+                    "texture": {
+                        "key": "tilapia_new",
+                        "frame": 0
+                    },
+                    "x": 3,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Container",
+                    "id": "12e5a686-1a2b-49ee-ae94-326f253a59a3",
+                    "label": "tb",
+                    "y": 305,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "638caa23-9766-4ef1-b47e-c47ca5e8476e",
+                            "label": "text_box_empty_20",
+                            "texture": {
+                                "key": "text_box_empty"
+                            },
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "17192cde-12c6-48f6-a8ff-5728cd38e234",
+                            "label": "bitmaptext_26",
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Using your knowledge of aquaponics,\n let's step towards building\n your own virtual aquaponics system!",
+                            "font": "pixelmix_16",
+                            "align": 1,
+                            "fontSize": 16
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

@@ -9,6 +9,7 @@ import System from './scenes/System';
 import Shop from './scenes/Shop';
 import Tasks from './scenes/Tasks';
 import Journal from './scenes/Journal';
+import Cycle from './scenes/Cycle';
 
 // Find out more information about the Game Config at:
 // https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
@@ -32,7 +33,8 @@ const config = {
         Shop,
         Tasks,
         Mail,
-        Journal
+        Journal,
+        Cycle
     ],
     //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
     pixelArt: true

@@ -440,7 +440,8 @@ export default class MainMenu extends Phaser.Scene {
 			this.logoTween = null;
 		}
 
-		this.scene.start('Game');
+		this.scene.pause();
+		this.scene.start('Cycle');
 	}
 
 
