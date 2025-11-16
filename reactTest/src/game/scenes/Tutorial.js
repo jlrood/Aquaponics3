@@ -26,12 +26,19 @@ export default class Tutorial extends Phaser.Scene {
 		background.fillColor = 5084783;
 
 		// help
-		this.add.image(1228, 45, "help");
+		const help = this.add.image(1141, 48, "question");
+		help.scaleX = 2;
+		help.scaleY = 2;
 
 		// title
-		const title = this.add.image(653, 132, "title");
-		title.scaleX = 1.8406697932199103;
-		title.scaleY = 1.8503780327126584;
+		const title = this.add.image(653, 148, "title");
+		title.scaleX = 2;
+		title.scaleY = 2;
+
+		// settings
+		const settings = this.add.image(1218, 47, "settings");
+		settings.scaleX = 2;
+		settings.scaleY = 2;
 
 		this.background = background;
 

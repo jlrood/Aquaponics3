@@ -8,11 +8,15 @@
 export default class Preloader extends Phaser.Scene {
 
 	constructor() {
-		super("Preloader");
-
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
+		super({
+      key: "Preloader",
+      // <-- pack.files are loaded BEFORE init() so textures are available in init()
+      pack: {
+        files: [
+          { type: "image", key: "tilapia_new", url: "assets/life/tilapia_new.png"}
+        ]
+      }
+    });
 	}
 
 	/** @returns {void} */
@@ -38,7 +42,7 @@ export default class Preloader extends Phaser.Scene {
 		text_1.setStyle({ "color": "#060404ff" });
 
 		// tilapia_new0
-		this.add.image(324, 327, "tilapia_new", 0);
+		this.add.image(323, 343, "tilapia_new", 0);
 
 		this.background = background;
 		this.progressBar = progressBar;
@@ -56,8 +60,7 @@ export default class Preloader extends Phaser.Scene {
 	// Write your code here
     init ()
     {
-        this.editorCreate();
-
+		  this.editorCreate();
         //  This is the progress bar itself. It will increase in size from the left based on the % of progress.
         const bar = this.add.rectangle(this.progressBar.x - this.progressBar.width / 2 + 4, this.progressBar.y, 4, 28, 0xffffff);
 

@@ -229,6 +229,13 @@
                 "key": "mail icon"
             },
             {
+                "url": "assets/bmFonts/MedodicaRegular.woff2",
+                "format": "woff2",
+                "descriptors": {},
+                "type": "font",
+                "key": "MedodicaRegular"
+            },
+            {
                 "url": "assets/buttons_boxes/mini icons.png",
                 "frameConfig": {
                     "frameWidth": 16,

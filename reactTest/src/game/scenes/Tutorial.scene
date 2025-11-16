@@ -31,10 +31,12 @@
             "id": "a8131db1-85ea-4271-b04f-aa3becbd71d5",
             "label": "help",
             "texture": {
-                "key": "help"
+                "key": "question"
             },
-            "x": 1228,
-            "y": 45
+            "x": 1141,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2
         },
         {
             "type": "Image",
@@ -44,9 +46,21 @@
                 "key": "title"
             },
             "x": 653,
-            "y": 132,
-            "scaleX": 1.8406697932199103,
-            "scaleY": 1.8503780327126584
+            "y": 148,
+            "scaleX": 2,
+            "scaleY": 2
+        },
+        {
+            "type": "Image",
+            "id": "e25c41e2-acf9-4547-9fd0-92ca840d85cc",
+            "label": "settings",
+            "texture": {
+                "key": "settings"
+            },
+            "x": 1218,
+            "y": 47,
+            "scaleX": 2,
+            "scaleY": 2
         }
     ],
     "plainObjects": [],

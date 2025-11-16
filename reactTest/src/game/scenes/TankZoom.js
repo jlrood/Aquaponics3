@@ -228,6 +228,7 @@ export default class TankZoom extends Phaser.Scene {
 		fish.scale = 2;
 		fish.tint = 0x659bba;
 		fish.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		
 		fish.on("pointerdown", () => {
 			this.analyzeFish(x, y, fishIndex, fishItem);
 		})
@@ -283,6 +284,7 @@ export default class TankZoom extends Phaser.Scene {
 		this.change_fish_button.on("pointerdown", () => {
 			this.changeFish();
 		})
+
 	}
 
 	/* END-USER-CODE */
