@@ -345,13 +345,21 @@ export default class MainMenu extends Phaser.Scene {
 
 		this.cameras.main.setBackgroundColor('#ffffff')
 
+		// base cursor for this scene
+  		this.input.setDefaultCursor('default');
+
+
 		// Change to hand cursor when you hover over interactable icons.
 		const handify = o => {
-			if (!o || !o.input) o.setInteractive();           // ensure it has an input plugin
-			o.input.cursor = 'pointer';                       // hand on hover
-			o.on('pointerover', () => this.input.setDefaultCursor('pointer'));
-			o.on('pointerout', () => this.input.setDefaultCursor('default'));
-			return o;
+			if (!o) return;
+
+			// If it already has input, keep its hitArea.
+			if (!o.input) {
+				o.setInteractive({ useHandCursor: true });
+			}
+
+    		// hand only while over this object
+    		o.input.cursor = 'pointer';
 		};
 
 		// Icons are visible, so start with these
@@ -360,7 +368,9 @@ export default class MainMenu extends Phaser.Scene {
 		this.journal_icon,
 		this.mail_icon,
 		this.system_icon,
-		this.advance
+		this.advance,
+		this.tank_screen_trigger,
+		this.bed_screen_trigger,
 		].forEach(handify);
 
 		// If you later show the text buttons, fix their hit areas then handify
@@ -369,14 +379,7 @@ export default class MainMenu extends Phaser.Scene {
 		this.journal_button,
 		this.mail_button,
 		this.system_button,
-		this.advance
-		].forEach(t => {
-			if (!t) return;
-			// re-center the generated 0,0 hit rect on origin 0.5
-			const w = t.width || 64, h = t.height || 18;
-			if (t.input?.hitArea?.setTo) t.input.hitArea.setTo(-w / 2, -h / 2, w, h);
-			handify(t);
-		});
+		].forEach(handify);
 
 		// week system
 		this.week = new WeekSystem(this, 6)
@@ -395,7 +398,6 @@ export default class MainMenu extends Phaser.Scene {
 
 		this.applyWeekRules(this.week.week)
 
-		// advance is your week system button
 		if (this.advance) {
 			this.advance.setInteractive({ useHandCursor: true })
 			this.advance.on('pointerdown', async () => {
@@ -455,7 +457,7 @@ export default class MainMenu extends Phaser.Scene {
 			this.scene.start('BedZoom');
 		})
 
-		// If you have a sprite created in the editor named 'player'
+		// Play the background bubbles
 		this.bg.play('bg');
 	}
 
@@ -498,6 +500,7 @@ export default class MainMenu extends Phaser.Scene {
 			});
 		}
 	}
+
 	// week rules
 	applyWeekRules(wk) {
 		if (wk == 1) {
