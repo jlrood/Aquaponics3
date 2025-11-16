@@ -619,22 +619,6 @@
                 },
                 {
                     "type": "Rectangle",
-                    "id": "6d246cba-8ebf-419d-b6b4-9a059eec84a4",
-                    "label": "announcement_2",
-                    "displayName": "announcement_2",
-                    "x": 285.09893798828125,
-                    "y": 392.8402099609375,
-                    "scaleX": 1.9313435329452338,
-                    "scaleY": 1.023622721338591,
-                    "isFilled": true,
-                    "strokeColor": "#000000",
-                    "lineWidth": 2,
-                    "isStroked": true,
-                    "width": 128,
-                    "height": 128
-                },
-                {
-                    "type": "Rectangle",
                     "id": "5983f07b-87e4-4149-9a3c-128de565e1df",
                     "label": "announcement_3",
                     "displayName": "announcement_3",
@@ -655,23 +639,10 @@
                     "label": "announcement_icon_1",
                     "displayName": "announcement_icon_1",
                     "texture": {
-                        "key": "star"
+                        "key": "young"
                     },
                     "x": 281.0000305175781,
                     "y": 246,
-                    "scaleX": 1.8170590540794684,
-                    "scaleY": 1.6965553601170669
-                },
-                {
-                    "type": "Image",
-                    "id": "0726407c-5cb8-4bc9-aec1-168a4749ad44",
-                    "label": "announcement_icon_2",
-                    "displayName": "announcement_icon_2",
-                    "texture": {
-                        "key": "star"
-                    },
-                    "x": 283.0478515625,
-                    "y": 392.8402099609375,
                     "scaleX": 1.8170590540794684,
                     "scaleY": 1.6965553601170669
                 },
@@ -687,6 +658,75 @@
                     "y": 538.7225341796875,
                     "scaleX": 1.8170590540794684,
                     "scaleY": 1.6965553601170669
+                },
+                {
+                    "type": "Container",
+                    "id": "2ac1b0dc-4f7e-4151-9141-873f7f0da185",
+                    "label": "announcement_2_container",
+                    "x": 282,
+                    "y": 393,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "6d246cba-8ebf-419d-b6b4-9a059eec84a4",
+                            "label": "announcement_2",
+                            "displayName": "announcement_2",
+                            "x": 3.09893798828125,
+                            "y": -0.1597900390625,
+                            "scaleX": 1.9313435329452338,
+                            "scaleY": 1.023622721338591,
+                            "isFilled": true,
+                            "fillColor": "#1db3ec",
+                            "strokeColor": "#000000",
+                            "lineWidth": 2,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Image",
+                            "id": "0726407c-5cb8-4bc9-aec1-168a4749ad44",
+                            "label": "announcement_icon_2",
+                            "displayName": "announcement_icon_2",
+                            "texture": {
+                                "key": "sillouette"
+                            },
+                            "x": 3,
+                            "y": -3,
+                            "scaleX": 3,
+                            "scaleY": 3
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "aeb7bc42-4e3b-43e9-b608-d6615cba65e3",
+                            "label": "bitmaptext_1",
+                            "x": -102,
+                            "y": -57,
+                            "tintTopLeft": "#eedcdc",
+                            "tintTopRight": "#fffefe",
+                            "tintBottomRight": "#fafafa",
+                            "tintFill": true,
+                            "text": "BARRAMUNDI UPDATE",
+                            "font": "pixelmix_16",
+                            "align": 1,
+                            "fontSize": 16
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "0c7b5c9f-caf8-44ac-bba5-807d81fe328a",
+                            "label": "bitmaptext",
+                            "x": -64,
+                            "y": 43,
+                            "tintTopLeft": "#eedcdc",
+                            "tintTopRight": "#fffefe",
+                            "tintBottomRight": "#fafafa",
+                            "tintFill": true,
+                            "text": "COMING SOON",
+                            "font": "pixelmix_16",
+                            "align": 1,
+                            "fontSize": 16
+                        }
+                    ]
                 }
             ]
         }

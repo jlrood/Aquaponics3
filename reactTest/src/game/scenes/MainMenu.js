@@ -276,6 +276,18 @@ export default class MainMenu extends Phaser.Scene {
 		multiplayer_icon.scaleX = 1.5;
 		multiplayer_icon.scaleY = 1.5;
 
+		// tank_screen_trigger
+		const tank_screen_trigger = this.add.image(958, 468, "transparent");
+		tank_screen_trigger.setInteractive(new Phaser.Geom.Ellipse(150, 150, 300, 300), Phaser.Geom.Ellipse.Contains);
+		tank_screen_trigger.scaleX = 1.66;
+		tank_screen_trigger.scaleY = 1.05;
+
+		// bed_screen_trigger
+		const bed_screen_trigger = this.add.image(432, 335, "transparent");
+		bed_screen_trigger.setInteractive(new Phaser.Geom.Rectangle(0, 0, 300, 300), Phaser.Geom.Rectangle.Contains);
+		bed_screen_trigger.scaleX = 1.5;
+		bed_screen_trigger.scaleY = 0.41;
+
 		this.bg = bg;
 		this.tasks_button = tasks_button;
 		this.shop_button = shop_button;
@@ -288,6 +300,8 @@ export default class MainMenu extends Phaser.Scene {
 		this.mail_icon = mail_icon;
 		this.system_icon = system_icon;
 		this.advance = advance;
+		this.tank_screen_trigger = tank_screen_trigger;
+		this.bed_screen_trigger = bed_screen_trigger;
 
 		this.events.emit("scene-awake");
 	}
@@ -316,6 +330,10 @@ export default class MainMenu extends Phaser.Scene {
 	system_icon;
 	/** @type {Phaser.GameObjects.Image} */
 	advance;
+	/** @type {Phaser.GameObjects.Image} */
+	tank_screen_trigger;
+	/** @type {Phaser.GameObjects.Image} */
+	bed_screen_trigger;
 
 	/* START-USER-CODE */
 
@@ -428,6 +446,14 @@ export default class MainMenu extends Phaser.Scene {
 				repeat: -1
 			});
 		}
+
+		this.tank_screen_trigger.on("pointerdown", () => {
+			this.scene.start('TankZoom');
+		})
+
+		this.bed_screen_trigger.on("pointerdown", () => {
+			this.scene.start('BedZoom');
+		})
 
 		// If you have a sprite created in the editor named 'player'
 		this.bg.play('bg');

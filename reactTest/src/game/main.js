@@ -10,6 +10,8 @@ import Shop from './scenes/Shop';
 import Tasks from './scenes/Tasks';
 import Journal from './scenes/Journal';
 import Cycle from './scenes/Cycle';
+import TankZoom from './scenes/TankZoom';
+import BedZoom from './scenes/BedZoom';
 
 // Find out more information about the Game Config at:
 // https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
@@ -34,7 +36,9 @@ const config = {
         Tasks,
         Mail,
         Journal,
-        Cycle
+        Cycle,
+        TankZoom,
+        BedZoom
     ],
     //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
     pixelArt: true

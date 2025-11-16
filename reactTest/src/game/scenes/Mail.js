@@ -344,16 +344,6 @@ export default class Mail extends Phaser.Scene {
 		announcement_1.lineWidth = 2;
 		announcements_container.add(announcement_1);
 
-		// announcement_2
-		const announcement_2 = this.add.rectangle(285.09893798828125, 392.8402099609375, 128, 128);
-		announcement_2.scaleX = 1.9313435329452338;
-		announcement_2.scaleY = 1.023622721338591;
-		announcement_2.isFilled = true;
-		announcement_2.isStroked = true;
-		announcement_2.strokeColor = 0;
-		announcement_2.lineWidth = 2;
-		announcements_container.add(announcement_2);
-
 		// announcement_3
 		const announcement_3 = this.add.rectangle(285.09893798828125, 538.7225341796875, 128, 128);
 		announcement_3.scaleX = 1.9313435329452338;
@@ -365,22 +355,59 @@ export default class Mail extends Phaser.Scene {
 		announcements_container.add(announcement_3);
 
 		// announcement_icon_1
-		const announcement_icon_1 = this.add.image(281.0000305175781, 246, "star");
+		const announcement_icon_1 = this.add.image(281.0000305175781, 246, "young");
 		announcement_icon_1.scaleX = 1.8170590540794684;
 		announcement_icon_1.scaleY = 1.6965553601170669;
 		announcements_container.add(announcement_icon_1);
-
-		// announcement_icon_2
-		const announcement_icon_2 = this.add.image(283.0478515625, 392.8402099609375, "star");
-		announcement_icon_2.scaleX = 1.8170590540794684;
-		announcement_icon_2.scaleY = 1.6965553601170669;
-		announcements_container.add(announcement_icon_2);
 
 		// announcement_icon_3
 		const announcement_icon_3 = this.add.image(284.0733947753906, 538.7225341796875, "star");
 		announcement_icon_3.scaleX = 1.8170590540794684;
 		announcement_icon_3.scaleY = 1.6965553601170669;
 		announcements_container.add(announcement_icon_3);
+
+		// announcement_2_container
+		const announcement_2_container = this.add.container(282, 393);
+		announcements_container.add(announcement_2_container);
+
+		// announcement_2
+		const announcement_2 = this.add.rectangle(3.09893798828125, -0.1597900390625, 128, 128);
+		announcement_2.scaleX = 1.9313435329452338;
+		announcement_2.scaleY = 1.023622721338591;
+		announcement_2.isFilled = true;
+		announcement_2.fillColor = 1946604;
+		announcement_2.isStroked = true;
+		announcement_2.strokeColor = 0;
+		announcement_2.lineWidth = 2;
+		announcement_2_container.add(announcement_2);
+
+		// announcement_icon_2
+		const announcement_icon_2 = this.add.image(3, -3, "sillouette");
+		announcement_icon_2.scaleX = 3;
+		announcement_icon_2.scaleY = 3;
+		announcement_2_container.add(announcement_icon_2);
+
+		// bitmaptext_1
+		const bitmaptext_1 = this.add.bitmapText(-102, -57, "pixelmix_16", "BARRAMUNDI UPDATE");
+		bitmaptext_1.tintFill = true;
+		bitmaptext_1.tintTopLeft = 15654108;
+		bitmaptext_1.tintTopRight = 16776958;
+		bitmaptext_1.tintBottomRight = 16448250;
+		bitmaptext_1.text = "BARRAMUNDI UPDATE";
+		bitmaptext_1.fontSize = 16;
+		bitmaptext_1.align = 1;
+		announcement_2_container.add(bitmaptext_1);
+
+		// bitmaptext
+		const bitmaptext = this.add.bitmapText(-64, 43, "pixelmix_16", "COMING SOON");
+		bitmaptext.tintFill = true;
+		bitmaptext.tintTopLeft = 15654108;
+		bitmaptext.tintTopRight = 16776958;
+		bitmaptext.tintBottomRight = 16448250;
+		bitmaptext.text = "COMING SOON";
+		bitmaptext.fontSize = 16;
+		bitmaptext.align = 1;
+		announcement_2_container.add(bitmaptext);
 
 		this.back_button = back_button;
 		this.mail_button = mail_button;
@@ -457,7 +484,7 @@ export default class Mail extends Phaser.Scene {
 			}
 			else
 			{
-				this.check_circle_1.fillColor = 0x000000;
+				this.check_circle_1.fillColor = 0x428544;
 			}
 		});
 
@@ -468,7 +495,7 @@ export default class Mail extends Phaser.Scene {
 			}
 			else
 			{
-				this.check_circle_2.fillColor = 0x000000;
+				this.check_circle_2.fillColor = 0x428544;
 			}
 		});
 
@@ -479,7 +506,7 @@ export default class Mail extends Phaser.Scene {
 			}
 			else
 			{
-				this.check_circle_3.fillColor = 0x000000;
+				this.check_circle_3.fillColor = 0x428544;
 			}
 		});
 
@@ -490,7 +517,7 @@ export default class Mail extends Phaser.Scene {
 			}
 			else
 			{
-				this.check_circle_4.fillColor = 0x000000;
+				this.check_circle_4.fillColor = 0x428544;
 			}
 		});
 
@@ -501,7 +528,7 @@ export default class Mail extends Phaser.Scene {
 			}
 			else
 			{
-				this.check_circle_5.fillColor = 0x000000;
+				this.check_circle_5.fillColor = 0x428544;
 			}
 		});
 	}

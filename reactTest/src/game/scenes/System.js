@@ -147,24 +147,6 @@ export default class System extends Phaser.Scene {
 		plant_amount.setStyle({ "color": "#000000ff", "fontSize": "24px" });
 		stat_container.add(plant_amount);
 
-		// text_3
-		const text_3 = this.add.text(14, 30, "", {});
-		text_3.text = "[I]";
-		text_3.setStyle({ "color": "#000000ff" });
-		stat_container.add(text_3);
-
-		// text_4
-		const text_4 = this.add.text(12, 107, "", {});
-		text_4.text = "[I]";
-		text_4.setStyle({ "color": "#000000ff" });
-		stat_container.add(text_4);
-
-		// text_5
-		const text_5 = this.add.text(15, 66, "", {});
-		text_5.text = "[I]";
-		text_5.setStyle({ "color": "#000000ff" });
-		stat_container.add(text_5);
-
 		// energy_rate
 		const energy_rate = this.add.text(300, 50, "", {});
 		energy_rate.setOrigin(0, 0.5);
@@ -179,17 +161,23 @@ export default class System extends Phaser.Scene {
 		water_rate.setStyle({ "color": "#000000ff", "fontSize": "24px" });
 		stat_container.add(water_rate);
 
-		// text_6
-		const text_6 = this.add.text(262, 44, "", {});
-		text_6.text = "[I]";
-		text_6.setStyle({ "color": "#000000ff" });
-		stat_container.add(text_6);
+		// mini_icons4
+		const mini_icons4 = this.add.image(32, 38, "mini icons", 4);
+		mini_icons4.scaleX = 1.8;
+		mini_icons4.scaleY = 1.8;
+		stat_container.add(mini_icons4);
 
-		// text_7
-		const text_7 = this.add.text(263, 90, "", {});
-		text_7.text = "[I]";
-		text_7.setStyle({ "color": "#000000ff" });
-		stat_container.add(text_7);
+		// mini_icons1
+		const mini_icons1 = this.add.image(30, 76, "mini icons", 1);
+		mini_icons1.scaleX = 2;
+		mini_icons1.scaleY = 2;
+		stat_container.add(mini_icons1);
+
+		// mini_icons0
+		const mini_icons0 = this.add.image(29, 114, "mini icons", 0);
+		mini_icons0.scaleX = 2;
+		mini_icons0.scaleY = 2;
+		stat_container.add(mini_icons0);
 
 		// system_container
 		const system_container = this.add.container(150, 363);
@@ -207,6 +195,12 @@ export default class System extends Phaser.Scene {
 		graph2.scaleY = 2.2;
 		system_container.add(graph2);
 
+		// mini_icons3
+		const mini_icons3 = this.add.image(287, -120, "mini icons", 3);
+		mini_icons3.scaleX = 2;
+		mini_icons3.scaleY = 2;
+		system_container.add(mini_icons3);
+
 		// production_container
 		const production_container = this.add.container(674, 273);
 
@@ -222,6 +216,11 @@ export default class System extends Phaser.Scene {
 		graph1.scaleX = 2.6;
 		graph1.scaleY = 2.6;
 		production_container.add(graph1);
+
+		// mini_icons2
+		const mini_icons2 = this.add.image(435, 291, "mini icons", 2);
+		mini_icons2.scaleX = 2;
+		mini_icons2.scaleY = 2;
 
 		this.back_button = back_button;
 		this.week_button = week_button;
