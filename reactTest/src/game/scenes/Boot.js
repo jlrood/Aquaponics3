@@ -20,7 +20,7 @@ export default class Boot extends Scene
             'assets/life/tilapia_new.png',
             {
             frameWidth: 64,   // width of one fish in pixels
-            frameHeight: 48   // height of one fish in pixels
+            frameHeight: 64   // height of one fish in pixels
             }
         );
 
