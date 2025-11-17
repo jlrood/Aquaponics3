@@ -270,9 +270,9 @@ export default class Shop extends Phaser.Scene {
 		system_container.add(content2_box);
 
 		// Header2_Text
-		const header2_Text = this.add.bitmapText(241, 10, "pixelmix_32", "System");
+		const header2_Text = this.add.bitmapText(241, 10, "pixelmix_32", "Sale at Market");
 		header2_Text.setOrigin(0.5, 0);
-		header2_Text.text = "System";
+		header2_Text.text = "Sale at Market";
 		header2_Text.fontSize = 32;
 		system_container.add(header2_Text);
 
@@ -914,7 +914,7 @@ export default class Shop extends Phaser.Scene {
 		})
 	}
 
-	switchScreen(str) {
+	/*switchScreen(str) {
 		if (str == 's') {
 			this.sell_page_button.setVisible(false);
 			this.sell_page_icon.setVisible(false);
@@ -931,7 +931,7 @@ export default class Shop extends Phaser.Scene {
 			this.systemImage.setVisible(true);
 			this.header2_Text.text = "System";
 		}
-	}
+	}*/
 
 	setListPrice(boxNum, textObj, itemObj) {
 		textObj.text = "$ " + itemObj.price;
@@ -967,6 +967,76 @@ export default class Shop extends Phaser.Scene {
 		// Write it back to the registry so the change is recognized globally
 		this.registry.set('items', items);
 		console.log(items[itemIndex]);
+		this.updateSellMenu();
+	}
+
+	sellItem(itemID) {
+		let items = this.registry.get('items');
+		const itemIndex = this.getItemIndexbyID(itemID, items);
+		items[itemIndex].playerHas -= 1;
+		this.registry.set('items', items);
+		console.log(items[itemIndex]);
+		this.updateSellMenu();
+	}
+
+	destroyAllSellBoxes() {
+		for (let i = 0; this.sellDestroyList[i] != null; i++) {
+			this.sellDestroyList[i].destroy();
+			this.sellDestroyList[i] = null;
+		}
+		this.sellDestroyListIndex = 0;
+	}
+
+	addToDestroyList(obj) {
+		this.sellDestroyList[this.sellDestroyListIndex] = obj;
+		this.sellDestroyListIndex += 1;
+	}
+
+	updateSellMenu() {
+		this.destroyAllSellBoxes();
+		let items = this.registry.get('items');
+		let adjust = 0;
+		for (let i = 0; i < items.length; i++) {
+			if (items[i].playerHas == 0)
+				continue;
+
+			const sell_item_bar = this.add.rectangle(780, 140 + adjust, 444, 40);
+			sell_item_bar.setOrigin(0, 0);
+			sell_item_bar.isFilled = true;
+			sell_item_bar.fillColor = 15465709;
+			sell_item_bar.isStroked = true;
+			sell_item_bar.strokeColor = 4473924;
+			sell_item_bar.lineWidth = 1;
+			this.addToDestroyList(sell_item_bar);
+
+			const sell_item_name = this.add.bitmapText(800, 160 + adjust, "pixelmix_16", items[i].shopSellText);
+			sell_item_name.setOrigin(0, 0.5);
+			this.addToDestroyList(sell_item_name);
+
+			const sell_item_button = this.add.rectangle(1120, 145 + adjust, 98, 30);
+			sell_item_button.setOrigin(0, 0);
+			sell_item_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 98, 30), Phaser.Geom.Rectangle.Contains);
+			sell_item_button.isFilled = true;
+			sell_item_button.fillColor = 0x9c5a3c;
+			sell_item_button.isStroked = true;
+			sell_item_button.strokeColor = 4473924;
+			sell_item_button.lineWidth = 1;
+			this.addToDestroyList(sell_item_button);
+
+			const sell_text = this.add.bitmapText(1169, 160 + adjust, "pixelmix_16", "SELL");
+			sell_text.setOrigin(0.5, 0.5);
+			this.addToDestroyList(sell_text);
+
+			const sell_amount = this.add.bitmapText(1110, 160 + adjust, "pixelmix_16", "x" + items[i].playerHas);
+			sell_amount.setOrigin(1, 0.5);
+			this.addToDestroyList(sell_amount);
+
+			sell_item_button.on("pointerdown", () => {
+				this.sellItem(items[i].id);
+			})
+
+			adjust += 40;
+		}
 	}
 
 	setupFishShop() {
@@ -1290,9 +1360,10 @@ export default class Shop extends Phaser.Scene {
 
 		this.editorCreate();
 		this.shopTable = new Array(13);
+		this.sellDestroyList = new Array(256);
+		this.sellDestroyListIndex = 0;
 		this.updateMoney(0);
 		this.setupFishShop();
-		this.switchScreen('b')
 
 		this.back_Button.on("pointerdown", () => {
             this.scene.start('MainMenu'); // Still works!
@@ -1313,14 +1384,6 @@ export default class Shop extends Phaser.Scene {
 		this.equip_Box.on("pointerdown", () => {
             this.setupEquipShop();
         });
-
-		this.sell_page_button.on("pointerdown", () => {
-			this.switchScreen('s');
-		})
-
-		this.buy_page_button.on("pointerdown", () => {
-			this.switchScreen('b');
-		})
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
