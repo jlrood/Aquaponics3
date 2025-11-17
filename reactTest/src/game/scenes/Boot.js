@@ -34,27 +34,32 @@ export default class Boot extends Scene
         this.registry.set('fish_amount', 0);
         this.registry.set('plant_amount', 0);
         this.registry.set('items', [
-            {id: 'tilapiaLarvae', playerHas: 0, price: 1, shopText: "Tilapia\nLarvae", shopSellText: "Tilapia Larvae", sprite: 'larvae'},
-            {id: 'tilapiaFingerling', playerHas: 0, price: 2, shopText: "Tilapia\nFingerling", shopSellText: "Tilapia Fingerling", sprite: 'fingerling'},
-            {id: 'tilapiaJuvenile', playerHas: 0, price: 5, shopText: "Tilapia\nJuvenile", shopSellText: "Tilapia Juvenile", sprite: 'juvenile'},
-            {id: 'tilapiaAdult', playerHas: 0, price: 10, shopText: "Tilapia\nAdult", shopSellText: "Tilapia Adult", sprite: 'tilapia_new'},
-            {id: 'barramundiLarvae', playerHas: 0, price: 2, shopText: "Barramundi\nLarvae", shopSellText: "Barramundi Larvae"},
-            {id: 'barramundiFingerling', playerHas: 0, price: 5, shopText: "Barramundi\nFingerling", shopSellText: "Barramundi Fingerling"},
-            {id: 'barramundiJuvenile', playerHas: 0, price: 10, shopText: "Barramundi\nJuvenile", shopSellText: "Barramundi Juvenile"},
-            {id: 'barramundiAdult', playerHas: 0, price: 20, shopText: "Barramundi\nAdult", shopSellText: "Barramundi Adult"},
-            {id: 'romaineSeed', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSeed", shopSellText: "Romaine Lettuce Seed", sprite: 'seed'},
-            {id: 'romaineSprout', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSprout", shopSellText: "Romaine Lettuce Sprout", sprite: 'sprout'},
-            {id: 'romaineSeedling', playerHas: 0, price: 2, shopText: "Romaine\nLettuce\nSeedling", shopSellText: "Romaine Lettuce Seedling", sprite: 'seedling'},
-            {id: 'romaineYoung', playerHas: 0, price: 3, shopText: "Romaine\nLettuce\nYoung", shopSellText: "Romaine Lettuce Young", sprite: 'young'},
-            {id: 'romaineHead', playerHas: 0, price: 5, shopText: "Romaine\nLettuce\nHead", shopSellText: "Romaine Lettuce Head", sprite: 'lettuce'},
-            {id: 'growBed', playerHas: 0, price: 20, shopText: "Grow Bed", shopSellText: "Grow Bed"},
-            {id: 'fluorescentLight', playerHas: 0, price: 15, shopText: "F. Light", shopSellText: "Fluorescent Light"},
-            {id: 'tankSensor', playerHas: 0, price: 20, shopText: "Tank\nSensor", shopSellText: "Tank Sensor"},
-            {id: 'regTank', playerHas: 0, price: 30, shopText: "Fish Tank", shopSellText: "Fish Tank"},
-            {id: 'premiumTank', playerHas: 0, price: 80, shopText: "Premium\nFish Tank", shopSellText: "Premium Fish Tank"},
-            {id: 'plantTray', playerHas: 0, price: 10, shopText: "Plant\nTray", shopSellText: "Plant Tray"},
-            {id: 'pHMeter', playerHas: 0, price: 5, shopText: "pH Meter", shopSellText: "pH Meter"},
+            {id: 'tilapiaLarvae', type: 'fish', playerHas: 0, price: 1, shopText: "Tilapia\nLarvae", shopSellText: "Tilapia Larvae", sprite: 'larvae'},
+            {id: 'tilapiaFingerling', type: 'fish', playerHas: 0, price: 2, shopText: "Tilapia\nFingerling", shopSellText: "Tilapia Fingerling", sprite: 'fingerling'},
+            {id: 'tilapiaJuvenile', type: 'fish', playerHas: 0, price: 5, shopText: "Tilapia\nJuvenile", shopSellText: "Tilapia Juvenile", sprite: 'juvenile'},
+            {id: 'tilapiaAdult', type: 'fish', playerHas: 0, price: 10, shopText: "Tilapia\nAdult", shopSellText: "Tilapia Adult", sprite: 'tilapia_new'},
+            {id: 'barramundiLarvae', type: 'fish', playerHas: 0, price: 2, shopText: "Barramundi\nLarvae", shopSellText: "Barramundi Larvae"},
+            {id: 'barramundiFingerling', type: 'fish', playerHas: 0, price: 5, shopText: "Barramundi\nFingerling", shopSellText: "Barramundi Fingerling"},
+            {id: 'barramundiJuvenile', type: 'fish', playerHas: 0, price: 10, shopText: "Barramundi\nJuvenile", shopSellText: "Barramundi Juvenile"},
+            {id: 'barramundiAdult', type: 'fish', playerHas: 0, price: 20, shopText: "Barramundi\nAdult", shopSellText: "Barramundi Adult"},
+            {id: 'romaineSeed', type: 'plant', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSeed", shopSellText: "Romaine Lettuce Seed", sprite: 'seed'},
+            {id: 'romaineSprout', type: 'plant', playerHas: 0, price: 1, shopText: "Romaine\nLettuce\nSprout", shopSellText: "Romaine Lettuce Sprout", sprite: 'sprout'},
+            {id: 'romaineSeedling', type: 'plant', playerHas: 0, price: 2, shopText: "Romaine\nLettuce\nSeedling", shopSellText: "Romaine Lettuce Seedling", sprite: 'seedling'},
+            {id: 'romaineYoung', type: 'plant', playerHas: 0, price: 3, shopText: "Romaine\nLettuce\nYoung", shopSellText: "Romaine Lettuce Young", sprite: 'young'},
+            {id: 'romaineHead', type: 'plant', playerHas: 0, price: 5, shopText: "Romaine\nLettuce\nHead", shopSellText: "Romaine Lettuce Head", sprite: 'lettuce'},
+            {id: 'growBed', type: 'system', playerHas: 0, price: 20, shopText: "Grow Bed", shopSellText: "Grow Bed"},
+            {id: 'fluorescentLight', type: 'system', playerHas: 0, price: 15, shopText: "F. Light", shopSellText: "Fluorescent Light"},
+            {id: 'tankSensor', type: 'system', playerHas: 0, price: 20, shopText: "Tank\nSensor", shopSellText: "Tank Sensor"},
+            {id: 'regTank', type: 'system', playerHas: 0, price: 30, shopText: "Fish Tank", shopSellText: "Fish Tank"},
+            {id: 'premiumTank', type: 'system', playerHas: 0, price: 80, shopText: "Premium\nFish Tank", shopSellText: "Premium Fish Tank"},
+            {id: 'plantTray', type: 'system', playerHas: 0, price: 10, shopText: "Plant\nTray", shopSellText: "Plant Tray"},
+            {id: 'pHMeter', type: 'equip', playerHas: 0, price: 5, shopText: "pH Meter", shopSellText: "pH Meter"},
         ]);
         this.scene.start('Preloader');
+        this.registry.set('plantBed', [
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null]
+        ]);
     }
 }
