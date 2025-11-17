@@ -1032,6 +1032,7 @@ export default class Shop extends Phaser.Scene {
 			this.addToDestroyList(sell_amount);
 
 			sell_item_button.on("pointerdown", () => {
+				this.updateMoney(items[i].price)
 				this.sellItem(items[i].id);
 			})
 
