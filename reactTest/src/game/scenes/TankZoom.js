@@ -224,14 +224,31 @@ export default class TankZoom extends Phaser.Scene {
 	addFish(fishItem, fishIndex) {
 		const x = Phaser.Math.Between(125, 1165);
 		const y = Phaser.Math.Between(180, 485);
+		const scale = Phaser.Math.Between(-500, 500);
+		
+		// Use add.sprite with the spritesheet key
 		const fish = this.add.sprite(x, y, fishItem.sprite);
-		fish.scale = 2;
+
+		// Randomize the directions
+		fish.scaleY = 2;
+		if (scale < 0)
+		{
+			fish.scaleX = -2;
+		}
+		else
+		{
+			fish.scaleX = 2;
+		}
 		fish.tint = 0x659bba;
 		fish.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
 		
+		// Play the animation - make sure fishItem has an animKey property
+		// or derive it from the sprite name
+		fish.play(`${fishItem.sprite}-swim`);
+		
 		fish.on("pointerdown", () => {
 			this.analyzeFish(x, y, fishIndex, fishItem);
-		})
+		});
 
 		this.fishArr[fishIndex] = {icon: fish, item: fishItem};
 	}
@@ -284,6 +301,34 @@ export default class TankZoom extends Phaser.Scene {
 		this.change_fish_button.on("pointerdown", () => {
 			this.changeFish();
 		})
+
+		this.anims.create({
+			key: 'larvae-swim',
+			frames: this.anims.generateFrameNumbers('larvae', { start: 0, end: 1 }), // adjust frame count
+			frameRate: 4,
+			repeat: -1, // -1 means loop forever
+    	})
+
+		this.anims.create({
+			key: 'fingerling-swim',
+			frames: this.anims.generateFrameNumbers('fingerling', { start: 0, end: 1 }), // adjust frame count
+			frameRate: 4,
+			repeat: -1, // -1 means loop forever
+    	})
+
+		this.anims.create({
+			key: 'juvenile-swim',
+			frames: this.anims.generateFrameNumbers('juvenile', { start: 0, end: 1 }), // adjust frame count
+			frameRate: 4,
+			repeat: -1, // -1 means loop forever
+    	})
+
+		this.anims.create({
+			key: 'tilapia_new-swim',
+			frames: this.anims.generateFrameNumbers('tilapia_new', { start: 0, end: 2 }), // adjust frame count
+			frameRate: 4,
+			repeat: -1, // -1 means loop forever
+    	})
 
 	}
 
