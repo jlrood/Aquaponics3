@@ -1363,6 +1363,7 @@ export default class Shop extends Phaser.Scene {
 		this.shopTable = new Array(13);
 		this.sellDestroyList = new Array(256);
 		this.sellDestroyListIndex = 0;
+		this.updateSellMenu()
 		this.updateMoney(0);
 		this.setupFishShop();
 
