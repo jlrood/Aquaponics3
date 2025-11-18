@@ -1011,7 +1011,7 @@ export default class Shop extends Phaser.Scene {
 	}*/
 
 	setListPrice(boxNum, textObj, itemObj) {
-		textObj.text = "$ " + itemObj.price;
+		textObj.text = "$ " + itemObj.price + ".00";
 		this.shopTable[boxNum] = itemObj;
 	}
 
@@ -1021,7 +1021,7 @@ export default class Shop extends Phaser.Scene {
 		if (newMoney < 0)
 			return false;
 		this.registry.set('money', newMoney);
-		this.money_text.text = "$ " + newMoney;
+		this.money_text.text = "$ " + newMoney + ".00";
 		return true;
 	}
 
