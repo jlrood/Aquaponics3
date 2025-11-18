@@ -252,8 +252,8 @@
                             "displayName": "icon_1",
                             "x": 506,
                             "y": 236,
-                            "scaleX": 0.19049010132085792,
-                            "scaleY": 0.20133064841509496,
+                            "scaleX": 0.1,
+                            "scaleY": 0.1,
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
@@ -337,8 +337,8 @@
                             "displayName": "icon_2",
                             "x": 506,
                             "y": 305,
-                            "scaleX": 0.19049010132085792,
-                            "scaleY": 0.20133064841509496,
+                            "scaleX": 0.1,
+                            "scaleY": 0.1,
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
@@ -411,8 +411,8 @@
                             "displayName": "icon_3",
                             "x": 506,
                             "y": 377,
-                            "scaleX": 0.19049010132085792,
-                            "scaleY": 0.20133064841509496,
+                            "scaleX": 0.1,
+                            "scaleY": 0.1,
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
@@ -485,8 +485,8 @@
                             "displayName": "icon_4",
                             "x": 506,
                             "y": 449,
-                            "scaleX": 0.19049010132085792,
-                            "scaleY": 0.20133064841509496,
+                            "scaleX": 0.1,
+                            "scaleY": 0.1,
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
@@ -559,8 +559,8 @@
                             "displayName": "icon_5",
                             "x": 506,
                             "y": 518,
-                            "scaleX": 0.19049010132085792,
-                            "scaleY": 0.20133064841509496,
+                            "scaleX": 0.1,
+                            "scaleY": 0.1,
                             "isFilled": true,
                             "fillColor": "#81b377",
                             "strokeColor": "#000000",
@@ -611,60 +611,19 @@
                     "scaleX": 1.9313435329452338,
                     "scaleY": 1.023622721338591,
                     "isFilled": true,
+                    "fillColor": "#a7f27a",
                     "strokeColor": "#000000",
                     "lineWidth": 2,
                     "isStroked": true,
                     "width": 128,
                     "height": 128
-                },
-                {
-                    "type": "Rectangle",
-                    "id": "5983f07b-87e4-4149-9a3c-128de565e1df",
-                    "label": "announcement_3",
-                    "displayName": "announcement_3",
-                    "x": 285.09893798828125,
-                    "y": 538.7225341796875,
-                    "scaleX": 1.9313435329452338,
-                    "scaleY": 1.023622721338591,
-                    "isFilled": true,
-                    "strokeColor": "#000000",
-                    "lineWidth": 2,
-                    "isStroked": true,
-                    "width": 128,
-                    "height": 128
-                },
-                {
-                    "type": "Image",
-                    "id": "61f52fd1-5297-4bf5-961a-3060f2a86089",
-                    "label": "announcement_icon_1",
-                    "displayName": "announcement_icon_1",
-                    "texture": {
-                        "key": "young"
-                    },
-                    "x": 281.0000305175781,
-                    "y": 246,
-                    "scaleX": 1.8170590540794684,
-                    "scaleY": 1.6965553601170669
-                },
-                {
-                    "type": "Image",
-                    "id": "1d201b70-a9bb-45f2-8ed7-b72aafc14754",
-                    "label": "announcement_icon_3",
-                    "displayName": "announcement_icon_3",
-                    "texture": {
-                        "key": "star"
-                    },
-                    "x": 284.0733947753906,
-                    "y": 538.7225341796875,
-                    "scaleX": 1.8170590540794684,
-                    "scaleY": 1.6965553601170669
                 },
                 {
                     "type": "Container",
                     "id": "2ac1b0dc-4f7e-4151-9141-873f7f0da185",
                     "label": "announcement_2_container",
-                    "x": 282,
-                    "y": 393,
+                    "x": 280,
+                    "y": 544,
                     "list": [
                         {
                             "type": "Rectangle",
@@ -692,7 +651,7 @@
                                 "key": "sillouette"
                             },
                             "x": 3,
-                            "y": -3,
+                            "y": -1,
                             "scaleX": 3,
                             "scaleY": 3
                         },
@@ -727,8 +686,103 @@
                             "fontSize": 16
                         }
                     ]
+                },
+                {
+                    "type": "Container",
+                    "id": "240a2bc5-0043-46da-a8c0-cb1523ecc5cc",
+                    "label": "announcement_1_container",
+                    "x": 1,
+                    "y": -149,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "5983f07b-87e4-4149-9a3c-128de565e1df",
+                            "label": "announcement_3",
+                            "displayName": "announcement_3",
+                            "x": 283.09893798828125,
+                            "y": 542.7225341796875,
+                            "scaleX": 1.9313435329452338,
+                            "scaleY": 1.023622721338591,
+                            "isFilled": true,
+                            "fillColor": "#72a6ed",
+                            "strokeColor": "#000000",
+                            "lineWidth": 2,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Image",
+                            "id": "1e35d57b-98b7-4f7f-9e54-b7a069d00b62",
+                            "label": "star",
+                            "texture": {
+                                "key": "star"
+                            },
+                            "x": 286,
+                            "y": 543,
+                            "scaleX": 2,
+                            "scaleY": 2,
+                            "angle": 15,
+                            "alpha": 0.75,
+                            "alphaTopLeft": 0.75,
+                            "alphaTopRight": 0.75,
+                            "alphaBottomLeft": 0.75,
+                            "alphaBottomRight": 0.75
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "8f38904e-7690-4a42-a432-7d547a2ffc94",
+                            "label": "bitmaptext_3",
+                            "x": 246,
+                            "y": 563,
+                            "tintFill": true,
+                            "text": "ADDED",
+                            "font": "pixelmix_24",
+                            "fontSize": 24
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "cc78762c-1c9c-462d-99de-c763f77b470b",
+                            "label": "bitmaptext_2",
+                            "x": 166,
+                            "y": 494,
+                            "tintFill": true,
+                            "text": "TILAPIA LARVAE",
+                            "font": "pixelmix_24",
+                            "fontSize": 24
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9384b884-957b-449d-a82f-2319a8e88d60",
+                            "label": "larvae0",
+                            "texture": {
+                                "key": "larvae",
+                                "frame": 0
+                            },
+                            "x": 293,
+                            "y": 557,
+                            "scaleX": 3,
+                            "scaleY": 3
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "type": "BitmapText",
+            "id": "3967328e-0aa0-4ad7-b421-001bc64d8e02",
+            "label": "Fact",
+            "x": 172,
+            "y": 189,
+            "tintTopLeft": "#b1087f",
+            "tintTopRight": "#717a16",
+            "tintBottomLeft": "#1d5f0a",
+            "tintBottomRight": "#060760",
+            "tintFill": true,
+            "text": "I love fish!",
+            "font": "pixelmix_16",
+            "fontSize": 16,
+            "maxWidth": 240
         }
     ],
     "plainObjects": [],

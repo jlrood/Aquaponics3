@@ -142,8 +142,8 @@ export default class Mail extends Phaser.Scene {
 
 		// icon_1
 		const icon_1 = this.add.ellipse(506, 236, 128, 128);
-		icon_1.scaleX = 0.19049010132085792;
-		icon_1.scaleY = 0.20133064841509496;
+		icon_1.scaleX = 0.1;
+		icon_1.scaleY = 0.1;
 		icon_1.isFilled = true;
 		icon_1.fillColor = 8500087;
 		icon_1.isStroked = true;
@@ -189,8 +189,8 @@ export default class Mail extends Phaser.Scene {
 
 		// icon_2
 		const icon_2 = this.add.ellipse(506, 305, 128, 128);
-		icon_2.scaleX = 0.19049010132085792;
-		icon_2.scaleY = 0.20133064841509496;
+		icon_2.scaleX = 0.1;
+		icon_2.scaleY = 0.1;
 		icon_2.isFilled = true;
 		icon_2.fillColor = 8500087;
 		icon_2.isStroked = true;
@@ -230,8 +230,8 @@ export default class Mail extends Phaser.Scene {
 
 		// icon_3
 		const icon_3 = this.add.ellipse(506, 377, 128, 128);
-		icon_3.scaleX = 0.19049010132085792;
-		icon_3.scaleY = 0.20133064841509496;
+		icon_3.scaleX = 0.1;
+		icon_3.scaleY = 0.1;
 		icon_3.isFilled = true;
 		icon_3.fillColor = 8500087;
 		icon_3.isStroked = true;
@@ -271,8 +271,8 @@ export default class Mail extends Phaser.Scene {
 
 		// icon_4
 		const icon_4 = this.add.ellipse(506, 449, 128, 128);
-		icon_4.scaleX = 0.19049010132085792;
-		icon_4.scaleY = 0.20133064841509496;
+		icon_4.scaleX = 0.1;
+		icon_4.scaleY = 0.1;
 		icon_4.isFilled = true;
 		icon_4.fillColor = 8500087;
 		icon_4.isStroked = true;
@@ -312,8 +312,8 @@ export default class Mail extends Phaser.Scene {
 
 		// icon_5
 		const icon_5 = this.add.ellipse(506, 518, 128, 128);
-		icon_5.scaleX = 0.19049010132085792;
-		icon_5.scaleY = 0.20133064841509496;
+		icon_5.scaleX = 0.1;
+		icon_5.scaleY = 0.1;
 		icon_5.isFilled = true;
 		icon_5.fillColor = 8500087;
 		icon_5.isStroked = true;
@@ -339,35 +339,14 @@ export default class Mail extends Phaser.Scene {
 		announcement_1.scaleX = 1.9313435329452338;
 		announcement_1.scaleY = 1.023622721338591;
 		announcement_1.isFilled = true;
+		announcement_1.fillColor = 11006586;
 		announcement_1.isStroked = true;
 		announcement_1.strokeColor = 0;
 		announcement_1.lineWidth = 2;
 		announcements_container.add(announcement_1);
 
-		// announcement_3
-		const announcement_3 = this.add.rectangle(285.09893798828125, 538.7225341796875, 128, 128);
-		announcement_3.scaleX = 1.9313435329452338;
-		announcement_3.scaleY = 1.023622721338591;
-		announcement_3.isFilled = true;
-		announcement_3.isStroked = true;
-		announcement_3.strokeColor = 0;
-		announcement_3.lineWidth = 2;
-		announcements_container.add(announcement_3);
-
-		// announcement_icon_1
-		const announcement_icon_1 = this.add.image(281.0000305175781, 246, "young");
-		announcement_icon_1.scaleX = 1.8170590540794684;
-		announcement_icon_1.scaleY = 1.6965553601170669;
-		announcements_container.add(announcement_icon_1);
-
-		// announcement_icon_3
-		const announcement_icon_3 = this.add.image(284.0733947753906, 538.7225341796875, "star");
-		announcement_icon_3.scaleX = 1.8170590540794684;
-		announcement_icon_3.scaleY = 1.6965553601170669;
-		announcements_container.add(announcement_icon_3);
-
 		// announcement_2_container
-		const announcement_2_container = this.add.container(282, 393);
+		const announcement_2_container = this.add.container(280, 544);
 		announcements_container.add(announcement_2_container);
 
 		// announcement_2
@@ -382,7 +361,7 @@ export default class Mail extends Phaser.Scene {
 		announcement_2_container.add(announcement_2);
 
 		// announcement_icon_2
-		const announcement_icon_2 = this.add.image(3, -3, "sillouette");
+		const announcement_icon_2 = this.add.image(3, -1, "sillouette");
 		announcement_icon_2.scaleX = 3;
 		announcement_icon_2.scaleY = 3;
 		announcement_2_container.add(announcement_icon_2);
@@ -408,6 +387,71 @@ export default class Mail extends Phaser.Scene {
 		bitmaptext.fontSize = 16;
 		bitmaptext.align = 1;
 		announcement_2_container.add(bitmaptext);
+
+		// announcement_1_container
+		const announcement_1_container = this.add.container(1, -149);
+		announcements_container.add(announcement_1_container);
+
+		// announcement_3
+		const announcement_3 = this.add.rectangle(283.09893798828125, 542.7225341796875, 128, 128);
+		announcement_3.scaleX = 1.9313435329452338;
+		announcement_3.scaleY = 1.023622721338591;
+		announcement_3.isFilled = true;
+		announcement_3.fillColor = 7513837;
+		announcement_3.isStroked = true;
+		announcement_3.strokeColor = 0;
+		announcement_3.lineWidth = 2;
+		announcement_1_container.add(announcement_3);
+
+		// star
+		const star = this.add.image(286, 543, "star");
+		star.scaleX = 2;
+		star.scaleY = 2;
+		star.angle = 15;
+		star.alpha = 0.75;
+		star.alphaTopLeft = 0.75;
+		star.alphaTopRight = 0.75;
+		star.alphaBottomLeft = 0.75;
+		star.alphaBottomRight = 0.75;
+		announcement_1_container.add(star);
+
+		// bitmaptext_3
+		const bitmaptext_3 = this.add.bitmapText(246, 563, "pixelmix_24", "ADDED");
+		bitmaptext_3.tintFill = true;
+		bitmaptext_3.text = "ADDED";
+		bitmaptext_3.fontSize = 24;
+		announcement_1_container.add(bitmaptext_3);
+
+		// bitmaptext_2
+		const bitmaptext_2 = this.add.bitmapText(166, 494, "pixelmix_24", "TILAPIA LARVAE");
+		bitmaptext_2.tintFill = true;
+		bitmaptext_2.text = "TILAPIA LARVAE";
+		bitmaptext_2.fontSize = 24;
+		announcement_1_container.add(bitmaptext_2);
+
+		// larvae0
+		const larvae0 = this.add.image(293, 557, "larvae", 0);
+		larvae0.scaleX = 3;
+		larvae0.scaleY = 3;
+		announcement_1_container.add(larvae0);
+
+		// Fact
+		const fact = this.add.bitmapText(172, 189, "pixelmix_16", "I love fish!");
+		fact.tintFill = true;
+		fact.tintTopLeft = 11602047;
+		fact.tintTopRight = 7436822;
+		fact.tintBottomLeft = 1924874;
+		fact.tintBottomRight = 395104;
+		fact.text = "I love fish!";
+		fact.fontSize = 16;
+		fact.maxWidth = 240;
+
+//get fun fact from facts.txt
+		const raw = this.cache.text.get("facts");
+const lines = raw.split(/\r?\n/).filter(l => l.trim().length > 0);
+const randomLine = Phaser.Utils.Array.GetRandom(lines);
+
+fact.setText(randomLine);
 
 		this.back_button = back_button;
 		this.mail_button = mail_button;

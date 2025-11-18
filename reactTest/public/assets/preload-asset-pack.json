@@ -150,6 +150,11 @@
                 "key": "cycle"
             },
             {
+                "url": "assets/facts.txt",
+                "type": "text",
+                "key": "facts"
+            },
+            {
                 "url": "assets/life/fingerling.png",
                 "frameConfig": {
                     "frameWidth": 64,
