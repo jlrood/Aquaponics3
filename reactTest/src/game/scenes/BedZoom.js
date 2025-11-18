@@ -146,13 +146,6 @@ export default class BedZoom extends Phaser.Scene {
 		change_plant_text.text = "Change Plant";
 		change_plant_text.fontSize = 24;
 
-		// selected_box
-		const selected_box = this.add.rectangle(662.0014438507658, 329.03657154501985, 128, 128);
-		selected_box.visible = false;
-		selected_box.isStroked = true;
-		selected_box.strokeColor = 1893396;
-		selected_box.lineWidth = 5;
-
 		// bitmaptext_1
 		const bitmaptext_1 = this.add.bitmapText(734.0014438507658, 584.0365715450198, "pixelmix_32", "Green");
 		bitmaptext_1.tintFill = true;
@@ -160,9 +153,16 @@ export default class BedZoom extends Phaser.Scene {
 		bitmaptext_1.fontSize = 32;
 
 		// zoomTray
-		const zoomTray = this.add.image(640, 354, "zoomTray");
+		const zoomTray = this.add.image(640, 336, "zoomTray");
 		zoomTray.scaleX = 20;
 		zoomTray.scaleY = 20;
+
+		// selected_box
+		const selected_box = this.add.rectangle(662.0014438507658, 329.03657154501985, 160, 160);
+		selected_box.visible = false;
+		selected_box.isStroked = true;
+		selected_box.strokeColor = 1893396;
+		selected_box.lineWidth = 5;
 
 		this.back_button = back_button;
 		this.cur_plant_name = cur_plant_name;
@@ -226,12 +226,12 @@ export default class BedZoom extends Phaser.Scene {
 	 * Additionally, stores the plant in the array as it's
 	 * graphical icon and it's item information.
 	 */
-	addPlant(plantItem, plantIndex) {
-		const x = Phaser.Math.Between(125, 1165);
-		const y = Phaser.Math.Between(180, 485);
+	addPlant(plantItem, arrX, arrY, plantIndex) {
+		const x = 182 + arrX * 150;
+		const y = 236 + arrY * 100;
 		const plant = this.add.sprite(x, y, plantItem.sprite);
-		plant.scale = 2;
-		plant.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
+		plant.scale = 5;
+		plant.setInteractive(new Phaser.Geom.Rectangle(0, 0, 32, 32), Phaser.Geom.Rectangle.Contains);
 		plant.on("pointerdown", () => {
 			this.analyzePlant(x, y, plantIndex, plantItem);
 		})
@@ -245,32 +245,16 @@ export default class BedZoom extends Phaser.Scene {
 	 * the "change plant" button has an order to follow.
 	 */
 	populateBed() {
-		let itemsArr = this.registry.get('items');
+		let bedArr = this.registry.get('plantBed');
 		let plantIndex = 0;
-		//For each seed...
-		for (let i = 0; i < itemsArr[8].playerHas; i++) {
-			this.addPlant(itemsArr[8], plantIndex);
-			plantIndex++;
-		}
-		//For each sprout...
-		for (let i = 0; i < itemsArr[9].playerHas; i++) {
-			this.addPlant(itemsArr[9], plantIndex);
-			plantIndex++;
-		}
-		//For each seedling...
-		for (let i = 0; i < itemsArr[10].playerHas; i++) {
-			this.addPlant(itemsArr[10], plantIndex);
-			plantIndex++;
-		}
-		//For each young...
-		for (let i = 0; i < itemsArr[11].playerHas; i++) {
-			this.addPlant(itemsArr[11], plantIndex);
-			plantIndex++;
-		}
-		//For each head...
-		for (let i = 0; i < itemsArr[12].playerHas; i++) {
-			this.addPlant(itemsArr[12], plantIndex);
-			plantIndex++;
+		//For each plant...
+		for (let i = 0; i < 3; i++) {
+			for (let j = 0; j < 7; j++) {
+				if (bedArr[i][j] !== null) {
+					this.addPlant(bedArr[i][j], j, i, plantIndex);
+				}
+				plantIndex++;
+			}
 		}
 	}
 

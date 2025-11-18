@@ -959,6 +959,36 @@ export default class Shop extends Phaser.Scene {
 		return i;
 	}
 
+	removeFromPlantBed(plant) {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j].id == plant.id) {
+					bedArr[i][j] = null;
+					found = true;
+				}
+			}
+		}
+		this.registry.set('plantBed', bedArr);
+		console.log(bedArr);
+	}
+
+	addToPlantBed(plant) {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null) {
+					bedArr[i][j] = plant;
+					found = true;
+				}
+			}
+		}
+		this.registry.set('plantBed', bedArr);
+		console.log(bedArr);
+	}
+
 	buyItem(itemID) {
 		let items = this.registry.get('items');
 		const itemIndex = this.getItemIndexbyID(itemID, items);
@@ -966,6 +996,12 @@ export default class Shop extends Phaser.Scene {
 		items[itemIndex].playerHas += 1;
 		// Write it back to the registry so the change is recognized globally
 		this.registry.set('items', items);
+
+		// Update plantbed array
+		if (items[itemIndex].type == 'plant') {
+			this.addToPlantBed(items[itemIndex]);
+		}
+		
 		console.log(items[itemIndex]);
 		this.updateSellMenu();
 	}
@@ -975,6 +1011,12 @@ export default class Shop extends Phaser.Scene {
 		const itemIndex = this.getItemIndexbyID(itemID, items);
 		items[itemIndex].playerHas -= 1;
 		this.registry.set('items', items);
+
+		// Update plantbed array
+		if (items[itemIndex].type == 'plant') {
+			this.removeFromPlantBed(items[itemIndex]);
+		}
+
 		console.log(items[itemIndex]);
 		this.updateSellMenu();
 	}
