@@ -566,72 +566,132 @@ export default class Shop extends Phaser.Scene {
 		option1_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option1_lock.setOrigin(0, 0);
 		option1_lock.visible = false;
+		option1_lock.alpha = 0.5;
+		option1_lock.alphaTopLeft = 0.5;
+		option1_lock.alphaTopRight = 0.5;
+		option1_lock.alphaBottomLeft = 0.5;
+		option1_lock.alphaBottomRight = 0.5;
 
 		// option2_lock
 		const option2_lock = this.add.image(200, 240, "Lock");
 		option2_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option2_lock.setOrigin(0, 0);
 		option2_lock.visible = false;
+		option2_lock.alpha = 0.5;
+		option2_lock.alphaTopLeft = 0.5;
+		option2_lock.alphaTopRight = 0.5;
+		option2_lock.alphaBottomLeft = 0.5;
+		option2_lock.alphaBottomRight = 0.5;
 
 		// option3_lock
 		const option3_lock = this.add.image(340, 240, "Lock");
 		option3_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option3_lock.setOrigin(0, 0);
 		option3_lock.visible = false;
+		option3_lock.alpha = 0.5;
+		option3_lock.alphaTopLeft = 0.5;
+		option3_lock.alphaTopRight = 0.5;
+		option3_lock.alphaBottomLeft = 0.5;
+		option3_lock.alphaBottomRight = 0.5;
 
 		// option4_lock
 		const option4_lock = this.add.image(480, 240, "Lock");
 		option4_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option4_lock.setOrigin(0, 0);
 		option4_lock.visible = false;
+		option4_lock.alpha = 0.5;
+		option4_lock.alphaTopLeft = 0.5;
+		option4_lock.alphaTopRight = 0.5;
+		option4_lock.alphaBottomLeft = 0.5;
+		option4_lock.alphaBottomRight = 0.5;
 
 		// option5_lock
 		const option5_lock = this.add.image(60, 380, "Lock");
 		option5_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option5_lock.setOrigin(0, 0);
 		option5_lock.visible = false;
+		option5_lock.alpha = 0.5;
+		option5_lock.alphaTopLeft = 0.5;
+		option5_lock.alphaTopRight = 0.5;
+		option5_lock.alphaBottomLeft = 0.5;
+		option5_lock.alphaBottomRight = 0.5;
 
 		// option6_lock
 		const option6_lock = this.add.image(200, 380, "Lock");
 		option6_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option6_lock.setOrigin(0, 0);
 		option6_lock.visible = false;
+		option6_lock.alpha = 0.5;
+		option6_lock.alphaTopLeft = 0.5;
+		option6_lock.alphaTopRight = 0.5;
+		option6_lock.alphaBottomLeft = 0.5;
+		option6_lock.alphaBottomRight = 0.5;
 
 		// option7_lock
 		const option7_lock = this.add.image(340, 380, "Lock");
 		option7_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option7_lock.setOrigin(0, 0);
 		option7_lock.visible = false;
+		option7_lock.alpha = 0.5;
+		option7_lock.alphaTopLeft = 0.5;
+		option7_lock.alphaTopRight = 0.5;
+		option7_lock.alphaBottomLeft = 0.5;
+		option7_lock.alphaBottomRight = 0.5;
 
 		// option8_lock
 		const option8_lock = this.add.image(480, 380, "Lock");
 		option8_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option8_lock.setOrigin(0, 0);
 		option8_lock.visible = false;
+		option8_lock.alpha = 0.5;
+		option8_lock.alphaTopLeft = 0.5;
+		option8_lock.alphaTopRight = 0.5;
+		option8_lock.alphaBottomLeft = 0.5;
+		option8_lock.alphaBottomRight = 0.5;
 
 		// option9_lock
 		const option9_lock = this.add.image(60, 520, "Lock");
 		option9_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option9_lock.setOrigin(0, 0);
 		option9_lock.visible = false;
+		option9_lock.alpha = 0.5;
+		option9_lock.alphaTopLeft = 0.5;
+		option9_lock.alphaTopRight = 0.5;
+		option9_lock.alphaBottomLeft = 0.5;
+		option9_lock.alphaBottomRight = 0.5;
 
 		// option10_lock
 		const option10_lock = this.add.image(200, 520, "Lock");
 		option10_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option10_lock.setOrigin(0, 0);
 		option10_lock.visible = false;
+		option10_lock.alpha = 0.5;
+		option10_lock.alphaTopLeft = 0.5;
+		option10_lock.alphaTopRight = 0.5;
+		option10_lock.alphaBottomLeft = 0.5;
+		option10_lock.alphaBottomRight = 0.5;
 
 		// option11_lock
 		const option11_lock = this.add.image(340, 520, "Lock");
 		option11_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option11_lock.setOrigin(0, 0);
 		option11_lock.visible = false;
+		option11_lock.alpha = 0.5;
+		option11_lock.alphaTopLeft = 0.5;
+		option11_lock.alphaTopRight = 0.5;
+		option11_lock.alphaBottomLeft = 0.5;
+		option11_lock.alphaBottomRight = 0.5;
 
 		// option12_lock
 		const option12_lock = this.add.image(480, 520, "Lock");
 		option12_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option12_lock.setOrigin(0, 0);
 		option12_lock.visible = false;
+		option12_lock.alpha = 0.5;
+		option12_lock.alphaTopLeft = 0.5;
+		option12_lock.alphaTopRight = 0.5;
+		option12_lock.alphaBottomLeft = 0.5;
+		option12_lock.alphaBottomRight = 0.5;
 
 		// til_lrv
 		const til_lrv = this.add.image(121, 298, "larvae", 0);
@@ -662,6 +722,17 @@ export default class Shop extends Phaser.Scene {
 		const ltt_spr = this.add.image(125, 297, "sprout");
 		ltt_spr.scaleX = 3;
 		ltt_spr.scaleY = 3;
+
+		// capacity_background
+		const capacity_background = this.add.image(547, 676, "text_box_empty");
+		capacity_background.scaleX = 0.5;
+		capacity_background.scaleY = 0.5;
+
+		// capacity_text
+		const capacity_text = this.add.bitmapText(391, 675, "pixelmix_32", "Plants: 0/21");
+		capacity_text.setOrigin(0, 0.5);
+		capacity_text.text = "Plants: 0/21";
+		capacity_text.fontSize = 32;
 
 		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
@@ -742,6 +813,8 @@ export default class Shop extends Phaser.Scene {
 		this.til_re = til_re;
 		this.ltt_h = ltt_h;
 		this.ltt_spr = ltt_spr;
+		this.capacity_background = capacity_background;
+		this.capacity_text = capacity_text;
 
 		this.events.emit("scene-awake");
 	}
@@ -904,6 +977,10 @@ export default class Shop extends Phaser.Scene {
 	ltt_h;
 	/** @type {Phaser.GameObjects.Image} */
 	ltt_spr;
+	/** @type {Phaser.GameObjects.Image} */
+	capacity_background;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	capacity_text;
 
 	/* START-USER-CODE */
 
@@ -934,7 +1011,7 @@ export default class Shop extends Phaser.Scene {
 	}*/
 
 	setListPrice(boxNum, textObj, itemObj) {
-		textObj.text = "$ " + itemObj.price;
+		textObj.text = "$ " + itemObj.price + ".00";
 		this.shopTable[boxNum] = itemObj;
 	}
 
@@ -944,7 +1021,7 @@ export default class Shop extends Phaser.Scene {
 		if (newMoney < 0)
 			return false;
 		this.registry.set('money', newMoney);
-		this.money_text.text = "$ " + newMoney;
+		this.money_text.text = "$ " + newMoney + ".00";
 		return true;
 	}
 
@@ -959,6 +1036,67 @@ export default class Shop extends Phaser.Scene {
 		return i;
 	}
 
+	totalPlants() {
+		let bedArr = this.registry.get('plantBed');
+		let total = 0;
+		for (let i = 0; i < 3; i++) {
+			for (let j = 0; j < 7; j++) {
+				if (bedArr[i][j] !== null) {
+					total++;
+				}
+			}
+		}
+		console.log(total);
+		return total;
+	}
+
+	removeFromPlantBed(plant) {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null)
+					continue;
+				if (bedArr[i][j].id == plant.id) {
+					bedArr[i][j] = null;
+					found = true;
+				}
+			}
+		}
+		this.registry.set('plantBed', bedArr);
+		this.capacity_text.text = "Plants: " + this.totalPlants() + "/21";
+		console.log(bedArr);
+	}
+
+	addToPlantBed(plant) {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null) {
+					bedArr[i][j] = plant;
+					found = true;
+				}
+			}
+		}
+		this.registry.set('plantBed', bedArr);
+		this.capacity_text.text = "Plants: " + this.totalPlants() + "/21";
+		console.log(bedArr);
+	}
+
+	isAtPlantCapacity() {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null) {
+					found = true;
+				}
+			}
+		}
+		return !found;
+	}
+
 	buyItem(itemID) {
 		let items = this.registry.get('items');
 		const itemIndex = this.getItemIndexbyID(itemID, items);
@@ -966,6 +1104,12 @@ export default class Shop extends Phaser.Scene {
 		items[itemIndex].playerHas += 1;
 		// Write it back to the registry so the change is recognized globally
 		this.registry.set('items', items);
+
+		// Update plantbed array
+		if (items[itemIndex].type == 'plant') {
+			this.addToPlantBed(items[itemIndex]);
+		}
+
 		console.log(items[itemIndex]);
 		this.updateSellMenu();
 	}
@@ -975,6 +1119,12 @@ export default class Shop extends Phaser.Scene {
 		const itemIndex = this.getItemIndexbyID(itemID, items);
 		items[itemIndex].playerHas -= 1;
 		this.registry.set('items', items);
+
+		// Update plantbed array
+		if (items[itemIndex].type == 'plant') {
+			this.removeFromPlantBed(items[itemIndex]);
+		}
+
 		console.log(items[itemIndex]);
 		this.updateSellMenu();
 	}
@@ -1107,10 +1257,17 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option1_lock.setVisible(false);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(true);
 		this.option6_lock.setVisible(true);
 		this.option7_lock.setVisible(true);
 		this.option8_lock.setVisible(true);
+
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
 
 		this.scroll.setVisible(false);
 	}
@@ -1182,10 +1339,17 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(true);
 		this.ltt_spr.setVisible(true);
 
+		this.option1_lock.setVisible(false);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(false);
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
+
+		this.capacity_background.setVisible(true);
+		this.capacity_text.setVisible(true);
 
 		this.scroll.setVisible(false);
 	}
@@ -1257,10 +1421,17 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
-		this.option5_lock.setVisible(false);
-		this.option6_lock.setVisible(false);
+		this.option1_lock.setVisible(true);
+		this.option2_lock.setVisible(true);
+		this.option3_lock.setVisible(true);
+		this.option4_lock.setVisible(true);
+		this.option5_lock.setVisible(true);
+		this.option6_lock.setVisible(true);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
+
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
 
 		this.scroll.setVisible(false);
 	}
@@ -1332,10 +1503,17 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option1_lock.setVisible(true);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(false);
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
+
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
 
 		this.scroll.setVisible(false);
 	}
@@ -1389,72 +1567,96 @@ export default class Shop extends Phaser.Scene {
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
+			if (this.shopTable[1].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[1].price * -1))
 				this.buyItem(this.shopTable[1].id);
 		})
 
 		this.option_box_2.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_2);
+			if (this.shopTable[2].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[2].price * -1))
 				this.buyItem(this.shopTable[2].id);
 		})
 
 		this.option_box_3.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_3);
+			if (this.shopTable[3].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[3].price * -1))
 				this.buyItem(this.shopTable[3].id);
 		})
 
 		this.option_box_4.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_4);
+			if (this.shopTable[4].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[4].price * -1))
 				this.buyItem(this.shopTable[4].id);
 		})
 
 		this.option_box_5.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_5);
+			if (this.shopTable[5].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[5].price * -1))
 				this.buyItem(this.shopTable[5].id);
 		})
 
 		this.option_box_6.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_6);
+			if (this.shopTable[6].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[6].price * -1))
 				this.buyItem(this.shopTable[6].id);
 		})
 
 		this.option_box_7.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_7);
+			if (this.shopTable[7].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[7].price * -1))
 				this.buyItem(this.shopTable[7].id);
 		})
 
 		this.option_box_8.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_8);
+			if (this.shopTable[8].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[8].price * -1))
 				this.buyItem(this.shopTable[8].id);
 		})
 
 		this.option_box_9.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_9);
+			if (this.shopTable[9].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[9].price * -1))
 				this.buyItem(this.shopTable[9].id);
 		})
 
 		this.option_box_10.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_10);
+			if (this.shopTable[10].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[10].price * -1))
 				this.buyItem(this.shopTable[10].id);
 		})
 
 		this.option_box_11.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_11);
+			if (this.shopTable[11].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[11].price * -1))
 				this.buyItem(this.shopTable[11].id);
 		})
 
 		this.option_box_12.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_12);
+			if (this.shopTable[12].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[12].price * -1))
 				this.buyItem(this.shopTable[12].id);
 		})

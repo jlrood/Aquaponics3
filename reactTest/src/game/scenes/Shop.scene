@@ -1174,7 +1174,12 @@
             "y": 240,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1192,7 +1197,12 @@
             "y": 240,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1210,7 +1220,12 @@
             "y": 240,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1228,7 +1243,12 @@
             "y": 240,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1246,7 +1266,12 @@
             "y": 380,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1264,7 +1289,12 @@
             "y": 380,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1282,7 +1312,12 @@
             "y": 380,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1300,7 +1335,12 @@
             "y": 380,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1318,7 +1358,12 @@
             "y": 520,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1336,7 +1381,12 @@
             "y": 520,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1354,7 +1404,12 @@
             "y": 520,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1372,7 +1427,12 @@
             "y": 520,
             "originX": 0,
             "originY": 0,
-            "visible": false
+            "visible": false,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
         },
         {
             "type": "Image",
@@ -1461,6 +1521,33 @@
             "y": 297,
             "scaleX": 3,
             "scaleY": 3
+        },
+        {
+            "type": "Image",
+            "id": "33679177-10ef-40d1-9eef-1a78d8bb513f",
+            "label": "capacity_background",
+            "displayName": "capacity_background",
+            "scope": "CLASS",
+            "texture": {
+                "key": "text_box_empty"
+            },
+            "x": 547,
+            "y": 676,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "BitmapText",
+            "id": "5eb5a25b-4184-47fd-bca8-25bc77b2adf2",
+            "label": "capacity_text",
+            "displayName": "capacity_text",
+            "scope": "CLASS",
+            "x": 391,
+            "y": 675,
+            "originY": 0.5,
+            "text": "Plants: 0/21",
+            "font": "pixelmix_32",
+            "fontSize": 32
         }
     ],
     "plainObjects": [],

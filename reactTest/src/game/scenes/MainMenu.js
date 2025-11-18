@@ -258,7 +258,7 @@ export default class MainMenu extends Phaser.Scene {
 		settings.scaleY = 2;
 
 		// question
-		const question = this.add.image(1072, 70, "question");
+		const question = this.add.image(1092, 70, "question");
 		question.scaleX = 2;
 		question.scaleY = 2;
 

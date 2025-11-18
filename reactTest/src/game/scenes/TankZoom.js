@@ -187,11 +187,19 @@ export default class TankZoom extends Phaser.Scene {
 	 * current fish text to be the correct one.
 	 */
 	analyzeFish(posX, posY, index, item) {
-		this.selected_box.setVisible(true);
-		this.selected_box.setPosition(posX, posY);
 		this.setFishArrIndex(index);
+
+		const entry = this.fishArr[index];
+		const fish = entry ? entry.icon : null;
+
+		if (fish) {
+			this.selected_box.setVisible(true);
+			this.selected_box.setPosition(fish.x, fish.y);
+		}
+
 		this.cur_fish_name.text = item.shopText;
 	}
+
 
 	/**
 	 * Called when pushing the "change fish" button.
@@ -222,36 +230,33 @@ export default class TankZoom extends Phaser.Scene {
 	 * graphical icon and it's item information.
 	 */
 	addFish(fishItem, fishIndex) {
-		const x = Phaser.Math.Between(125, 1165);
-		const y = Phaser.Math.Between(180, 485);
-		const scale = Phaser.Math.Between(-500, 500);
-		
-		// Use add.sprite with the spritesheet key
-		const fish = this.add.sprite(x, y, fishItem.sprite);
+		const x = Phaser.Math.Between(125, 1165)
+		const y = Phaser.Math.Between(180, 485)
 
-		// Randomize the directions
-		fish.scaleY = 2;
-		if (scale < 0)
-		{
-			fish.scaleX = -2;
-		}
-		else
-		{
-			fish.scaleX = 2;
-		}
-		fish.tint = 0x659bba;
-		fish.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains);
-		
-		// Play the animation - make sure fishItem has an animKey property
-		// or derive it from the sprite name
-		fish.play(`${fishItem.sprite}-swim`);
-		
+		const fish = this.add.sprite(x, y, fishItem.sprite)
+
+		fish.scaleY = 2
+		fish.scaleX = 2        // base size only
+
+		fish.tint = 0x659bba
+		fish.setInteractive(new Phaser.Geom.Rectangle(0, 0, 64, 64), Phaser.Geom.Rectangle.Contains)
+
+		const speed = Phaser.Math.Between(40, 80)
+		const dirX = Phaser.Math.Between(0, 1) === 0 ? -1 : 1
+
+		fish.vx = speed * dirX
+		fish.vy = Phaser.Math.Between(-15, 15)
+
+		fish.play(`${fishItem.sprite}-swim`)
+
 		fish.on("pointerdown", () => {
-			this.analyzeFish(x, y, fishIndex, fishItem);
-		});
+			this.analyzeFish(fish.x, fish.y, fishIndex, fishItem)
+		})
 
-		this.fishArr[fishIndex] = {icon: fish, item: fishItem};
+		this.fishArr[fishIndex] = { icon: fish, item: fishItem }
 	}
+
+
 
 	/**
 	 * Populates the tank with all the fish that the player has.
@@ -288,7 +293,6 @@ export default class TankZoom extends Phaser.Scene {
 		this.editorCreate();
 		this.fishArr = new Array(256);
 		this.fishArrIndex = 0;
-		this.populateTank();
 
 		this.back_button.on("pointerdown", () => {
 			this.scene.start('MainMenu');
@@ -307,30 +311,91 @@ export default class TankZoom extends Phaser.Scene {
 			frames: this.anims.generateFrameNumbers('larvae', { start: 0, end: 1 }), // adjust frame count
 			frameRate: 4,
 			repeat: -1, // -1 means loop forever
-    	})
+		})
 
 		this.anims.create({
 			key: 'fingerling-swim',
 			frames: this.anims.generateFrameNumbers('fingerling', { start: 0, end: 1 }), // adjust frame count
 			frameRate: 4,
 			repeat: -1, // -1 means loop forever
-    	})
+		})
 
 		this.anims.create({
 			key: 'juvenile-swim',
 			frames: this.anims.generateFrameNumbers('juvenile', { start: 0, end: 1 }), // adjust frame count
 			frameRate: 4,
 			repeat: -1, // -1 means loop forever
-    	})
+		})
 
 		this.anims.create({
 			key: 'tilapia_new-swim',
 			frames: this.anims.generateFrameNumbers('tilapia_new', { start: 0, end: 2 }), // adjust frame count
 			frameRate: 4,
 			repeat: -1, // -1 means loop forever
-    	})
+		})
 
+		this.populateTank();
 	}
+
+	update(time, delta) {
+		const left = 125
+		const right = 1165
+		const top = 180
+		const bottom = 485
+
+		const dt = delta / 1000
+
+		for (let i = 0; i < this.fishArr.length; i++) {
+			const entry = this.fishArr[i]
+			if (!entry) continue
+
+			const fish = entry.icon
+			if (!fish) continue
+
+			fish.x += fish.vx * dt
+			fish.y += fish.vy * dt
+
+			// horizontal bounce
+			if (fish.x < left) {
+				fish.x = left
+				fish.vx = Math.abs(fish.vx)
+			} else if (fish.x > right) {
+				fish.x = right
+				fish.vx = -Math.abs(fish.vx)
+			}
+
+			// vertical bounce
+			if (fish.y < top) {
+				fish.y = top
+				fish.vy = Math.abs(fish.vy)
+			} else if (fish.y > bottom) {
+				fish.y = bottom
+				fish.vy = -Math.abs(fish.vy)
+			}
+			
+			// after the for-loop that moves all fish
+			//it'll check/move the selected box as well.
+			if (this.selected_box.visible) {
+				const entry = this.fishArr[this.fishArrIndex];
+				if (entry && entry.icon) {
+					const fish = entry.icon;
+					this.selected_box.setPosition(fish.x, fish.y);
+				}
+			}
+
+			// face the direction of travel
+			// your art faces LEFT when scaleX = +2, so invert:
+			if (fish.vx > 0) {
+				// moving right, flip horizontally
+				fish.scaleX = -2
+			} else if (fish.vx < 0) {
+				// moving left, normal
+				fish.scaleX = 2
+			}
+		}
+	}
+
+
 
 	/* END-USER-CODE */
 }
