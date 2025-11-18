@@ -472,6 +472,16 @@ export default class MainMenu extends Phaser.Scene {
 		this.scene.start('Cycle');
 	}
 
+	changeSceneSetup() {
+		if (this.logoTween) {
+			this.logoTween.stop();
+			this.logoTween = null;
+		}
+
+		this.scene.pause();
+		this.scene.launch('SetupTut');
+	}
+
 
 	moveLogo(reactCallback) {
 		if (this.logoTween) {

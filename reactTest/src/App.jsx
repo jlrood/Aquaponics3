@@ -22,6 +22,16 @@ function App ()
         }
     }
 
+    const changeSceneSetup = () => {
+
+        const scene = phaserRef.current.scene;
+
+        if (scene)
+        {
+            scene.changeSceneSetup();
+        }
+    }
+
     const moveSprite = () => {
 
         const scene = phaserRef.current.scene;
@@ -76,7 +86,10 @@ function App ()
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
             <div>
                 <div>
-                    <button className="button" onClick={changeScene}>Begin Tutorial</button>
+                    <button className="button" onClick={changeScene}>Begin Cycle Tutorial</button>
+                </div>
+                <div>
+                    <button className="button" onClick={changeSceneSetup}>Begin Setup Tutorial</button>
                 </div>
                 <div>
                     <button disabled={canMoveSprite} className="button" onClick={moveSprite}>Toggle Movement</button>

@@ -1,26 +1,1141 @@
 {
-  "id": "d66a3d8d-eda2-4352-b5b3-e3d6debdeafb",
-  "settings": {
-    "compilerOutputLanguage": "JAVA_SCRIPT",
-    "javaScriptInitFieldsInConstructor": false,
-    "javaScriptGenerateFieldDeclarations": true,
-    "exportClass": true,
-    "autoImport": true,
-    "importFileExtension": false,
-    "createMethodName": "editorCreate",
-    "compilerInsertSpaces": false,
-    "compilerTabSize": 4,
-    "borderWidth": 1280,
-    "borderHeight": 720,
-    "borderX": 0,
-    "borderY": 0,
-    "sceneKey": "SetupTut"
-  },
-  "sceneType": "SCENE",
-  "displayList": [],
-  "meta": {
-    "app": "Phaser Editor 2D - Scene Editor",
-    "url": "https://phasereditor2d.com",
-    "contentType": "phasereditor2d.core.scene.SceneContentType"
-  }
+    "id": "d66a3d8d-eda2-4352-b5b3-e3d6debdeafb",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "SetupTut",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "5df6ad48-a4e5-4723-ac11-8f9e51d63428",
+            "label": "background",
+            "scope": "CLASS",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 1280,
+            "hitArea.height": 720,
+            "x": 640,
+            "y": 360,
+            "fillAlpha": 0,
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "type": "Container",
+            "id": "1a024a8f-95ef-438a-a7fe-5cf672df2e99",
+            "label": "page1",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "7a601d5b-d895-4410-b6fa-db8d808b1970",
+                    "label": "text_box_empty",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "6ed448ca-2e1c-48dc-b9ba-3e4953742951",
+                    "label": "bitmaptext_1",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Let's get you started with your first aquaponics system!",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "ebdb387f-336f-4e14-bbec-cc90cd141a5c",
+            "label": "page2",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "382f030d-f241-4dea-85ed-3f6d278b229a",
+                    "label": "text_box_empty_1",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2d6b3d63-f28a-41a0-8f4b-6c6835844c8e",
+                    "label": "bitmaptext",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "This is your system!",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "7c992b7e-9a38-49d8-ae7d-f31729f36d31",
+            "label": "page3",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "ab932d5d-9feb-44ad-8323-04aba214be20",
+                    "label": "text_box_empty_2",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "7c2bbe19-6aff-4607-9deb-88b6b6ab6729",
+                    "label": "bitmaptext_2",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Each week, your fish and plants will grow, \nand new events will challenge your understanding\n of aquaponics.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "f490cdda-0bea-41fe-bdc7-e6699bbe5133",
+            "label": "page4",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "cfdceabb-7ad2-4247-84ea-a26639749d13",
+                    "label": "text_box_empty_3",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "dbee76d4-fd4b-4ea0-bb84-8bdca8c698e7",
+                    "label": "bitmaptext_3",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Thankfully, there are a variety of tools\n and tips at your disposal to help you succeed!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "c64b77fd-8562-4abd-a13c-2596a470a7f5",
+            "label": "page5",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "79fca30c-f6d5-41b7-aee3-a827d7a1d44f",
+                    "label": "rectangle_1",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "0ebec2b4-d023-4d55-9b49-901dde60c0ba",
+                    "label": "text_box_empty_4",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "b366750a-96fb-4e44-9bdd-352df2455d59",
+                    "label": "bitmaptext_4",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Go ahead and select the tasks icon!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "400029d0-6cfd-4896-a77c-68223cd1bd50",
+                    "label": "task_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "task icon"
+                    },
+                    "x": -563,
+                    "y": -350.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "2a0ea551-b41f-4597-8ff2-8a6a63fafb9b",
+                            "label": "glowFx"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "b67387be-489b-415d-a38d-5b5f6eb8781a",
+            "label": "page6",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "aecb291d-be09-409e-ac02-69befa7321b3",
+                    "label": "text_box_empty_5",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "79290a5d-f585-4936-b343-954ace9d949f",
+                    "label": "bitmaptext_5",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "This is the Tasks sidebar.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "9c7e185b-0773-4ecb-a382-04e726329459",
+            "label": "page7",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "0bee95cd-38db-4185-addd-676665800ade",
+                    "label": "text_box_empty_6",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "279cb1e8-5fd5-4177-bd6c-1e514126ed3c",
+                    "label": "bitmaptext_6",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Here, you will see the various tasks\n you must work on from week to week. \n",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "4959e2ee-2f79-493a-8646-53e6c1b286b2",
+            "label": "page8",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "50dcc106-52f6-4c27-b105-897972a522f0",
+                    "label": "text_box_empty_7",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "0dfdfb5d-3d90-4320-a5eb-703258302e12",
+                    "label": "bitmaptext_7",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "When you complete a task, the icon will\n disappear from the Tasks bar.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "e3ccc639-0965-4a8a-b066-8d80f9342d38",
+            "label": "page9",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "b720a1bb-6a3e-4ddb-983a-cd0cb7b6e2c4",
+                    "label": "text_box_empty_8",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "7d03225a-57da-4a58-8129-79f5aaa20d37",
+                    "label": "bitmaptext_8",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Daily tasks grant money when they are completed,\n and Primary tasks must be completed if\n you want to progress to the next week.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "4374e8d2-21b1-4c50-ae7a-2b89c06a5204",
+            "label": "page10",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "1be0d9b3-7f47-4e60-b8e2-7773cc9e1771",
+                    "label": "text_box_empty_9",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "222cfc25-d434-4dd3-8c80-afd41437c561",
+                    "label": "bitmaptext_9",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Completing other tasks are recommended, \nbecause every uncompleted mission might\n have consequences for you later on...",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "82089f92-ea33-4114-ad85-07ba9fb155d0",
+            "label": "page11",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "89b6e54a-8ce0-4991-92dc-33e474bc0f93",
+                    "label": "rectangle",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "389b9773-2acd-46b1-b2c4-b94e4cbfafc4",
+                    "label": "text_box_empty_10",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "95e705ef-1448-4325-b389-79da138c7e27",
+                    "label": "bitmaptext_10",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Now let's check out the shop!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "41c0939e-14a9-4ff6-aee2-f7869e8c918d",
+                    "label": "shop_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "shop icon"
+                    },
+                    "x": -563,
+                    "y": -281.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "87e7c8bf-94d5-4fb7-8eac-4033486e642b",
+                            "label": "glowFx_1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "bd737f60-2ef3-4482-bd4f-aec550f63e9b",
+            "label": "page12",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "e400ba0a-c5d6-482e-8f14-14beeaa8ebc1",
+                    "label": "text_box_empty_11",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2657a3d9-8662-4aa6-8e86-023a3ab5b4f3",
+                    "label": "bitmaptext_11",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "In the shop, you can purchase the fish,\n plants, and equipment upgrades you need \nto keep your system running. ",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "9ecbfbdf-c774-4c35-bed4-0c9665306eca",
+            "label": "page13",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "3f0c5545-6547-4ca6-aa31-719fd2cab263",
+                    "label": "text_box_empty_12",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "71ad2d71-981f-42aa-8571-6cbcf080aa7c",
+                    "label": "bitmaptext_12",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Certain types of fish work with certain types of plants -\n make sure you know which go together before buying!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "1a5148ca-9aea-41dc-9815-b91f9e13d088",
+            "label": "page14",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "5234207c-b172-4e16-bddd-96e41faad5de",
+                    "label": "text_box_empty_13",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "d0f92fbf-aea4-416e-910b-ea13ada84aac",
+                    "label": "bitmaptext_13",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "You can see a representation of your current inventory\n to the right so you can see what you need to buy,\n and your total currency is held on the\n bottom left of the screen.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "77e5b2c3-5b57-421b-bd5f-98038d67f71a",
+            "label": "page15",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "50376b54-b122-4ec7-9dcf-fb1460e1996c",
+                    "label": "rectangle_2",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "ba74f6fa-e04a-4c70-950f-3c085b24b096",
+                    "label": "text_box_empty_14",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "8a3ab7ef-274b-4149-82a1-51a89f26d54a",
+                    "label": "bitmaptext_14",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Try it now - Select the Tilapia fingerling icon to\n buy it and add it to your tank.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "c291132c-5ade-45c9-a41f-c79db4ce554d",
+                    "label": "fingerling_box",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 120,
+                    "hitArea.height": 120,
+                    "x": -428,
+                    "y": -351,
+                    "originX": 0,
+                    "originY": 0,
+                    "isFilled": true,
+                    "strokeColor": "#000000",
+                    "isStroked": true,
+                    "width": 120,
+                    "height": 120,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "286bb87e-cde1-442f-b7f3-314aef1cebf4",
+                            "label": "glowFx_2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "44b8eb1f-d5d1-499a-99a3-4d26af9ec8f8",
+                    "label": "til_fin",
+                    "displayName": "til_fin",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "fingerling",
+                        "frame": 0
+                    },
+                    "x": -342,
+                    "y": -305,
+                    "scaleX": 1.9,
+                    "scaleY": 1.9
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "50de0a4f-20a9-4723-8d1e-21718498b0f0",
+                    "label": "rectangle_3",
+                    "scope": "CLASS",
+                    "x": -368,
+                    "y": -248,
+                    "isFilled": true,
+                    "fillColor": "9c5a3c",
+                    "strokeColor": "#000000",
+                    "isStroked": true,
+                    "width": 116,
+                    "height": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "4777c02b-3250-43fb-9038-35a9aff01080",
+                    "label": "fingerling_price",
+                    "scope": "CLASS",
+                    "x": -417,
+                    "y": -248,
+                    "originY": 0.5,
+                    "text": "$ 0.00",
+                    "font": "pixelmix_16",
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "148fb8ab-12fa-4d94-b546-86f544cab0cf",
+            "label": "page16",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "a5002ca8-450c-41c9-9112-2ff089dc09a6",
+                    "label": "text_box_empty_15",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "2145d195-bc27-4932-b4e7-2f58f42751ba",
+                    "label": "bitmaptext_15",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Perfect! Your fingerlings will arrive\n by mail in the coming week.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "e384bcdb-794e-4285-8ddf-5bb0382caafa",
+            "label": "page17",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "4a5b86a3-a5a8-4560-ae16-e75a7fc7db28",
+                    "label": "rectangle_4",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "fe42b468-c968-4e4a-80bc-b6e66dd4fd74",
+                    "label": "text_box_empty_16",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "051e2e84-42a6-4daf-a3aa-2c79fbe16ab8",
+                    "label": "bitmaptext_16",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Now go ahead and select the Journal icon.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "169e4622-2481-43c4-b1b1-bdfc44f5b2ac",
+                    "label": "journal_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "journal icon"
+                    },
+                    "x": -563,
+                    "y": -212.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "72689d0f-5a78-494b-b6a4-c31f5c86d7a7",
+                            "label": "glowFx_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "0d23353d-11fb-4933-b91e-5a4e0a52b120",
+            "label": "page18",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "8410e35d-eb07-4641-9606-e94328382c39",
+                    "label": "text_box_empty_17",
+                    "texture": {
+                        "key": "text_box_empty"
+                    },
+                    "x": 286
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "50c57988-c073-4fb4-9599-3bcdd65eebcf",
+                    "label": "bitmaptext_17",
+                    "x": 286,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "The journal holds vital system information\n about the chemical levels of your tanks,\n which will affect how well your fish and plants thrive. \nKeep a close eye on these readings!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "6ad6d951-903f-4891-9afd-7e85ed32967b",
+            "label": "page19",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "f1fc920c-0de6-44a9-bdf9-3ae495e895cc",
+                    "label": "rectangle_5",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "3c1c50c5-338b-445b-acd9-87414beafd9a",
+                    "label": "text_box_empty_18",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "e63f0742-6398-4061-ba8a-1a7dc50a519e",
+                    "label": "bitmaptext_18",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Now select the mail icon!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "1f6c895b-f5dc-471f-9b2e-173685876016",
+                    "label": "mail_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "mail icon"
+                    },
+                    "x": -563,
+                    "y": -143.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "08c20c95-2291-45c2-a9be-016c72014fe9",
+                            "label": "glowFx_4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "b8df3d85-9b04-4093-b660-a467240d431f",
+            "label": "page20",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "2db4f208-7d58-42fb-bec3-6eca363d347c",
+                    "label": "text_box_empty_19",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "839f4d78-54da-426d-a1bd-9cdeb50f5e67",
+                    "label": "bitmaptext_19",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "In the Mail tab, you can receive gifts of fish,\n plants, and cash, as well as receive important\n messages for a variety of other purposes. ",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "aed14cdc-3854-4634-88e5-cb9c05857710",
+            "label": "page21",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "5becc8ce-eeea-4c25-808b-98f949757723",
+                    "label": "text_box_empty_20",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "3fc49c04-86bb-4ff6-b8e9-21413c39c7d4",
+                    "label": "bitmaptext_20",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Messages remain in your Mail tab until you click\n the checkmark to mark them as read and move them\n to the bottom of the queue\n (don’t worry, they aren’t fully deleted!)",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "b8b22fc8-e293-4718-b0b9-68260917879e",
+            "label": "page22",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "17ab8cd8-ed45-43ba-9de4-bf9be38a0e4e",
+                    "label": "rectangle_6",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "71354e3b-3df9-4d94-8308-e7ae64e6e03a",
+                    "label": "text_box_empty_21",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "6e6f7a1e-ac1b-44e3-ad82-dfd1498bfcd4",
+                    "label": "bitmaptext_21",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Alright, last one, let's check out the systems page!",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "80a427b8-4c2b-47ca-bdb9-508c3787c209",
+                    "label": "system_icon",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 64,
+                    "hitArea.height": 64,
+                    "texture": {
+                        "key": "system icon"
+                    },
+                    "x": -563,
+                    "y": -74.01629638671875,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "19ffa9c0-07e2-44ed-afe7-83193086f30f",
+                            "label": "glowFx_5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "c7181c3b-38f6-41aa-8bc4-a971e4361792",
+            "label": "page23",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "16496932-9824-4a65-aa43-3a709024d24d",
+                    "label": "text_box_empty_22",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "47191786-fba9-424d-8b7b-799aa4431a85",
+                    "label": "bitmaptext_22",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "The System tab offers more useful information\n about your system.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "2bd12487-591a-47e6-ac8c-5b22fb7ca2da",
+            "label": "page24",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "86316b99-c4ee-43de-a240-283197ac0a68",
+                    "label": "text_box_empty_23",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "852973b9-b7de-4b55-85aa-d0e51207cb78",
+                    "label": "bitmaptext_23",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "For example, here you can see a graph of\npower and water consumption...",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "12a7328a-4d85-4c92-9581-d6a88b958015",
+            "label": "page25",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "cc48d83e-bfa8-44c9-b19b-ad15d9f10bf5",
+                    "label": "text_box_empty_24",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "79df5b02-22d7-462f-9c02-40be78d91daa",
+                    "label": "bitmaptext_24",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "...and on the right, projected fish and plant\n yield over day, month, and year time scale.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "32bcb3c7-c2a5-4095-b061-8ec1e515608b",
+            "label": "page26",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "d86eb9db-d5f7-4374-8c2a-c21fa94d9548",
+                    "label": "text_box_empty_25",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "8598a1ee-a080-441f-9899-193e05afb784",
+                    "label": "bitmaptext_25",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "The other buttons offer useful out of game features.\n including creating a profile,\n asking for help on Aquaponics topics,\n and accessing the settings of the game.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "e8bb87df-175f-4495-8c2e-7d2891efafc0",
+            "label": "page27",
+            "scope": "CLASS",
+            "x": 628,
+            "y": 591,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "bc2fc90e-aaae-4e30-bef5-85b5363c833c",
+                    "label": "rectangle_7",
+                    "x": 12,
+                    "y": -231,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1280,
+                    "height": 720
+                },
+                {
+                    "type": "Image",
+                    "id": "6f4cb3c2-644f-4851-9f0a-5f9b8576e7f2",
+                    "label": "text_box_empty_26",
+                    "texture": {
+                        "key": "text_box_empty"
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "0072acf9-4d21-4bb1-9ad6-6b9b743a0ef7",
+                    "label": "bitmaptext_26",
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "When you’re ready to begin, select the Next Week icon\n to move week by week and face new challenges.",
+                    "font": "pixelmix_16",
+                    "align": 1,
+                    "fontSize": 16
+                },
+                {
+                    "type": "Image",
+                    "id": "6d98fa22-80d9-4fa7-84b0-84fcd892562f",
+                    "label": "advance",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 32,
+                    "hitArea.height": 32,
+                    "texture": {
+                        "key": "advance"
+                    },
+                    "x": 564,
+                    "y": 53,
+                    "scaleX": 4,
+                    "scaleY": 4,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "94e03d88-c0f9-4666-89b3-a1bf050b82e1",
+                            "label": "glowFx_6",
+                            "preFX": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
 }
