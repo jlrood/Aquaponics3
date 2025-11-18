@@ -131,7 +131,7 @@ export default class Mail extends Phaser.Scene {
 		large_mail_container.add(mail_item_container_1);
 
 		// mail_item_1
-		const mail_item_1 = this.add.rectangle(774, 236, 128, 128);
+		const mail_item_1 = this.add.rectangle(774, 234, 128, 128);
 		mail_item_1.scaleX = 4.575648467010909;
 		mail_item_1.scaleY = 0.43131116787969503;
 		mail_item_1.isFilled = true;
@@ -151,8 +151,8 @@ export default class Mail extends Phaser.Scene {
 		mail_item_container_1.add(icon_1);
 
 		// mail_text_1
-		const mail_text_1 = this.add.bitmapText(528, 221, "pixelmix_16", "You've got mail!");
-		mail_text_1.text = "You've got mail!";
+		const mail_text_1 = this.add.bitmapText(528, 221, "pixelmix_16", "Fish Delivery! (1)");
+		mail_text_1.text = "Fish Delivery! (1)";
 		mail_text_1.fontSize = 30;
 		mail_item_container_1.add(mail_text_1);
 
@@ -445,13 +445,6 @@ export default class Mail extends Phaser.Scene {
 		fact.text = "I love fish!";
 		fact.fontSize = 16;
 		fact.maxWidth = 240;
-
-//get fun fact from facts.txt
-		const raw = this.cache.text.get("facts");
-const lines = raw.split(/\r?\n/).filter(l => l.trim().length > 0);
-const randomLine = Phaser.Utils.Array.GetRandom(lines);
-
-fact.setText(randomLine);
 
 		this.back_button = back_button;
 		this.mail_button = mail_button;

@@ -235,7 +235,7 @@
                             "label": "mail_item_1",
                             "displayName": "mail_item_1",
                             "x": 774,
-                            "y": 236,
+                            "y": 234,
                             "scaleX": 4.575648467010909,
                             "scaleY": 0.43131116787969503,
                             "isFilled": true,
@@ -268,7 +268,7 @@
                             "displayName": "mail_text_1",
                             "x": 528,
                             "y": 221,
-                            "text": "You've got mail!",
+                            "text": "Fish Delivery! (1)",
                             "font": "pixelmix_16",
                             "fontSize": 30
                         },
