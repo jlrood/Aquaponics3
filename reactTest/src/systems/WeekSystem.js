@@ -8,7 +8,10 @@ export default class WeekSystem extends Phaser.Events.EventEmitter {
     super()
     this.scene = scene
     this.maxWeeks = maxWeeks
-    const start = scene.registry.get('week') || 1
+    let start = scene.registry.get('week')
+    if (start === undefined) start = 0
+    scene.registry.set('week', start)
+
     scene.registry.set('week', start)
   }
 
