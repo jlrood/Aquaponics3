@@ -147,8 +147,8 @@
             "id": "5166ee8e-92f8-401a-8c4d-f98d21abac88",
             "label": "tool1_header",
             "displayName": "tool1_header",
-            "x": 197.0014438507658,
-            "y": 600.0365715450198,
+            "x": 197,
+            "y": 578,
             "originX": 0.5,
             "originY": 0.5,
             "tintFill": true,
@@ -280,21 +280,6 @@
             "fontSize": 24
         },
         {
-            "type": "Rectangle",
-            "id": "93c68e83-5260-4861-b2a7-d0cc4c0f3251",
-            "label": "selected_box",
-            "displayName": "selected_box",
-            "scope": "CLASS",
-            "x": 662.0014438507658,
-            "y": 329.03657154501985,
-            "visible": false,
-            "strokeColor": "#1ce414",
-            "lineWidth": 5,
-            "isStroked": true,
-            "width": 128,
-            "height": 128
-        },
-        {
             "type": "BitmapText",
             "id": "a63ca709-acff-4152-a4d1-ae2fbe9e0de2",
             "label": "bitmaptext_1",
@@ -313,9 +298,39 @@
                 "key": "zoomTray"
             },
             "x": 640,
-            "y": 354,
+            "y": 336,
             "scaleX": 20,
             "scaleY": 20
+        },
+        {
+            "type": "Rectangle",
+            "id": "93c68e83-5260-4861-b2a7-d0cc4c0f3251",
+            "label": "selected_box",
+            "displayName": "selected_box",
+            "scope": "CLASS",
+            "x": 662.0014438507658,
+            "y": 329.03657154501985,
+            "visible": false,
+            "strokeColor": "#1ce414",
+            "lineWidth": 5,
+            "isStroked": true,
+            "width": 160,
+            "height": 160
+        },
+        {
+            "type": "BitmapText",
+            "id": "4c345eca-b471-493a-831a-63fae0787ebc",
+            "label": "capacity_text",
+            "displayName": "capacity_text",
+            "scope": "CLASS",
+            "x": 197,
+            "y": 622,
+            "originX": 0.5,
+            "originY": 0.5,
+            "tintFill": true,
+            "text": "0/21",
+            "font": "pixelmix_24",
+            "fontSize": 24
         }
     ],
     "plainObjects": [],

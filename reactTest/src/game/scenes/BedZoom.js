@@ -79,7 +79,7 @@ export default class BedZoom extends Phaser.Scene {
 		divider_right.lineWidth = 5;
 
 		// tool1_header
-		const tool1_header = this.add.bitmapText(197.0014438507658, 600.0365715450198, "pixelmix_24", "Plant Bed");
+		const tool1_header = this.add.bitmapText(197, 578, "pixelmix_24", "Plant Bed");
 		tool1_header.setOrigin(0.5, 0.5);
 		tool1_header.tintFill = true;
 		tool1_header.text = "Plant Bed";
@@ -164,11 +164,19 @@ export default class BedZoom extends Phaser.Scene {
 		selected_box.strokeColor = 1893396;
 		selected_box.lineWidth = 5;
 
+		// capacity_text
+		const capacity_text = this.add.bitmapText(197, 622, "pixelmix_24", "0/21");
+		capacity_text.setOrigin(0.5, 0.5);
+		capacity_text.tintFill = true;
+		capacity_text.text = "0/21";
+		capacity_text.fontSize = 24;
+
 		this.back_button = back_button;
 		this.cur_plant_name = cur_plant_name;
 		this.zoom_out_button = zoom_out_button;
 		this.change_plant_button = change_plant_button;
 		this.selected_box = selected_box;
+		this.capacity_text = capacity_text;
 
 		this.events.emit("scene-awake");
 	}
@@ -183,6 +191,8 @@ export default class BedZoom extends Phaser.Scene {
 	change_plant_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	selected_box;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	capacity_text;
 
 	/* START-USER-CODE */
 
@@ -247,15 +257,18 @@ export default class BedZoom extends Phaser.Scene {
 	populateBed() {
 		let bedArr = this.registry.get('plantBed');
 		let plantIndex = 0;
+		let plantTotal = 0;
 		//For each plant...
 		for (let i = 0; i < 3; i++) {
 			for (let j = 0; j < 7; j++) {
 				if (bedArr[i][j] !== null) {
 					this.addPlant(bedArr[i][j], j, i, plantIndex);
+					plantTotal++;
 				}
 				plantIndex++;
 			}
 		}
+		this.capacity_text.text = "" + plantTotal + "/21"
 	}
 
 	create() {

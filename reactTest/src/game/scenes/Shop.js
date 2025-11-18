@@ -663,6 +663,17 @@ export default class Shop extends Phaser.Scene {
 		ltt_spr.scaleX = 3;
 		ltt_spr.scaleY = 3;
 
+		// capacity_background
+		const capacity_background = this.add.image(547, 676, "text_box_empty");
+		capacity_background.scaleX = 0.5;
+		capacity_background.scaleY = 0.5;
+
+		// capacity_text
+		const capacity_text = this.add.bitmapText(391, 675, "pixelmix_32", "Plants: 0/21");
+		capacity_text.setOrigin(0, 0.5);
+		capacity_text.text = "Plants: 0/21";
+		capacity_text.fontSize = 32;
+
 		this.scroll = scroll;
 		this.option_box_1 = option_box_1;
 		this.option_box_2 = option_box_2;
@@ -742,6 +753,8 @@ export default class Shop extends Phaser.Scene {
 		this.til_re = til_re;
 		this.ltt_h = ltt_h;
 		this.ltt_spr = ltt_spr;
+		this.capacity_background = capacity_background;
+		this.capacity_text = capacity_text;
 
 		this.events.emit("scene-awake");
 	}
@@ -904,6 +917,10 @@ export default class Shop extends Phaser.Scene {
 	ltt_h;
 	/** @type {Phaser.GameObjects.Image} */
 	ltt_spr;
+	/** @type {Phaser.GameObjects.Image} */
+	capacity_background;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	capacity_text;
 
 	/* START-USER-CODE */
 
@@ -959,11 +976,27 @@ export default class Shop extends Phaser.Scene {
 		return i;
 	}
 
+	totalPlants() {
+		let bedArr = this.registry.get('plantBed');
+		let total = 0;
+		for (let i = 0; i < 3; i++) {
+			for (let j = 0; j < 7; j++) {
+				if (bedArr[i][j] !== null) {
+					total++;
+				}
+			}
+		}
+		console.log(total);
+		return total;
+	}
+
 	removeFromPlantBed(plant) {
 		let bedArr = this.registry.get('plantBed');
 		let found = false;
 		for(let i = 0; i < 3 && !found; i++) {
 			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null)
+					continue;
 				if (bedArr[i][j].id == plant.id) {
 					bedArr[i][j] = null;
 					found = true;
@@ -971,6 +1004,7 @@ export default class Shop extends Phaser.Scene {
 			}
 		}
 		this.registry.set('plantBed', bedArr);
+		this.capacity_text.text = "Plants: " + this.totalPlants() + "/21";
 		console.log(bedArr);
 	}
 
@@ -986,6 +1020,7 @@ export default class Shop extends Phaser.Scene {
 			}
 		}
 		this.registry.set('plantBed', bedArr);
+		this.capacity_text.text = "Plants: " + this.totalPlants() + "/21";
 		console.log(bedArr);
 	}
 
@@ -1014,7 +1049,7 @@ export default class Shop extends Phaser.Scene {
 		if (items[itemIndex].type == 'plant') {
 			this.addToPlantBed(items[itemIndex]);
 		}
-		
+
 		console.log(items[itemIndex]);
 		this.updateSellMenu();
 	}
@@ -1167,6 +1202,9 @@ export default class Shop extends Phaser.Scene {
 		this.option7_lock.setVisible(true);
 		this.option8_lock.setVisible(true);
 
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1241,6 +1279,9 @@ export default class Shop extends Phaser.Scene {
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
+
+		this.capacity_background.setVisible(true);
+		this.capacity_text.setVisible(true);
 
 		this.scroll.setVisible(false);
 	}
@@ -1317,6 +1358,9 @@ export default class Shop extends Phaser.Scene {
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
 
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
+
 		this.scroll.setVisible(false);
 	}
 
@@ -1391,6 +1435,9 @@ export default class Shop extends Phaser.Scene {
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
+
+		this.capacity_background.setVisible(false);
+		this.capacity_text.setVisible(false);
 
 		this.scroll.setVisible(false);
 	}
