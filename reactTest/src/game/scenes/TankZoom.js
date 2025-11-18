@@ -293,7 +293,6 @@ export default class TankZoom extends Phaser.Scene {
 		this.editorCreate();
 		this.fishArr = new Array(256);
 		this.fishArrIndex = 0;
-		this.populateTank();
 
 		this.back_button.on("pointerdown", () => {
 			this.scene.start('MainMenu');
@@ -335,6 +334,7 @@ export default class TankZoom extends Phaser.Scene {
 			repeat: -1, // -1 means loop forever
 		})
 
+		this.populateTank();
 	}
 
 	update(time, delta) {
