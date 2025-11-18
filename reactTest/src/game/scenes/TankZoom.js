@@ -187,11 +187,19 @@ export default class TankZoom extends Phaser.Scene {
 	 * current fish text to be the correct one.
 	 */
 	analyzeFish(posX, posY, index, item) {
-		this.selected_box.setVisible(true);
-		this.selected_box.setPosition(posX, posY);
 		this.setFishArrIndex(index);
+
+		const entry = this.fishArr[index];
+		const fish = entry ? entry.icon : null;
+
+		if (fish) {
+			this.selected_box.setVisible(true);
+			this.selected_box.setPosition(fish.x, fish.y);
+		}
+
 		this.cur_fish_name.text = item.shopText;
 	}
+
 
 	/**
 	 * Called when pushing the "change fish" button.
@@ -363,6 +371,16 @@ export default class TankZoom extends Phaser.Scene {
 			} else if (fish.y > bottom) {
 				fish.y = bottom
 				fish.vy = -Math.abs(fish.vy)
+			}
+			
+			// after the for-loop that moves all fish
+			//it'll check/move the selected box as well.
+			if (this.selected_box.visible) {
+				const entry = this.fishArr[this.fishArrIndex];
+				if (entry && entry.icon) {
+					const fish = entry.icon;
+					this.selected_box.setPosition(fish.x, fish.y);
+				}
 			}
 
 			// face the direction of travel
