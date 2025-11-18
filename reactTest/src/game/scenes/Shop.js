@@ -566,72 +566,132 @@ export default class Shop extends Phaser.Scene {
 		option1_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option1_lock.setOrigin(0, 0);
 		option1_lock.visible = false;
+		option1_lock.alpha = 0.5;
+		option1_lock.alphaTopLeft = 0.5;
+		option1_lock.alphaTopRight = 0.5;
+		option1_lock.alphaBottomLeft = 0.5;
+		option1_lock.alphaBottomRight = 0.5;
 
 		// option2_lock
 		const option2_lock = this.add.image(200, 240, "Lock");
 		option2_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option2_lock.setOrigin(0, 0);
 		option2_lock.visible = false;
+		option2_lock.alpha = 0.5;
+		option2_lock.alphaTopLeft = 0.5;
+		option2_lock.alphaTopRight = 0.5;
+		option2_lock.alphaBottomLeft = 0.5;
+		option2_lock.alphaBottomRight = 0.5;
 
 		// option3_lock
 		const option3_lock = this.add.image(340, 240, "Lock");
 		option3_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option3_lock.setOrigin(0, 0);
 		option3_lock.visible = false;
+		option3_lock.alpha = 0.5;
+		option3_lock.alphaTopLeft = 0.5;
+		option3_lock.alphaTopRight = 0.5;
+		option3_lock.alphaBottomLeft = 0.5;
+		option3_lock.alphaBottomRight = 0.5;
 
 		// option4_lock
 		const option4_lock = this.add.image(480, 240, "Lock");
 		option4_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option4_lock.setOrigin(0, 0);
 		option4_lock.visible = false;
+		option4_lock.alpha = 0.5;
+		option4_lock.alphaTopLeft = 0.5;
+		option4_lock.alphaTopRight = 0.5;
+		option4_lock.alphaBottomLeft = 0.5;
+		option4_lock.alphaBottomRight = 0.5;
 
 		// option5_lock
 		const option5_lock = this.add.image(60, 380, "Lock");
 		option5_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option5_lock.setOrigin(0, 0);
 		option5_lock.visible = false;
+		option5_lock.alpha = 0.5;
+		option5_lock.alphaTopLeft = 0.5;
+		option5_lock.alphaTopRight = 0.5;
+		option5_lock.alphaBottomLeft = 0.5;
+		option5_lock.alphaBottomRight = 0.5;
 
 		// option6_lock
 		const option6_lock = this.add.image(200, 380, "Lock");
 		option6_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option6_lock.setOrigin(0, 0);
 		option6_lock.visible = false;
+		option6_lock.alpha = 0.5;
+		option6_lock.alphaTopLeft = 0.5;
+		option6_lock.alphaTopRight = 0.5;
+		option6_lock.alphaBottomLeft = 0.5;
+		option6_lock.alphaBottomRight = 0.5;
 
 		// option7_lock
 		const option7_lock = this.add.image(340, 380, "Lock");
 		option7_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option7_lock.setOrigin(0, 0);
 		option7_lock.visible = false;
+		option7_lock.alpha = 0.5;
+		option7_lock.alphaTopLeft = 0.5;
+		option7_lock.alphaTopRight = 0.5;
+		option7_lock.alphaBottomLeft = 0.5;
+		option7_lock.alphaBottomRight = 0.5;
 
 		// option8_lock
 		const option8_lock = this.add.image(480, 380, "Lock");
 		option8_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option8_lock.setOrigin(0, 0);
 		option8_lock.visible = false;
+		option8_lock.alpha = 0.5;
+		option8_lock.alphaTopLeft = 0.5;
+		option8_lock.alphaTopRight = 0.5;
+		option8_lock.alphaBottomLeft = 0.5;
+		option8_lock.alphaBottomRight = 0.5;
 
 		// option9_lock
 		const option9_lock = this.add.image(60, 520, "Lock");
 		option9_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option9_lock.setOrigin(0, 0);
 		option9_lock.visible = false;
+		option9_lock.alpha = 0.5;
+		option9_lock.alphaTopLeft = 0.5;
+		option9_lock.alphaTopRight = 0.5;
+		option9_lock.alphaBottomLeft = 0.5;
+		option9_lock.alphaBottomRight = 0.5;
 
 		// option10_lock
 		const option10_lock = this.add.image(200, 520, "Lock");
 		option10_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option10_lock.setOrigin(0, 0);
 		option10_lock.visible = false;
+		option10_lock.alpha = 0.5;
+		option10_lock.alphaTopLeft = 0.5;
+		option10_lock.alphaTopRight = 0.5;
+		option10_lock.alphaBottomLeft = 0.5;
+		option10_lock.alphaBottomRight = 0.5;
 
 		// option11_lock
 		const option11_lock = this.add.image(340, 520, "Lock");
 		option11_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option11_lock.setOrigin(0, 0);
 		option11_lock.visible = false;
+		option11_lock.alpha = 0.5;
+		option11_lock.alphaTopLeft = 0.5;
+		option11_lock.alphaTopRight = 0.5;
+		option11_lock.alphaBottomLeft = 0.5;
+		option11_lock.alphaBottomRight = 0.5;
 
 		// option12_lock
 		const option12_lock = this.add.image(480, 520, "Lock");
 		option12_lock.setInteractive(new Phaser.Geom.Rectangle(0, 0, 120, 120), Phaser.Geom.Rectangle.Contains);
 		option12_lock.setOrigin(0, 0);
 		option12_lock.visible = false;
+		option12_lock.alpha = 0.5;
+		option12_lock.alphaTopLeft = 0.5;
+		option12_lock.alphaTopRight = 0.5;
+		option12_lock.alphaBottomLeft = 0.5;
+		option12_lock.alphaBottomRight = 0.5;
 
 		// til_lrv
 		const til_lrv = this.add.image(121, 298, "larvae", 0);
@@ -1197,6 +1257,10 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option1_lock.setVisible(false);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(true);
 		this.option6_lock.setVisible(true);
 		this.option7_lock.setVisible(true);
@@ -1275,6 +1339,10 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(true);
 		this.ltt_spr.setVisible(true);
 
+		this.option1_lock.setVisible(false);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(false);
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
@@ -1353,8 +1421,12 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
-		this.option5_lock.setVisible(false);
-		this.option6_lock.setVisible(false);
+		this.option1_lock.setVisible(true);
+		this.option2_lock.setVisible(true);
+		this.option3_lock.setVisible(true);
+		this.option4_lock.setVisible(true);
+		this.option5_lock.setVisible(true);
+		this.option6_lock.setVisible(true);
 		this.option7_lock.setVisible(false);
 		this.option8_lock.setVisible(false);
 
@@ -1431,6 +1503,10 @@ export default class Shop extends Phaser.Scene {
 		this.ltt_h.setVisible(false);
 		this.ltt_spr.setVisible(false);
 
+		this.option1_lock.setVisible(true);
+		this.option2_lock.setVisible(false);
+		this.option3_lock.setVisible(false);
+		this.option4_lock.setVisible(false);
 		this.option5_lock.setVisible(false);
 		this.option6_lock.setVisible(false);
 		this.option7_lock.setVisible(false);
