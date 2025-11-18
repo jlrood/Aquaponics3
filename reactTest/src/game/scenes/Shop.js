@@ -989,6 +989,19 @@ export default class Shop extends Phaser.Scene {
 		console.log(bedArr);
 	}
 
+	isAtPlantCapacity() {
+		let bedArr = this.registry.get('plantBed');
+		let found = false;
+		for(let i = 0; i < 3 && !found; i++) {
+			for(let j = 0; j < 7 && !found; j++) {
+				if (bedArr[i][j] == null) {
+					found = true;
+				}
+			}
+		}
+		return !found;
+	}
+
 	buyItem(itemID) {
 		let items = this.registry.get('items');
 		const itemIndex = this.getItemIndexbyID(itemID, items);
@@ -1431,72 +1444,96 @@ export default class Shop extends Phaser.Scene {
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);
+			if (this.shopTable[1].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[1].price * -1))
 				this.buyItem(this.shopTable[1].id);
 		})
 
 		this.option_box_2.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_2);
+			if (this.shopTable[2].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[2].price * -1))
 				this.buyItem(this.shopTable[2].id);
 		})
 
 		this.option_box_3.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_3);
+			if (this.shopTable[3].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[3].price * -1))
 				this.buyItem(this.shopTable[3].id);
 		})
 
 		this.option_box_4.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_4);
+			if (this.shopTable[4].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[4].price * -1))
 				this.buyItem(this.shopTable[4].id);
 		})
 
 		this.option_box_5.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_5);
+			if (this.shopTable[5].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[5].price * -1))
 				this.buyItem(this.shopTable[5].id);
 		})
 
 		this.option_box_6.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_6);
+			if (this.shopTable[6].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[6].price * -1))
 				this.buyItem(this.shopTable[6].id);
 		})
 
 		this.option_box_7.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_7);
+			if (this.shopTable[7].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[7].price * -1))
 				this.buyItem(this.shopTable[7].id);
 		})
 
 		this.option_box_8.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_8);
+			if (this.shopTable[8].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[8].price * -1))
 				this.buyItem(this.shopTable[8].id);
 		})
 
 		this.option_box_9.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_9);
+			if (this.shopTable[9].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[9].price * -1))
 				this.buyItem(this.shopTable[9].id);
 		})
 
 		this.option_box_10.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_10);
+			if (this.shopTable[10].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[10].price * -1))
 				this.buyItem(this.shopTable[10].id);
 		})
 
 		this.option_box_11.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_11);
+			if (this.shopTable[11].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[11].price * -1))
 				this.buyItem(this.shopTable[11].id);
 		})
 
 		this.option_box_12.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_12);
+			if (this.shopTable[12].type == 'plant' && this.isAtPlantCapacity())
+				return;
 			if (this.updateMoney(this.shopTable[12].price * -1))
 				this.buyItem(this.shopTable[12].id);
 		})
