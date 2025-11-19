@@ -765,10 +765,6 @@ export default class SetupTut extends Phaser.Scene {
 			this.getItemPricebyID('tilapiaFingerling', this.registry.get('items'))
 			+ ".00";
 
-		this.fingerling_box.on('pointerdown', (pointer) => {
-			this.advance_tut(false);
-		});
-
 		this.journal_icon.on('pointerdown', (pointer) => {
 			this.scene.launch('Journal');
 
@@ -787,9 +783,42 @@ export default class SetupTut extends Phaser.Scene {
 			this.advance_tut(false);
 		});
 
-		this.advance.on('pointerdown', (pointer) => {
-			this.advance_tut(false);
-		});
+		this.fingerling_box.on('pointerdown', (pointer) => {
+			// get our list of items from the registry
+			let items = this.registry.get('items');
+			
+			// get the fingerling id
+			const itemIndex = items.findIndex(item => item.id === 'tilapiaFingerling');
+			
+			if (itemIndex !== -1) {
+				// Handle monetary transaction
+				const itemPrice = items[itemIndex].price;
+				let curMoney = this.registry.get('money');
+				let newMoney = curMoney - itemPrice;
+				
+				// Check for enough money
+				if (newMoney >= 0) {
+					this.registry.set('money', newMoney);
+					
+					// Add fish to inventory
+					items[itemIndex].playerHas += 1;
+					this.registry.set('items', items);
+					
+					console.log('Purchased tilapia fingerling!');
+				}
+    		}
+    
+    			this.advance_tut(false);
+			});
+
+			this.advance.on('pointerdown', (pointer) => {
+				// Pull the week system from main menu
+				const mainMenuScene = this.scene.get('MainMenu');
+				
+				// Advance to the next week
+				mainMenuScene.week.nextWeek();
+				this.advance_tut(false);
+			});
 	}
 
 	scene_handler() {
@@ -816,25 +845,12 @@ export default class SetupTut extends Phaser.Scene {
 			// Do nothing
 		}
 		else if (this.pg_counter < this.max_pages) {
-			// Only hide current page if it's not marked as persistent
-			if (!this.persistentPages.includes(this.pg_counter)) {
-				this.tutPages[this.pg_counter - 1].setVisible(false);
-			}
-
-			// If this page comes after a set of persistent, clear them
-			if (this.clearPersistent.includes(this.pg_counter)) {
-				this.tutPages[this.pg_counter - 1].setVisible(false);
-				this.tutPages[this.pg_counter - 2].setVisible(false);
-				this.tutPages[this.pg_counter - 3].setVisible(false);
-			}
+			this.tutPages[this.pg_counter - 1].setVisible(false);
 
 			this.pg_counter++;
 			this.tutPages[this.pg_counter - 1].setVisible(true);
 		} else {
-			// Hide last page if not persistent
-			if (!this.persistentPages.includes(this.pg_counter)) {
-				this.tutPages[this.pg_counter - 1].setVisible(false);
-			}
+			this.tutPages[this.pg_counter - 1].setVisible(false);
 
 			this.background.off('pointerdown');
 
