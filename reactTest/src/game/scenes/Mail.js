@@ -446,6 +446,13 @@ export default class Mail extends Phaser.Scene {
 		fact.fontSize = 16;
 		fact.maxWidth = 240;
 
+		//get fun fact from facts.txt
+		const raw = this.cache.text.get("facts");
+const lines = raw.split(/\r?\n/).filter(l => l.trim().length > 0);
+const randomLine = Phaser.Utils.Array.GetRandom(lines);
+
+fact.setText(randomLine);
+
 		this.back_button = back_button;
 		this.mail_button = mail_button;
 		this.maintenance_button = maintenance_button;
