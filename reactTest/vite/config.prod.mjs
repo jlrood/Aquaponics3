@@ -18,29 +18,33 @@ const phasermsg = () => {
 }
 
 export default defineConfig({
-    base: './',
-    plugins: [
-        react(),
-        phasermsg()
-    ],
-    logLevel: 'warning',
-    build: {
-        rollupOptions: {
-            output: {
-                manualChunks: {
-                    phaser: ['phaser']
-                }
-            }
-        },
-        minify: 'terser',
-        terserOptions: {
-            compress: {
-                passes: 2
-            },
-            mangle: true,
-            format: {
-                comments: false
-            }
+  base: '/Aquaponics3/reactTest/',
+
+  plugins: [
+    react(),
+    phasermsg()
+  ],
+  logLevel: 'warning',
+  build: {
+    outDir: '../docs/reactTest',
+    emptyOutDir: true,
+
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          phaser: ['phaser']
         }
+      }
+    },
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        passes: 2
+      },
+      mangle: true,
+      format: {
+        comments: false
+      }
     }
+  }
 });

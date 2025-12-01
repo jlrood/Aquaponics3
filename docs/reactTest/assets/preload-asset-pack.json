@@ -1,0 +1,403 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/cycle/1.png",
+                "type": "image",
+                "key": "1"
+            },
+            {
+                "url": "assets/cycle/10.png",
+                "type": "image",
+                "key": "10"
+            },
+            {
+                "url": "assets/cycle/11.png",
+                "type": "image",
+                "key": "11"
+            },
+            {
+                "url": "assets/cycle/12.png",
+                "type": "image",
+                "key": "12"
+            },
+            {
+                "url": "assets/cycle/13.png",
+                "type": "image",
+                "key": "13"
+            },
+            {
+                "url": "assets/cycle/14.png",
+                "type": "image",
+                "key": "14"
+            },
+            {
+                "url": "assets/cycle/15.png",
+                "type": "image",
+                "key": "15"
+            },
+            {
+                "url": "assets/cycle/16.png",
+                "type": "image",
+                "key": "16"
+            },
+            {
+                "url": "assets/cycle/17.png",
+                "type": "image",
+                "key": "17"
+            },
+            {
+                "url": "assets/cycle/18.png",
+                "type": "image",
+                "key": "18"
+            },
+            {
+                "url": "assets/cycle/19.png",
+                "type": "image",
+                "key": "19"
+            },
+            {
+                "url": "assets/cycle/2.png",
+                "type": "image",
+                "key": "2"
+            },
+            {
+                "url": "assets/cycle/20.png",
+                "type": "image",
+                "key": "20"
+            },
+            {
+                "url": "assets/cycle/21.png",
+                "type": "image",
+                "key": "21"
+            },
+            {
+                "url": "assets/cycle/3.png",
+                "type": "image",
+                "key": "3"
+            },
+            {
+                "url": "assets/cycle/4.png",
+                "type": "image",
+                "key": "4"
+            },
+            {
+                "url": "assets/cycle/5.png",
+                "type": "image",
+                "key": "5"
+            },
+            {
+                "url": "assets/cycle/6.png",
+                "type": "image",
+                "key": "6"
+            },
+            {
+                "url": "assets/cycle/7.png",
+                "type": "image",
+                "key": "7"
+            },
+            {
+                "url": "assets/cycle/8.png",
+                "type": "image",
+                "key": "8"
+            },
+            {
+                "url": "assets/cycle/9.png",
+                "type": "image",
+                "key": "9"
+            },
+            {
+                "url": "assets/buttons_boxes/achievement icon.png",
+                "type": "image",
+                "key": "achievement icon"
+            },
+            {
+                "url": "assets/buttons_boxes/advance.png",
+                "type": "image",
+                "key": "advance"
+            },
+            {
+                "url": "assets/buttons_boxes/back button.png",
+                "type": "image",
+                "key": "back button"
+            },
+            {
+                "url": "assets/buttons_boxes/back button (2).png",
+                "type": "image",
+                "key": "back button (2)"
+            },
+            {
+                "url": "assets/backgrounds/bg.png",
+                "frameConfig": {
+                    "frameWidth": 1280,
+                    "frameHeight": 720,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "bg"
+            },
+            {
+                "url": "assets/backgrounds/bg (1).png",
+                "type": "image",
+                "key": "bg (1)"
+            },
+            {
+                "url": "assets/backgrounds/cycle.png",
+                "type": "image",
+                "key": "cycle"
+            },
+            {
+                "url": "assets/facts.txt",
+                "type": "text",
+                "key": "facts"
+            },
+            {
+                "url": "assets/life/fingerling.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "fingerling"
+            },
+            {
+                "url": "assets/buttons_boxes/graph1.png",
+                "type": "image",
+                "key": "graph1"
+            },
+            {
+                "url": "assets/buttons_boxes/graph2.png",
+                "type": "image",
+                "key": "graph2"
+            },
+            {
+                "url": "assets/buttons_boxes/help.png",
+                "type": "image",
+                "key": "help"
+            },
+            {
+                "url": "assets/buttons_boxes/journal icon.png",
+                "type": "image",
+                "key": "journal icon"
+            },
+            {
+                "url": "assets/juvenile.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": 1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "juvenile"
+            },
+            {
+                "url": "assets/life/larvae.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "larvae"
+            },
+            {
+                "url": "assets/life/lettuce.png",
+                "type": "image",
+                "key": "lettuce"
+            },
+            {
+                "url": "assets/Lock.png",
+                "type": "image",
+                "key": "Lock"
+            },
+            {
+                "url": "assets/logo.png",
+                "type": "image",
+                "key": "logo"
+            },
+            {
+                "url": "assets/buttons_boxes/mail icon.png",
+                "type": "image",
+                "key": "mail icon"
+            },
+            {
+                "url": "assets/bmFonts/MedodicaRegular.woff2",
+                "format": "woff2",
+                "descriptors": {},
+                "type": "font",
+                "key": "MedodicaRegular"
+            },
+            {
+                "url": "assets/buttons_boxes/mini icons.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 15,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "mini icons"
+            },
+            {
+                "url": "assets/buttons_boxes/multiplayer icon.png",
+                "type": "image",
+                "key": "multiplayer icon"
+            },
+            {
+                "textureURL": "assets/bmFonts/pixelmix_16.png",
+                "fontDataURL": "assets/bmFonts/pixelmix_16.xml",
+                "type": "bitmapFont",
+                "key": "pixelmix_16"
+            },
+            {
+                "textureURL": "assets/bmFonts/pixelmix_24.png",
+                "fontDataURL": "assets/bmFonts/pixelmix_24.xml",
+                "type": "bitmapFont",
+                "key": "pixelmix_24"
+            },
+            {
+                "textureURL": "assets/bmFonts/pixelmix_32.png",
+                "fontDataURL": "assets/bmFonts/pixelmix_32.xml",
+                "type": "bitmapFont",
+                "key": "pixelmix_32"
+            },
+            {
+                "textureURL": "assets/bmFonts/pixelmix_8.png",
+                "fontDataURL": "assets/bmFonts/pixelmix_8.xml",
+                "type": "bitmapFont",
+                "key": "pixelmix_8"
+            },
+            {
+                "url": "assets/backgrounds/plant_ss_1.png",
+                "type": "image",
+                "key": "plant_ss_1"
+            },
+            {
+                "url": "assets/backgrounds/plant_ss_2.png",
+                "type": "image",
+                "key": "plant_ss_2"
+            },
+            {
+                "url": "assets/buttons_boxes/profile.png",
+                "type": "image",
+                "key": "profile"
+            },
+            {
+                "url": "assets/buttons_boxes/question.png",
+                "type": "image",
+                "key": "question"
+            },
+            {
+                "url": "assets/backgrounds/Screenshot 2025-11-15 212047.png",
+                "type": "image",
+                "key": "Screenshot 2025-11-15 212047"
+            },
+            {
+                "url": "assets/life/seed.png",
+                "type": "image",
+                "key": "seed"
+            },
+            {
+                "url": "assets/life/seedling.png",
+                "type": "image",
+                "key": "seedling"
+            },
+            {
+                "url": "assets/buttons_boxes/settings.png",
+                "type": "image",
+                "key": "settings"
+            },
+            {
+                "url": "assets/buttons_boxes/shop icon.png",
+                "type": "image",
+                "key": "shop icon"
+            },
+            {
+                "url": "assets/life/sillouette.png",
+                "type": "image",
+                "key": "sillouette"
+            },
+            {
+                "url": "assets/life/sprout.png",
+                "type": "image",
+                "key": "sprout"
+            },
+            {
+                "url": "assets/star.png",
+                "type": "image",
+                "key": "star"
+            },
+            {
+                "url": "assets/buttons_boxes/system icon.png",
+                "type": "image",
+                "key": "system icon"
+            },
+            {
+                "url": "assets/buttons_boxes/task icon.png",
+                "type": "image",
+                "key": "task icon"
+            },
+            {
+                "url": "assets/buttons_boxes/text_box_empty.png",
+                "type": "image",
+                "key": "text_box_empty"
+            },
+            {
+                "url": "assets/life/tilapia_new.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": 2,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "tilapia_new"
+            },
+            {
+                "url": "assets/title.png",
+                "type": "image",
+                "key": "title"
+            },
+            {
+                "url": "assets/buttons_boxes/transparent.png",
+                "type": "image",
+                "key": "transparent"
+            },
+            {
+                "url": "assets/life/young.png",
+                "type": "image",
+                "key": "young"
+            },
+            {
+                "url": "assets/backgrounds/zoomTray.png",
+                "type": "image",
+                "key": "zoomTray"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false,
+        "visible": true
+    }
+}
