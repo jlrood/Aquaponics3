@@ -566,196 +566,210 @@ export default class Mail extends Phaser.Scene {
 					this.fishMailRow.setText('You have no mail. :(')
 					this.fishMailRow.disableInteractive()
 				}
-			} else {
-				console.warn('Fish Delivery row not found for week 1')
 			}
-		}
+			// For the rest of the weeks, no more mail i guess
+			}else {
+				this.fishMailRow = mailRowTexts.find(t =>
+					t.text && t.text.startsWith('Fish Delivery')
+				)
 
-
-
-
-		this.check_circle_1.on("pointerdown", () => {
-			if (this.check_circle_1.fillColor == 0x000000) {
-				this.check_circle_1.fillColor = 0xffffff;
-			}
-			else {
-				this.check_circle_1.fillColor = 0x428544;
-			}
-		});
-
-		this.check_circle_2.on("pointerdown", () => {
-			if (this.check_circle_2.fillColor == 0x000000) {
-				this.check_circle_2.fillColor = 0xffffff;
-			}
-			else {
-				this.check_circle_2.fillColor = 0x428544;
-			}
-		});
-
-		this.check_circle_3.on("pointerdown", () => {
-			if (this.check_circle_3.fillColor == 0x000000) {
-				this.check_circle_3.fillColor = 0xffffff;
-			}
-			else {
-				this.check_circle_3.fillColor = 0x428544;
-			}
-		});
-
-		this.check_circle_4.on("pointerdown", () => {
-			if (this.check_circle_4.fillColor == 0x000000) {
-				this.check_circle_4.fillColor = 0xffffff;
-			}
-			else {
-				this.check_circle_4.fillColor = 0x428544;
-			}
-		});
-
-		this.check_circle_5.on("pointerdown", () => {
-			if (this.check_circle_5.fillColor == 0x000000) {
-				this.check_circle_5.fillColor = 0xffffff;
-			}
-			else {
-				this.check_circle_5.fillColor = 0x428544;
-			}
-		});
-	}
-
-
-	handleFishDeliveryClick() {
-		const currentWeek = this.registry.get('currentWeek') || 0
-		if (currentWeek !== 1) return
-
-		if (this.registry.get('tutorialWeek1MailReceived')) {
-			return
-		}
-
-		const items = this.registry.get('items') || []
-
-		const giveItem = (id, amount = 1) => {
-			const it = items.find(i => i.id === id)
-			if (!it) return
-			if (typeof it.playerHas !== 'number') it.playerHas = 0
-			it.playerHas += amount
-		}
-
-		// Week 1 starter package
-		giveItem('tilapiaLarvae', 5)
-		giveItem('romaineSprout', 3)
-
-		this.registry.set('items', items)
-		this.registry.set('tutorialWeek1MailReceived', true)
-		this.registry.set('tutorialWeek1MailPending', false)
-
-		// fill plant bed with the starter plants
-		this.fillPlantBedWithStarterPlants('romaineSprout', 3)
-
-		// turn off mail glow in MainMenu
-		const mainMenu = this.scene.get('MainMenu')
-		if (mainMenu && typeof mainMenu.updateMailIconNotification === 'function') {
-			mainMenu.updateMailIconNotification()
-		}
-
-		// tick the first checkbox
-		if (this.check_circle_1) {
-			this.check_circle_1.fillColor = 0x428544
-		}
-
-		// list now shows empty inbox
-		if (this.fishMailRow) {
-			this.fishMailRow.setText('You have no mail.')
-			this.fishMailRow.disableInteractive()
-		}
-
-		// popup background
-		if (this.detailBg) {
-			this.detailBg.destroy()
-		}
-		if (this.detailText) {
-			this.detailText.destroy()
-		}
-
-		this.detailBg = this.add.rectangle(
-			772,
-			360,
-			430,
-			140,
-			0xfff1c4
-		)
-		this.detailBg.setOrigin(0.5, 0.5)
-		this.detailBg.setStrokeStyle(2, 0x3b3131)
-		this.detailBg.setDepth(5)
-
-		this.detailText = this.add.bitmapText(
-			772,
-			360,
-			'pixelmix_16',
-			'You received:\n5 larvae tilapia\n3 romaine lettuce sprout. \nThey are now in your system.',
-			16
-		)
-		this.detailText.setOrigin(0.5, 0.5)
-		this.detailText.setDepth(6)
-	}
-
-
-
-
-	// Finds all the mail text so that I can leave setuptut/week0 the same.
-	findMailRowTexts() {
-		const rows = []
-
-		const visit = obj => {
-			if (obj instanceof Phaser.GameObjects.BitmapText) {
-				if (
-					obj.text === 'Fish Delivery! (1)' ||
-					obj.text === "You've got mail!"
-				) {
-					rows.push(obj)
+				if (this.fishMailRow) {
+					// clear all other rows
+					mailRowTexts.forEach(t => {
+						if (t !== this.fishMailRow) {
+							t.setText('')
+						}
+					})
+					this.fishMailRow.setText('You have no mail. :(')
+					this.fishMailRow.disableInteractive()
 				}
 			}
 
-			// recurse into containers
-			if (obj.list && Array.isArray(obj.list)) {
-				obj.list.forEach(visit)
+
+
+
+			this.check_circle_1.on("pointerdown", () => {
+				if (this.check_circle_1.fillColor == 0x000000) {
+					this.check_circle_1.fillColor = 0xffffff;
+				}
+				else {
+					this.check_circle_1.fillColor = 0x428544;
+				}
+			});
+
+			this.check_circle_2.on("pointerdown", () => {
+				if (this.check_circle_2.fillColor == 0x000000) {
+					this.check_circle_2.fillColor = 0xffffff;
+				}
+				else {
+					this.check_circle_2.fillColor = 0x428544;
+				}
+			});
+
+			this.check_circle_3.on("pointerdown", () => {
+				if (this.check_circle_3.fillColor == 0x000000) {
+					this.check_circle_3.fillColor = 0xffffff;
+				}
+				else {
+					this.check_circle_3.fillColor = 0x428544;
+				}
+			});
+
+			this.check_circle_4.on("pointerdown", () => {
+				if (this.check_circle_4.fillColor == 0x000000) {
+					this.check_circle_4.fillColor = 0xffffff;
+				}
+				else {
+					this.check_circle_4.fillColor = 0x428544;
+				}
+			});
+
+			this.check_circle_5.on("pointerdown", () => {
+				if (this.check_circle_5.fillColor == 0x000000) {
+					this.check_circle_5.fillColor = 0xffffff;
+				}
+				else {
+					this.check_circle_5.fillColor = 0x428544;
+				}
+			});
+		}
+
+
+		handleFishDeliveryClick() {
+			const currentWeek = this.registry.get('currentWeek') || 0
+			if (currentWeek !== 1) return
+
+			if (this.registry.get('tutorialWeek1MailReceived')) {
+				return
 			}
+
+			const items = this.registry.get('items') || []
+
+			const giveItem = (id, amount = 1) => {
+				const it = items.find(i => i.id === id)
+				if (!it) return
+				if (typeof it.playerHas !== 'number') it.playerHas = 0
+				it.playerHas += amount
+			}
+
+			// Week 1 starter package
+			giveItem('tilapiaLarvae', 5)
+			giveItem('romaineSprout', 3)
+
+			this.registry.set('items', items)
+			this.registry.set('tutorialWeek1MailReceived', true)
+			this.registry.set('tutorialWeek1MailPending', false)
+
+			// fill plant bed with the starter plants
+			this.fillPlantBedWithStarterPlants('romaineSprout', 3)
+
+			// turn off mail glow in MainMenu
+			const mainMenu = this.scene.get('MainMenu')
+			if (mainMenu && typeof mainMenu.updateMailIconNotification === 'function') {
+				mainMenu.updateMailIconNotification()
+			}
+
+			// tick the first checkbox
+			if (this.check_circle_1) {
+				this.check_circle_1.fillColor = 0x428544
+			}
+
+			// list now shows empty inbox
+			if (this.fishMailRow) {
+				this.fishMailRow.setText('You have no mail.')
+				this.fishMailRow.disableInteractive()
+			}
+
+			// popup background
+			if (this.detailBg) {
+				this.detailBg.destroy()
+			}
+			if (this.detailText) {
+				this.detailText.destroy()
+			}
+
+			this.detailBg = this.add.rectangle(
+				772,
+				360,
+				430,
+				140,
+				0xfff1c4
+			)
+			this.detailBg.setOrigin(0.5, 0.5)
+			this.detailBg.setStrokeStyle(2, 0x3b3131)
+			this.detailBg.setDepth(5)
+
+			this.detailText = this.add.bitmapText(
+				772,
+				360,
+				'pixelmix_16',
+				'You received:\n5 larvae tilapia\n3 romaine lettuce sprout. \nThey are now in your system.',
+				16
+			)
+			this.detailText.setOrigin(0.5, 0.5)
+			this.detailText.setDepth(6)
 		}
 
-		this.children.list.forEach(visit)
-		return rows
-	}
 
-	fillPlantBedWithStarterPlants(plantId, amount) {
-		let bedArr = this.registry.get('plantBed');
 
-		if (!Array.isArray(bedArr) || bedArr.length === 0) {
-			bedArr = [
-				[null, null, null, null, null, null, null],
-				[null, null, null, null, null, null, null],
-				[null, null, null, null, null, null, null]
-			];
-		}
 
-		let remaining = amount;
+		// Finds all the mail text so that I can leave setuptut/week0 the same.
+		findMailRowTexts() {
+			const rows = []
 
-		for (let i = 0; i < 3 && remaining > 0; i++) {
-			for (let j = 0; j < 7 && remaining > 0; j++) {
-				if (bedArr[i][j] == null) {
-					bedArr[i][j] = {
-						id: plantId,
-						stage: plantId === 'romaineSeedling' ? 'seedling' : 'sprout',
-						weeksInStage: 0
+			const visit = obj => {
+				if (obj instanceof Phaser.GameObjects.BitmapText) {
+					if (
+						obj.text === 'Fish Delivery! (1)' ||
+						obj.text === "You've got mail!"
+					) {
+						rows.push(obj)
 					}
-					remaining -= 1;
+				}
+
+				// recurse into containers
+				if (obj.list && Array.isArray(obj.list)) {
+					obj.list.forEach(visit)
 				}
 			}
+
+			this.children.list.forEach(visit)
+			return rows
 		}
 
-		this.registry.set('plantBed', bedArr);
+		fillPlantBedWithStarterPlants(plantId, amount) {
+			let bedArr = this.registry.get('plantBed');
+
+			if (!Array.isArray(bedArr) || bedArr.length === 0) {
+				bedArr = [
+					[null, null, null, null, null, null, null],
+					[null, null, null, null, null, null, null],
+					[null, null, null, null, null, null, null]
+				];
+			}
+
+			let remaining = amount;
+
+			for (let i = 0; i < 3 && remaining > 0; i++) {
+				for (let j = 0; j < 7 && remaining > 0; j++) {
+					if (bedArr[i][j] == null) {
+						bedArr[i][j] = {
+							id: plantId,
+							stage: plantId === 'romaineSeedling' ? 'seedling' : 'sprout',
+							weeksInStage: 0
+						}
+						remaining -= 1;
+					}
+				}
+			}
+
+			this.registry.set('plantBed', bedArr);
+		}
+
+
+
+		/* END-USER-CODE */
 	}
-
-
-
-	/* END-USER-CODE */
-}
 
 /* END OF COMPILED CODE */
 

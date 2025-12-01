@@ -104,12 +104,6 @@ export default class TankZoom extends Phaser.Scene {
 		cur_fish_box.isStroked = true;
 		cur_fish_box.lineWidth = 5;
 
-		// tool3_header
-		const tool3_header = this.add.bitmapText(658, 540, "pixelmix_16", "Status:");
-		tool3_header.tintFill = true;
-		tool3_header.text = "Status:";
-		tool3_header.fontSize = 16;
-
 		// zoom_out_button
 		const zoom_out_button = this.add.rectangle(1083, 565, 264, 56);
 		zoom_out_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 264, 56), Phaser.Geom.Rectangle.Contains);
@@ -153,17 +147,53 @@ export default class TankZoom extends Phaser.Scene {
 		selected_box.strokeColor = 1893396;
 		selected_box.lineWidth = 5;
 
-		// bitmaptext
-		const bitmaptext = this.add.bitmapText(734, 584, "pixelmix_32", "Fishy");
-		bitmaptext.tintFill = true;
-		bitmaptext.text = "Fishy";
-		bitmaptext.fontSize = 32;
+		// check_ph_text
+		const check_ph_text = this.add.bitmapText(784, 565, "pixelmix_24", "");
+		check_ph_text.setOrigin(0.5, 0.5);
+		check_ph_text.tintFill = true;
+		check_ph_text.tintTopLeft = 4473924;
+		check_ph_text.tintTopRight = 4473924;
+		check_ph_text.tintBottomLeft = 4473924;
+		check_ph_text.tintBottomRight = 4473924;
+		check_ph_text.fontSize = 24;
+
+		// increase_ph_button
+		const increase_ph_button = this.add.rectangle(785, 635, 264, 56);
+		increase_ph_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 264, 56), Phaser.Geom.Rectangle.Contains);
+		increase_ph_button.isFilled = true;
+		increase_ph_button.isStroked = true;
+		increase_ph_button.lineWidth = 5;
+
+		// increase_ph_text
+		const increase_ph_text = this.add.bitmapText(785, 635, "pixelmix_24", "Increase pH");
+		increase_ph_text.setOrigin(0.5, 0.5);
+		increase_ph_text.tintFill = true;
+		increase_ph_text.tintTopLeft = 4473924;
+		increase_ph_text.tintTopRight = 4473924;
+		increase_ph_text.tintBottomLeft = 4473924;
+		increase_ph_text.tintBottomRight = 4473924;
+		increase_ph_text.text = "Increase pH";
+		increase_ph_text.fontSize = 24;
+
+		// status_text
+		const status_text = this.add.bitmapText(655, 540, "pixelmix_16", "Status:");
+		status_text.tintFill = true;
+		status_text.text = "Status:";
+		status_text.fontSize = 16;
+
+		// ph_level
+		const ph_level = this.add.bitmapText(655, 564, "pixelmix_16", "None");
+		ph_level.tintFill = true;
+		ph_level.text = "None";
+		ph_level.fontSize = 16;
 
 		this.back_button = back_button;
 		this.cur_fish_name = cur_fish_name;
 		this.zoom_out_button = zoom_out_button;
 		this.change_fish_button = change_fish_button;
 		this.selected_box = selected_box;
+		this.increase_ph_button = increase_ph_button;
+		this.ph_level = ph_level;
 
 		this.events.emit("scene-awake");
 	}
@@ -178,8 +208,15 @@ export default class TankZoom extends Phaser.Scene {
 	change_fish_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	selected_box;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	increase_ph_button;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	ph_level;
 
 	/* START-USER-CODE */
+
+	/** @type {number} */
+	currentPH;
 
 	/**
 	 * Moves the green selection box to be on the same
@@ -288,6 +325,23 @@ export default class TankZoom extends Phaser.Scene {
 		}
 	}
 
+	updatePHDisplay(ph) {
+		// text
+		this.ph_level.text = `pH: ${ph.toFixed(1)}`
+
+		// safe range 6.5 to 7.5
+		const safe = ph >= 6.5 && ph <= 7.5
+
+		if (safe) {
+			// bright green, force-fill the bitmap text
+			this.ph_level.setTintFill(0x00ff00)
+		} else {
+			// bright red
+			this.ph_level.setTintFill(0xff0000)
+		}
+	}
+
+
 	create() {
 
 		this.editorCreate();
@@ -335,6 +389,30 @@ export default class TankZoom extends Phaser.Scene {
 		})
 
 		this.populateTank();
+
+		// pH setup
+		let storedPH = this.registry.get('waterPH');
+
+		if (typeof storedPH !== 'number') {
+			// default value, you can change this
+			storedPH = 7.0;
+			this.registry.set('waterPH', storedPH);
+		}
+
+		this.currentPH = storedPH;
+		this.updatePHDisplay(this.currentPH);
+
+		// Increase pH button
+		this.increase_ph_button.on('pointerdown', () => {
+			// raise pH a bit
+			this.currentPH += 0.5;
+			if (this.currentPH > 8.5) {
+				this.currentPH = 8.5;
+			}
+
+			this.registry.set('waterPH', this.currentPH);
+			this.updatePHDisplay(this.currentPH);
+		});
 	}
 
 	update(time, delta) {
@@ -372,7 +450,7 @@ export default class TankZoom extends Phaser.Scene {
 				fish.y = bottom
 				fish.vy = -Math.abs(fish.vy)
 			}
-			
+
 			// after the for-loop that moves all fish
 			//it'll check/move the selected box as well.
 			if (this.selected_box.visible) {
@@ -393,6 +471,14 @@ export default class TankZoom extends Phaser.Scene {
 				fish.scaleX = 2
 			}
 		}
+
+		// sync pH text if something else changed waterPH
+		const registryPH = this.registry.get('waterPH');
+		if (typeof registryPH === 'number' && registryPH !== this.currentPH) {
+			this.currentPH = registryPH;
+			this.updatePHDisplay(this.currentPH);
+		}
+
 	}
 
 

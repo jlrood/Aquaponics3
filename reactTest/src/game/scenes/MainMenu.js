@@ -338,6 +338,9 @@ export default class MainMenu extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
+	/** @type {Phaser.GameObjects.Rectangle} */
+	tankHighlight;
+
 	// Write your code here
 
 	create() {
@@ -349,7 +352,8 @@ export default class MainMenu extends Phaser.Scene {
 		// base cursor for this scene
 		this.input.setDefaultCursor('default');
 
-		this.mailGlow = null
+		this.mailGlow = null;
+		this.tankGlow = null;
 
 		// Change to hand cursor when you hover over interactable icons.
 		const handify = o => {
@@ -382,6 +386,55 @@ export default class MainMenu extends Phaser.Scene {
 		this.mail_button,
 		this.system_button,
 		].forEach(handify);
+
+		// small warning box above the tank trigger
+		this.phWarningBox = this.add.rectangle(
+			this.tank_screen_trigger.x,
+			this.tank_screen_trigger.y - 180,
+			260,
+			60,
+			0xffe08a,
+			1
+		)
+			.setStrokeStyle(2, 0x000000)
+			.setDepth(900)
+			.setVisible(false)
+
+		this.phWarningText = this.add.bitmapText(
+			this.tank_screen_trigger.x,
+			this.tank_screen_trigger.y - 180,
+			'pixelmix_16',
+			'      pH is low!\n Zoom in on the Tank!'
+		)
+			.setOrigin(0.5, 0.5)
+			.setDepth(901)
+			.setVisible(false)
+
+		this.tankHighlight = this.add.ellipse(
+			this.tank_screen_trigger.x + 8,
+			this.tank_screen_trigger.y + 5,
+			this.tank_screen_trigger.displayWidth * 1,
+			this.tank_screen_trigger.displayHeight * 1,
+			0xff0000,
+			0.25
+		)
+			.setDepth(1)
+			.setVisible(false);
+		this.children.list.forEach(child => {
+			if (
+				child instanceof Phaser.GameObjects.Image &&
+				child.texture &&
+				child.texture.key === 'text_box_empty'
+			) {
+				child.setDepth(10);           // box frame
+			}
+			if (
+				child instanceof Phaser.GameObjects.BitmapText &&
+				child.text.includes("Welcome to Grow n' Flow")
+			) {
+				child.setDepth(11);           // bottom text
+			}
+		});
 
 		// week system
 		this.week = new WeekSystem(this, 6)
@@ -444,6 +497,7 @@ export default class MainMenu extends Phaser.Scene {
 		// react to week changes
 		this.week.on(WEEK_CHANGED, wk => {
 			this.weekText.setText(`Week ${wk}`)
+			this.applyWeekPHDrop(wk);
 			this.applyWeekRules(wk);
 			if (this.ageSystem) {
 				this.ageSystem.advanceWeek();
@@ -506,6 +560,8 @@ export default class MainMenu extends Phaser.Scene {
 		// Play the background bubbles
 		this.bg.play('bg');
 
+		// initial pH warning state
+		this.updateTankPHWarning();
 
 
 	}
@@ -572,7 +628,6 @@ export default class MainMenu extends Phaser.Scene {
 			if (this.advance) {
 				this.advanceLocked = false
 				this.advance.setTint(0x777777)
-
 			}
 			if (this.chatText) {
 				this.chatText.setText('         Welcome to Grow n\' Flow!\nClick "Begin Setup Tutorial" to start.')
@@ -591,20 +646,36 @@ export default class MainMenu extends Phaser.Scene {
 
 		// Week 1, fish + plants arrive by mail
 		if (wk === 1) {
+
 			if (!this.registry.get('tutorialWeek1MailReceived')) {
 				this.registry.set('tutorialWeek1MailPending', true)
 
 				if (this.chatText) {
 					this.chatText.setText('         Great! You have completed the setup tutorial.\nCheck your mail for your first fish and plant arrivals.')
 				}
-			}
-			this.updateMailIconNotification()
 
-			if (wk === 2) {
-				// week 2 rules here if needed
+			}
+			if (this.advance) {
+				this.advanceLocked = true
+				this.advance.setTint(0x777777)
 			}
 			this.updateMailIconNotification()
 		}
+		//unlocks the advance button
+		if (this.advance) {
+			this.advanceLocked = false
+			this.advance.clearTint()
+		}
+		if (wk === 2) {
+			if (this.chatText) {
+				this.chatText.setText(' Oh no! Your water pH has dropped significantly this week.\n '
+					+ '                    Quick!! Save your Fish')
+			}
+		}
+		if (wk === 3) {
+
+		}
+		this.updateMailIconNotification()
 	}
 
 	showWeekOverlay(data) {
@@ -622,8 +693,8 @@ export default class MainMenu extends Phaser.Scene {
 		if (hasMail) {
 			this.mail_icon.setTint(0xffff66)
 
-			if (!this.mailGlowTween) {
-				this.mailGlowTween = this.tweens.add({
+			if (!this.mailGlow) {
+				this.mailGlow = this.tweens.add({
 					targets: this.mail_icon,
 					alpha: { from: 1, to: 0.4 },
 					duration: 500,
@@ -635,13 +706,82 @@ export default class MainMenu extends Phaser.Scene {
 			this.mail_icon.clearTint()
 			this.mail_icon.alpha = 1
 
-			if (this.mailGlowTween) {
-				this.mailGlowTween.stop()
-				this.mailGlowTween.remove()
-				this.mailGlowTween = null
+			if (this.mailGlow) {
+				this.mailGlow.stop()
+				this.mailGlow.remove()
+				this.mailGlow = null
 			}
 		}
 	}
+
+	updateTankPHWarning() {
+		if (!this.tank_screen_trigger) return
+
+		const ph = this.registry.get('waterPH')
+		const low = typeof ph === 'number' && ph < 6.5
+
+		if (low) {
+			if (this.tankHighlight) this.tankHighlight.setVisible(true)
+
+			if (!this.tankGlow && this.tankHighlight) {
+				this.tankGlow = this.tweens.add({
+					targets: this.tankHighlight,
+					alpha: { from: 0.9, to: 0.3 },
+					duration: 600,
+					yoyo: true,
+					repeat: -1
+				})
+			}
+
+			if (this.phWarningBox) this.phWarningBox.setVisible(true)
+			if (this.phWarningText) this.phWarningText.setVisible(true)
+		} else {
+			if (this.tankHighlight) {
+				this.tankHighlight.setVisible(false)
+				this.tankHighlight.alpha = 0.9
+			}
+
+			if (this.tankGlow) {
+				this.tankGlow.stop()
+				this.tankGlow.remove()
+				this.tankGlow = null
+			}
+
+			if (this.phWarningBox) this.phWarningBox.setVisible(false)
+			if (this.phWarningText) this.phWarningText.setVisible(false)
+		}
+	}
+
+	// helper func because
+	// pH drop is being used every time you exit in and out of the tank zoom
+	applyWeekPHDrop(wk) {
+		let ph = this.registry.get('waterPH')
+		if (typeof ph !== 'number') ph = 7.5
+
+		// count total tilapia
+		const items = this.registry.get('items') || []
+		const fishIds = ['tilapiaLarvae', 'tilapiaFingerling', 'tilapiaJuvenile', 'tilapiaAdult']
+		let fishCount = 0
+		for (const id of fishIds) {
+			const it = items.find(i => i.id === id)
+			if (it && typeof it.playerHas === 'number') {
+				fishCount += it.playerHas
+			}
+		}
+
+		// one-time drop for week 2
+		if (wk === 2) {
+			ph = ph - 2.0;
+		} else if (wk >= 3) {
+			const drop = 0.25 + 0.02 * fishCount
+			ph = Math.max(5, ph - drop)
+		}
+
+		this.registry.set('waterPH', ph)
+		this.updateTankPHWarning()
+	}
+
+
 
 	/* END-USER-CODE */
 }
