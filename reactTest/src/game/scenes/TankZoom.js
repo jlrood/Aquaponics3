@@ -79,7 +79,7 @@ export default class TankZoom extends Phaser.Scene {
 		divider_right.lineWidth = 5;
 
 		// tool1_header
-		const tool1_header = this.add.bitmapText(197, 600, "pixelmix_24", "Fish Tank");
+		const tool1_header = this.add.bitmapText(194, 566, "pixelmix_24", "Fish Tank");
 		tool1_header.setOrigin(0.5, 0.5);
 		tool1_header.tintFill = true;
 		tool1_header.text = "Fish Tank";
@@ -104,33 +104,33 @@ export default class TankZoom extends Phaser.Scene {
 		cur_fish_box.isStroked = true;
 		cur_fish_box.lineWidth = 5;
 
-		// zoom_out_button
-		const zoom_out_button = this.add.rectangle(1083, 565, 264, 56);
-		zoom_out_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 264, 56), Phaser.Geom.Rectangle.Contains);
-		zoom_out_button.isFilled = true;
-		zoom_out_button.isStroked = true;
-		zoom_out_button.lineWidth = 5;
+		// adjust_feed_button
+		const adjust_feed_button = this.add.rectangle(1087, 635, 264, 56);
+		adjust_feed_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 264, 56), Phaser.Geom.Rectangle.Contains);
+		adjust_feed_button.isFilled = true;
+		adjust_feed_button.isStroked = true;
+		adjust_feed_button.lineWidth = 5;
 
 		// change_fish_button
-		const change_fish_button = this.add.rectangle(1083, 635, 264, 56);
+		const change_fish_button = this.add.rectangle(197, 635, 264, 56);
 		change_fish_button.setInteractive(new Phaser.Geom.Rectangle(0, 0, 264, 56), Phaser.Geom.Rectangle.Contains);
 		change_fish_button.isFilled = true;
 		change_fish_button.isStroked = true;
 		change_fish_button.lineWidth = 5;
 
 		// zoom_out_text
-		const zoom_out_text = this.add.bitmapText(1083, 565, "pixelmix_24", "Zoom Out");
+		const zoom_out_text = this.add.bitmapText(1087, 635, "pixelmix_24", "Feed Fish\n");
 		zoom_out_text.setOrigin(0.5, 0.5);
 		zoom_out_text.tintFill = true;
 		zoom_out_text.tintTopLeft = 4473924;
 		zoom_out_text.tintTopRight = 4473924;
 		zoom_out_text.tintBottomLeft = 4473924;
 		zoom_out_text.tintBottomRight = 4473924;
-		zoom_out_text.text = "Zoom Out";
+		zoom_out_text.text = "Feed Fish\n";
 		zoom_out_text.fontSize = 24;
 
 		// change_fish_text
-		const change_fish_text = this.add.bitmapText(1083, 635, "pixelmix_24", "Change Fish");
+		const change_fish_text = this.add.bitmapText(197, 635, "pixelmix_24", "Change Fish");
 		change_fish_text.setOrigin(0.5, 0.5);
 		change_fish_text.tintFill = true;
 		change_fish_text.tintTopLeft = 4473924;
@@ -176,9 +176,9 @@ export default class TankZoom extends Phaser.Scene {
 		increase_ph_text.fontSize = 24;
 
 		// status_text
-		const status_text = this.add.bitmapText(655, 540, "pixelmix_16", "Status:");
+		const status_text = this.add.bitmapText(655, 540, "pixelmix_16", "pH Status:");
 		status_text.tintFill = true;
-		status_text.text = "Status:";
+		status_text.text = "pH Status:";
 		status_text.fontSize = 16;
 
 		// ph_level
@@ -187,13 +187,26 @@ export default class TankZoom extends Phaser.Scene {
 		ph_level.text = "None";
 		ph_level.fontSize = 16;
 
+		// status_text_1
+		const status_text_1 = this.add.bitmapText(955, 540, "pixelmix_16", "Nitrate Levels:");
+		status_text_1.tintFill = true;
+		status_text_1.text = "Nitrate Levels:";
+		status_text_1.fontSize = 16;
+
+		// nitrate_level
+		const nitrate_level = this.add.bitmapText(955, 564, "pixelmix_16", "None");
+		nitrate_level.tintFill = true;
+		nitrate_level.text = "None";
+		nitrate_level.fontSize = 16;
+
 		this.back_button = back_button;
 		this.cur_fish_name = cur_fish_name;
-		this.zoom_out_button = zoom_out_button;
+		this.adjust_feed_button = adjust_feed_button;
 		this.change_fish_button = change_fish_button;
 		this.selected_box = selected_box;
 		this.increase_ph_button = increase_ph_button;
 		this.ph_level = ph_level;
+		this.nitrate_level = nitrate_level;
 
 		this.events.emit("scene-awake");
 	}
@@ -203,7 +216,7 @@ export default class TankZoom extends Phaser.Scene {
 	/** @type {Phaser.GameObjects.BitmapText} */
 	cur_fish_name;
 	/** @type {Phaser.GameObjects.Rectangle} */
-	zoom_out_button;
+	adjust_feed_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	change_fish_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
@@ -212,11 +225,15 @@ export default class TankZoom extends Phaser.Scene {
 	increase_ph_button;
 	/** @type {Phaser.GameObjects.BitmapText} */
 	ph_level;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	nitrate_level;
 
 	/* START-USER-CODE */
 
 	/** @type {number} */
 	currentPH;
+	/** @type {number} */
+	currentNitrate;
 
 	/**
 	 * Moves the green selection box to be on the same
@@ -341,6 +358,19 @@ export default class TankZoom extends Phaser.Scene {
 		}
 	}
 
+	updateNitrateDisplay(value){
+		this.nitrate_level.text = `Nitrate: ${value} ppm`
+		// target range 5 to 15
+		const safe = value >= 5 && value <= 15
+
+		if (safe) {
+			// bright green, force-fill the bitmap text
+			this.nitrate_level.setTintFill(0x00ff00)
+		} else {
+			// bright red
+			this.nitrate_level.setTintFill(0xff0000)
+		}
+	}
 
 	create() {
 
@@ -349,10 +379,6 @@ export default class TankZoom extends Phaser.Scene {
 		this.fishArrIndex = 0;
 
 		this.back_button.on("pointerdown", () => {
-			this.scene.start('MainMenu');
-		})
-
-		this.zoom_out_button.on("pointerdown", () => {
 			this.scene.start('MainMenu');
 		})
 
@@ -392,7 +418,7 @@ export default class TankZoom extends Phaser.Scene {
 
 		// pH setup
 		let storedPH = this.registry.get('waterPH');
-
+		
 		if (typeof storedPH !== 'number') {
 			// default value, you can change this
 			storedPH = 7.0;
@@ -413,6 +439,26 @@ export default class TankZoom extends Phaser.Scene {
 			this.registry.set('waterPH', this.currentPH);
 			this.updatePHDisplay(this.currentPH);
 		});
+
+		// nitrate setup
+		let storedNitrate = this.registry.get('waterNitrate')
+		if (typeof storedNitrate !== 'number') {
+			// start a bit low so the week-3 event has room
+			storedNitrate = 3.0
+			this.registry.set('waterNitrate', storedNitrate)
+		}
+		this.currentNitrate = storedNitrate
+		this.updateNitrateDisplay(this.currentNitrate)
+
+		// Adjust feed button, raise nitrate
+		this.adjust_feed_button.on('pointerdown', () => {
+			this.currentNitrate += 2.0
+			if (this.currentNitrate > 20) {
+				this.currentNitrate = 20
+			}
+			this.registry.set('waterNitrate', this.currentNitrate)
+			this.updateNitrateDisplay(this.currentNitrate)
+		})
 	}
 
 	update(time, delta) {
@@ -478,7 +524,12 @@ export default class TankZoom extends Phaser.Scene {
 			this.currentPH = registryPH;
 			this.updatePHDisplay(this.currentPH);
 		}
-
+		// sync nitrate text if something else changed waterNitrate
+		const registryNitrate = this.registry.get('waterNitrate')
+		if (typeof registryNitrate === 'number' && registryNitrate !== this.currentNitrate) {
+			this.currentNitrate = registryNitrate
+			this.updateNitrateDisplay(this.currentNitrate)
+		}
 	}
 
 

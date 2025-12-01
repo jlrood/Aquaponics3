@@ -498,6 +498,7 @@ export default class MainMenu extends Phaser.Scene {
 		this.week.on(WEEK_CHANGED, wk => {
 			this.weekText.setText(`Week ${wk}`)
 			this.applyWeekPHDrop(wk);
+			this.applyWeekNitrateDrop(wk)
 			this.applyWeekRules(wk);
 			if (this.ageSystem) {
 				this.ageSystem.advanceWeek();
@@ -673,7 +674,11 @@ export default class MainMenu extends Phaser.Scene {
 			}
 		}
 		if (wk === 3) {
-
+			if (this.chatText) {
+				this.chatText.setText(
+					'Nitrate levels dropped.\nVisit the tank and feed the fish.'
+				)
+			}
 		}
 		this.updateMailIconNotification()
 	}
@@ -780,8 +785,33 @@ export default class MainMenu extends Phaser.Scene {
 		this.registry.set('waterPH', ph)
 		this.updateTankPHWarning()
 	}
+	// similar helper func as ph
+	applyWeekNitrateDrop(wk) {
+		let nitrate = this.registry.get('waterNitrate')
+		if (typeof nitrate !== 'number') nitrate = 5.0
 
+		if (wk === 3) {
+			nitrate = nitrate - 3.0
+		}
 
+		this.registry.set('waterNitrate', nitrate)
+		this.updateTankNitrateWarning()
+	}
+
+	updateTankNitrateWarning() {
+		const nitrate = this.registry.get('waterNitrate')
+		if (typeof nitrate !== 'number') return
+
+		// nitrate target range is 5 to 15
+		const safe = nitrate >= 5 && nitrate <= 15
+
+		if (!safe) {
+			// show nitrate tutorial bubble or highlight the tank
+			this.showTankNitrateBubble = true
+		} else {
+			this.showTankNitrateBubble = false
+		}
+	}
 
 	/* END-USER-CODE */
 }
