@@ -735,12 +735,12 @@ export default class SetupTut extends Phaser.Scene {
 		for (let i = 1; i <= this.max_pages; i++) {
 			const page = this[`page${i}`];
 
-        if (page) {
-            page.setVisible(i === 1);
-            page.setDepth(1000);
-            this.tutPages.push(page);
-        }
-    	}
+			if (page) {
+				page.setVisible(i === 1);
+				page.setDepth(1000);
+				this.tutPages.push(page);
+			}
+		}
 
 		this.background.on('pointerdown', (pointer) => {
 			this.scene_handler();
@@ -786,39 +786,47 @@ export default class SetupTut extends Phaser.Scene {
 		this.fingerling_box.on('pointerdown', (pointer) => {
 			// get our list of items from the registry
 			let items = this.registry.get('items');
-			
+
 			// get the fingerling id
 			const itemIndex = items.findIndex(item => item.id === 'tilapiaFingerling');
-			
+
 			if (itemIndex !== -1) {
 				// Handle monetary transaction
 				const itemPrice = items[itemIndex].price;
 				let curMoney = this.registry.get('money');
 				let newMoney = curMoney - itemPrice;
-				
+
 				// Check for enough money
 				if (newMoney >= 0) {
 					this.registry.set('money', newMoney);
-					
+
 					// Add fish to inventory
 					items[itemIndex].playerHas += 1;
 					this.registry.set('items', items);
-					
+
 					console.log('Purchased tilapia fingerling!');
 				}
-    		}
-    
-    			this.advance_tut(false);
-			});
+			}
 
-			this.advance.on('pointerdown', (pointer) => {
-				// Pull the week system from main menu
-				const mainMenuScene = this.scene.get('MainMenu');
-				
-				// Advance to the next week
-				mainMenuScene.week.nextWeek();
-				this.advance_tut(false);
-			});
+			this.advance_tut(false);
+		});
+
+		this.advance.on('pointerdown', async () => {
+			// Pull the week system from main menu
+			const mainMenuScene = this.scene.get('MainMenu');
+
+			// close tutorial and bring MainMenu back
+			this.scene.stop();
+			// unpauses MainMenu
+			mainMenuScene.scene.resume();
+
+			// show the week overlay ON MainMenu, which is now active
+			await mainMenuScene.showWeekOverlay({ week: mainMenuScene.week.week });
+
+			// after player clicks Continue, advance the week
+			mainMenuScene.week.nextWeek();
+		});
+
 	}
 
 	scene_handler() {

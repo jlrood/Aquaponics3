@@ -383,6 +383,17 @@ export default class MainMenu extends Phaser.Scene {
 
 		// week system
 		this.week = new WeekSystem(this, 6)
+		// allows me to change the text without adding / hiding pages
+		this.chatText = null
+		this.children.list.forEach(child => {
+			if (
+				child instanceof Phaser.GameObjects.BitmapText &&
+				child.text === 'Welcome to Grow n\' Flow!'
+			) {
+				this.chatText = child
+			}
+		})
+
 
 		this.weekBackground = this.add.rectangle(
 			this.scale.width - 12,
@@ -405,7 +416,22 @@ export default class MainMenu extends Phaser.Scene {
 		)
 			.setOrigin(1, 0.5)
 			.setDepth(999)
-			
+
+		// lock flag
+		this.advanceLocked = false
+
+		// advance click handler
+		if (this.advance) {
+			this.advance.on('pointerdown', async () => {
+				if (this.advanceLocked) return
+				if (this.week.isFinalWeek()) return
+
+				await this.showWeekOverlay({ week: this.week.week })
+				this.week.nextWeek()
+			})
+		}
+
+		// react to week changes
 		this.week.on(WEEK_CHANGED, wk => {
 			this.weekText.setText(`Week ${wk}`)
 			this.applyWeekRules(wk)
@@ -413,15 +439,6 @@ export default class MainMenu extends Phaser.Scene {
 
 		this.applyWeekRules(this.week.week)
 
-
-		if (this.advance) {
-			this.advance.setInteractive({ useHandCursor: true })
-			this.advance.on('pointerdown', async () => {
-				if (this.week.isFinalWeek()) return
-				await this.showWeekOverlay({ week: this.week.week })
-				this.week.nextWeek()
-			})
-		}
 
 		// React bridge
 		EventBus.emit('current-scene-ready', this)
@@ -475,6 +492,9 @@ export default class MainMenu extends Phaser.Scene {
 
 		// Play the background bubbles
 		this.bg.play('bg');
+
+
+
 	}
 
 
@@ -527,15 +547,37 @@ export default class MainMenu extends Phaser.Scene {
 		}
 	}
 
+
+
+
 	// week rules
 	applyWeekRules(wk) {
-		if (wk == 0) {
-
+		if (wk === 0) {
+			if (this.advance) {
+				this.advanceLocked = true
+				this.advance.setTint(0x777777)
+			}
+			if (this.chatText) {
+				this.chatText.setText('Click "Begin Setup Tutorial" to start.')
+			}
+			return
 		}
-		if (wk == 2) {
 
+		if (this.advance) {
+			this.advanceLocked = false
+			this.advance.clearTint()
+		}
+		if (this.chatText) {
+			this.chatText.setText('Welcome to Grow n\' Flow!')
+		}
+
+		if (wk === 2) {
+			// week 2 rules here if needed
 		}
 	}
+
+
+
 
 	showWeekOverlay(data) {
 		return createWeekOverlay(this, {

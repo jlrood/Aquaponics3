@@ -6,13 +6,13 @@ export default function createWeekOverlay(scene, { title = 'Week complete', mess
   root.setDepth(9999)
 
   const dim = scene.add.rectangle(0, 0, w, h, 0x000000, 0.6).setOrigin(0, 0)
-  const panel = scene.add.rectangle(w / 2, h / 2, 460, 240, 0x263238)
-  const titleTxt = scene.add.text(w / 2, h / 2 - 80, title, { color: '#fff', fontSize: '26px' }).setOrigin(0.5)
-  const bodyTxt = scene.add.text(w / 2, h / 2 - 20, message, { color: '#ddd', fontSize: '16px', align: 'center', wordWrap: { width: 400 } }).setOrigin(0.5)
+  const panel = scene.add.rectangle(w / 2, h / 2, 460, 240, 0xfff1c4);
+  panel.setStrokeStyle(4, 0x3b3131);
+  const titleTxt = scene.add.bitmapText(w / 2, h / 2 - 80, 'pixelmix_16', title).setOrigin(0.5);titleTxt.setFontSize(24);titleTxt.setTint(0x3b3131);
+  const bodyTxt = scene.add.bitmapText(w / 2, h / 2 - 20, 'pixelmix_16', message).setOrigin(0.5);bodyTxt.setFontSize(16);bodyTxt.setTint(0x3b3131);
 
-  const btn = scene.add.rectangle(w / 2, h / 2 + 70, 160, 40, 0x1e88e5).setInteractive({ useHandCursor: true })
-  const btnTxt = scene.add.text(w / 2, h / 2 + 70, 'Continue', { color: '#fff', fontSize: '16px' }).setOrigin(0.5)
-
+  const btn = scene.add.rectangle(w / 2, h / 2 + 70, 180, 50, 0xffe08a).setInteractive({ useHandCursor: true })
+  const btnTxt = scene.add.bitmapText(w / 2, h / 2 + 70, 'pixelmix_16', 'Continue').setOrigin(0.5);btnTxt.setFontSize(16);btnTxt.setTint(0x3b3131);
   root.add([dim, panel, titleTxt, bodyTxt, btn, btnTxt])
 
   return new Promise(resolve => {
