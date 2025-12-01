@@ -446,17 +446,19 @@ export default class Mail extends Phaser.Scene {
 		fact.fontSize = 16;
 		fact.maxWidth = 240;
 
-		//get fun fact from facts.txt
+		// get fun facts from facts.txt
+		//TODO: THIS NEEDS TO BE MOVED UNDER
 		const raw = this.cache.text.get("facts");
-const lines = raw.split(/\r?\n/).filter(l => l.trim().length > 0);
-const randomLine = Phaser.Utils.Array.GetRandom(lines);
+		const lines = raw.split(/\r?\n/).filter(l => l.trim().length > 0);
+		const randomLine = Phaser.Utils.Array.GetRandom(lines);
 
-fact.setText(randomLine);
+		fact.setText(randomLine);
 
 		this.back_button = back_button;
 		this.mail_button = mail_button;
 		this.maintenance_button = maintenance_button;
 		this.updates_button = updates_button;
+		this.mail_item_1 = mail_item_1;
 		this.check_circle_1 = check_circle_1;
 		this.check_circle_2 = check_circle_2;
 		this.check_circle_3 = check_circle_3;
@@ -474,6 +476,8 @@ fact.setText(randomLine);
 	maintenance_button;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	updates_button;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	mail_item_1;
 	/** @type {Phaser.GameObjects.Ellipse} */
 	check_circle_1;
 	/** @type {Phaser.GameObjects.Ellipse} */
@@ -495,108 +499,264 @@ fact.setText(randomLine);
 
 		this.back_button.on("pointerdown", () => {
 			// Stop this overlay scene
-            this.scene.stop();
-            // Resume the underlying main scene
-            this.scene.resume('MainMenu');
+			this.scene.stop();
+			// Resume the underlying main scene
+			this.scene.resume('MainMenu');
 		})
 
 		this.mail_button.on("pointerdown", () => {
-            this.mail_button.fillColor = 0x428544;
+			this.mail_button.fillColor = 0x428544;
 			this.maintenance_button.fillColor = 0xffffff;
 			this.updates_button.fillColor = 0xffffff;
 			this.getProdGraph('w');
-        });
+		});
 
 		this.maintenance_button.on("pointerdown", () => {
-            this.mail_button.fillColor = 0xffffff;
+			this.mail_button.fillColor = 0xffffff;
 			this.maintenance_button.fillColor = 0x428544;
 			this.updates_button.fillColor = 0xffffff;
 			this.getProdGraph('w');
-        });
+		});
 
 		this.updates_button.on("pointerdown", () => {
-            this.mail_button.fillColor = 0xffffff;
+			this.mail_button.fillColor = 0xffffff;
 			this.maintenance_button.fillColor = 0xffffff;
 			this.updates_button.fillColor = 0x428544;
 			this.getProdGraph('w');
-        });
+		});
+
+		//Now that week 1 started, I'm going to wipe all the mail text.
+		//Fish delivery! Row
+		// -------------------------
+		// Week 1 mail rows
+		// -------------------------
+
+		const currentWeek = this.registry.get('currentWeek') || 0
+		const week1Received = this.registry.get('tutorialWeek1MailReceived')
+		this.fishMailRow = null
+		this.detailText = null
+		this.detailBg = null
+		const mailRowTexts = this.findMailRowTexts()
+
+		if (currentWeek === 1 && mailRowTexts.length) {
+			this.fishMailRow = mailRowTexts.find(t =>
+				t.text && t.text.startsWith('Fish Delivery')
+			)
+
+			if (this.fishMailRow) {
+				// clear all other rows
+				mailRowTexts.forEach(t => {
+					if (t !== this.fishMailRow) {
+						t.setText('')
+					}
+				})
+
+				this.fishMailRow.fontSize = 18
+				this.fishMailRow.maxWidth = 460
+
+				if (!week1Received) {
+					// before claim
+					this.fishMailRow.setText('Starter fish and plants, click to claim')
+					this.fishMailRow.setInteractive({ useHandCursor: true })
+					this.fishMailRow.on('pointerdown', () => {
+						this.handleFishDeliveryClick()
+					})
+				} else {
+					// after claim, show no-mail text and no click
+					this.fishMailRow.setText('You have no mail. :(')
+					this.fishMailRow.disableInteractive()
+				}
+			} else {
+				console.warn('Fish Delivery row not found for week 1')
+			}
+		}
+
+
+
 
 		this.check_circle_1.on("pointerdown", () => {
-			if(this.check_circle_1.fillColor == 0x000000)
-			{
+			if (this.check_circle_1.fillColor == 0x000000) {
 				this.check_circle_1.fillColor = 0xffffff;
 			}
-			else
-			{
+			else {
 				this.check_circle_1.fillColor = 0x428544;
 			}
 		});
 
 		this.check_circle_2.on("pointerdown", () => {
-			if(this.check_circle_2.fillColor == 0x000000)
-			{
+			if (this.check_circle_2.fillColor == 0x000000) {
 				this.check_circle_2.fillColor = 0xffffff;
 			}
-			else
-			{
+			else {
 				this.check_circle_2.fillColor = 0x428544;
 			}
 		});
 
 		this.check_circle_3.on("pointerdown", () => {
-			if(this.check_circle_3.fillColor == 0x000000)
-			{
+			if (this.check_circle_3.fillColor == 0x000000) {
 				this.check_circle_3.fillColor = 0xffffff;
 			}
-			else
-			{
+			else {
 				this.check_circle_3.fillColor = 0x428544;
 			}
 		});
 
 		this.check_circle_4.on("pointerdown", () => {
-			if(this.check_circle_4.fillColor == 0x000000)
-			{
+			if (this.check_circle_4.fillColor == 0x000000) {
 				this.check_circle_4.fillColor = 0xffffff;
 			}
-			else
-			{
+			else {
 				this.check_circle_4.fillColor = 0x428544;
 			}
 		});
 
 		this.check_circle_5.on("pointerdown", () => {
-			if(this.check_circle_5.fillColor == 0x000000)
-			{
+			if (this.check_circle_5.fillColor == 0x000000) {
 				this.check_circle_5.fillColor = 0xffffff;
 			}
-			else
-			{
+			else {
 				this.check_circle_5.fillColor = 0x428544;
 			}
 		});
 	}
 
-	/*
-	Just in case it accidentally deletes it again:
 
-	this.check_circle_1 = check_circle_1;
-	this.check_circle_2 = check_circle_2;
-	this.check_circle_3 = check_circle_3;
-	this.check_circle_4 = check_circle_4;
-	this.check_circle_5 = check_circle_5;
-	*/
+	handleFishDeliveryClick() {
+		const currentWeek = this.registry.get('currentWeek') || 0
+		if (currentWeek !== 1) return
 
-	/** @type {Phaser.GameObjects.Ellipse} */
-	//check_circle_1;
-	/** @type {Phaser.GameObjects.Ellipse} */
-	//check_circle_2;
-	/** @type {Phaser.GameObjects.Ellipse} */
-	//check_circle_3;
-	/** @type {Phaser.GameObjects.Ellipse} */
-	//check_circle_4;
-	/** @type {Phaser.GameObjects.Ellipse} */
-	//check_circle_5;
+		if (this.registry.get('tutorialWeek1MailReceived')) {
+			return
+		}
+
+		const items = this.registry.get('items') || []
+
+		const giveItem = (id, amount = 1) => {
+			const it = items.find(i => i.id === id)
+			if (!it) return
+			if (typeof it.playerHas !== 'number') it.playerHas = 0
+			it.playerHas += amount
+		}
+
+		// Week 1 starter package
+		giveItem('tilapiaLarvae', 5)
+		giveItem('romaineSeedling', 3)
+
+		this.registry.set('items', items)
+		this.registry.set('tutorialWeek1MailReceived', true)
+		this.registry.set('tutorialWeek1MailPending', false)
+
+		// fill plant bed with the starter plants
+		this.fillPlantBedWithStarterPlants('romaineSeedling', 3)
+
+		// turn off mail glow in MainMenu
+		const mainMenu = this.scene.get('MainMenu')
+		if (mainMenu && typeof mainMenu.updateMailIconNotification === 'function') {
+			mainMenu.updateMailIconNotification()
+		}
+
+		// tick the first checkbox
+		if (this.check_circle_1) {
+			this.check_circle_1.fillColor = 0x428544
+		}
+
+		// list now shows empty inbox
+		if (this.fishMailRow) {
+			this.fishMailRow.setText('You have no mail.')
+			this.fishMailRow.disableInteractive()
+		}
+
+		// popup background
+		if (this.detailBg) {
+			this.detailBg.destroy()
+		}
+		if (this.detailText) {
+			this.detailText.destroy()
+		}
+
+		this.detailBg = this.add.rectangle(
+			772,
+			360,
+			430,
+			140,
+			0xfff1c4
+		)
+		this.detailBg.setOrigin(0.5, 0.5)
+		this.detailBg.setStrokeStyle(2, 0x3b3131)
+		this.detailBg.setDepth(5)
+
+		this.detailText = this.add.bitmapText(
+			772,
+			360,
+			'pixelmix_16',
+			'You received:\n5 larvae tilapia\n3 romaine lettuce seedlings.\nThey are now in your system.',
+			16
+		)
+		this.detailText.setOrigin(0.5, 0.5)
+		this.detailText.setDepth(6)
+	}
+
+
+
+
+	// Finds all the mail text so that I can leave setuptut/week0 the same.
+	findMailRowTexts() {
+		const rows = []
+
+		const visit = obj => {
+			if (obj instanceof Phaser.GameObjects.BitmapText) {
+				if (
+					obj.text === 'Fish Delivery! (1)' ||
+					obj.text === "You've got mail!"
+				) {
+					rows.push(obj)
+				}
+			}
+
+			// recurse into containers
+			if (obj.list && Array.isArray(obj.list)) {
+				obj.list.forEach(visit)
+			}
+		}
+
+		this.children.list.forEach(visit)
+		return rows
+	}
+
+	fillPlantBedWithStarterPlants(plantId, amount) {
+		let bedArr = this.registry.get('plantBed');
+
+		if (!Array.isArray(bedArr) || bedArr.length === 0) {
+			// safety, match Boot.js structure if needed
+			bedArr = [
+				[null, null, null, null, null, null, null],
+				[null, null, null, null, null, null, null],
+				[null, null, null, null, null, null, null]
+			];
+		}
+
+		const items = this.registry.get('items') || [];
+		const plant = items.find(i => i.id === plantId);
+		if (!plant) {
+			console.warn('Starter plant id not found in items:', plantId);
+			this.registry.set('plantBed', bedArr);
+			return;
+		}
+
+		let remaining = amount;
+
+		for (let i = 0; i < 3 && remaining > 0; i++) {
+			for (let j = 0; j < 7 && remaining > 0; j++) {
+				if (bedArr[i][j] == null) {
+					bedArr[i][j] = plant;
+					remaining -= 1;
+				}
+			}
+		}
+
+		this.registry.set('plantBed', bedArr);
+	}
+
 
 	/* END-USER-CODE */
 }

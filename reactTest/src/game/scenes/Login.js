@@ -6,10 +6,10 @@
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class Tutorial extends Phaser.Scene {
+export default class Login extends Phaser.Scene {
 
 	constructor() {
-		super("Tutorial");
+		super("Login");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

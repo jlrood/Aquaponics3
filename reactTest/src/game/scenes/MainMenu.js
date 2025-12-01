@@ -348,6 +348,7 @@ export default class MainMenu extends Phaser.Scene {
 		// base cursor for this scene
 		this.input.setDefaultCursor('default');
 
+		this.mailGlow = null
 
 		// Change to hand cursor when you hover over interactable icons.
 		const handify = o => {
@@ -383,6 +384,10 @@ export default class MainMenu extends Phaser.Scene {
 
 		// week system
 		this.week = new WeekSystem(this, 6)
+
+		// store current week for other scenes
+		this.registry.set('currentWeek', this.week.week)
+
 		// allows me to change the text without adding / hiding pages
 		this.chatText = null
 		this.children.list.forEach(child => {
@@ -552,32 +557,46 @@ export default class MainMenu extends Phaser.Scene {
 
 	// week rules
 	applyWeekRules(wk) {
+
+		this.registry.set('currentWeek', wk)
+
 		if (wk === 0) {
 			if (this.advance) {
-				this.advanceLocked = true
+				this.advanceLocked = false
 				this.advance.setTint(0x777777)
 			}
 			if (this.chatText) {
-				this.chatText.setText('Click "Begin Setup Tutorial" to start.')
+				this.chatText.setText('         Welcome to Grow n\' Flow!\nClick "Begin Setup Tutorial" to start.')
 			}
+
+			// no week-1 mail while in week 0
+			this.registry.set('tutorialWeek1MailPending', false)
+			this.updateMailIconNotification()
 			return
 		}
-
+		//unlocks the advance button
 		if (this.advance) {
 			this.advanceLocked = false
 			this.advance.clearTint()
 		}
-		if (this.chatText) {
-			this.chatText.setText('Welcome to Grow n\' Flow!')
-		}
 
-		if (wk === 2) {
-			// week 2 rules here if needed
+		// Week 1, fish + plants arrive by mail
+		if (wk === 1) {
+			if (!this.registry.get('tutorialWeek1MailReceived')) {
+				this.registry.set('tutorialWeek1MailPending', true)
+
+				if (this.chatText) {
+					this.chatText.setText('         Great! You have completed the setup tutorial.\nCheck your mail for your first fish and plant arrivals.')
+				}
+			}
+			this.updateMailIconNotification()
+
+			if (wk === 2) {
+				// week 2 rules here if needed
+			}
+			this.updateMailIconNotification()
 		}
 	}
-
-
-
 
 	showWeekOverlay(data) {
 		return createWeekOverlay(this, {
@@ -585,6 +604,36 @@ export default class MainMenu extends Phaser.Scene {
 			message: 'New actions unlocked next week.'
 		})
 	}
+
+	updateMailIconNotification() {
+		if (!this.mail_icon) return
+
+		const hasMail = !!this.registry.get('tutorialWeek1MailPending')
+
+		if (hasMail) {
+			this.mail_icon.setTint(0xffff66)
+
+			if (!this.mailGlowTween) {
+				this.mailGlowTween = this.tweens.add({
+					targets: this.mail_icon,
+					alpha: { from: 1, to: 0.4 },
+					duration: 500,
+					yoyo: true,
+					repeat: -1
+				})
+			}
+		} else {
+			this.mail_icon.clearTint()
+			this.mail_icon.alpha = 1
+
+			if (this.mailGlowTween) {
+				this.mailGlowTween.stop()
+				this.mailGlowTween.remove()
+				this.mailGlowTween = null
+			}
+		}
+	}
+
 	/* END-USER-CODE */
 }
 

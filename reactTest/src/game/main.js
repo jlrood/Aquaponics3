@@ -12,7 +12,7 @@ import Journal from './scenes/Journal';
 import Cycle from './scenes/Cycle';
 import TankZoom from './scenes/TankZoom';
 import BedZoom from './scenes/BedZoom';
-import Tutorial from './scenes/Tutorial';
+import Login from './scenes/Login';
 import SetupTut from './scenes/SetupTut';
 
 // Find out more information about the Game Config at:
@@ -44,7 +44,7 @@ const config = {
         Cycle,
         TankZoom,
         BedZoom,
-        Tutorial,
+        Login,
         SetupTut
     ],
     //This order, above, is the Photoshop layer order. Anything above MainMenu will layer below it.
