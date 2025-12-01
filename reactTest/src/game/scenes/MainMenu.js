@@ -346,7 +346,7 @@ export default class MainMenu extends Phaser.Scene {
 		this.cameras.main.setBackgroundColor('#ffffff')
 
 		// base cursor for this scene
-  		this.input.setDefaultCursor('default');
+		this.input.setDefaultCursor('default');
 
 
 		// Change to hand cursor when you hover over interactable icons.
@@ -358,8 +358,8 @@ export default class MainMenu extends Phaser.Scene {
 				o.setInteractive({ useHandCursor: true });
 			}
 
-    		// hand only while over this object
-    		o.input.cursor = 'pointer';
+			// hand only while over this object
+			o.input.cursor = 'pointer';
 		};
 
 		// Icons are visible, so start with these
@@ -383,20 +383,36 @@ export default class MainMenu extends Phaser.Scene {
 
 		// week system
 		this.week = new WeekSystem(this, 6)
-		this.weekText = this.add.text(
-			this.scale.width - 20,
-			16,
+
+		this.weekBackground = this.add.rectangle(
+			this.scale.width - 12,
+			20,
+			100,
+			32,
+			0xfff1c4,
+			1
+		)
+			.setOrigin(1, 0.5)
+			.setStrokeStyle(2, 0x3b3131)
+			.setDepth(998)
+
+		this.weekText = this.add.bitmapText(
+			this.scale.width - 24,
+			20,
+			"pixelmix_16",
 			`Week ${this.week.week}`,
-			{ color: '#000000', fontSize: '24px' }
-		).setOrigin(1, 0)
-
-
+			16
+		)
+			.setOrigin(1, 0.5)
+			.setDepth(999)
+			
 		this.week.on(WEEK_CHANGED, wk => {
 			this.weekText.setText(`Week ${wk}`)
 			this.applyWeekRules(wk)
 		})
 
 		this.applyWeekRules(this.week.week)
+
 
 		if (this.advance) {
 			this.advance.setInteractive({ useHandCursor: true })
@@ -513,7 +529,7 @@ export default class MainMenu extends Phaser.Scene {
 
 	// week rules
 	applyWeekRules(wk) {
-		if (wk == 1) {
+		if (wk == 0) {
 
 		}
 		if (wk == 2) {

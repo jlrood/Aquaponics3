@@ -11,8 +11,6 @@ export default class WeekSystem extends Phaser.Events.EventEmitter {
     let start = scene.registry.get('week')
     if (start === undefined) start = 0
     scene.registry.set('week', start)
-
-    scene.registry.set('week', start)
   }
 
   get week() {
