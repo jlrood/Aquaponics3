@@ -5,6 +5,7 @@ import Phaser from 'phaser'
 import { EventBus } from '../EventBus';
 import WeekSystem, { WEEK_CHANGED } from '../../systems/WeekSystem'
 import createWeekOverlay from '../../ui/WeekOverlay'
+import AgingSystem from '../../systems/AgingSystem';
 /* END-USER-IMPORTS */
 
 export default class MainMenu extends Phaser.Scene {
@@ -385,6 +386,10 @@ export default class MainMenu extends Phaser.Scene {
 		// week system
 		this.week = new WeekSystem(this, 6)
 
+		// aging system
+		this.ageSystem = new AgingSystem(this);
+
+
 		// store current week for other scenes
 		this.registry.set('currentWeek', this.week.week)
 
@@ -439,7 +444,10 @@ export default class MainMenu extends Phaser.Scene {
 		// react to week changes
 		this.week.on(WEEK_CHANGED, wk => {
 			this.weekText.setText(`Week ${wk}`)
-			this.applyWeekRules(wk)
+			this.applyWeekRules(wk);
+			if (this.ageSystem) {
+				this.ageSystem.advanceWeek();
+			}
 		})
 
 		this.applyWeekRules(this.week.week)
@@ -564,6 +572,7 @@ export default class MainMenu extends Phaser.Scene {
 			if (this.advance) {
 				this.advanceLocked = false
 				this.advance.setTint(0x777777)
+
 			}
 			if (this.chatText) {
 				this.chatText.setText('         Welcome to Grow n\' Flow!\nClick "Begin Setup Tutorial" to start.')

@@ -4,7 +4,10 @@ export const WEEK_CHANGED = 'week-changed'
 export const WEEK_ENDED = 'week-ended'
 
 export default class WeekSystem extends Phaser.Events.EventEmitter {
-  constructor(scene, maxWeeks = 6) {
+  // Max weeks for Tutorial should be 6.
+  // Giving users a sandbox option even though
+  // It's barebones here.
+  constructor(scene, maxWeeks = 999) {
     super()
     this.scene = scene
     this.maxWeeks = maxWeeks

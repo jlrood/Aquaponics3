@@ -640,14 +640,14 @@ export default class Mail extends Phaser.Scene {
 
 		// Week 1 starter package
 		giveItem('tilapiaLarvae', 5)
-		giveItem('romaineSeedling', 3)
+		giveItem('romaineSprout', 3)
 
 		this.registry.set('items', items)
 		this.registry.set('tutorialWeek1MailReceived', true)
 		this.registry.set('tutorialWeek1MailPending', false)
 
 		// fill plant bed with the starter plants
-		this.fillPlantBedWithStarterPlants('romaineSeedling', 3)
+		this.fillPlantBedWithStarterPlants('romaineSprout', 3)
 
 		// turn off mail glow in MainMenu
 		const mainMenu = this.scene.get('MainMenu')
@@ -689,7 +689,7 @@ export default class Mail extends Phaser.Scene {
 			772,
 			360,
 			'pixelmix_16',
-			'You received:\n5 larvae tilapia\n3 romaine lettuce seedlings.\nThey are now in your system.',
+			'You received:\n5 larvae tilapia\n3 romaine lettuce sprout. \nThey are now in your system.',
 			16
 		)
 		this.detailText.setOrigin(0.5, 0.5)
@@ -727,7 +727,6 @@ export default class Mail extends Phaser.Scene {
 		let bedArr = this.registry.get('plantBed');
 
 		if (!Array.isArray(bedArr) || bedArr.length === 0) {
-			// safety, match Boot.js structure if needed
 			bedArr = [
 				[null, null, null, null, null, null, null],
 				[null, null, null, null, null, null, null],
@@ -735,20 +734,16 @@ export default class Mail extends Phaser.Scene {
 			];
 		}
 
-		const items = this.registry.get('items') || [];
-		const plant = items.find(i => i.id === plantId);
-		if (!plant) {
-			console.warn('Starter plant id not found in items:', plantId);
-			this.registry.set('plantBed', bedArr);
-			return;
-		}
-
 		let remaining = amount;
 
 		for (let i = 0; i < 3 && remaining > 0; i++) {
 			for (let j = 0; j < 7 && remaining > 0; j++) {
 				if (bedArr[i][j] == null) {
-					bedArr[i][j] = plant;
+					bedArr[i][j] = {
+						id: plantId,
+						stage: plantId === 'romaineSeedling' ? 'seedling' : 'sprout',
+						weeksInStage: 0
+					}
 					remaining -= 1;
 				}
 			}
@@ -756,6 +751,7 @@ export default class Mail extends Phaser.Scene {
 
 		this.registry.set('plantBed', bedArr);
 	}
+
 
 
 	/* END-USER-CODE */

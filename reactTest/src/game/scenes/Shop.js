@@ -985,7 +985,7 @@ export default class Shop extends Phaser.Scene {
 	/* START-USER-CODE */
 
 	toggleBoxColor(box) {
-    	box.fillColor = 0x428544;
+		box.fillColor = 0x428544;
 		this.time.delayedCall(500, () => {
 			box.fillColor = 0xffffff;
 		})
@@ -1053,8 +1053,8 @@ export default class Shop extends Phaser.Scene {
 	removeFromPlantBed(plant) {
 		let bedArr = this.registry.get('plantBed');
 		let found = false;
-		for(let i = 0; i < 3 && !found; i++) {
-			for(let j = 0; j < 7 && !found; j++) {
+		for (let i = 0; i < 3 && !found; i++) {
+			for (let j = 0; j < 7 && !found; j++) {
 				if (bedArr[i][j] == null)
 					continue;
 				if (bedArr[i][j].id == plant.id) {
@@ -1068,27 +1068,56 @@ export default class Shop extends Phaser.Scene {
 		console.log(bedArr);
 	}
 
-	addToPlantBed(plant) {
-		let bedArr = this.registry.get('plantBed');
-		let found = false;
-		for(let i = 0; i < 3 && !found; i++) {
-			for(let j = 0; j < 7 && !found; j++) {
+	addToPlantBed(plantItem) {
+		let bedArr = this.registry.get('plantBed')
+
+		// safety, make sure bed exists and is 3x7
+		if (!Array.isArray(bedArr) || bedArr.length === 0) {
+			bedArr = [
+				[null, null, null, null, null, null, null],
+				[null, null, null, null, null, null, null],
+				[null, null, null, null, null, null, null]
+			]
+		}
+
+		// decide stage from item id
+		const id = plantItem.id
+		let stage = null
+
+		if (id === 'romaineSprout') {
+			stage = 'sprout'
+		} else if (id === 'romaineSeedling') {
+			stage = 'seedling'
+		} else if (id === 'romaineHead') {
+			stage = 'head'
+		}
+
+		let found = false
+
+		for (let i = 0; i < 3 && !found; i++) {
+			for (let j = 0; j < 7 && !found; j++) {
 				if (bedArr[i][j] == null) {
-					bedArr[i][j] = plant;
-					found = true;
+					bedArr[i][j] = {
+						id,
+						stage,
+						weeksInStage: 0
+					}
+					found = true
 				}
 			}
 		}
-		this.registry.set('plantBed', bedArr);
-		this.capacity_text.text = "Plants: " + this.totalPlants() + "/21";
-		console.log(bedArr);
+
+		this.registry.set('plantBed', bedArr)
+		this.capacity_text.text = 'Plants: ' + this.totalPlants() + '/21'
+		console.log(bedArr)
 	}
+
 
 	isAtPlantCapacity() {
 		let bedArr = this.registry.get('plantBed');
 		let found = false;
-		for(let i = 0; i < 3 && !found; i++) {
-			for(let j = 0; j < 7 && !found; j++) {
+		for (let i = 0; i < 3 && !found; i++) {
+			for (let j = 0; j < 7 && !found; j++) {
 				if (bedArr[i][j] == null) {
 					found = true;
 				}
@@ -1546,24 +1575,24 @@ export default class Shop extends Phaser.Scene {
 		this.setupFishShop();
 
 		this.back_Button.on("pointerdown", () => {
-            this.scene.start('MainMenu'); // Still works!
-        });
+			this.scene.start('MainMenu'); // Still works!
+		});
 
 		this.fish_Box.on("pointerdown", () => {
 			this.setupFishShop();
-        });
+		});
 
 		this.plant_Box.on("pointerdown", () => {
-            this.setupPlantShop();
-        });
+			this.setupPlantShop();
+		});
 
 		this.system_Box.on("pointerdown", () => {
-            this.setupSystemsShop();
-        });
+			this.setupSystemsShop();
+		});
 
 		this.equip_Box.on("pointerdown", () => {
-            this.setupEquipShop();
-        });
+			this.setupEquipShop();
+		});
 
 		this.option_box_1.on("pointerdown", () => {
 			this.toggleBoxColor(this.option_box_1);

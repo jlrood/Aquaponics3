@@ -202,11 +202,23 @@ export default class BedZoom extends Phaser.Scene {
 	 * current plant text to be the correct one.
 	 */
 	analyzePlant(posX, posY, index, item) {
-		this.selected_box.setVisible(true);
-		this.selected_box.setPosition(posX, posY);
-		this.setPlantArrIndex(index);
-		this.cur_plant_name.text = item.shopText;
+		this.selected_box.setVisible(true)
+		this.selected_box.setPosition(posX, posY)
+		this.setPlantArrIndex(index)
+		const entry = this.plantArr[index]
+		const cell = entry ? entry.cell : null
+		if (!cell || !cell.stage) {
+			this.cur_plant_name.text = item.shopText
+			return
+		}
+		if (cell.id === 'romaineHead') {
+			this.cur_plant_name.text = item.shopText
+		} else {
+			this.cur_plant_name.text = `${item.shopText}`
+		}
 	}
+
+
 
 	/**
 	 * Called when pushing the "change plant" button.
@@ -236,18 +248,28 @@ export default class BedZoom extends Phaser.Scene {
 	 * Additionally, stores the plant in the array as it's
 	 * graphical icon and it's item information.
 	 */
-	addPlant(plantItem, arrX, arrY, plantIndex) {
-		const x = 182 + arrX * 150;
-		const y = 236 + arrY * 100;
-		const plant = this.add.sprite(x, y, plantItem.sprite);
-		plant.scale = 5;
-		plant.setInteractive(new Phaser.Geom.Rectangle(0, 0, 32, 32), Phaser.Geom.Rectangle.Contains);
-		plant.on("pointerdown", () => {
-			this.analyzePlant(x, y, plantIndex, plantItem);
+	addPlant(plantCell, arrX, arrY, plantIndex) {
+		const items = this.registry.get('items') || []
+		const plantItem = items.find(i => i.id === plantCell.id)
+
+		const x = 182 + arrX * 150
+		const y = 236 + arrY * 100
+
+		const plant = this.add.sprite(x, y, plantItem.sprite)
+		plant.scale = 5
+		plant.setInteractive(new Phaser.Geom.Rectangle(0, 0, 32, 32), Phaser.Geom.Rectangle.Contains)
+
+		plant.on('pointerdown', () => {
+			this.analyzePlant(x, y, plantIndex, plantItem)
 		})
 
-		this.plantArr[plantIndex] = {icon: plant, item: plantItem};
+		this.plantArr[plantIndex] = {
+			icon: plant,
+			item: plantItem,
+			cell: plantCell
+		}
 	}
+
 
 	/**
 	 * Populates the bed with all the plants that the player has.
@@ -259,16 +281,23 @@ export default class BedZoom extends Phaser.Scene {
 		let plantIndex = 0;
 		let plantTotal = 0;
 		//For each plant...
+		if (!Array.isArray(bedArr) || bedArr.length === 0) {
+			this.capacity_text.text = '0/21';
+			return
+		}
+
 		for (let i = 0; i < 3; i++) {
 			for (let j = 0; j < 7; j++) {
-				if (bedArr[i][j] !== null) {
-					this.addPlant(bedArr[i][j], j, i, plantIndex);
-					plantTotal++;
+				const cell = bedArr[i][j]
+				if (cell != null) {
+					this.addPlant(cell, j, i, plantIndex)
+					plantTotal += 1
 				}
 				plantIndex++;
 			}
 		}
-		this.capacity_text.text = "" + plantTotal + "/21"
+
+		this.capacity_text.text = plantTotal + '/21'
 	}
 
 	create() {
