@@ -568,7 +568,7 @@ export default class Mail extends Phaser.Scene {
 				}
 			}
 			// For the rest of the weeks, no more mail i guess
-			}else {
+			}else if(currentWeek > 1 && mailRowTexts.length){ {
 				this.fishMailRow = mailRowTexts.find(t =>
 					t.text && t.text.startsWith('Fish Delivery')
 				)
@@ -583,6 +583,7 @@ export default class Mail extends Phaser.Scene {
 					this.fishMailRow.setText('You have no mail. :(')
 					this.fishMailRow.disableInteractive()
 				}
+			}
 			}
 
 

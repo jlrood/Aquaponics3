@@ -367,6 +367,16 @@ export default class MainMenu extends Phaser.Scene {
 			// hand only while over this object
 			o.input.cursor = 'pointer';
 		};
+		this.input.once('pointerdown', (pointer, targets) => {
+
+			// if clicking directly on the locked advance button, ignore
+			if (targets && targets.includes(this.advance)) {
+				return
+			}
+
+			this.registry.set('weekMessageRead', true)
+			this.unlockAdvanceButton()
+		});
 
 		// Icons are visible, so start with these
 		[this.task_icon,
@@ -437,7 +447,8 @@ export default class MainMenu extends Phaser.Scene {
 		});
 
 		// week system
-		this.week = new WeekSystem(this, 6)
+		// max weeks set to 999 just for testing purposes
+		this.week = new WeekSystem(this, 999)
 
 		// aging system
 		this.ageSystem = new AgingSystem(this);
@@ -456,6 +467,13 @@ export default class MainMenu extends Phaser.Scene {
 				this.chatText = child
 			}
 		})
+		if (this.chatText) {
+			this.chatText.setInteractive()
+			this.chatText.on('pointerdown', () => {
+				this.registry.set('weekMessageRead', true)
+				this.unlockAdvanceButton()
+			})
+		}
 
 
 		this.weekBackground = this.add.rectangle(
@@ -500,6 +518,7 @@ export default class MainMenu extends Phaser.Scene {
 			this.applyWeekPHDrop(wk);
 			this.applyWeekNitrateDrop(wk)
 			this.applyWeekRules(wk);
+			this.applyWeeklyBills(wk);
 			if (this.ageSystem) {
 				this.ageSystem.advanceWeek();
 			}
@@ -626,13 +645,11 @@ export default class MainMenu extends Phaser.Scene {
 		this.registry.set('currentWeek', wk)
 
 		if (wk === 0) {
-			if (this.advance) {
-				this.advanceLocked = false
-				this.advance.setTint(0x777777)
-			}
 			if (this.chatText) {
 				this.chatText.setText('         Welcome to Grow n\' Flow!\nClick "Begin Setup Tutorial" to start.')
 			}
+			this.registry.set('weekMessageRead', false)
+			this.lockAdvanceButton()
 
 			// no week-1 mail while in week 0
 			this.registry.set('tutorialWeek1MailPending', false)
@@ -647,38 +664,54 @@ export default class MainMenu extends Phaser.Scene {
 
 		// Week 1, fish + plants arrive by mail
 		if (wk === 1) {
+			const received = this.registry.get('tutorialWeek1MailReceived') === true;
 
-			if (!this.registry.get('tutorialWeek1MailReceived')) {
-				this.registry.set('tutorialWeek1MailPending', true)
-
-				if (this.chatText) {
-					this.chatText.setText('         Great! You have completed the setup tutorial.\nCheck your mail for your first fish and plant arrivals.')
-				}
-
+			if (!received) {
+				this.chatText.setText(
+					'         Great! You have completed the setup tutorial.\n' +
+					'Check your mail for your first fish and plant arrivals.'
+				);
+				this.registry.set('weekMessageRead', false);
+				this.lockAdvanceButton();
 			}
-			if (this.advance) {
-				this.advanceLocked = true
-				this.advance.setTint(0x777777)
-			}
-			this.updateMailIconNotification()
+			return
 		}
-		//unlocks the advance button
-		if (this.advance) {
-			this.advanceLocked = false
-			this.advance.clearTint()
-		}
+
+
 		if (wk === 2) {
 			if (this.chatText) {
 				this.chatText.setText(' Oh no! Your water pH has dropped significantly this week.\n '
 					+ '                    Quick!! Save your Fish')
 			}
+			this.registry.set('weekMessageRead', false);
+			this.lockAdvanceButton();
+			return;
 		}
 		if (wk === 3) {
-			if (this.chatText) {
-				this.chatText.setText(
-					'Nitrate levels dropped.\nVisit the tank and feed the fish.'
-				)
-			}
+			this.chatText.setText(
+				'Nitrate levels dropped.\nVisit the tank and feed the fish.'
+			)
+			this.registry.set('weekMessageRead', false)
+			this.lockAdvanceButton()
+			return
+
+		}
+		if (wk === 4) {
+			this.chatText.setText(
+				'Don\'t forget to sell your fish or plants if they\'re ready!'
+			)
+
+		}
+		if (wk === 5) {
+			this.chatText.setText(
+				'You thought this operation was free? No you have bills!\nMake sure to sell fish and plants to pay them off.'
+			)
+
+		}
+		if (wk === 6){
+			this.chatText.setText(
+				'Make sure to keep Fishy happy!'
+			)
 		}
 		this.updateMailIconNotification()
 	}
@@ -806,12 +839,59 @@ export default class MainMenu extends Phaser.Scene {
 		const safe = nitrate >= 5 && nitrate <= 15
 
 		if (!safe) {
-			// show nitrate tutorial bubble or highlight the tank
 			this.showTankNitrateBubble = true
 		} else {
 			this.showTankNitrateBubble = false
 		}
 	}
+
+	// utility bills
+	applyWeeklyBills(wk) {
+		if (wk < 5) return
+
+		// only bills user every 3 weeks starting from week 5
+		const isBillingWeek = ((wk - 5) % 3 === 0);
+		if (!isBillingWeek) return;
+
+		const lastBilledWeek = this.registry.get('billsPaidUpToWeek') || 0
+		if (wk <= lastBilledWeek) return
+
+		let money = this.registry.get('money')
+		if (typeof money !== 'number') money = 0
+
+		let bill = 0
+		if (wk === 5) {
+			bill = 15
+		} else {
+			bill = 25
+		}
+
+		const newMoney = Math.max(0, money - bill)
+
+		this.registry.set('money', newMoney)
+		this.registry.set('lastBillAmount', bill)
+		this.registry.set('billsPaidUpToWeek', wk)
+
+		if (this.chatText) {
+			this.chatText.setText(
+				`Utility bill this week: $${bill}\nCurrent balance: $${newMoney}.00
+			+\n You'll be billed every 3 weeks starting week 5.`
+			)
+		}
+	}
+
+	lockAdvanceButton() {
+		if (!this.advance) return
+		this.advanceLocked = true
+		this.advance.setTint(0x777777)
+	}
+
+	unlockAdvanceButton() {
+		if (!this.advance) return
+		this.advanceLocked = false
+		this.advance.clearTint()
+	}
+
 
 	/* END-USER-CODE */
 }
