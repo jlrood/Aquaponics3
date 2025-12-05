@@ -18,7 +18,7 @@ const phasermsg = () => {
 }
 
 export default defineConfig({
-  base: '/Aquaponics3/reactTest/',
+  base: '/Aquaponics3/',
 
   plugins: [
     react(),
@@ -26,7 +26,7 @@ export default defineConfig({
   ],
   logLevel: 'warning',
   build: {
-    outDir: '../docs/reactTest',
+    outDir: '../docs',
     emptyOutDir: true,
 
     rollupOptions: {
