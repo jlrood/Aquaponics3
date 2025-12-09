@@ -37,10 +37,8 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-Marissa Hirakawa
-Andrew Pham
-Niobe Schumer
-Jack Gartman
-Jack Rood
-
-    * Initial Release
+* Marissa Hirakawa
+* Andrew Pham
+* Niobe Schumer
+* Jack Gartman
+* Jack Rood
