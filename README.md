@@ -1,7 +1,5 @@
 # Grow 'n Flow Frontend Tutorial
 
-Simple overview of use/purpose.
-
 ## Description
 
 Our pixel art frontend tutorial for Grow 'n Flow! Built using React and Phaser.
