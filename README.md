@@ -76,7 +76,57 @@ follow the rest of the steps to add it to your main.js.
 
 ### Adding Images
 
+To add an image, like a background or a sprite in Phaser Editor, you're going to want to put it somehwhere in public/assets. From there you're free
+to create a directory to group them in some way if you'd like, we have a few like backgrounds, bmFonts, buttons_boxes, etc. Then click on the asset,
+and on the right side of the screen you should see a few buttons, letting you choose if you want to add it as an image, sprite, etc. Click which one
+you want, and then it gives you the option of putting it in boot.js or preload.js. Generally putting things in preload.js works fine, although boot.js
+may be needed for anything you want to show up on the preloading screen.
+
 ### Making Buttons Clickable
+
+To make an image, shape, or other asset clickable in Phaser Editor, there are a few steps.
+
+1. Change SCOPE (on the righthand bar) to CLASS
+
+2. Change Shape (on the righthand bar under Hit Area) to anything other than NONE
+
+3. Make a function inside of create() within your .js file along the lines of:
+```
+        this.buttonName.on("pointerdown", () => {
+                //What it does
+        }
+```
+
+### Adding Spritesheet Animation
+Step 1: Open the Preloader.js file and paste the below code in the preload() function. Modify 'player' to what you want to refer to the sprite as, and modify the path to the actual location of your file, should be assets/your_file_name.png 
+
+Then modify frameWidth and frameHeight to the size of your sprites on the sheet
+```
+    this.load.spritesheet('player', 'assets/player.png', {
+        frameWidth: 32,   // width of each frame
+        frameHeight: 32   // height of each frame
+    });
+```
+Step 2: Drop the below code in the create() function of your desired scenes, below the call to this.editorCreate(); 
+
+Modify the name of the animation, and change player to whatever you named your spritesheet in the first step. For start and end frames, a sprite sheet with 3 frames would be 0, 1, and 2
+```
+    if (!this.anims.exists('walk')) {
+        this.anims.create({
+            key: 'walk',
+            frames: this.anims.generateFrameNumbers('player', { 
+                start: 0, 
+                end: 7 
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+    }
+    
+    // If you have a sprite created in the editor named 'player'
+    this.player.play('walk');
+```
+Step 3: Create a new sprite in your scene with the editor, and name it to whatever you named your spritesheet in step 1. Give it CLASS scope in the editor so it can be accessed in your create() method.
 
 ## Authors
 
