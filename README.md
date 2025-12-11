@@ -189,6 +189,17 @@ Returning to the original scene, in this case MainMenu, works as follows.
     });
 ```
 
+## Known Issues
+
+### Advance Button in Later Weeks
+
+The fast forward to next week button is called advanceButton and I implemented two helper functions called
+lockAdvanceButton() and unlockAdvanceButton() that is used at the top of create() and the goal of it is to basically have it check if user has clicked once then it should unlock the week advance button. So the user is suppose to read each message, click anywhere on the screen, and unlocks the week advance button to prevent people from spamming through.
+However, you have to click multiple times randomly at the screen, I think the issue is that maybe it only unlocks when you click on interactable items such as the fishtank zoom and shop menu, but sometimes it works when you click on the chatbox which isnt interactable.
+
+To remove this implementation, you can remove the entire "this.input.once('pointerdown', (pointer, targets) => {}" in handify.
+Mainly this is used in the function applyWeekRules(wk), ideally we want each week past week1 to be implemented similar to SetupTut.js, but with the time constraint and listening to the evaluations, we prioritized the gameplay mechanics and didn't focus on guiding the users.
+
 ## Authors
 
 * Marissa Hirakawa
