@@ -40,6 +40,40 @@ to start the server. At this point, you can simply navigate to a browser and hea
 The help we provide in this section may be relevant only to Phaser Editor, as that is the IDE that we used to develop the game. Phaser
 Launcher or other IDEs may require different methods.
 
+### Creating New Scenes
+To create a new scene in Phaser Editor, right click the scenes directory and hit create new scene file. This will create a .scene and
+a corresponding .js file. However, there are a few more steps. You will need to navigate to the main.js file within the scene folder and
+add your scene as an import at the top, and to the scene list in the config. For example, if we have a scene named NewScene, you would import
+
+```
+import NewScene from './scenes/NewScene';
+```
+and then add it to the list of scenes in the config
+
+```
+    scene: [
+        Boot,
+        Preloader,
+        MainMenu,
+        Game,
+        GameOver,
+        System,
+        Shop,
+        Tasks,
+        Mail,
+        Journal,
+        Cycle,
+        TankZoom,
+        BedZoom,
+        Login,
+        SetupTut,
+        NewScene
+    ],
+```
+
+In the case of Phase Launcher or other non-graphical IDE, simply manually create a new .js file with a layout based on an existing scene.js, and
+follow the rest of the steps to add it to your main.js.
+
 ### Adding Images
 
 ### Making Buttons Clickable
